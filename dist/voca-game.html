@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#111318">
+<title>단어 게임</title>
+<style>
+  :root {
+    --bg: #111318; --card: #1c1f27; --fg: #f3f4f6; --muted: #8b90a0;
+    --accent: #5b8cff; --ok: #2ecc71; --ng: #ff5c5c; --ring: #2a2e3a;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; }
+  body { display: flex; flex-direction: column; min-height: 100dvh; user-select: none; -webkit-user-select: none; }
+  .screen { display: none; flex: 1; flex-direction: column; padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom)); }
+  .screen.on { display: flex; }
+  h1 { font-size: 22px; margin: 8px 0 16px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .list { display: flex; flex-direction: column; gap: 10px; }
+  .item { background: var(--card); border-radius: 14px; padding: 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+  .item b { font-size: 17px; }
+  .btn { background: var(--accent); color: #fff; border: 0; border-radius: 14px; padding: 14px 18px; font-size: 17px; font-weight: 700; cursor: pointer; }
+  .btn.ghost { background: var(--card); color: var(--fg); }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .seg { display: inline-flex; background: var(--card); border-radius: 12px; padding: 4px; }
+  .seg button { background: transparent; color: var(--muted); border: 0; padding: 8px 14px; border-radius: 9px; font-size: 15px; font-weight: 700; }
+  .seg button.sel { background: var(--accent); color: #fff; }
+  textarea { width: 100%; min-height: 140px; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: 12px; padding: 12px; font-size: 15px; }
+  input[type=text] { width: 100%; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: 12px; padding: 12px; font-size: 15px; }
+  details { margin-top: 20px; }
+  summary { cursor: pointer; color: var(--muted); }
+
+  /* 카드 */
+  #card { justify-content: space-between; }
+  .top { display: flex; justify-content: space-between; align-items: center; font-size: 15px; color: var(--muted); }
+  .top .phase { color: var(--fg); font-weight: 700; }
+  .prog { height: 4px; background: var(--ring); border-radius: 2px; margin-top: 10px; overflow: hidden; }
+  .prog i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .15s; }
+  .stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 22px; padding: 12px 0; }
+  .prompt { font-size: clamp(30px, 9vw, 56px); font-weight: 800; line-height: 1.2; word-break: keep-all; }
+  .prompt.ko { font-size: clamp(22px, 6.2vw, 38px); font-weight: 700; }
+  .answer { font-size: clamp(22px, 6.2vw, 38px); font-weight: 700; color: var(--accent); line-height: 1.35; word-break: keep-all; min-height: 1.4em; }
+  .answer.en { font-size: clamp(30px, 9vw, 56px); font-weight: 800; }
+  .ring { position: relative; width: 120px; height: 120px; }
+  .ring svg { transform: rotate(-90deg); }
+  .ring circle { fill: none; stroke-width: 8; }
+  .ring .bg { stroke: var(--ring); }
+  .ring .fg { stroke: var(--accent); stroke-linecap: round; }
+  .ring .num { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 44px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .hint { color: var(--muted); font-size: 14px; }
+  .judge { display: none; gap: 12px; height: 120px; }
+  .judge.on { display: flex; }
+  .judge button { flex: 1; border: 0; border-radius: 18px; font-size: 56px; font-weight: 900; color: #fff; cursor: pointer; }
+  .judge .x { background: var(--ng); }
+  .judge .o { background: var(--ok); }
+  .judge button:active { filter: brightness(1.15); transform: scale(.98); }
+  .toast { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(17,19,24,.92); font-size: 30px; font-weight: 800; text-align: center; padding: 24px; line-height: 1.4; z-index: 9; }
+  .toast.on { display: flex; }
+  .toast small { display: block; font-size: 16px; color: var(--muted); margin-top: 10px; font-weight: 500; }
+
+  /* 결과 */
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; }
+  td, th { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--ring); font-size: 15px; }
+  th { color: var(--muted); font-weight: 600; }
+  .ok { color: var(--ok); } .ng { color: var(--ng); }
+  .big { font-size: 40px; font-weight: 800; }
+</style>
+</head>
+<body>
+
+<!-- 홈 -->
+<section id="home" class="screen on">
+  <h1>📚 단어 게임</h1>
+  <div class="row" style="margin-bottom:16px">
+    <span class="sub">보여주는 시간</span>
+    <div class="seg" id="secs">
+      <button data-s="3">3초</button><button data-s="5">5초</button><button data-s="7">7초</button>
+    </div>
+  </div>
+  <div class="list" id="packs"></div>
+  <details>
+    <summary>+ 단어팩 붙여넣기로 추가</summary>
+    <p class="sub">한 줄에 한 단어. <code>영어[탭]뜻</code> 또는 <code>영어 - 뜻</code> 형식.</p>
+    <input type="text" id="newTitle" placeholder="팩 이름 (예: DAY 04)">
+    <textarea id="newText" placeholder="pack&#9;(짐을) 싸다&#10;male - 남성의"></textarea>
+    <div class="row" style="margin-top:10px"><button class="btn" id="addPack">추가</button><span class="sub" id="addMsg"></span></div>
+  </details>
+  <details id="recentWrap" style="display:none">
+    <summary>최근 기록</summary>
+    <div id="recent" class="sub"></div>
+  </details>
+</section>
+
+<!-- 카드 -->
+<section id="card" class="screen">
+  <div>
+    <div class="top"><span class="phase" id="phaseLabel"></span><span id="posLabel"></span></div>
+    <div class="prog"><i id="prog"></i></div>
+  </div>
+  <div class="stage" id="stage">
+    <div class="prompt" id="prompt"></div>
+    <div class="ring" id="ring">
+      <svg width="120" height="120" viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" id="ringFg" cx="60" cy="60" r="52"/></svg>
+      <div class="num" id="num">5</div>
+    </div>
+    <div class="answer" id="answer"></div>
+    <div class="hint" id="hint">화면을 누르면 바로 정답</div>
+  </div>
+  <div class="judge" id="judge">
+    <button class="x" id="btnX">X</button>
+    <button class="o" id="btnO">O</button>
+  </div>
+</section>
+
+<!-- 결과 -->
+<section id="result" class="screen">
+  <h1>🎉 다 외웠다!</h1>
+  <div class="big" id="elapsed"></div>
+  <div class="sub" id="resultTitle"></div>
+  <table id="roundsTbl"></table>
+  <div id="weakWrap"></div>
+  <div class="row" style="margin-top:auto">
+    <button class="btn" id="again">다시 하기</button>
+    <button class="btn ghost" id="toHome">홈으로</button>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// 단어 암기 게임 엔진 — 순수 로직 (브라우저·node 공용)
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.VocaEngine = factory();
+})(typeof self !== 'undefined' ? self : this, function () {
+  const PHASES = ['en2ko', 'ko2en'];
+
+  function fisherYates(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function allIdx(words) {
+    return words.map((_, i) => i);
+  }
+
+  function createSession(words, opts) {
+    opts = opts || {};
+    const shuffle = opts.shuffle || fisherYates;
+    return {
+      words,
+      shuffle,
+      phase: PHASES[0],
+      pass: 1,
+      queue: shuffle(allIdx(words)),
+      pos: 0,
+      wrong: [],
+      rounds: [{ phase: PHASES[0], pass: 1, ok: 0, ng: 0 }],
+      misses: words.map(() => 0),
+      startedAt: Date.now(),
+      finishedAt: null,
+    };
+  }
+
+  function current(s) {
+    if (s.phase === 'done') return null;
+    const w = s.words[s.queue[s.pos]];
+    return {
+      word: w,
+      index: s.pos,
+      total: s.queue.length,
+      prompt: s.phase === 'en2ko' ? w.en : w.ko,
+      answer: s.phase === 'en2ko' ? w.ko : w.en,
+    };
+  }
+
+  function answer(s, ok) {
+    if (s.phase === 'done') return { type: 'done' };
+    const idx = s.queue[s.pos];
+    const round = s.rounds[s.rounds.length - 1];
+    if (ok) round.ok++;
+    else {
+      round.ng++;
+      s.wrong.push(idx);
+      s.misses[idx]++;
+    }
+    s.pos++;
+    if (s.pos < s.queue.length) return { type: 'next' };
+
+    if (s.wrong.length > 0) {
+      s.pass++;
+      s.queue = s.shuffle(s.wrong);
+      s.wrong = [];
+      s.pos = 0;
+      s.rounds.push({ phase: s.phase, pass: s.pass, ok: 0, ng: 0 });
+      return { type: 'retry', count: s.queue.length };
+    }
+
+    const next = PHASES[PHASES.indexOf(s.phase) + 1];
+    if (!next) {
+      s.phase = 'done';
+      s.finishedAt = Date.now();
+      return { type: 'done' };
+    }
+    s.phase = next;
+    s.pass = 1;
+    s.queue = s.shuffle(allIdx(s.words));
+    s.wrong = [];
+    s.pos = 0;
+    s.rounds.push({ phase: next, pass: 1, ok: 0, ng: 0 });
+    return { type: 'phase', phase: next };
+  }
+
+  function summary(s) {
+    const weak = s.words
+      .map((w, i) => ({ en: w.en, ko: w.ko, misses: s.misses[i] }))
+      .filter((w) => w.misses > 0)
+      .sort((a, b) => b.misses - a.misses);
+    return {
+      rounds: s.rounds.map((r) => ({ ...r })),
+      weak,
+      elapsedMs: (s.finishedAt || Date.now()) - s.startedAt,
+    };
+  }
+
+  // 붙여넣기 텍스트 → 단어 목록. 구분자: 탭 · " - " · " : " · 2칸 이상 공백
+  function parsePack(text) {
+    const out = [];
+    text.split(/\r?\n/).forEach((line) => {
+      const t = line.trim().replace(/^\d+[.)]?\s+/, '');
+      if (!t) return;
+      const m = t.match(/^(.+?)(?:\t+|\s+-\s+|\s+:\s+|\s{2,})(.+)$/);
+      if (!m) return;
+      out.push({ n: out.length + 1, en: m[1].trim(), ko: m[2].trim() });
+    });
+    return out;
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates };
+});
+
+</script>
+<script>
+// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장)
+window.VOCA_PACKS = [
+  {
+    "pack_id": "neungyul-voca-middle-2025-day03",
+    "title": "능률VOCA 중등 필수 [2025] DAY 03",
+    "source": "프렙업 영어학원 프린트 (PAGE 3/50)",
+    "words": [
+      {
+        "n": 1,
+        "en": "pack",
+        "ko": "[동] 1. (짐을) 싸다 2. 포장하다 / [명] (한) 갑[통/상자]"
+      },
+      {
+        "n": 2,
+        "en": "male",
+        "ko": "[형] 남성[수컷]의 / [명] 남성, 수컷"
+      },
+      {
+        "n": 3,
+        "en": "finally",
+        "ko": "[부] 1. 마침내, 결국 2. 마지막으로"
+      },
+      {
+        "n": 4,
+        "en": "sometime",
+        "ko": "[부] (과거, 미래의) 언제, 언젠가"
+      },
+      {
+        "n": 5,
+        "en": "valley",
+        "ko": "[명] 계곡, 골짜기"
+      },
+      {
+        "n": 6,
+        "en": "bark",
+        "ko": "[동] (개가) 짖다"
+      },
+      {
+        "n": 7,
+        "en": "crash",
+        "ko": "[동] 충돌[추락]하다 / [명] (자동차의) 충돌, (비행기의) 추락"
+      },
+      {
+        "n": 8,
+        "en": "nature",
+        "ko": "[명] 1. 자연 2. 천성, 본성"
+      },
+      {
+        "n": 9,
+        "en": "harmony",
+        "ko": "[명] 1. 조화, 화합 2. 화음"
+      },
+      {
+        "n": 10,
+        "en": "wonder",
+        "ko": "[동] 궁금하다 / [명] 감탄, 놀라움"
+      },
+      {
+        "n": 11,
+        "en": "able",
+        "ko": "[형] 1. …할 수 있는 2. 능력 있는, 유능한"
+      },
+      {
+        "n": 12,
+        "en": "pain",
+        "ko": "[명] (육체적, 정신적) 통증, 고통"
+      },
+      {
+        "n": 13,
+        "en": "uniform",
+        "ko": "[명] 제복, 유니폼 / [형] 균일한, 일정한"
+      },
+      {
+        "n": 14,
+        "en": "beauty",
+        "ko": "[명] 1. 아름다움, 미 2. 미인"
+      },
+      {
+        "n": 15,
+        "en": "taste",
+        "ko": "[명] 맛 / [동] 1. 맛이 나다 2. 맛보다"
+      },
+      {
+        "n": 16,
+        "en": "without",
+        "ko": "[전] 1. … 없이 2. …하지 않고"
+      },
+      {
+        "n": 17,
+        "en": "sunlight",
+        "ko": "[명] 햇빛, 햇살"
+      },
+      {
+        "n": 18,
+        "en": "exact",
+        "ko": "[형] 정확한"
+      },
+      {
+        "n": 19,
+        "en": "popular",
+        "ko": "[형] 1. 인기 있는 2. 대중의, 대중적인"
+      },
+      {
+        "n": 20,
+        "en": "noisy",
+        "ko": "[형] 떠들썩한, 시끄러운"
+      },
+      {
+        "n": 21,
+        "en": "pill",
+        "ko": "[명] 알약, 정제"
+      },
+      {
+        "n": 22,
+        "en": "be in trouble",
+        "ko": "어려움[곤경]에 처하다"
+      },
+      {
+        "n": 23,
+        "en": "think up",
+        "ko": "…을 생각해내다"
+      },
+      {
+        "n": 24,
+        "en": "be famous for",
+        "ko": "…로 유명하다"
+      }
+    ]
+  }
+];
+
+</script>
+<script>
+(function () {
+  const E = window.VocaEngine;
+  const $ = (id) => document.getElementById(id);
+  const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs' };
+  const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
+  const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+
+  let secs = load(LS.secs, 5);
+  let packs = [...window.VOCA_PACKS, ...load(LS.packs, [])];
+  let session = null, pack = null, timer = null, revealed = false, shownAt = 0;
+
+  function show(id) { document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); }
+
+  // ---- 홈
+  function renderHome() {
+    document.querySelectorAll('#secs button').forEach(b => b.classList.toggle('sel', +b.dataset.s === secs));
+    $('packs').innerHTML = packs.map((p, i) =>
+      `<div class="item" data-i="${i}"><div><b>${p.title}</b><div class="sub">${p.words.length}단어</div></div><span>▶</span></div>`).join('');
+    const ss = load(LS.sessions, []);
+    $('recentWrap').style.display = ss.length ? '' : 'none';
+    $('recent').innerHTML = ss.slice(-10).reverse().map(s =>
+      `<div>${s.date} · ${s.title} · ${fmt(s.elapsedMs)} · 틀림 ${s.totalNg}회</div>`).join('');
+  }
+  $('secs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; secs = +b.dataset.s; save(LS.secs, secs); renderHome(); });
+  $('packs').addEventListener('click', e => { const it = e.target.closest('.item'); if (it) start(packs[+it.dataset.i]); });
+  $('addPack').addEventListener('click', () => {
+    const words = E.parsePack($('newText').value);
+    if (words.length < 2) { $('addMsg').textContent = '2단어 이상 필요해요'; return; }
+    const p = { pack_id: 'custom-' + Date.now(), title: $('newTitle').value.trim() || `내 단어팩 (${words.length})`, words };
+    const custom = load(LS.packs, []); custom.push(p); save(LS.packs, custom);
+    packs = [...window.VOCA_PACKS, ...custom];
+    $('newText').value = ''; $('newTitle').value = ''; $('addMsg').textContent = `추가됨: ${p.title}`;
+    renderHome();
+  });
+
+  // ---- 게임
+  function start(p) {
+    pack = p; session = E.createSession(p.words);
+    show('card'); showCard();
+  }
+  function phaseName(ph) { return ph === 'en2ko' ? '1차 영어 → 뜻' : '2차 뜻 → 영어'; }
+
+  function showCard() {
+    const c = E.current(session);
+    if (!c) return finish();
+    revealed = false;
+    $('phaseLabel').textContent = `${phaseName(session.phase)} · ${session.pass}회차`;
+    $('posLabel').textContent = `${c.index + 1} / ${c.total}`;
+    $('prog').style.width = (c.index / c.total * 100) + '%';
+    $('prompt').textContent = c.prompt;
+    $('prompt').className = 'prompt' + (session.phase === 'ko2en' ? ' ko' : '');
+    $('answer').textContent = '';
+    $('answer').className = 'answer' + (session.phase === 'ko2en' ? ' en' : '');
+    $('ring').style.display = '';
+    $('hint').style.display = '';
+    $('judge').classList.remove('on');
+    startCountdown();
+  }
+
+  const CIRC = 2 * Math.PI * 52;
+  function startCountdown() {
+    clearInterval(timer);
+    const t0 = performance.now(), total = secs * 1000;
+    $('ringFg').style.strokeDasharray = CIRC; $('ringFg').style.strokeDashoffset = 0;
+    $('num').textContent = secs;
+    timer = setInterval(() => {
+      const el = performance.now() - t0, left = Math.max(0, total - el);
+      $('num').textContent = Math.ceil(left / 1000);
+      $('ringFg').style.strokeDashoffset = CIRC * (el / total);
+      if (left <= 0) reveal();
+    }, 50);
+  }
+
+  function reveal() {
+    if (revealed) return;
+    revealed = true; clearInterval(timer);
+    const c = E.current(session);
+    $('answer').textContent = c.answer;
+    $('ring').style.display = 'none';
+    $('hint').style.display = 'none';
+    $('judge').classList.add('on');
+    shownAt = Date.now();
+  }
+
+  function judge(ok) {
+    if (!revealed) return;
+    const ev = E.answer(session, ok);
+    if (ev.type === 'retry') toast(`틀린 ${ev.count}개 다시!`, `${session.pass}회차`, showCard);
+    else if (ev.type === 'phase') toast('1차 완료 🎯', '이제 뜻을 보고 영어를 떠올려요', showCard);
+    else if (ev.type === 'done') finish();
+    else showCard();
+  }
+
+  function toast(main, sub, next) {
+    $('toast').innerHTML = `<div>${main}<small>${sub}</small></div>`;
+    $('toast').classList.add('on');
+    setTimeout(() => { $('toast').classList.remove('on'); next(); }, 900);
+  }
+
+  $('stage').addEventListener('click', reveal);
+  $('btnX').addEventListener('click', () => judge(false));
+  $('btnO').addEventListener('click', () => judge(true));
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('card').classList.contains('on')) return;
+    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); revealed ? judge(true) : reveal(); }
+    else if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'o') judge(true);
+    else if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'x') judge(false);
+  });
+
+  // ---- 결과
+  function fmt(ms) { const s = Math.round(ms / 1000); return `${Math.floor(s / 60)}분 ${s % 60}초`; }
+  function finish() {
+    clearInterval(timer);
+    const sm = E.summary(session);
+    $('elapsed').textContent = fmt(sm.elapsedMs);
+    $('resultTitle').textContent = pack.title;
+    $('roundsTbl').innerHTML = '<tr><th>단계</th><th>회차</th><th class="ok">O</th><th class="ng">X</th></tr>' +
+      sm.rounds.map(r => `<tr><td>${phaseName(r.phase)}</td><td>${r.pass}</td><td class="ok">${r.ok}</td><td class="ng">${r.ng}</td></tr>`).join('');
+    $('weakWrap').innerHTML = sm.weak.length
+      ? `<div class="sub">많이 틀린 단어</div><table>${sm.weak.slice(0, 5).map(w => `<tr><td><b>${w.en}</b></td><td>${w.ko}</td><td class="ng">${w.misses}회</td></tr>`).join('')}</table>`
+      : '<div class="sub">한 번도 안 틀렸어요! 👏</div>';
+    const ss = load(LS.sessions, []);
+    ss.push({ date: new Date().toISOString().slice(0, 10), title: pack.title, elapsedMs: sm.elapsedMs,
+      totalNg: sm.rounds.reduce((a, r) => a + r.ng, 0), weak: sm.weak.slice(0, 10) });
+    save(LS.sessions, ss.slice(-50));
+    show('result');
+  }
+  $('again').addEventListener('click', () => start(pack));
+  $('toHome').addEventListener('click', () => { renderHome(); show('home'); });
+
+  renderHome();
+})();
+</script>
+</body>
+</html>
