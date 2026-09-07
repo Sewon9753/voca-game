@@ -124,6 +124,7 @@
     <textarea id="newText" placeholder="pack&#9;(짐을) 싸다&#10;male - 남성의"></textarea>
     <div class="row" style="margin-top:.6rem"><button class="btn" id="addPack">추가</button><span class="sub" id="addMsg"></span></div>
   </details>
+  <div class="row" style="margin-top:1.2rem"><button class="btn ghost" id="forceUpdate" style="font-size:.95rem">🔄 새 버전 확인</button><span class="sub" id="updMsg"></span></div>
   <details id="recentWrap" style="display:none">
     <summary>최근 기록</summary>
     <div id="recent" class="sub"></div>
@@ -328,7 +329,7 @@
 </script>
 <script>
 // 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
-window.VOCA_BUILD = '0907.1041';
+window.VOCA_BUILD = '0907.1044';
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
@@ -884,6 +885,14 @@ window.VOCA_PACKS = [
 
   renderHome();
   $('ver').textContent = 'v' + (window.VOCA_BUILD || '');
+  $('forceUpdate').addEventListener('click', async () => {
+    $('updMsg').textContent = '확인 중…';
+    try {
+      if ('caches' in window) for (const k of await caches.keys()) await caches.delete(k);
+      if ('serviceWorker' in navigator) for (const r of await navigator.serviceWorker.getRegistrations()) await r.unregister();
+    } catch {}
+    location.replace(location.pathname + '?t=' + Date.now());
+  });
   // 새 버전 자동 반영: 앱을 열거나 다시 화면에 올 때 sw.js 갱신 확인 → 새 워커가 잡히면 한 번 새로고침
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('sw.js').then(reg => {

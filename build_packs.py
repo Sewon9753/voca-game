@@ -4,17 +4,21 @@ import json, re
 from pathlib import Path
 
 root = Path(__file__).parent
+build = __import__("datetime").datetime.now().strftime("%m%d.%H%M")
 packs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((root / "packs").glob("*.json"))]
 (root / "packs.js").write_text(
     "// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성\nwindow.VOCA_BUILD = '" + __import__("datetime").datetime.now().strftime("%m%d.%H%M") + "';\nwindow.VOCA_PACKS = "
     + json.dumps(packs, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
 
-html = (root / "index.html").read_text(encoding="utf-8")
+build = __import__("datetime").datetime.now().strftime("%m%d.%H%M")
+idx = root / "index.html"
+html = re.sub(r'\?v=[^"]*"', f'?v={build}"', idx.read_text(encoding="utf-8"))
+idx.write_text(html, encoding="utf-8")
 eng = (root / "engine.js").read_text(encoding="utf-8")
 pk = (root / "packs.js").read_text(encoding="utf-8")
-bundled = html.replace('<script src="engine.js"></script>', "<script>\n" + eng + "\n</script>") \
-              .replace('<script src="packs.js"></script>', "<script>\n" + pk + "\n</script>")
-assert 'src="engine.js"' not in bundled and 'src="packs.js"' not in bundled
+bundled = re.sub(r'<script src="engine\.js[^"]*"></script>', lambda _: "<script>\n" + eng + "\n</script>", html)
+bundled = re.sub(r'<script src="packs\.js[^"]*"></script>', lambda _: "<script>\n" + pk + "\n</script>", bundled)
+assert 'src="engine.js' not in bundled and 'src="packs.js' not in bundled
 (root / "dist").mkdir(exist_ok=True)
 (root / "dist" / "voca-game.html").write_text(bundled, encoding="utf-8")
 m = re.search(r"<head>(.*?)</head>\s*<body>(.*?)</body>", bundled, re.S)
