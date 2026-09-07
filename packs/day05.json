@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day05",
+  "title": "능률VOCA 중등 필수 [2025] DAY 05",
+  "source": "프렙업 영어학원 프린트 (PAGE 5/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "repair",
+      "ko": "[동] 고치다, 수리하다 / [명] 수리, 보수",
+      "ipa": "/rɪˈper/",
+      "stress": "re-PAIR",
+      "emoji": "🔧🛠️",
+      "ex": "My dad will repair my broken bike today.",
+      "ex_ko": "아빠가 오늘 내 고장 난 자전거를 고쳐 주실 거야.",
+      "mnemonic": "'리페어' — 페어(pair, 짝)를 다시(re) 맞춘다. 망가진 걸 원래 짝처럼 되돌리는 게 수리."
+    },
+    {
+      "n": 2,
+      "en": "instant",
+      "ko": "[형] 1. 즉각적인, 당장의 2. 즉석의, 인스턴트의 / [명] 순간",
+      "ipa": "/ˈɪnstənt/",
+      "stress": "IN-stant",
+      "emoji": "⚡🍜",
+      "ex": "I made instant noodles for a quick snack.",
+      "ex_ko": "간단히 먹으려고 인스턴트 라면을 끓였어.",
+      "mnemonic": "인스턴트 라면! 3분이면 바로 나오는 즉석. 그래서 '즉각적인, 순간'."
+    },
+    {
+      "n": 3,
+      "en": "advise",
+      "ko": "[동] 충고하다, 조언하다",
+      "ipa": "/ədˈvaɪz/",
+      "stress": "ad-VISE",
+      "emoji": "💬🧑‍🏫",
+      "ex": "My teacher advised me to study every day.",
+      "ex_ko": "선생님이 나에게 매일 공부하라고 조언하셨어.",
+      "mnemonic": "ad(~에게) + vise(wise, 지혜). 지혜를 건네주는 게 충고·조언이에요."
+    },
+    {
+      "n": 4,
+      "en": "totally",
+      "ko": "[부] 완전히, 전적으로",
+      "ipa": "/ˈtoʊtəli/",
+      "stress": "TO-tal-ly",
+      "emoji": "💯🙌",
+      "ex": "I totally forgot about the math test.",
+      "ex_ko": "나 수학 시험을 완전히 까먹었어.",
+      "mnemonic": "토탈(total, 전체)에 -ly가 붙어 '전체적으로 = 완전히'. 토탈 합계니까 하나도 안 빼고."
+    },
+    {
+      "n": 5,
+      "en": "freezing",
+      "ko": "[형] 몹시 추운[차가운]",
+      "ipa": "/ˈfriːzɪŋ/",
+      "stress": "FREE-zing",
+      "emoji": "🥶❄️",
+      "ex": "It's freezing outside, so wear your coat.",
+      "ex_ko": "밖이 엄청 추우니까 코트 입어.",
+      "mnemonic": "'프리징' — 프리저(냉동실) 안처럼 꽁꽁 어는 추위. freeze(얼다)+ing."
+    },
+    {
+      "n": 6,
+      "en": "blank",
+      "ko": "[형] 공백의, 빈 / [명] 빈칸, 공란",
+      "ipa": "/blæŋk/",
+      "stress": "BLANK",
+      "emoji": "📄⬜",
+      "ex": "Please fill in the blank with a word.",
+      "ex_ko": "빈칸에 단어를 채워 넣으세요.",
+      "mnemonic": "'블랭크' — 시험지 빈칸 보면 머리가 '블랭!' 하고 하얘진다. 그게 공백."
+    },
+    {
+      "n": 7,
+      "en": "important",
+      "ko": "[형] 중요한",
+      "ipa": "/ɪmˈpɔːrtnt/",
+      "stress": "im-POR-tant",
+      "emoji": "⭐❗",
+      "ex": "This test is very important for my grade.",
+      "ex_ko": "이 시험은 내 성적에 아주 중요해.",
+      "mnemonic": "항구(port)로 안으로(im) 들여오는 물건은 귀한 것. 수입할 만큼 값진 = 중요한."
+    },
+    {
+      "n": 8,
+      "en": "teen",
+      "ko": "[명] 십 대 / [형] 십 대의",
+      "ipa": "/tiːn/",
+      "stress": "TEEN",
+      "emoji": "🧑‍🎤🎒",
+      "ex": "Many teens love listening to K-pop music.",
+      "ex_ko": "많은 십 대들이 케이팝 음악 듣는 걸 좋아해.",
+      "mnemonic": "thirTEEN(13)부터 nineTEEN(19)까지 뒤에 붙는 -teen. 그 나이대가 바로 십 대."
+    },
+    {
+      "n": 9,
+      "en": "weigh",
+      "ko": "[동] 1. 무게가 …이다 2. 무게를 재다[달다]",
+      "ipa": "/weɪ/",
+      "stress": "WEIGH",
+      "emoji": "⚖️",
+      "ex": "How much does your backpack weigh?",
+      "ex_ko": "네 가방 무게가 얼마나 나가?",
+      "mnemonic": "\"웨이\" 하고 저울 위에 올리면 무게가 나온다. 헬스장 웨이트(weight)도 같은 뿌리."
+    },
+    {
+      "n": 10,
+      "en": "regularly",
+      "ko": "[부] 정기적으로, 규칙적으로",
+      "ipa": "/ˈreɡjələrli/",
+      "stress": "RE-gu-lar-ly",
+      "emoji": "📅⏰",
+      "ex": "I exercise regularly after school.",
+      "ex_ko": "나는 방과 후에 규칙적으로 운동해.",
+      "mnemonic": "규칙(rule)을 뜻하는 regular에 -ly가 붙어 '규칙적으로'. 달력에 동그라미 치듯 정기적으로."
+    },
+    {
+      "n": 11,
+      "en": "law",
+      "ko": "[명] 법, 법률",
+      "ipa": "/lɔː/",
+      "stress": "LAW",
+      "emoji": "⚖️📜",
+      "ex": "Everyone must follow the law.",
+      "ex_ko": "모두가 법을 지켜야 해.",
+      "mnemonic": "\"로\"—법대를 '로스쿨(law school)'이라고 하지. 로스쿨 = 법 배우는 학교."
+    },
+    {
+      "n": 12,
+      "en": "rub",
+      "ko": "[동] 비비다, 문지르다",
+      "ipa": "/rʌb/",
+      "stress": "RUB",
+      "emoji": "🤲✨",
+      "ex": "She rubbed her eyes and yawned.",
+      "ex_ko": "그녀는 눈을 비비며 하품했어.",
+      "mnemonic": "\"럽\" 하고 손을 문지르면 러브(love) 하트가 나올 것 같다. 램프를 rub하면 지니 등장."
+    },
+    {
+      "n": 13,
+      "en": "pour",
+      "ko": "[동] 1. 붓다, 따르다 2. (비가) 쏟아지다, 퍼붓다",
+      "ipa": "/pɔːr/",
+      "stress": "POUR",
+      "emoji": "🫗🌧️",
+      "ex": "Can you pour me some water?",
+      "ex_ko": "물 좀 따라 줄래?",
+      "mnemonic": "\"포~\" 하고 물줄기가 쏟아진다. 비가 퍼부을 때도 pour."
+    },
+    {
+      "n": 14,
+      "en": "yet",
+      "ko": "[부] 1. [부정문] 아직 2. [의문문] 벌써",
+      "ipa": "/jet/",
+      "stress": "YET",
+      "emoji": "⏳❓",
+      "ex": "I haven't finished my homework yet.",
+      "ex_ko": "나 아직 숙제 다 못 끝냈어.",
+      "mnemonic": "\"옛?\"—아직 안 했냐고 물을 때 쓰는 말. 부정문엔 '아직', 의문문엔 '벌써'."
+    },
+    {
+      "n": 15,
+      "en": "skill",
+      "ko": "[명] 1. 기량, 솜씨 2. 기술",
+      "ipa": "/skɪl/",
+      "stress": "SKILL",
+      "emoji": "🎯🛠️",
+      "ex": "Cooking is a useful skill to have.",
+      "ex_ko": "요리는 갖고 있으면 유용한 기술이야.",
+      "mnemonic": "게임에서 '스킬 쓴다'고 하지. 스킬 = 갈고닦은 솜씨·기술."
+    },
+    {
+      "n": 16,
+      "en": "neat",
+      "ko": "[형] 정돈된, 단정한",
+      "ipa": "/niːt/",
+      "stress": "NEAT",
+      "emoji": "🧹📚",
+      "ex": "Your room looks really neat today.",
+      "ex_ko": "네 방 오늘 정말 깔끔해 보인다.",
+      "mnemonic": "\"니트\" 스웨터를 곱게 개어 놓은 모습. 반듯하고 단정한 상태가 neat."
+    },
+    {
+      "n": 17,
+      "en": "ache",
+      "ko": "[동] 아프다, 쑤시다 / [명] 아픔, 통증",
+      "ipa": "/eɪk/",
+      "stress": "ACHE",
+      "emoji": "🤕😣",
+      "ex": "My legs ache after playing soccer all day.",
+      "ex_ko": "하루 종일 축구하고 나니 다리가 쑤셔요.",
+      "mnemonic": "'에이크(에이 크다!)' 하고 아파서 소리치는 모습. 몸이 쑤실 때 나는 신음이에요."
+    },
+    {
+      "n": 18,
+      "en": "patient",
+      "ko": "[명] 환자 / [형] 인내심[참을성] 있는",
+      "ipa": "/ˈpeɪʃənt/",
+      "stress": "PA-tient",
+      "emoji": "🏥🧑‍⚕️😌",
+      "ex": "The doctor is very patient with young patients.",
+      "ex_ko": "그 의사 선생님은 어린 환자들에게 아주 인내심이 많아요.",
+      "mnemonic": "'페이션트'는 아파도 참는 사람. 참는 사람이 곧 '환자'이자 '참을성 있는' 이에요."
+    },
+    {
+      "n": 19,
+      "en": "elderly",
+      "ko": "[형] 나이가 지긋한, 연세가 드신",
+      "ipa": "/ˈeldərli/",
+      "stress": "EL-der-ly",
+      "emoji": "👴👵",
+      "ex": "An elderly man sat next to me on the bus.",
+      "ex_ko": "버스에서 나이 지긋한 할아버지가 제 옆에 앉으셨어요.",
+      "mnemonic": "elder(연장자) + ly. '엘더'는 나보다 오래 산 어른, 그래서 연세 드신."
+    },
+    {
+      "n": 20,
+      "en": "wipe",
+      "ko": "[동] 닦다, 훔치다",
+      "ipa": "/waɪp/",
+      "stress": "WIPE",
+      "emoji": "🧽🧻",
+      "ex": "Please wipe the table before we eat.",
+      "ex_ko": "밥 먹기 전에 식탁 좀 닦아 줘.",
+      "mnemonic": "'와입~' 하고 물티슈로 쓱 닦는 소리. 와이퍼가 유리창 닦는 거 생각하면 돼요."
+    },
+    {
+      "n": 21,
+      "en": "punch",
+      "ko": "[동] 1. 주먹으로 치다[때리다] 2. 구멍을 뚫다",
+      "ipa": "/pʌntʃ/",
+      "stress": "PUNCH",
+      "emoji": "👊🥊",
+      "ex": "He tried to punch the wall in anger.",
+      "ex_ko": "그는 화가 나서 벽을 주먹으로 치려고 했어요.",
+      "mnemonic": "'펀치!' 주먹으로 퍽 때리기. 펀치로 종이에 구멍 뚫는 것도 같은 단어예요."
+    },
+    {
+      "n": 22,
+      "en": "take out",
+      "ko": "1. …을 꺼내다 2. …을 데리고 나가다",
+      "ipa": "/teɪk aʊt/",
+      "stress": "TAKE out",
+      "emoji": "🎒📤🐕",
+      "ex": "Take out your notebook and write your name.",
+      "ex_ko": "공책을 꺼내서 이름을 쓰세요.",
+      "mnemonic": "take(가지다) + out(밖으로) = 밖으로 가지고 나오다, 즉 꺼내다."
+    },
+    {
+      "n": 23,
+      "en": "get out of",
+      "ko": "1. (장소)에서 나가다 2. (차)에서 내리다",
+      "ipa": "/ɡet aʊt əv/",
+      "stress": "GET out of",
+      "emoji": "🚗🚪🚶",
+      "ex": "Get out of the car and close the door.",
+      "ex_ko": "차에서 내려서 문을 닫아.",
+      "mnemonic": "get(움직이다) + out of(~밖으로) = ~에서 빠져나오다, 차에서 내리다."
+    },
+    {
+      "n": 24,
+      "en": "plenty of",
+      "ko": "많은, 충분한",
+      "ipa": "/ˈplenti əv/",
+      "stress": "PLEN-ty of",
+      "emoji": "🍎🍎🍎",
+      "ex": "We have plenty of time before the movie starts.",
+      "ex_ko": "영화 시작 전까지 시간이 충분히 많아요.",
+      "mnemonic": "'플렌티'는 full(가득)과 뿌리가 같아요. 넘칠 만큼 많고 충분한 것."
+    }
+  ]
+}

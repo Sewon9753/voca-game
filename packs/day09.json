@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day09",
+  "title": "능률VOCA 중등 필수 [2025] DAY 09",
+  "source": "프렙업 영어학원 프린트 (PAGE 9/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "member",
+      "ko": "[명] 회원, 일원",
+      "ipa": "/ˈmembər/",
+      "stress": "MEM-ber",
+      "emoji": "👥🎫",
+      "ex": "She is a member of our school band.",
+      "ex_ko": "그녀는 우리 학교 밴드의 회원이야.",
+      "mnemonic": "'멤버'는 이미 우리말로 쓰죠. 동아리 멤버 = 그 모임의 회원, 일원."
+    },
+    {
+      "n": 2,
+      "en": "serious",
+      "ko": "[형] 1. (상태, 정도가) 심각한 2. 진지한",
+      "ipa": "/ˈsɪriəs/",
+      "stress": "SE-ri-ous",
+      "emoji": "😐🚨",
+      "ex": "Don't laugh, this is a serious problem.",
+      "ex_ko": "웃지 마, 이건 심각한 문제야.",
+      "mnemonic": "'시리어스'한 얼굴 = 웃음기 없이 굳은 표정. 심각하고 진지한 상태예요."
+    },
+    {
+      "n": 3,
+      "en": "afraid",
+      "ko": "[형] 1. 두려워하는 2. 걱정하는",
+      "ipa": "/əˈfreɪd/",
+      "stress": "a-FRAID",
+      "emoji": "😨🕷️",
+      "ex": "I'm afraid of spiders in the bathroom.",
+      "ex_ko": "난 욕실에 있는 거미가 무서워.",
+      "mnemonic": "a + fraid(fright, 공포). 공포에 빠진 상태라서 두려워하는 거예요."
+    },
+    {
+      "n": 4,
+      "en": "dessert",
+      "ko": "[명] 디저트, 후식",
+      "ipa": "/dɪˈzɜːrt/",
+      "stress": "de-SSERT",
+      "emoji": "🍰🍨",
+      "ex": "What's for dessert after dinner tonight?",
+      "ex_ko": "오늘 저녁 먹고 디저트는 뭐야?",
+      "mnemonic": "s가 두 개인 건 디저트는 한 번 더(second) 먹고 싶으니까! 사막(desert)은 s 하나."
+    },
+    {
+      "n": 5,
+      "en": "toothache",
+      "ko": "[명] 치통",
+      "ipa": "/ˈtuːθeɪk/",
+      "stress": "TOOTH-ache",
+      "emoji": "🦷😖",
+      "ex": "I have a toothache, so I can't eat.",
+      "ex_ko": "나 이가 아파서 못 먹겠어.",
+      "mnemonic": "tooth(이) + ache(아픔) = 치통. ache는 '에이크', 아파서 '에잇!' 소리."
+    },
+    {
+      "n": 6,
+      "en": "effect",
+      "ko": "[명] 1. 영향 2. 결과",
+      "ipa": "/ɪˈfekt/",
+      "stress": "e-FFECT",
+      "emoji": "🎬✨",
+      "ex": "The movie's special effects were really cool.",
+      "ex_ko": "그 영화의 특수 효과 정말 멋있었어.",
+      "mnemonic": "게임·영화의 '이펙트(효과)' 그대로예요. 원인 뒤에 따라오는 결과·영향."
+    },
+    {
+      "n": 7,
+      "en": "skillful",
+      "ko": "[형] 숙련된, 능숙한",
+      "ipa": "/ˈskɪlfl/",
+      "stress": "SKILL-ful",
+      "emoji": "🎯🛠️",
+      "ex": "He is a skillful player on our team.",
+      "ex_ko": "그는 우리 팀에서 능숙한 선수야.",
+      "mnemonic": "skill(기술) + full(가득) = 기술이 가득한, 즉 능숙한."
+    },
+    {
+      "n": 8,
+      "en": "silence",
+      "ko": "[명] 1. 고요, 정적 2. 침묵",
+      "ipa": "/ˈsaɪləns/",
+      "stress": "SI-lence",
+      "emoji": "🤫🔇",
+      "ex": "There was a long silence in the classroom.",
+      "ex_ko": "교실에 긴 침묵이 흘렀어.",
+      "mnemonic": "'사일런스'—폰의 사일런트 모드처럼 소리가 꺼진 상태, 고요·침묵."
+    },
+    {
+      "n": 9,
+      "en": "stomach",
+      "ko": "[명] [소화기관] 위, 배",
+      "ipa": "/ˈstʌmək/",
+      "stress": "STOM-ach",
+      "emoji": "🫃🍽️",
+      "ex": "My stomach hurts after eating too much pizza.",
+      "ex_ko": "피자를 너무 많이 먹었더니 배가 아파.",
+      "mnemonic": "\"스터먹\" — 스트레스 받으면 먹고, 그게 다 위로 간다고 기억하세요."
+    },
+    {
+      "n": 10,
+      "en": "print",
+      "ko": "[동] 1. 인쇄[출력]하다 2. 출판[발행]하다",
+      "ipa": "/prɪnt/",
+      "stress": "PRINT",
+      "emoji": "🖨️📄",
+      "ex": "Can you print this page for me, please?",
+      "ex_ko": "이 페이지 좀 출력해 줄래?",
+      "mnemonic": "프린터가 종이를 뽑아내는 그 동작이 바로 print입니다."
+    },
+    {
+      "n": 11,
+      "en": "safely",
+      "ko": "[부] 안전하게, 무사히",
+      "ipa": "/ˈseɪfli/",
+      "stress": "SAFE-ly",
+      "emoji": "🦺✅",
+      "ex": "We arrived home safely before the storm started.",
+      "ex_ko": "우리는 폭풍이 오기 전에 무사히 집에 도착했어.",
+      "mnemonic": "safe(안전한) + ly(하게) = 안전하게. 금고(safe)처럼 무사히요."
+    },
+    {
+      "n": 12,
+      "en": "importance",
+      "ko": "[명] 중요성",
+      "ipa": "/ɪmˈpɔːrtəns/",
+      "stress": "im-POR-tance",
+      "emoji": "⭐❗",
+      "ex": "My teacher talked about the importance of sleep.",
+      "ex_ko": "선생님이 잠의 중요성에 대해 말씀하셨어.",
+      "mnemonic": "important(중요한)에 -ance 붙여 명사로. \"임포턴스\" = 중요함."
+    },
+    {
+      "n": 13,
+      "en": "review",
+      "ko": "[동] 1. 검토하다 2. 평론[비평]하다 3. 복습하다 / [명] 1. 검토 2. 평론[비평] 3. 복습",
+      "ipa": "/rɪˈvjuː/",
+      "stress": "re-VIEW",
+      "emoji": "🔁👀📝",
+      "ex": "I need to review my notes before the test.",
+      "ex_ko": "시험 전에 필기를 복습해야 해.",
+      "mnemonic": "re(다시) + view(보다) = 다시 보다 → 복습, 검토."
+    },
+    {
+      "n": 14,
+      "en": "strange",
+      "ko": "[형] 1. 이상한 2. 낯선",
+      "ipa": "/streɪndʒ/",
+      "stress": "STRANGE",
+      "emoji": "🤨👽",
+      "ex": "That's a strange noise coming from upstairs.",
+      "ex_ko": "위층에서 이상한 소리가 나는데.",
+      "mnemonic": "\"스트레인지\" — 스트레스 받게 낯설고 이상한 느낌으로 외우세요."
+    },
+    {
+      "n": 15,
+      "en": "burn",
+      "ko": "[동] (불에) 타다, 태우다",
+      "ipa": "/bɜːrn/",
+      "stress": "BURN",
+      "emoji": "🔥",
+      "ex": "Be careful, don't burn your hand on the pan!",
+      "ex_ko": "조심해, 팬에 손 데지 마!",
+      "mnemonic": "\"번!\" 하고 불이 번지는 소리 — 타다, 태우다."
+    },
+    {
+      "n": 16,
+      "en": "talented",
+      "ko": "[형] 재능 있는, 유능한",
+      "ipa": "/ˈtæləntɪd/",
+      "stress": "TAL-ent-ed",
+      "emoji": "🎤🌟",
+      "ex": "She is a talented singer in our school band.",
+      "ex_ko": "그 애는 우리 학교 밴드의 재능 있는 가수야.",
+      "mnemonic": "탤런트(talent)는 재능 있는 사람. 거기에 -ed 붙여 \"재능 있는\"."
+    },
+    {
+      "n": 17,
+      "en": "bare",
+      "ko": "[형] 벌거벗은, 살을 드러낸",
+      "ipa": "/ber/",
+      "stress": "BARE",
+      "emoji": "🦶🌳",
+      "ex": "Don't walk on the hot sand with bare feet.",
+      "ex_ko": "뜨거운 모래 위를 맨발로 걷지 마.",
+      "mnemonic": "곰(bear)이 털 없이 '베어'진 모습 — 벌거벗은 상태. 소리는 곰과 똑같아요."
+    },
+    {
+      "n": 18,
+      "en": "housework",
+      "ko": "[명] 집안일, 가사",
+      "ipa": "/ˈhaʊsˌwɜːrk/",
+      "stress": "HOUSE-work",
+      "emoji": "🧹🧺🏠",
+      "ex": "I have to do the housework before dinner.",
+      "ex_ko": "나 저녁 먹기 전에 집안일 해야 해.",
+      "mnemonic": "house(집) + work(일) = 집안일. 숙제는 homework, 집안일은 housework!"
+    },
+    {
+      "n": 19,
+      "en": "however",
+      "ko": "[부] 그러나, 그렇지만",
+      "ipa": "/haʊˈevər/",
+      "stress": "how-EV-er",
+      "emoji": "🔄🤔",
+      "ex": "I studied hard. However, I failed the test.",
+      "ex_ko": "나 열심히 공부했어. 그러나 시험을 망쳤어.",
+      "mnemonic": "how(어떻게) + ever(도대체) — '아무리 그래도'가 '그러나'로. 앞말을 뒤집는 신호."
+    },
+    {
+      "n": 20,
+      "en": "accept",
+      "ko": "[동] 받아들이다, 수락하다",
+      "ipa": "/əkˈsept/",
+      "stress": "ac-CEPT",
+      "emoji": "🤝🎁✅",
+      "ex": "She decided to accept his apology.",
+      "ex_ko": "그녀는 그의 사과를 받아들이기로 했어.",
+      "mnemonic": "ac(~에게) + cept(잡다). 내미는 걸 손으로 잡아 받아들이는 장면이에요."
+    },
+    {
+      "n": 21,
+      "en": "mark",
+      "ko": "[명] 1. 자국, 얼룩 2. 표시 / [동] 표시하다",
+      "ipa": "/mɑːrk/",
+      "stress": "MARK",
+      "emoji": "🖊️🔵",
+      "ex": "There's a dirty mark on your white shirt.",
+      "ex_ko": "네 흰 셔츠에 더러운 얼룩이 있어.",
+      "mnemonic": "매직으로 '마크' 찍기 — 찍으면 표시, 남으면 자국. 마크 표시가 곧 얼룩."
+    },
+    {
+      "n": 22,
+      "en": "not ... anymore",
+      "ko": "더 이상 … 않다",
+      "ipa": "/nɑːt ˌeniˈmɔːr/",
+      "stress": "NOT ... an-y-MORE",
+      "emoji": "🚫⏹️",
+      "ex": "I don't play that game anymore.",
+      "ex_ko": "나 그 게임 더 이상 안 해.",
+      "mnemonic": "not(안) + any more(더) = '더는 안'. 문장 맨 끝에 붙여서 '이제 끝!'을 표시해요."
+    },
+    {
+      "n": 23,
+      "en": "pass through",
+      "ko": "지나가다, 통과하다",
+      "ipa": "/pæs θruː/",
+      "stress": "PASS through",
+      "emoji": "🚶🚪➡️",
+      "ex": "The train passes through our town every hour.",
+      "ex_ko": "그 기차는 한 시간마다 우리 마을을 지나가.",
+      "mnemonic": "pass(지나가다) + through(관통) = 뚫고 지나가다. 터널을 통과하는 기차를 떠올려요."
+    },
+    {
+      "n": 24,
+      "en": "in fact",
+      "ko": "사실은",
+      "ipa": "/ɪn fækt/",
+      "stress": "in FACT",
+      "emoji": "💡🗣️",
+      "ex": "He looks young. In fact, he's forty.",
+      "ex_ko": "그는 어려 보여. 사실은 마흔이야.",
+      "mnemonic": "fact(사실) 안으로 들어가면 '사실은'. 겉모습 말한 뒤 진짜를 밝힐 때 써요."
+    }
+  ]
+}

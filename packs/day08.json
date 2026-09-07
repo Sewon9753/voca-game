@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day08",
+  "title": "능률VOCA 중등 필수 [2025] DAY 08",
+  "source": "프렙업 영어학원 프린트 (PAGE 8/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "tear",
+      "ko": "[명] 눈물 / [동] 찢다, 찢어지다",
+      "ipa": "/tɪr/",
+      "stress": "TEAR",
+      "emoji": "😢💧",
+      "ex": "A tear rolled down her cheek slowly.",
+      "ex_ko": "눈물 한 방울이 그녀의 뺨을 타고 천천히 흘렀다.",
+      "mnemonic": "티어 나게 울면 눈물! 찢을 때는 '테어' 하고 종이가 찢어지는 소리."
+    },
+    {
+      "n": 2,
+      "en": "gallery",
+      "ko": "[명] 미술관",
+      "ipa": "/ˈɡæləri/",
+      "stress": "GAL-ler-y",
+      "emoji": "🖼️🏛️",
+      "ex": "We visited an art gallery on Sunday.",
+      "ex_ko": "우리는 일요일에 미술관에 갔다.",
+      "mnemonic": "'갤러리'는 우리도 그대로 쓰죠. 그림 걸어놓고 구경하는 곳!"
+    },
+    {
+      "n": 3,
+      "en": "result",
+      "ko": "[명] 결과 / [동] (…의 결과로) 발생하다, 생기다",
+      "ipa": "/rɪˈzʌlt/",
+      "stress": "re-SULT",
+      "emoji": "📊✅",
+      "ex": "I'm nervous about my test results today.",
+      "ex_ko": "오늘 시험 결과 때문에 긴장돼.",
+      "mnemonic": "'리설트' — 게임 끝나면 뜨는 RESULT 화면. 다 끝난 뒤 나오는 게 결과."
+    },
+    {
+      "n": 4,
+      "en": "upstairs",
+      "ko": "[부] 위층에[으로] / [명] 위층",
+      "ipa": "/ˌʌpˈsterz/",
+      "stress": "up-STAIRS",
+      "emoji": "🪜⬆️🏠",
+      "ex": "My room is upstairs next to the bathroom.",
+      "ex_ko": "내 방은 위층 화장실 옆에 있어.",
+      "mnemonic": "up(위로) + stairs(계단) = 계단 위로, 즉 위층!"
+    },
+    {
+      "n": 5,
+      "en": "living",
+      "ko": "[형] 살아 있는 / [명] 생활비, 생계 수단",
+      "ipa": "/ˈlɪvɪŋ/",
+      "stress": "LIV-ing",
+      "emoji": "🌱💰",
+      "ex": "My uncle makes a living by fixing cars.",
+      "ex_ko": "우리 삼촌은 자동차를 고쳐서 생계를 유지하신다.",
+      "mnemonic": "live(살다)+ing → 살아 있는. 살려면 돈이 필요하니 '생계'도 됨."
+    },
+    {
+      "n": 6,
+      "en": "report",
+      "ko": "[명] 보고(서) / [동] 1. 보고하다, 발표하다 2. 보도하다",
+      "ipa": "/rɪˈpɔrt/",
+      "stress": "re-PORT",
+      "emoji": "📝📢",
+      "ex": "I have to write a book report tonight.",
+      "ex_ko": "나 오늘 밤에 독후감 써야 해.",
+      "mnemonic": "'리포트' 그대로 쓰죠! 조사한 걸 다시(re) 날라다(port) 알리는 것."
+    },
+    {
+      "n": 7,
+      "en": "produce",
+      "ko": "[동] 1. (곡물 등을) 생산하다 2. (상품 등을) 제조[생산]하다",
+      "ipa": "/prəˈdus/",
+      "stress": "pro-DUCE",
+      "emoji": "🏭🌾",
+      "ex": "This factory produces about a thousand phones daily.",
+      "ex_ko": "이 공장은 하루에 약 천 대의 휴대폰을 생산한다.",
+      "mnemonic": "'프로듀서'가 뭘 하죠? 노래·방송을 만들어내는 사람. produce는 만들어내다!"
+    },
+    {
+      "n": 8,
+      "en": "excited",
+      "ko": "[형] 신이 난, 흥분한",
+      "ipa": "/ɪkˈsaɪtɪd/",
+      "stress": "ex-CI-ted",
+      "emoji": "🤩🎉",
+      "ex": "I'm so excited about the school trip tomorrow.",
+      "ex_ko": "나 내일 수학여행 때문에 너무 신나.",
+      "mnemonic": "'익사이팅'한 순간! 심장이 '싸이(cite)~' 하고 뛰며 신나는 상태."
+    },
+    {
+      "n": 9,
+      "en": "gather",
+      "ko": "[동] 1. (사람들이) 모이다, (물건 등을) 모으다 2. (정보 등을) 수집하다",
+      "ipa": "/ˈɡæðər/",
+      "stress": "GA-ther",
+      "emoji": "👥🧺",
+      "ex": "Let's gather in the gym after lunch.",
+      "ex_ko": "점심 먹고 체육관에 모이자.",
+      "mnemonic": "\"개더\" 개들이 더 모인다! 사람도 물건도 한곳에 모으는 거예요."
+    },
+    {
+      "n": 10,
+      "en": "cause",
+      "ko": "[명] 원인 / [동] 일으키다, …의 원인이 되다",
+      "ipa": "/kɔːz/",
+      "stress": "CAUSE",
+      "emoji": "🔥➡️💨",
+      "ex": "The heavy rain caused a big accident.",
+      "ex_ko": "폭우가 큰 사고를 일으켰어.",
+      "mnemonic": "'코즈'는 because 안에 들어 있는 cause! 결과를 일으키는 원인이에요."
+    },
+    {
+      "n": 11,
+      "en": "interested",
+      "ko": "[형] 흥미 있는, 관심 있는",
+      "ipa": "/ˈɪntrəstɪd/",
+      "stress": "IN-ter-est-ed",
+      "emoji": "🤩👀",
+      "ex": "I'm really interested in K-pop dance.",
+      "ex_ko": "난 케이팝 댄스에 정말 관심이 많아.",
+      "mnemonic": "interest(관심)에 -ed가 붙어 \"관심이 생긴 상태\". 사람이 흥미를 느낄 땐 -ed예요."
+    },
+    {
+      "n": 12,
+      "en": "actually",
+      "ko": "[부] 실제로, 정말로",
+      "ipa": "/ˈæktʃuəli/",
+      "stress": "AC-tu-al-ly",
+      "emoji": "💡✅",
+      "ex": "Actually, I already finished my homework.",
+      "ex_ko": "사실 나 숙제 벌써 다 했어.",
+      "mnemonic": "act(행동)+ually — 말이 아니라 실제 행동으로 그렇다는 뜻, \"사실은\"."
+    },
+    {
+      "n": 13,
+      "en": "talent",
+      "ko": "[명] (타고난) 재능, 재주",
+      "ipa": "/ˈtælənt/",
+      "stress": "TA-lent",
+      "emoji": "🎤🌟",
+      "ex": "She has a real talent for singing.",
+      "ex_ko": "걔는 노래에 진짜 재능이 있어.",
+      "mnemonic": "\"탤런트\"는 연기 재능을 타고난 사람이죠. 타고난 재능이 talent예요."
+    },
+    {
+      "n": 14,
+      "en": "greet",
+      "ko": "[동] 맞이하다, 환영하다",
+      "ipa": "/ɡriːt/",
+      "stress": "GREET",
+      "emoji": "🙋👋",
+      "ex": "My dog greets me at the door.",
+      "ex_ko": "우리 개가 문 앞에서 날 반겨줘.",
+      "mnemonic": "\"그리트\" 그리웠던 사람을 만나 반갑게 맞이한다!"
+    },
+    {
+      "n": 15,
+      "en": "lane",
+      "ko": "[명] 1. 좁은 길, 도로 2. 차선 3. (육상, 수영 대회 등의) 레인",
+      "ipa": "/leɪn/",
+      "stress": "LANE",
+      "emoji": "🛣️🏊",
+      "ex": "The car moved into the fast lane.",
+      "ex_ko": "그 차가 추월 차선으로 옮겨 갔어.",
+      "mnemonic": "\"레인\" 수영장 레인처럼 길게 나뉜 좁은 길·차선이에요."
+    },
+    {
+      "n": 16,
+      "en": "stress",
+      "ko": "[명] 1. 스트레스, 압박 2. 강조 / [동] 강조하다",
+      "ipa": "/stres/",
+      "stress": "STRESS",
+      "emoji": "😩📌",
+      "ex": "Exams give me a lot of stress.",
+      "ex_ko": "시험은 나에게 스트레스를 많이 줘.",
+      "mnemonic": "\"스트레스\" 그대로! 꾹 누르는 압박, 말할 때 꾹 눌러 강조하기도 해요."
+    },
+    {
+      "n": 17,
+      "en": "later",
+      "ko": "[부] 후에, 나중에 / [형] 더 늦은, 더 나중의",
+      "ipa": "/ˈleɪtər/",
+      "stress": "LA-ter",
+      "emoji": "⏰➡️",
+      "ex": "I'll call you later tonight, okay?",
+      "ex_ko": "오늘 밤 이따가 전화할게, 알았지?",
+      "mnemonic": "late(늦은)에 -er이 붙어 '더 늦게', 즉 '나중에'가 돼요."
+    },
+    {
+      "n": 18,
+      "en": "create",
+      "ko": "[동] 창조하다, 만들다",
+      "ipa": "/kriˈeɪt/",
+      "stress": "cre-ATE",
+      "emoji": "🎨✨",
+      "ex": "Let's create a new game together this weekend.",
+      "ex_ko": "이번 주말에 같이 새 게임을 만들어 보자.",
+      "mnemonic": "'크리에이터'는 영상을 만드는 사람이죠. create = 만들다, 창조하다."
+    },
+    {
+      "n": 19,
+      "en": "flat",
+      "ko": "[형] 1. 평평한 2. (타이어 등이) 바람이 빠진, 펑크가 난",
+      "ipa": "/flæt/",
+      "stress": "FLAT",
+      "emoji": "🛣️🛞",
+      "ex": "My bike tire is flat again today.",
+      "ex_ko": "내 자전거 타이어가 오늘 또 펑크 났어.",
+      "mnemonic": "'플랫 슈즈'는 굽 없이 평평한 신발! 바람 빠져 납작해진 타이어도 flat."
+    },
+    {
+      "n": 20,
+      "en": "beat",
+      "ko": "[동] 1. 때리다, 두드리다 2. 이기다",
+      "ipa": "/biːt/",
+      "stress": "BEAT",
+      "emoji": "🥁🏆",
+      "ex": "We beat their team by three points.",
+      "ex_ko": "우리가 그 팀을 3점 차로 이겼어.",
+      "mnemonic": "노래 '비트'는 북을 두드리는 소리! 두드리다 → 상대를 눌러 이기다."
+    },
+    {
+      "n": 21,
+      "en": "plus",
+      "ko": "[전] 1. 더하기 2. 게다가, … 뿐만 아니라",
+      "ipa": "/plʌs/",
+      "stress": "PLUS",
+      "emoji": "➕😀",
+      "ex": "Two plus three is five, plus it's easy.",
+      "ex_ko": "2 더하기 3은 5고, 게다가 쉬워.",
+      "mnemonic": "'플러스' 기호 그대로 더하기. 문장 앞에 쓰면 '게다가'라는 뜻이에요."
+    },
+    {
+      "n": 22,
+      "en": "make noise",
+      "ko": "소란을 피우다, 떠들다",
+      "ipa": "/meɪk nɔɪz/",
+      "stress": "make NOISE",
+      "emoji": "📢🙉",
+      "ex": "Please don't make noise during the movie.",
+      "ex_ko": "영화 보는 동안 떠들지 말아 줘.",
+      "mnemonic": "noise(소음)를 make(만들다) → 소음을 만들다 = 떠들다."
+    },
+    {
+      "n": 23,
+      "en": "hand in hand",
+      "ko": "서로 손을 잡고",
+      "ipa": "/hænd ɪn hænd/",
+      "stress": "HAND in hand",
+      "emoji": "🤝👫",
+      "ex": "They walked hand in hand along the beach.",
+      "ex_ko": "그들은 해변을 따라 손을 잡고 걸었다.",
+      "mnemonic": "손(hand) 안에(in) 손(hand) — 서로 손을 맞잡은 그림 그대로예요."
+    },
+    {
+      "n": 24,
+      "en": "take care of",
+      "ko": "…을 돌보다",
+      "ipa": "/teɪk kɛr ʌv/",
+      "stress": "take CARE of",
+      "emoji": "🧸👶",
+      "ex": "Can you take care of my dog tomorrow?",
+      "ex_ko": "내일 우리 강아지 좀 돌봐 줄 수 있어?",
+      "mnemonic": "care(돌봄)를 take(맡다) → 누군가를 맡아 돌보다."
+    }
+  ]
+}
