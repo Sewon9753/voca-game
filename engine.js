@@ -159,5 +159,29 @@
     ].filter(Boolean).join('\n');
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult };
+  // 완료 횟수 원장 — { [팩키]: { test: n, study: n, last: 'YYYY-MM-DD' } } (입력 불변)
+  function bumpDone(done, key, kind, date) {
+    const d = Object.assign({}, done || {});
+    const cur = Object.assign({ test: 0, study: 0, last: '' }, d[key]);
+    cur[kind] = (cur[kind] || 0) + 1;
+    cur.last = date;
+    d[key] = cur;
+    return d;
+  }
+  // 예전 세션 기록(제목만 있음)으로 테스트 완료 횟수 1회 백필
+  function doneFromSessions(sessions, titleToKey) {
+    let d = {};
+    (sessions || []).forEach((s) => { const k = titleToKey[s.title]; if (k) d = bumpDone(d, k, 'test', s.date || ''); });
+    return d;
+  }
+  function doneLabel(rec) {
+    if (!rec || (!rec.test && !rec.study)) return '';
+    const parts = [];
+    if (rec.test) parts.push(`✅ 테스트 ${rec.test}회`);
+    if (rec.study) parts.push(`🃏 카드 ${rec.study}회`);
+    if (rec.last) { const [, m, dd] = rec.last.split('-'); parts.push(`최근 ${+m}/${+dd}`); }
+    return parts.join(' · ');
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult, bumpDone, doneFromSessions, doneLabel };
 });

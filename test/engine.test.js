@@ -148,3 +148,26 @@ test('formatResult without name and with no misses', () => {
   assert.equal(txt.split('\n')[0], '[단어 게임 결과] D');
   assert.equal(txt.split('\n').pop(), '틀린 단어: 없음 (전부 한 번에 통과)');
 });
+
+test('bumpDone counts per pack and kind, keeps last date, never mutates input', () => {
+  const d0 = {};
+  const d1 = E.bumpDone(d0, 'day04', 'test', '2026-09-07');
+  const d2 = E.bumpDone(d1, 'day04', 'test', '2026-09-08');
+  const d3 = E.bumpDone(d2, 'day04', 'study', '2026-09-09');
+  assert.deepEqual(d0, {});
+  assert.deepEqual(d3.day04, { test: 2, study: 1, last: '2026-09-09' });
+  assert.equal(E.bumpDone(d3, 'day05', 'study', '2026-09-09').day05.test, 0);
+});
+
+test('doneFromSessions backfills test counts by title', () => {
+  const ss = [{ date: '2026-09-06', title: 'DAY 03' }, { date: '2026-09-07', title: 'DAY 03' }, { date: '2026-09-07', title: '없는 팩' }];
+  const d = E.doneFromSessions(ss, { 'DAY 03': 'day03' });
+  assert.deepEqual(d, { day03: { test: 2, study: 0, last: '2026-09-07' } });
+});
+
+test('doneLabel is empty at zero and lists only nonzero kinds', () => {
+  assert.equal(E.doneLabel(undefined), '');
+  assert.equal(E.doneLabel({ test: 0, study: 0, last: '' }), '');
+  assert.equal(E.doneLabel({ test: 3, study: 0, last: '2026-09-07' }), '✅ 테스트 3회 · 최근 9/7');
+  assert.equal(E.doneLabel({ test: 1, study: 2, last: '2026-09-07' }), '✅ 테스트 1회 · 🃏 카드 2회 · 최근 9/7');
+});

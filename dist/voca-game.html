@@ -28,6 +28,7 @@
   .screen.on { display: flex; }
   h1 { font-size: 1.6rem; margin: .4rem 0 1rem; }
   .sub { color: var(--muted); font-size: .9rem; }
+  .sub .done { color: var(--accent); font-weight: 700; }
   .list { display: flex; flex-direction: column; gap: .8rem; }
   .item { background: var(--card); border-radius: 1rem; padding: 1rem; display: flex; flex-direction: column; gap: .8rem; }
   .item b { font-size: 1.15rem; line-height: 1.3; }
@@ -358,13 +359,37 @@
     ].filter(Boolean).join('\n');
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult };
+  // 완료 횟수 원장 — { [팩키]: { test: n, study: n, last: 'YYYY-MM-DD' } } (입력 불변)
+  function bumpDone(done, key, kind, date) {
+    const d = Object.assign({}, done || {});
+    const cur = Object.assign({ test: 0, study: 0, last: '' }, d[key]);
+    cur[kind] = (cur[kind] || 0) + 1;
+    cur.last = date;
+    d[key] = cur;
+    return d;
+  }
+  // 예전 세션 기록(제목만 있음)으로 테스트 완료 횟수 1회 백필
+  function doneFromSessions(sessions, titleToKey) {
+    let d = {};
+    (sessions || []).forEach((s) => { const k = titleToKey[s.title]; if (k) d = bumpDone(d, k, 'test', s.date || ''); });
+    return d;
+  }
+  function doneLabel(rec) {
+    if (!rec || (!rec.test && !rec.study)) return '';
+    const parts = [];
+    if (rec.test) parts.push(`✅ 테스트 ${rec.test}회`);
+    if (rec.study) parts.push(`🃏 카드 ${rec.study}회`);
+    if (rec.last) { const [, m, dd] = rec.last.split('-'); parts.push(`최근 ${+m}/${+dd}`); }
+    return parts.join(' · ');
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult, bumpDone, doneFromSessions, doneLabel };
 });
 
 </script>
 <script>
 // 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
-window.VOCA_BUILD = '0907.2305';
+window.VOCA_BUILD = '0907.2312';
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
@@ -2552,13 +2577,19 @@ window.VOCA_PACKS = [
   applyScale(coarse(), window.innerWidth);
   window.addEventListener('resize', () => applyScale(coarse(), window.innerWidth));
   const $ = (id) => document.getElementById(id);
-  const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs', name: 'voca:name' };
+  const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs', name: 'voca:name', done: 'voca:done' };
   const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
   const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
   let secs = load(LS.secs, 5);
   let packs = [...window.VOCA_PACKS, ...load(LS.packs, [])];
   let session = null, pack = null, timer = null, revealed = false, shownAt = 0;
+  // 완료 횟수: 팩키=pack_id(없으면 제목). 첫 실행 시 예전 세션 기록에서 테스트 횟수 백필
+  const packKey = (p) => p.pack_id || p.title;
+  const today = () => { const d = new Date(), z = (n) => String(n).padStart(2, '0'); return `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())}`; };
+  let done = load(LS.done, null);
+  if (!done) { done = E.doneFromSessions(load(LS.sessions, []), Object.fromEntries(packs.map(p => [p.title, packKey(p)]))); save(LS.done, done); }
+  const markDone = (p, kind) => { done = E.bumpDone(done, packKey(p), kind, today()); save(LS.done, done); };
 
   function show(id) { document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); }
 
@@ -2566,7 +2597,7 @@ window.VOCA_PACKS = [
   function renderHome() {
     document.querySelectorAll('#secs button').forEach(b => b.classList.toggle('sel', +b.dataset.s === secs));
     $('packs').innerHTML = packs.map((p, i) =>
-      `<div class="item"><div><b>${p.title}</b><div class="sub">${p.words.length}단어</div></div><div class="acts"><button class="study" data-i="${i}">🃏 카드</button><button class="test" data-i="${i}">⚡ 테스트</button></div></div>`).join('');
+      `<div class="item"><div><b>${p.title}</b><div class="sub">${p.words.length}단어${E.doneLabel(done[packKey(p)]) ? ` · <span class="done">${E.doneLabel(done[packKey(p)])}</span>` : ''}</div></div><div class="acts"><button class="study" data-i="${i}">🃏 카드</button><button class="test" data-i="${i}">⚡ 테스트</button></div></div>`).join('');
     const ss = load(LS.sessions, []);
     $('recentWrap').style.display = ss.length ? '' : 'none';
     $('recent').innerHTML = ss.slice(-10).reverse().map(s =>
@@ -2721,7 +2752,7 @@ window.VOCA_PACKS = [
   });
   $('sSpeak').addEventListener('click', () => speak(sPack.words[sIdx].en));
   $('sPrev').addEventListener('click', () => { if (sIdx > 0) { sIdx--; renderStudy(true); } });
-  $('sNext').addEventListener('click', () => { if (sIdx < sPack.words.length - 1) { sIdx++; renderStudy(true); } else { stopRec(); renderHome(); show('home'); } });
+  $('sNext').addEventListener('click', () => { if (sIdx < sPack.words.length - 1) { sIdx++; renderStudy(true); } else { stopRec(); markDone(sPack, 'study'); renderHome(); show('home'); } });
   $('studyHome').addEventListener('click', () => { stopRec(); speechSynthesis.cancel && speechSynthesis.cancel(); renderHome(); show('home'); });
   // 좌우 스와이프로 이전·다음. 세로 스크롤 중 비스듬한 손가락에 넘어가지 않도록 가로가 분명할 때만(가로 70px 이상 · 세로의 2배 이상 · 세로 60px 미만)
   let tx0 = 0, ty0 = 0;
@@ -2813,6 +2844,7 @@ window.VOCA_PACKS = [
     ss.push({ date: new Date().toISOString().slice(0, 10), title: pack.title, elapsedMs: sm.elapsedMs,
       totalNg: sm.rounds.reduce((a, r) => a + r.ng, 0), weak: sm.weak.slice(0, 10) });
     save(LS.sessions, ss.slice(-50));
+    markDone(pack, 'test');
     const d = new Date(), pad = (n) => String(n).padStart(2, '0');
     lastShare = E.formatResult(sm, { name: load(LS.name, ''), title: pack.title, total: pack.words.length,
       date: `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}` });
