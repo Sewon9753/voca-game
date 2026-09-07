@@ -3,7 +3,7 @@
 사용: python3 add_pack.py packs/day04.json [--image <원본 사진 경로>...] [--from validate|enrich|build|deploy] [--no-deploy]
 전제: packs/dayNN.json 에 pack_id·title·source·words[{n,en,ko}] 가 이미 전사돼 있다(전사는 세션에서 이미지를 보고 직접 한다).
 """
-import argparse, json, re, shutil, subprocess, sys, time, urllib.request
+import argparse, json, re, shutil, subprocess, sys, time, unicodedata, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -44,7 +44,8 @@ def validate(p: Path):
 
 def archive_images(images, day_tag):
     VAULT_ATT.mkdir(parents=True, exist_ok=True)
-    existing = sorted(VAULT_ATT.glob("아들-영어단어-*.jpeg")) + sorted(VAULT_ATT.glob("아들-영어단어-*.jpg")) + sorted(VAULT_ATT.glob("아들-영어단어-*.png"))
+    # 맥 파일명은 NFD·글롭 패턴은 NFC → 정규화해 비교(DAY03 미검출로 번호 중복 났던 버그)
+    existing = [q for q in VAULT_ATT.iterdir() if unicodedata.normalize("NFC", q.name).startswith("아들-영어단어-") and q.suffix.lower() in (".jpeg", ".jpg", ".png")]
     seq = len(existing)
     out = []
     for src in images:

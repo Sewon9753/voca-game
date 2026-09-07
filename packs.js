@@ -1,5 +1,5 @@
 // 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
-window.VOCA_BUILD = '0907.2303';
+window.VOCA_BUILD = '0907.2305';
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
@@ -2077,7 +2077,7 @@ window.VOCA_PACKS = [
         "emoji": "👏🌟",
         "ex": "My teacher gave me praise for my work.",
         "ex_ko": "선생님이 내 과제를 칭찬해 주셨어.",
-        "mnemonic": "'프레이즈'는 '풀어주자'처럼 들려요. 칭찬은 마음을 풀어주죠."
+        "mnemonic": "'프레이즈' — 잘했다고 박수 치며 칭찬하는 소리로 기억해요."
       },
       {
         "n": 17,
@@ -2088,7 +2088,7 @@ window.VOCA_PACKS = [
         "emoji": "▶️➡️",
         "ex": "The rain will continue until tomorrow morning.",
         "ex_ko": "비는 내일 아침까지 계속 올 거야.",
-        "mnemonic": "'큰 티뉴(new)' 티셔츠를 계속 입는다고 상상해봐. 계속되다."
+        "mnemonic": "con(함께) + tinue(잡다). 손을 놓지 않고 계속 이어가는 거예요."
       },
       {
         "n": 18,
@@ -2121,7 +2121,7 @@ window.VOCA_PACKS = [
         "emoji": "📉🤏",
         "ex": "I want less sugar in my coffee.",
         "ex_ko": "커피에 설탕 좀 덜 넣어줘.",
-        "mnemonic": "'레스(rest)만 남기고 덜어낸다' — 더 적은."
+        "mnemonic": "little(적은)의 비교급이 less. 더 적은, 덜한."
       },
       {
         "n": 21,
@@ -2163,8 +2163,8 @@ window.VOCA_PACKS = [
         "ipa": "/lʊk ʌp/",
         "stress": "LOOK up",
         "emoji": "🔎📖⬆️",
-        "ex": "Look up the word in your dictionary.",
-        "ex_ko": "그 단어를 사전에서 찾아봐.",
+        "ex": "Let's look up the answer online.",
+        "ex_ko": "온라인으로 답을 찾아보자.",
         "mnemonic": "사전 위쪽(up)을 훑어보며(look) 찾는다. 올려다보기도 그대로."
       }
     ]
