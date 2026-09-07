@@ -364,7 +364,7 @@
 </script>
 <script>
 // 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
-window.VOCA_BUILD = '0907.1118';
+window.VOCA_BUILD = '0907.1435';
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
@@ -941,8 +941,9 @@ window.VOCA_PACKS = [
   $('forceUpdate').addEventListener('click', async () => {
     $('updMsg').textContent = '확인 중…';
     try {
-      if ('caches' in window) for (const k of await caches.keys()) await caches.delete(k);
-      if ('serviceWorker' in navigator) for (const r of await navigator.serviceWorker.getRegistrations()) await r.unregister();
+      // 같은 오리진의 다른 앱(회화 단어, talk-*) 캐시·워커는 건드리지 않는다
+      if ('caches' in window) for (const k of await caches.keys()) if (k.startsWith('v-')) await caches.delete(k);
+      if ('serviceWorker' in navigator) for (const r of await navigator.serviceWorker.getRegistrations()) if (location.href.startsWith(r.scope)) await r.unregister();
     } catch {}
     location.replace(location.pathname + '?t=' + Date.now());
   });
