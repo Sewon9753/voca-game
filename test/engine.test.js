@@ -101,3 +101,24 @@ test('parsePack turns pasted lines into words', () => {
     { n: 3, en: 'valley', ko: '계곡' },
   ]);
 });
+
+test('pronunciationScore: exact match is 1, partial phrase match is word ratio', () => {
+  assert.equal(E.pronunciationScore('be famous for', 'Be famous for.'), 1);
+  assert.equal(E.pronunciationScore('be famous for', 'the famous four'), 1 / 3);
+  assert.equal(E.pronunciationScore('valley', ''), 0);
+});
+
+test('pronunciationScore: near-miss single word gets partial credit by letter similarity', () => {
+  const s = E.pronunciationScore('harmony', 'harmonie');
+  assert.ok(s > 0.7 && s < 1, 'got ' + s);
+  assert.equal(E.pronunciationScore('pill', 'peel') < 0.6, true);
+});
+
+test('stressSyllables parses FI-nal-ly into syllables with stress flags', () => {
+  assert.deepEqual(E.stressSyllables('FI-nal-ly'), [
+    { text: 'fi', stressed: true }, { text: 'nal', stressed: false }, { text: 'ly', stressed: false },
+  ]);
+  assert.deepEqual(E.stressSyllables('be FA-mous for'), [
+    { text: 'be', stressed: false }, { text: 'fa', stressed: true }, { text: 'mous', stressed: false }, { text: 'for', stressed: false },
+  ]);
+});

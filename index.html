@@ -64,6 +64,37 @@
   .toast.on { display: flex; }
   .toast small { display: block; font-size: 16px; color: var(--muted); margin-top: 10px; font-weight: 500; }
 
+  /* 카드 학습 */
+  .item .acts { display: flex; gap: 8px; }
+  .item .acts button { border: 0; border-radius: 10px; padding: 10px 12px; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; }
+  .item .acts .study { background: #7c5cff; } .item .acts .test { background: var(--accent); }
+  #study { padding-bottom: 0; }
+  .sbody { flex: 1; overflow-y: auto; padding-bottom: 12px; }
+  .scard { background: var(--card); border-radius: 20px; padding: 22px 18px; margin-top: 12px; display: flex; flex-direction: column; gap: 14px; }
+  .sword { font-size: clamp(34px, 10vw, 60px); font-weight: 800; line-height: 1.1; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .spk { background: var(--ring); color: var(--fg); border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 20px; cursor: pointer; flex: none; }
+  .spk.sm { width: 34px; height: 34px; font-size: 15px; }
+  .ipa { color: var(--muted); font-size: 16px; font-family: "Charis SIL", "Doulos SIL", "Times New Roman", serif; }
+  .stress { font-size: 18px; letter-spacing: .5px; color: var(--muted); }
+  .stress b { color: #ffb84d; font-size: 22px; }
+  .semoji { font-size: 56px; line-height: 1; text-align: center; padding: 6px 0; }
+  .smean { font-size: 20px; font-weight: 700; color: #a9c1ff; line-height: 1.4; }
+  .sec { border-top: 1px solid var(--ring); padding-top: 12px; }
+  .sec .lab { font-size: 12px; color: var(--muted); letter-spacing: .06em; margin-bottom: 6px; }
+  .sex { font-size: 18px; line-height: 1.45; display: flex; gap: 8px; align-items: flex-start; }
+  .sex .en { flex: 1; } .sex .en mark { background: transparent; color: #ffb84d; font-weight: 800; }
+  .sexko { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .smn { font-size: 16px; line-height: 1.5; background: #26223a; border-radius: 12px; padding: 12px; }
+  .pron { display: flex; flex-direction: column; gap: 10px; }
+  .rec { background: var(--ng); color: #fff; border: 0; border-radius: 14px; padding: 14px; font-size: 17px; font-weight: 800; cursor: pointer; }
+  .rec.on { background: #b23b3b; animation: pulse 1s infinite; }
+  @keyframes pulse { 50% { opacity: .6; } }
+  .heard { font-size: 16px; } .heard b { font-size: 20px; }
+  canvas.env { width: 100%; height: 70px; background: #15171e; border-radius: 10px; }
+  .snav { display: flex; gap: 10px; padding: 10px 0 max(12px, env(safe-area-inset-bottom)); }
+  .snav button { flex: 1; background: var(--card); color: var(--fg); border: 0; border-radius: 14px; padding: 16px; font-size: 20px; font-weight: 800; cursor: pointer; }
+  .snav button.prim { background: #7c5cff; color: #fff; }
+
   /* 결과 */
   table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; }
   td, th { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--ring); font-size: 15px; }
@@ -118,6 +149,19 @@
   </div>
 </section>
 
+<!-- 카드 학습 -->
+<section id="study" class="screen">
+  <div class="top"><button class="btn ghost" id="studyHome" style="padding:8px 12px;font-size:15px">‹ 홈</button><span id="studyPos"></span></div>
+  <div class="sbody" id="sbody">
+    <div class="scard" id="scard"></div>
+  </div>
+  <div class="snav">
+    <button id="sPrev">‹ 이전</button>
+    <button id="sSpeak" class="prim">🔊 듣기</button>
+    <button id="sNext">다음 ›</button>
+  </div>
+</section>
+
 <!-- 결과 -->
 <section id="result" class="screen">
   <h1>🎉 다 외웠다!</h1>
@@ -153,14 +197,17 @@
   function renderHome() {
     document.querySelectorAll('#secs button').forEach(b => b.classList.toggle('sel', +b.dataset.s === secs));
     $('packs').innerHTML = packs.map((p, i) =>
-      `<div class="item" data-i="${i}"><div><b>${p.title}</b><div class="sub">${p.words.length}단어</div></div><span>▶</span></div>`).join('');
+      `<div class="item"><div><b>${p.title}</b><div class="sub">${p.words.length}단어</div></div><div class="acts"><button class="study" data-i="${i}">🃏 카드</button><button class="test" data-i="${i}">⚡ 테스트</button></div></div>`).join('');
     const ss = load(LS.sessions, []);
     $('recentWrap').style.display = ss.length ? '' : 'none';
     $('recent').innerHTML = ss.slice(-10).reverse().map(s =>
       `<div>${s.date} · ${s.title} · ${fmt(s.elapsedMs)} · 틀림 ${s.totalNg}회</div>`).join('');
   }
   $('secs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; secs = +b.dataset.s; save(LS.secs, secs); renderHome(); });
-  $('packs').addEventListener('click', e => { const it = e.target.closest('.item'); if (it) start(packs[+it.dataset.i]); });
+  $('packs').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.classList.contains('test')) start(packs[+b.dataset.i]); else startStudy(packs[+b.dataset.i]);
+  });
   $('addPack').addEventListener('click', () => {
     const words = E.parsePack($('newText').value);
     if (words.length < 2) { $('addMsg').textContent = '2단어 이상 필요해요'; return; }
@@ -244,6 +291,139 @@
     else if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'o') judge(true);
     else if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'x') judge(false);
   });
+
+  // ---- 발음(TTS)
+  function pickVoice() {
+    const vs = speechSynthesis.getVoices().filter(v => /^en[-_]US/i.test(v.lang));
+    return vs.find(v => /Samantha|Google US|Ava|Allison/i.test(v.name)) || vs[0] || null;
+  }
+  function speak(text, rate) {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = rate || 0.85; const v = pickVoice(); if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  }
+  if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
+  // ---- 카드 학습
+  let sPack = null, sIdx = 0;
+  function startStudy(p) { sPack = p; sIdx = 0; show('study'); renderStudy(true); }
+  function esc(t) { return String(t || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function stressHtml(pattern) {
+    return String(pattern || '').split(/\s+/).filter(Boolean).map(word =>
+      E.stressSyllables(word).map(x => x.stressed ? `<b>${esc(x.text.toUpperCase())}</b>` : esc(x.text)).join('·')
+    ).join(' &nbsp;');
+  }
+  function highlight(sentence, word) {
+    const head = word.split(' ').map(x => x.replace(/[^a-z]/gi, '')).sort((a, b) => b.length - a.length)[0];
+    if (!head) return esc(sentence);
+    return esc(sentence).replace(new RegExp(`\\b(${head}\\w*)`, 'i'), '<mark>$1</mark>');
+  }
+  function renderStudy(autoSpeak) {
+    const w = sPack.words[sIdx];
+    stopRec();
+    $('studyPos').textContent = `${sIdx + 1} / ${sPack.words.length}`;
+    $('scard').innerHTML = `
+      <div class="sword"><span>${esc(w.en)}</span><button class="spk" data-say="${esc(w.en)}">🔊</button></div>
+      <div><span class="ipa">${esc(w.ipa || '')}</span> &nbsp; <span class="stress">${stressHtml(w.stress)}</span></div>
+      ${w.emoji ? `<div class="semoji">${esc(w.emoji)}</div>` : ''}
+      <div class="smean">${esc(w.ko)}</div>
+      ${w.ex ? `<div class="sec"><div class="lab">예문</div><div class="sex"><div class="en">${highlight(w.ex, w.en)}</div><button class="spk sm" data-say="${esc(w.ex)}">🔊</button></div><div class="sexko">${esc(w.ex_ko || '')}</div></div>` : ''}
+      ${w.mnemonic ? `<div class="sec"><div class="lab">💡 이렇게 외워요</div><div class="smn">${esc(w.mnemonic)}</div></div>` : ''}
+      <div class="sec pron">
+        <div class="lab">🎤 발음 연습 — 강세: <span class="stress">${stressHtml(w.stress)}</span></div>
+        <button class="rec" id="recBtn">🎤 녹음하고 따라 말하기</button>
+        <div class="heard" id="heard"></div>
+        <canvas class="env" id="env" width="600" height="140" style="display:none"></canvas>
+        <div class="row" id="recActs" style="display:none"><button class="btn ghost" id="playMine">▶ 내 녹음</button><button class="btn ghost" data-say="${esc(w.en)}">🔊 원어</button></div>
+      </div>`;
+    $('sPrev').disabled = sIdx === 0;
+    $('sNext').textContent = sIdx === sPack.words.length - 1 ? '끝 ✓' : '다음 ›';
+    $('sbody').scrollTop = 0;
+    if (autoSpeak) speak(w.en);
+  }
+  $('scard').addEventListener('click', e => {
+    const b = e.target.closest('[data-say]'); if (b) { speak(b.dataset.say, b.classList.contains('sm') ? 0.9 : 0.8); return; }
+    if (e.target.closest('#recBtn')) toggleRec();
+    if (e.target.closest('#playMine') && mineUrl) new Audio(mineUrl).play();
+  });
+  $('sSpeak').addEventListener('click', () => speak(sPack.words[sIdx].en));
+  $('sPrev').addEventListener('click', () => { if (sIdx > 0) { sIdx--; renderStudy(true); } });
+  $('sNext').addEventListener('click', () => { if (sIdx < sPack.words.length - 1) { sIdx++; renderStudy(true); } else { stopRec(); renderHome(); show('home'); } });
+  $('studyHome').addEventListener('click', () => { stopRec(); speechSynthesis.cancel && speechSynthesis.cancel(); renderHome(); show('home'); });
+  let tx0 = 0;
+  $('sbody').addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; }, { passive: true });
+  $('sbody').addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx0;
+    if (Math.abs(dx) > 70) (dx < 0 ? $('sNext') : $('sPrev')).click();
+  }, { passive: true });
+
+  // ---- 발음 녹음·인식·크기 곡선
+  let recOn = false, mediaRec = null, stream = null, mineUrl = null, envTimer = null, envData = [], recog = null;
+  async function toggleRec() { recOn ? stopRec() : startRec(); }
+  async function startRec() {
+    const w = sPack.words[sIdx];
+    const heard = $('heard');
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      heard.innerHTML = '마이크는 <b>https 주소</b>(또는 Safari 탭)에서만 쓸 수 있어요.'; return;
+    }
+    try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
+    catch (err) { heard.textContent = '마이크 권한이 필요해요 (' + err.name + ')'; return; }
+    recOn = true; $('recBtn').textContent = '⏹ 멈추기'; $('recBtn').classList.add('on');
+    heard.textContent = '듣고 있어요… 또박또박 말해 보세요';
+    // 크기 곡선
+    const AC = window.AudioContext || window.webkitAudioContext;
+    const ac = new AC(); const src = ac.createMediaStreamSource(stream); const an = ac.createAnalyser(); an.fftSize = 1024; src.connect(an);
+    const buf = new Uint8Array(an.fftSize); envData = [];
+    envTimer = setInterval(() => { an.getByteTimeDomainData(buf); let sum = 0; for (const v of buf) { const d = (v - 128) / 128; sum += d * d; } envData.push(Math.sqrt(sum / buf.length)); }, 40);
+    // 녹음
+    if (window.MediaRecorder) {
+      const chunks = []; mediaRec = new MediaRecorder(stream);
+      mediaRec.ondataavailable = e => chunks.push(e.data);
+      mediaRec.onstop = () => { if (mineUrl) URL.revokeObjectURL(mineUrl); mineUrl = URL.createObjectURL(new Blob(chunks, { type: mediaRec.mimeType })); $('recActs').style.display = ''; };
+      mediaRec.start();
+    }
+    // 음성 인식
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SR) {
+      recog = new SR(); recog.lang = 'en-US'; recog.interimResults = false; recog.maxAlternatives = 3;
+      recog.onresult = ev => {
+        const alts = Array.from(ev.results[0]).map(a => a.transcript);
+        const best = alts.map(a => [a, E.pronunciationScore(w.en, a)]).sort((a, b) => b[1] - a[1])[0];
+        const pct = Math.round(best[1] * 100);
+        const face = pct >= 90 ? '👍 아주 좋아요!' : pct >= 60 ? '🙂 비슷해요, 강세를 더 살려 보세요' : '🔁 다시 한 번! 🔊 원어를 듣고 따라 해요';
+        heard.innerHTML = `들린 말: <b>${esc(best[0])}</b> · 일치 ${pct}% <div>${face}</div>`;
+      };
+      recog.onerror = ev => { heard.textContent = '인식 실패(' + ev.error + ') — 녹음은 저장됐어요. ▶ 내 녹음과 🔊 원어를 번갈아 들어 보세요'; };
+      recog.onend = () => { if (recOn) stopRec(); };
+      recog.start();
+    } else {
+      heard.textContent = '이 브라우저는 음성 인식이 없어요 — 녹음 후 ▶ 내 녹음과 🔊 원어를 비교해 보세요';
+    }
+    setTimeout(() => { if (recOn) stopRec(); }, 6000);
+  }
+  function stopRec() {
+    if (!recOn) return;
+    recOn = false; clearInterval(envTimer);
+    try { recog && recog.stop(); } catch {}
+    try { mediaRec && mediaRec.state !== 'inactive' && mediaRec.stop(); } catch {}
+    stream && stream.getTracks().forEach(t => t.stop()); stream = null;
+    const b = $('recBtn'); if (b) { b.textContent = '🎤 다시 녹음'; b.classList.remove('on'); }
+    drawEnv();
+  }
+  function drawEnv() {
+    const c = $('env'); if (!c || envData.length < 5) return;
+    c.style.display = '';
+    const ctx = c.getContext('2d'); const W = c.width, H = c.height;
+    ctx.clearRect(0, 0, W, H);
+    // 앞뒤 무음 제거
+    const th = Math.max(...envData) * 0.12; let a = envData.findIndex(v => v > th); let z = envData.length - 1; while (z > a && envData[z] < th) z--;
+    const d = envData.slice(Math.max(0, a - 2), z + 3); const mx = Math.max(...d) || 1;
+    ctx.fillStyle = '#7c5cff';
+    d.forEach((v, i) => { const x = i / d.length * W, h = v / mx * (H - 20); ctx.fillRect(x, H - 10 - h, Math.max(2, W / d.length - 1), h); });
+    ctx.fillStyle = '#8b90a0'; ctx.font = '18px sans-serif'; ctx.fillText('소리 크기 — 높은 막대 = 세게 말한 부분. 강세 음절에서 높아야 해요', 8, 20);
+  }
 
   // ---- 결과
   function fmt(ms) { const s = Math.round(ms / 1000); return `${Math.floor(s / 60)}분 ${s % 60}초`; }

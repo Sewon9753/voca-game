@@ -110,5 +110,35 @@
     return out;
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates };
+  // ---- 발음 연습 보조
+  function norm(t) { return String(t || '').toLowerCase().replace(/[^a-z' ]+/g, ' ').trim().split(/\s+/).filter(Boolean); }
+  function lev(a, b) {
+    const m = a.length, n = b.length; if (!m) return n; if (!n) return m;
+    let prev = Array.from({ length: n + 1 }, (_, j) => j);
+    for (let i = 1; i <= m; i++) {
+      const cur = [i];
+      for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur;
+    }
+    return prev[n];
+  }
+  function sim(a, b) { const L = Math.max(a.length, b.length); return L ? 1 - lev(a, b) / L : 1; }
+  // 목표 단어(구) vs 음성인식 결과 → 0..1. 단어 하나면 철자 유사도, 구면 단어별 적중 비율(유사도 0.8 이상=적중)
+  function pronunciationScore(target, heard) {
+    const t = norm(target), h = norm(heard);
+    if (!t.length) return 0;
+    if (!h.length) return 0;
+    const best = (w) => Math.max(...h.map((x) => sim(w, x)));
+    if (t.length === 1) return best(t[0]);
+    return t.filter((w) => best(w) >= 0.8).length / t.length;
+  }
+  // "be FA-mous for" → [{text, stressed}]  (대문자 음절 = 강세)
+  function stressSyllables(pattern) {
+    return String(pattern || '').split(/[\s-]+/).filter(Boolean).map((tok) => ({
+      text: tok.toLowerCase(),
+      stressed: /[A-Z]/.test(tok) && tok === tok.toUpperCase(),
+    }));
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables };
 });

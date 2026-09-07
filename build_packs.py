@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+"""packs/*.json → packs.js (내장 단어팩) + dist/ 단일 파일 재생성."""
+import json, re
+from pathlib import Path
+
+root = Path(__file__).parent
+packs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((root / "packs").glob("*.json"))]
+(root / "packs.js").write_text(
+    "// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성\nwindow.VOCA_PACKS = "
+    + json.dumps(packs, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+
+html = (root / "index.html").read_text(encoding="utf-8")
+eng = (root / "engine.js").read_text(encoding="utf-8")
+pk = (root / "packs.js").read_text(encoding="utf-8")
+bundled = html.replace('<script src="engine.js"></script>', "<script>\n" + eng + "\n</script>") \
+              .replace('<script src="packs.js"></script>', "<script>\n" + pk + "\n</script>")
+assert 'src="engine.js"' not in bundled and 'src="packs.js"' not in bundled
+(root / "dist").mkdir(exist_ok=True)
+(root / "dist" / "voca-game.html").write_text(bundled, encoding="utf-8")
+m = re.search(r"<head>(.*?)</head>\s*<body>(.*?)</body>", bundled, re.S)
+head = re.sub(r'<meta (charset|name="viewport")[^>]*>\s*', "", m.group(1))
+(root / "dist" / "artifact.html").write_text(head.strip() + "\n" + m.group(2).strip() + "\n", encoding="utf-8")
+print(f"packs: {[ (p['title'], len(p['words'])) for p in packs ]} → packs.js, dist/voca-game.html, dist/artifact.html")

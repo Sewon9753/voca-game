@@ -64,6 +64,37 @@
   .toast.on { display: flex; }
   .toast small { display: block; font-size: 16px; color: var(--muted); margin-top: 10px; font-weight: 500; }
 
+  /* 카드 학습 */
+  .item .acts { display: flex; gap: 8px; }
+  .item .acts button { border: 0; border-radius: 10px; padding: 10px 12px; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; }
+  .item .acts .study { background: #7c5cff; } .item .acts .test { background: var(--accent); }
+  #study { padding-bottom: 0; }
+  .sbody { flex: 1; overflow-y: auto; padding-bottom: 12px; }
+  .scard { background: var(--card); border-radius: 20px; padding: 22px 18px; margin-top: 12px; display: flex; flex-direction: column; gap: 14px; }
+  .sword { font-size: clamp(34px, 10vw, 60px); font-weight: 800; line-height: 1.1; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .spk { background: var(--ring); color: var(--fg); border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 20px; cursor: pointer; flex: none; }
+  .spk.sm { width: 34px; height: 34px; font-size: 15px; }
+  .ipa { color: var(--muted); font-size: 16px; font-family: "Charis SIL", "Doulos SIL", "Times New Roman", serif; }
+  .stress { font-size: 18px; letter-spacing: .5px; color: var(--muted); }
+  .stress b { color: #ffb84d; font-size: 22px; }
+  .semoji { font-size: 56px; line-height: 1; text-align: center; padding: 6px 0; }
+  .smean { font-size: 20px; font-weight: 700; color: #a9c1ff; line-height: 1.4; }
+  .sec { border-top: 1px solid var(--ring); padding-top: 12px; }
+  .sec .lab { font-size: 12px; color: var(--muted); letter-spacing: .06em; margin-bottom: 6px; }
+  .sex { font-size: 18px; line-height: 1.45; display: flex; gap: 8px; align-items: flex-start; }
+  .sex .en { flex: 1; } .sex .en mark { background: transparent; color: #ffb84d; font-weight: 800; }
+  .sexko { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .smn { font-size: 16px; line-height: 1.5; background: #26223a; border-radius: 12px; padding: 12px; }
+  .pron { display: flex; flex-direction: column; gap: 10px; }
+  .rec { background: var(--ng); color: #fff; border: 0; border-radius: 14px; padding: 14px; font-size: 17px; font-weight: 800; cursor: pointer; }
+  .rec.on { background: #b23b3b; animation: pulse 1s infinite; }
+  @keyframes pulse { 50% { opacity: .6; } }
+  .heard { font-size: 16px; } .heard b { font-size: 20px; }
+  canvas.env { width: 100%; height: 70px; background: #15171e; border-radius: 10px; }
+  .snav { display: flex; gap: 10px; padding: 10px 0 max(12px, env(safe-area-inset-bottom)); }
+  .snav button { flex: 1; background: var(--card); color: var(--fg); border: 0; border-radius: 14px; padding: 16px; font-size: 20px; font-weight: 800; cursor: pointer; }
+  .snav button.prim { background: #7c5cff; color: #fff; }
+
   /* 결과 */
   table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; }
   td, th { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--ring); font-size: 15px; }
@@ -115,6 +146,19 @@
   <div class="judge" id="judge">
     <button class="x" id="btnX">X</button>
     <button class="o" id="btnO">O</button>
+  </div>
+</section>
+
+<!-- 카드 학습 -->
+<section id="study" class="screen">
+  <div class="top"><button class="btn ghost" id="studyHome" style="padding:8px 12px;font-size:15px">‹ 홈</button><span id="studyPos"></span></div>
+  <div class="sbody" id="sbody">
+    <div class="scard" id="scard"></div>
+  </div>
+  <div class="snav">
+    <button id="sPrev">‹ 이전</button>
+    <button id="sSpeak" class="prim">🔊 듣기</button>
+    <button id="sNext">다음 ›</button>
   </div>
 </section>
 
@@ -246,12 +290,42 @@
     return out;
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates };
+  // ---- 발음 연습 보조
+  function norm(t) { return String(t || '').toLowerCase().replace(/[^a-z' ]+/g, ' ').trim().split(/\s+/).filter(Boolean); }
+  function lev(a, b) {
+    const m = a.length, n = b.length; if (!m) return n; if (!n) return m;
+    let prev = Array.from({ length: n + 1 }, (_, j) => j);
+    for (let i = 1; i <= m; i++) {
+      const cur = [i];
+      for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur;
+    }
+    return prev[n];
+  }
+  function sim(a, b) { const L = Math.max(a.length, b.length); return L ? 1 - lev(a, b) / L : 1; }
+  // 목표 단어(구) vs 음성인식 결과 → 0..1. 단어 하나면 철자 유사도, 구면 단어별 적중 비율(유사도 0.8 이상=적중)
+  function pronunciationScore(target, heard) {
+    const t = norm(target), h = norm(heard);
+    if (!t.length) return 0;
+    if (!h.length) return 0;
+    const best = (w) => Math.max(...h.map((x) => sim(w, x)));
+    if (t.length === 1) return best(t[0]);
+    return t.filter((w) => best(w) >= 0.8).length / t.length;
+  }
+  // "be FA-mous for" → [{text, stressed}]  (대문자 음절 = 강세)
+  function stressSyllables(pattern) {
+    return String(pattern || '').split(/[\s-]+/).filter(Boolean).map((tok) => ({
+      text: tok.toLowerCase(),
+      stressed: /[A-Z]/.test(tok) && tok === tok.toUpperCase(),
+    }));
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables };
 });
 
 </script>
 <script>
-// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장)
+// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
@@ -261,122 +335,266 @@ window.VOCA_PACKS = [
       {
         "n": 1,
         "en": "pack",
-        "ko": "[동] 1. (짐을) 싸다 2. 포장하다 / [명] (한) 갑[통/상자]"
+        "ko": "[동] 1. (짐을) 싸다 2. 포장하다 / [명] (한) 갑[통/상자]",
+        "ipa": "/pæk/",
+        "stress": "PACK",
+        "emoji": "🎒📦",
+        "ex": "I need to pack my bag tonight.",
+        "ex_ko": "나 오늘 밤에 가방 싸야 해.",
+        "mnemonic": "'팩'하고 상자에 눌러 담는 소리. 짐을 팩팩 눌러 싸는 장면을 떠올리세요."
       },
       {
         "n": 2,
         "en": "male",
-        "ko": "[형] 남성[수컷]의 / [명] 남성, 수컷"
+        "ko": "[형] 남성[수컷]의 / [명] 남성, 수컷",
+        "ipa": "/meɪl/",
+        "stress": "MALE",
+        "emoji": "♂️👦",
+        "ex": "The male lion has a big mane.",
+        "ex_ko": "수컷 사자는 큰 갈기가 있어.",
+        "mnemonic": "발음이 '메일(mail)'과 똑같아요. 남자한테 온 메일이라고 묶어서 기억하세요."
       },
       {
         "n": 3,
         "en": "finally",
-        "ko": "[부] 1. 마침내, 결국 2. 마지막으로"
+        "ko": "[부] 1. 마침내, 결국 2. 마지막으로",
+        "ipa": "/ˈfaɪnəli/",
+        "stress": "FI-nal-ly",
+        "emoji": "🏁😮‍💨",
+        "ex": "I finally finished my science homework.",
+        "ex_ko": "나 드디어 과학 숙제 끝냈어.",
+        "mnemonic": "final(마지막) + ly. 마지막에 가서야, 즉 '마침내'예요."
       },
       {
         "n": 4,
         "en": "sometime",
-        "ko": "[부] (과거, 미래의) 언제, 언젠가"
+        "ko": "[부] (과거, 미래의) 언제, 언젠가",
+        "ipa": "/ˈsʌmtaɪm/",
+        "stress": "SOME-time",
+        "emoji": "📅❓",
+        "ex": "Let's watch a movie sometime next week.",
+        "ex_ko": "다음 주 언젠가 영화 보자.",
+        "mnemonic": "some(어떤) + time(때) = 어떤 때, 즉 '언젠가'. 정확한 날짜는 몰라요."
       },
       {
         "n": 5,
         "en": "valley",
-        "ko": "[명] 계곡, 골짜기"
+        "ko": "[명] 계곡, 골짜기",
+        "ipa": "/ˈvæli/",
+        "stress": "VAL-ley",
+        "emoji": "🏞️⛰️",
+        "ex": "We hiked down into the green valley.",
+        "ex_ko": "우리는 초록 계곡으로 걸어 내려갔어.",
+        "mnemonic": "'밸리'는 배구 '발리'처럼 푹 꺼진 곳. 산과 산 사이 푹 팬 골짜기예요."
       },
       {
         "n": 6,
         "en": "bark",
-        "ko": "[동] (개가) 짖다"
+        "ko": "[동] (개가) 짖다",
+        "ipa": "/bɑːrk/",
+        "stress": "BARK",
+        "emoji": "🐕🗯️",
+        "ex": "My dog barks at every stranger.",
+        "ex_ko": "우리 개는 낯선 사람만 보면 짖어.",
+        "mnemonic": "'박!' 하고 개가 짖는 소리예요. 발음 그대로 개 짖는 소리로 외우세요."
       },
       {
         "n": 7,
         "en": "crash",
-        "ko": "[동] 충돌[추락]하다 / [명] (자동차의) 충돌, (비행기의) 추락"
+        "ko": "[동] 충돌[추락]하다 / [명] (자동차의) 충돌, (비행기의) 추락",
+        "ipa": "/kræʃ/",
+        "stress": "CRASH",
+        "emoji": "💥🚗",
+        "ex": "Two cars crashed near my school today.",
+        "ex_ko": "오늘 학교 근처에서 차 두 대가 충돌했어.",
+        "mnemonic": "'크래쉬!' 자체가 쾅 부딪히는 소리. 컴퓨터가 '크래시' 나는 것도 같은 말이에요."
       },
       {
         "n": 8,
         "en": "nature",
-        "ko": "[명] 1. 자연 2. 천성, 본성"
+        "ko": "[명] 1. 자연 2. 천성, 본성",
+        "ipa": "/ˈneɪtʃər/",
+        "stress": "NA-ture",
+        "emoji": "🌳🦋",
+        "ex": "I love walking in nature after school.",
+        "ex_ko": "나는 방과 후에 자연 속을 걷는 걸 좋아해.",
+        "mnemonic": "'네이처'는 태어난(nat-) 그대로의 모습. 그래서 '자연'이자 타고난 '본성'이에요."
       },
       {
         "n": 9,
         "en": "harmony",
-        "ko": "[명] 1. 조화, 화합 2. 화음"
+        "ko": "[명] 1. 조화, 화합 2. 화음",
+        "ipa": "/ˈhɑːrməni/",
+        "stress": "HAR-mo-ny",
+        "emoji": "🎶🤝",
+        "ex": "The two singers sang in perfect harmony.",
+        "ex_ko": "두 가수는 완벽한 화음으로 노래했다.",
+        "mnemonic": "\"하모니카\"의 하모니! 여러 소리가 섞여 어울리는 게 조화, 화음이야."
       },
       {
         "n": 10,
         "en": "wonder",
-        "ko": "[동] 궁금하다 / [명] 감탄, 놀라움"
+        "ko": "[동] 궁금하다 / [명] 감탄, 놀라움",
+        "ipa": "/ˈwʌndər/",
+        "stress": "WON-der",
+        "emoji": "🤔❓",
+        "ex": "I wonder why she didn't come today.",
+        "ex_ko": "걔가 오늘 왜 안 왔는지 궁금해.",
+        "mnemonic": "\"원더\"풀! 놀라운 걸 보면 \"왜지?\" 하고 궁금해지지."
       },
       {
         "n": 11,
         "en": "able",
-        "ko": "[형] 1. …할 수 있는 2. 능력 있는, 유능한"
+        "ko": "[형] 1. …할 수 있는 2. 능력 있는, 유능한",
+        "ipa": "/ˈeɪbl/",
+        "stress": "A-ble",
+        "emoji": "💪✅",
+        "ex": "I'm able to finish this homework tonight.",
+        "ex_ko": "나 오늘 밤에 이 숙제 끝낼 수 있어.",
+        "mnemonic": "\"에이, 불~\" 껐어! 불도 끌 수 있는 능력자. …할 수 있다."
       },
       {
         "n": 12,
         "en": "pain",
-        "ko": "[명] (육체적, 정신적) 통증, 고통"
+        "ko": "[명] (육체적, 정신적) 통증, 고통",
+        "ipa": "/peɪn/",
+        "stress": "PAIN",
+        "emoji": "🤕😣",
+        "ex": "I felt a sharp pain in my leg.",
+        "ex_ko": "다리에 날카로운 통증이 느껴졌어.",
+        "mnemonic": "\"페인\"트 통이 발등에 쿵! 아픈 통증이 확 오지."
       },
       {
         "n": 13,
         "en": "uniform",
-        "ko": "[명] 제복, 유니폼 / [형] 균일한, 일정한"
+        "ko": "[명] 제복, 유니폼 / [형] 균일한, 일정한",
+        "ipa": "/ˈjuːnɪfɔːrm/",
+        "stress": "U-ni-form",
+        "emoji": "👔🎽",
+        "ex": "We have to wear a school uniform every day.",
+        "ex_ko": "우리는 매일 교복을 입어야 해.",
+        "mnemonic": "uni(하나)+form(모양). 다 같은 하나의 모양으로 입는 옷이 제복."
       },
       {
         "n": 14,
         "en": "beauty",
-        "ko": "[명] 1. 아름다움, 미 2. 미인"
+        "ko": "[명] 1. 아름다움, 미 2. 미인",
+        "ipa": "/ˈbjuːti/",
+        "stress": "BEAU-ty",
+        "emoji": "🌸✨",
+        "ex": "We stopped to enjoy the beauty of the sunset.",
+        "ex_ko": "우리는 노을의 아름다움을 즐기려고 멈췄어.",
+        "mnemonic": "\"뷰티\"숍은 아름다움을 만드는 곳! 그대로 아름다움, 미."
       },
       {
         "n": 15,
         "en": "taste",
-        "ko": "[명] 맛 / [동] 1. 맛이 나다 2. 맛보다"
+        "ko": "[명] 맛 / [동] 1. 맛이 나다 2. 맛보다",
+        "ipa": "/teɪst/",
+        "stress": "TASTE",
+        "emoji": "👅🍜",
+        "ex": "This soup tastes a little too salty.",
+        "ex_ko": "이 국은 좀 너무 짠 맛이 나.",
+        "mnemonic": "\"테이스트\"—떼서 입에 스윽! 맛보다, 맛이 나다."
       },
       {
         "n": 16,
         "en": "without",
-        "ko": "[전] 1. … 없이 2. …하지 않고"
+        "ko": "[전] 1. … 없이 2. …하지 않고",
+        "ipa": "/wɪˈðaʊt/",
+        "stress": "with-OUT",
+        "emoji": "🚫🥤",
+        "ex": "I can't study without my phone nearby.",
+        "ex_ko": "나는 폰이 옆에 없으면 공부를 못 해.",
+        "mnemonic": "with(함께)에서 out(밖으로) 나가버림. 그래서 \"… 없이\"."
       },
       {
         "n": 17,
         "en": "sunlight",
-        "ko": "[명] 햇빛, 햇살"
+        "ko": "[명] 햇빛, 햇살",
+        "ipa": "/ˈsʌnˌlaɪt/",
+        "stress": "SUN-light",
+        "emoji": "☀️🌤️",
+        "ex": "Open the curtains and let the sunlight in.",
+        "ex_ko": "커튼 열고 햇빛 좀 들어오게 해.",
+        "mnemonic": "sun(태양) + light(빛) = 햇빛. 두 쉬운 단어를 그냥 붙인 말이에요."
       },
       {
         "n": 18,
         "en": "exact",
-        "ko": "[형] 정확한"
+        "ko": "[형] 정확한",
+        "ipa": "/ɪɡˈzækt/",
+        "stress": "ex-ACT",
+        "emoji": "🎯📏",
+        "ex": "Tell me the exact time of the movie.",
+        "ex_ko": "영화 시작하는 정확한 시간을 말해 줘.",
+        "mnemonic": "\"이그잭!\" 자를 딱 대고 잰 듯 정확한. 뒤에 액트(ACT)에 힘줘서 읽어요."
       },
       {
         "n": 19,
         "en": "popular",
-        "ko": "[형] 1. 인기 있는 2. 대중의, 대중적인"
+        "ko": "[형] 1. 인기 있는 2. 대중의, 대중적인",
+        "ipa": "/ˈpɑːpjələr/",
+        "stress": "PO-pu-lar",
+        "emoji": "⭐🙌",
+        "ex": "That song is really popular at our school.",
+        "ex_ko": "그 노래 우리 학교에서 진짜 인기 많아.",
+        "mnemonic": "people(사람들)과 뿌리가 같아요. 사람들이 다 좋아하니까 인기 있는."
       },
       {
         "n": 20,
         "en": "noisy",
-        "ko": "[형] 떠들썩한, 시끄러운"
+        "ko": "[형] 떠들썩한, 시끄러운",
+        "ipa": "/ˈnɔɪzi/",
+        "stress": "NOI-sy",
+        "emoji": "📢🔊",
+        "ex": "The classroom is too noisy to study.",
+        "ex_ko": "교실이 공부하기엔 너무 시끄러워.",
+        "mnemonic": "noise(소음)에 -y 붙이면 시끄러운. \"노이지\"하면 귀 아픈 소리 떠올려요."
       },
       {
         "n": 21,
         "en": "pill",
-        "ko": "[명] 알약, 정제"
+        "ko": "[명] 알약, 정제",
+        "ipa": "/pɪl/",
+        "stress": "PILL",
+        "emoji": "💊",
+        "ex": "Take this pill after you eat lunch.",
+        "ex_ko": "점심 먹고 나서 이 알약 먹어.",
+        "mnemonic": "\"필\"수로 먹어야 하는 알약! 삼킬 때 \"삐~ㄹ\" 넘어가는 느낌."
       },
       {
         "n": 22,
         "en": "be in trouble",
-        "ko": "어려움[곤경]에 처하다"
+        "ko": "어려움[곤경]에 처하다",
+        "ipa": "/bi ɪn ˈtrʌbəl/",
+        "stress": "be in TROU-ble",
+        "emoji": "😰⚠️",
+        "ex": "I'll be in trouble if I'm late again.",
+        "ex_ko": "또 늦으면 나 곤란해질 거야.",
+        "mnemonic": "trouble(문제) 안에(in) 들어가 있다 = 곤경에 처하다."
       },
       {
         "n": 23,
         "en": "think up",
-        "ko": "…을 생각해내다"
+        "ko": "…을 생각해내다",
+        "ipa": "/ˌθɪŋk ˈʌp/",
+        "stress": "think UP",
+        "emoji": "💡🤔",
+        "ex": "Let's think up a good name for our team.",
+        "ex_ko": "우리 팀 이름 좋은 걸로 하나 생각해 내자.",
+        "mnemonic": "생각(think)을 머리 위로(up) 쑥 끌어올리다 = 생각해내다."
       },
       {
         "n": 24,
         "en": "be famous for",
-        "ko": "…로 유명하다"
+        "ko": "…로 유명하다",
+        "ipa": "/bi ˈfeɪməs fɔːr/",
+        "stress": "be FA-mous for",
+        "emoji": "🏅🍜",
+        "ex": "This town is famous for its fried chicken.",
+        "ex_ko": "이 동네는 치킨으로 유명해.",
+        "mnemonic": "famous(유명한) 뒤에 for는 \"~때문에\". 무엇 때문에 유명한지 알려줘요."
       }
     ]
   }
@@ -401,14 +619,17 @@ window.VOCA_PACKS = [
   function renderHome() {
     document.querySelectorAll('#secs button').forEach(b => b.classList.toggle('sel', +b.dataset.s === secs));
     $('packs').innerHTML = packs.map((p, i) =>
-      `<div class="item" data-i="${i}"><div><b>${p.title}</b><div class="sub">${p.words.length}단어</div></div><span>▶</span></div>`).join('');
+      `<div class="item"><div><b>${p.title}</b><div class="sub">${p.words.length}단어</div></div><div class="acts"><button class="study" data-i="${i}">🃏 카드</button><button class="test" data-i="${i}">⚡ 테스트</button></div></div>`).join('');
     const ss = load(LS.sessions, []);
     $('recentWrap').style.display = ss.length ? '' : 'none';
     $('recent').innerHTML = ss.slice(-10).reverse().map(s =>
       `<div>${s.date} · ${s.title} · ${fmt(s.elapsedMs)} · 틀림 ${s.totalNg}회</div>`).join('');
   }
   $('secs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; secs = +b.dataset.s; save(LS.secs, secs); renderHome(); });
-  $('packs').addEventListener('click', e => { const it = e.target.closest('.item'); if (it) start(packs[+it.dataset.i]); });
+  $('packs').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.classList.contains('test')) start(packs[+b.dataset.i]); else startStudy(packs[+b.dataset.i]);
+  });
   $('addPack').addEventListener('click', () => {
     const words = E.parsePack($('newText').value);
     if (words.length < 2) { $('addMsg').textContent = '2단어 이상 필요해요'; return; }
@@ -492,6 +713,139 @@ window.VOCA_PACKS = [
     else if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'o') judge(true);
     else if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'x') judge(false);
   });
+
+  // ---- 발음(TTS)
+  function pickVoice() {
+    const vs = speechSynthesis.getVoices().filter(v => /^en[-_]US/i.test(v.lang));
+    return vs.find(v => /Samantha|Google US|Ava|Allison/i.test(v.name)) || vs[0] || null;
+  }
+  function speak(text, rate) {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = rate || 0.85; const v = pickVoice(); if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  }
+  if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
+  // ---- 카드 학습
+  let sPack = null, sIdx = 0;
+  function startStudy(p) { sPack = p; sIdx = 0; show('study'); renderStudy(true); }
+  function esc(t) { return String(t || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function stressHtml(pattern) {
+    return String(pattern || '').split(/\s+/).filter(Boolean).map(word =>
+      E.stressSyllables(word).map(x => x.stressed ? `<b>${esc(x.text.toUpperCase())}</b>` : esc(x.text)).join('·')
+    ).join(' &nbsp;');
+  }
+  function highlight(sentence, word) {
+    const head = word.split(' ').map(x => x.replace(/[^a-z]/gi, '')).sort((a, b) => b.length - a.length)[0];
+    if (!head) return esc(sentence);
+    return esc(sentence).replace(new RegExp(`\\b(${head}\\w*)`, 'i'), '<mark>$1</mark>');
+  }
+  function renderStudy(autoSpeak) {
+    const w = sPack.words[sIdx];
+    stopRec();
+    $('studyPos').textContent = `${sIdx + 1} / ${sPack.words.length}`;
+    $('scard').innerHTML = `
+      <div class="sword"><span>${esc(w.en)}</span><button class="spk" data-say="${esc(w.en)}">🔊</button></div>
+      <div><span class="ipa">${esc(w.ipa || '')}</span> &nbsp; <span class="stress">${stressHtml(w.stress)}</span></div>
+      ${w.emoji ? `<div class="semoji">${esc(w.emoji)}</div>` : ''}
+      <div class="smean">${esc(w.ko)}</div>
+      ${w.ex ? `<div class="sec"><div class="lab">예문</div><div class="sex"><div class="en">${highlight(w.ex, w.en)}</div><button class="spk sm" data-say="${esc(w.ex)}">🔊</button></div><div class="sexko">${esc(w.ex_ko || '')}</div></div>` : ''}
+      ${w.mnemonic ? `<div class="sec"><div class="lab">💡 이렇게 외워요</div><div class="smn">${esc(w.mnemonic)}</div></div>` : ''}
+      <div class="sec pron">
+        <div class="lab">🎤 발음 연습 — 강세: <span class="stress">${stressHtml(w.stress)}</span></div>
+        <button class="rec" id="recBtn">🎤 녹음하고 따라 말하기</button>
+        <div class="heard" id="heard"></div>
+        <canvas class="env" id="env" width="600" height="140" style="display:none"></canvas>
+        <div class="row" id="recActs" style="display:none"><button class="btn ghost" id="playMine">▶ 내 녹음</button><button class="btn ghost" data-say="${esc(w.en)}">🔊 원어</button></div>
+      </div>`;
+    $('sPrev').disabled = sIdx === 0;
+    $('sNext').textContent = sIdx === sPack.words.length - 1 ? '끝 ✓' : '다음 ›';
+    $('sbody').scrollTop = 0;
+    if (autoSpeak) speak(w.en);
+  }
+  $('scard').addEventListener('click', e => {
+    const b = e.target.closest('[data-say]'); if (b) { speak(b.dataset.say, b.classList.contains('sm') ? 0.9 : 0.8); return; }
+    if (e.target.closest('#recBtn')) toggleRec();
+    if (e.target.closest('#playMine') && mineUrl) new Audio(mineUrl).play();
+  });
+  $('sSpeak').addEventListener('click', () => speak(sPack.words[sIdx].en));
+  $('sPrev').addEventListener('click', () => { if (sIdx > 0) { sIdx--; renderStudy(true); } });
+  $('sNext').addEventListener('click', () => { if (sIdx < sPack.words.length - 1) { sIdx++; renderStudy(true); } else { stopRec(); renderHome(); show('home'); } });
+  $('studyHome').addEventListener('click', () => { stopRec(); speechSynthesis.cancel && speechSynthesis.cancel(); renderHome(); show('home'); });
+  let tx0 = 0;
+  $('sbody').addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; }, { passive: true });
+  $('sbody').addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx0;
+    if (Math.abs(dx) > 70) (dx < 0 ? $('sNext') : $('sPrev')).click();
+  }, { passive: true });
+
+  // ---- 발음 녹음·인식·크기 곡선
+  let recOn = false, mediaRec = null, stream = null, mineUrl = null, envTimer = null, envData = [], recog = null;
+  async function toggleRec() { recOn ? stopRec() : startRec(); }
+  async function startRec() {
+    const w = sPack.words[sIdx];
+    const heard = $('heard');
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      heard.innerHTML = '마이크는 <b>https 주소</b>(또는 Safari 탭)에서만 쓸 수 있어요.'; return;
+    }
+    try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
+    catch (err) { heard.textContent = '마이크 권한이 필요해요 (' + err.name + ')'; return; }
+    recOn = true; $('recBtn').textContent = '⏹ 멈추기'; $('recBtn').classList.add('on');
+    heard.textContent = '듣고 있어요… 또박또박 말해 보세요';
+    // 크기 곡선
+    const AC = window.AudioContext || window.webkitAudioContext;
+    const ac = new AC(); const src = ac.createMediaStreamSource(stream); const an = ac.createAnalyser(); an.fftSize = 1024; src.connect(an);
+    const buf = new Uint8Array(an.fftSize); envData = [];
+    envTimer = setInterval(() => { an.getByteTimeDomainData(buf); let sum = 0; for (const v of buf) { const d = (v - 128) / 128; sum += d * d; } envData.push(Math.sqrt(sum / buf.length)); }, 40);
+    // 녹음
+    if (window.MediaRecorder) {
+      const chunks = []; mediaRec = new MediaRecorder(stream);
+      mediaRec.ondataavailable = e => chunks.push(e.data);
+      mediaRec.onstop = () => { if (mineUrl) URL.revokeObjectURL(mineUrl); mineUrl = URL.createObjectURL(new Blob(chunks, { type: mediaRec.mimeType })); $('recActs').style.display = ''; };
+      mediaRec.start();
+    }
+    // 음성 인식
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SR) {
+      recog = new SR(); recog.lang = 'en-US'; recog.interimResults = false; recog.maxAlternatives = 3;
+      recog.onresult = ev => {
+        const alts = Array.from(ev.results[0]).map(a => a.transcript);
+        const best = alts.map(a => [a, E.pronunciationScore(w.en, a)]).sort((a, b) => b[1] - a[1])[0];
+        const pct = Math.round(best[1] * 100);
+        const face = pct >= 90 ? '👍 아주 좋아요!' : pct >= 60 ? '🙂 비슷해요, 강세를 더 살려 보세요' : '🔁 다시 한 번! 🔊 원어를 듣고 따라 해요';
+        heard.innerHTML = `들린 말: <b>${esc(best[0])}</b> · 일치 ${pct}% <div>${face}</div>`;
+      };
+      recog.onerror = ev => { heard.textContent = '인식 실패(' + ev.error + ') — 녹음은 저장됐어요. ▶ 내 녹음과 🔊 원어를 번갈아 들어 보세요'; };
+      recog.onend = () => { if (recOn) stopRec(); };
+      recog.start();
+    } else {
+      heard.textContent = '이 브라우저는 음성 인식이 없어요 — 녹음 후 ▶ 내 녹음과 🔊 원어를 비교해 보세요';
+    }
+    setTimeout(() => { if (recOn) stopRec(); }, 6000);
+  }
+  function stopRec() {
+    if (!recOn) return;
+    recOn = false; clearInterval(envTimer);
+    try { recog && recog.stop(); } catch {}
+    try { mediaRec && mediaRec.state !== 'inactive' && mediaRec.stop(); } catch {}
+    stream && stream.getTracks().forEach(t => t.stop()); stream = null;
+    const b = $('recBtn'); if (b) { b.textContent = '🎤 다시 녹음'; b.classList.remove('on'); }
+    drawEnv();
+  }
+  function drawEnv() {
+    const c = $('env'); if (!c || envData.length < 5) return;
+    c.style.display = '';
+    const ctx = c.getContext('2d'); const W = c.width, H = c.height;
+    ctx.clearRect(0, 0, W, H);
+    // 앞뒤 무음 제거
+    const th = Math.max(...envData) * 0.12; let a = envData.findIndex(v => v > th); let z = envData.length - 1; while (z > a && envData[z] < th) z--;
+    const d = envData.slice(Math.max(0, a - 2), z + 3); const mx = Math.max(...d) || 1;
+    ctx.fillStyle = '#7c5cff';
+    d.forEach((v, i) => { const x = i / d.length * W, h = v / mx * (H - 20); ctx.fillRect(x, H - 10 - h, Math.max(2, W / d.length - 1), h); });
+    ctx.fillStyle = '#8b90a0'; ctx.font = '18px sans-serif'; ctx.fillText('소리 크기 — 높은 막대 = 세게 말한 부분. 강세 음절에서 높아야 해요', 8, 20);
+  }
 
   // ---- 결과
   function fmt(ms) { const s = Math.round(ms / 1000); return `${Math.floor(s / 60)}분 ${s % 60}초`; }
