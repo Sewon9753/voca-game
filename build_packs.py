@@ -20,4 +20,9 @@ assert 'src="engine.js"' not in bundled and 'src="packs.js"' not in bundled
 m = re.search(r"<head>(.*?)</head>\s*<body>(.*?)</body>", bundled, re.S)
 head = re.sub(r'<meta (charset|name="viewport")[^>]*>\s*', "", m.group(1))
 (root / "dist" / "artifact.html").write_text(head.strip() + "\n" + m.group(2).strip() + "\n", encoding="utf-8")
+import hashlib
+sw = root / "sw.js"
+stamp = hashlib.sha1((html + eng + pk).encode()).hexdigest()[:10]
+sw.write_text(re.sub(r"const VERSION = '[^']*';", f"const VERSION = 'v-{stamp}';", sw.read_text(encoding="utf-8")), encoding="utf-8")
+print(f"sw.js version v-{stamp}")
 print(f"packs: {[ (p['title'], len(p['words'])) for p in packs ]} → packs.js, dist/voca-game.html, dist/artifact.html")
