@@ -364,7 +364,7 @@
 </script>
 <script>
 // 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
-window.VOCA_BUILD = '0907.1435';
+window.VOCA_BUILD = '0907.1518';
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
@@ -826,11 +826,12 @@ window.VOCA_PACKS = [
   $('sPrev').addEventListener('click', () => { if (sIdx > 0) { sIdx--; renderStudy(true); } });
   $('sNext').addEventListener('click', () => { if (sIdx < sPack.words.length - 1) { sIdx++; renderStudy(true); } else { stopRec(); renderHome(); show('home'); } });
   $('studyHome').addEventListener('click', () => { stopRec(); speechSynthesis.cancel && speechSynthesis.cancel(); renderHome(); show('home'); });
-  let tx0 = 0;
-  $('sbody').addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; }, { passive: true });
+  // 좌우 스와이프로 이전·다음. 세로 스크롤 중 비스듬한 손가락에 넘어가지 않도록 가로가 분명할 때만(가로 70px 이상 · 세로의 2배 이상 · 세로 60px 미만)
+  let tx0 = 0, ty0 = 0;
+  $('sbody').addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; ty0 = e.touches[0].clientY; }, { passive: true });
   $('sbody').addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - tx0;
-    if (Math.abs(dx) > 70) (dx < 0 ? $('sNext') : $('sPrev')).click();
+    const dx = e.changedTouches[0].clientX - tx0, dy = e.changedTouches[0].clientY - ty0;
+    if (Math.abs(dx) > 70 && Math.abs(dy) < 60 && Math.abs(dx) > Math.abs(dy) * 2) (dx < 0 ? $('sNext') : $('sPrev')).click();
   }, { passive: true });
 
   // ---- 발음 녹음·인식·크기 곡선
