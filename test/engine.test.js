@@ -122,3 +122,29 @@ test('stressSyllables parses FI-nal-ly into syllables with stress flags', () => 
     { text: 'be', stressed: false }, { text: 'fa', stressed: true }, { text: 'mous', stressed: false }, { text: 'for', stressed: false },
   ]);
 });
+
+test('formatResult renders a plain-text summary for sharing', () => {
+  const sm = {
+    rounds: [
+      { phase: 'en2ko', pass: 1, ok: 21, ng: 3 }, { phase: 'en2ko', pass: 2, ok: 3, ng: 0 },
+      { phase: 'ko2en', pass: 1, ok: 24, ng: 0 },
+    ],
+    weak: [{ en: 'bark', ko: '[동] (개가) 짖다', misses: 2 }, { en: 'able', ko: '…', misses: 1 }],
+    elapsedMs: 252000,
+  };
+  const txt = E.formatResult(sm, { name: '연우', title: 'DAY 03', total: 24, date: '2026-09-07 10:50' });
+  assert.equal(txt, [
+    '[연우 단어 게임 결과] 2026-09-07 10:50',
+    'DAY 03 (24단어) · 4분 12초',
+    '1차 영어→뜻: 1회차 21/24, 2회차 3/3',
+    '2차 뜻→영어: 1회차 24/24',
+    '틀린 단어: bark(2), able(1)',
+  ].join('\n'));
+});
+
+test('formatResult without name and with no misses', () => {
+  const sm = { rounds: [{ phase: 'en2ko', pass: 1, ok: 2, ng: 0 }, { phase: 'ko2en', pass: 1, ok: 2, ng: 0 }], weak: [], elapsedMs: 30000 };
+  const txt = E.formatResult(sm, { name: '', title: 'T', total: 2, date: 'D' });
+  assert.equal(txt.split('\n')[0], '[단어 게임 결과] D');
+  assert.equal(txt.split('\n').pop(), '틀린 단어: 없음 (전부 한 번에 통과)');
+});

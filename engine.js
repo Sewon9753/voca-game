@@ -140,5 +140,24 @@
     }));
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables };
+  // 결과 공유용 텍스트 (카톡 복붙용 · 이모지 없음)
+  function formatResult(sm, meta) {
+    const s = Math.round(sm.elapsedMs / 1000);
+    const time = `${Math.floor(s / 60)}분 ${s % 60}초`;
+    const phaseLine = (ph, label) => {
+      const rs = sm.rounds.filter((r) => r.phase === ph);
+      if (!rs.length) return null;
+      return `${label}: ` + rs.map((r) => `${r.pass}회차 ${r.ok}/${r.ok + r.ng}`).join(', ');
+    };
+    const weak = sm.weak.length ? sm.weak.map((w) => `${w.en}(${w.misses})`).join(', ') : '없음 (전부 한 번에 통과)';
+    return [
+      `[${meta.name ? meta.name + ' ' : ''}단어 게임 결과] ${meta.date}`,
+      `${meta.title} (${meta.total}단어) · ${time}`,
+      phaseLine('en2ko', '1차 영어→뜻'),
+      phaseLine('ko2en', '2차 뜻→영어'),
+      `틀린 단어: ${weak}`,
+    ].filter(Boolean).join('\n');
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult };
 });

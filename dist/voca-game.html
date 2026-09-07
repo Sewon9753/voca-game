@@ -118,6 +118,10 @@
 <!-- 홈 -->
 <section id="home" class="screen on">
   <h1>📚 단어 게임 <span class="sub" id="ver" style="font-weight:400"></span></h1>
+  <div class="row" style="margin-bottom:.8rem">
+    <span class="sub">이름</span>
+    <input type="text" id="userName" placeholder="예: 연우" style="width:9rem;margin:0;padding:.55rem .8rem" maxlength="10">
+  </div>
   <div class="row" style="margin-bottom:1rem">
     <span class="sub">보여주는 시간</span>
     <div class="seg" id="secs">
@@ -180,7 +184,11 @@
   <div class="sub" id="resultTitle"></div>
   <table id="roundsTbl"></table>
   <div id="weakWrap"></div>
-  <div class="row" style="margin-top:auto">
+  <div class="sec" style="margin-top:.8rem">
+    <div class="row"><button class="btn" id="shareBtn" style="background:#f7c948;color:#1a1a1a">📤 결과 보내기 (카톡)</button><button class="btn ghost" id="copyBtn">복사</button><span class="sub" id="shareMsg"></span></div>
+    <textarea id="shareText" readonly style="margin-top:.6rem;min-height:7rem;font-size:.95rem"></textarea>
+  </div>
+  <div class="row" style="margin-top:1rem">
     <button class="btn" id="again">다시 하기</button>
     <button class="btn ghost" id="toHome">홈으로</button>
   </div>
@@ -331,13 +339,32 @@
     }));
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables };
+  // 결과 공유용 텍스트 (카톡 복붙용 · 이모지 없음)
+  function formatResult(sm, meta) {
+    const s = Math.round(sm.elapsedMs / 1000);
+    const time = `${Math.floor(s / 60)}분 ${s % 60}초`;
+    const phaseLine = (ph, label) => {
+      const rs = sm.rounds.filter((r) => r.phase === ph);
+      if (!rs.length) return null;
+      return `${label}: ` + rs.map((r) => `${r.pass}회차 ${r.ok}/${r.ok + r.ng}`).join(', ');
+    };
+    const weak = sm.weak.length ? sm.weak.map((w) => `${w.en}(${w.misses})`).join(', ') : '없음 (전부 한 번에 통과)';
+    return [
+      `[${meta.name ? meta.name + ' ' : ''}단어 게임 결과] ${meta.date}`,
+      `${meta.title} (${meta.total}단어) · ${time}`,
+      phaseLine('en2ko', '1차 영어→뜻'),
+      phaseLine('ko2en', '2차 뜻→영어'),
+      `틀린 단어: ${weak}`,
+    ].filter(Boolean).join('\n');
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult };
 });
 
 </script>
 <script>
 // 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
-window.VOCA_BUILD = '0907.1044';
+window.VOCA_BUILD = '0907.1109';
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
@@ -628,7 +655,7 @@ window.VOCA_PACKS = [
   applyScale(coarse(), window.innerWidth);
   window.addEventListener('resize', () => applyScale(coarse(), window.innerWidth));
   const $ = (id) => document.getElementById(id);
-  const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs' };
+  const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs', name: 'voca:name' };
   const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
   const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
@@ -648,6 +675,8 @@ window.VOCA_PACKS = [
     $('recent').innerHTML = ss.slice(-10).reverse().map(s =>
       `<div>${s.date} · ${s.title} · ${fmt(s.elapsedMs)} · 틀림 ${s.totalNg}회</div>`).join('');
   }
+  $('userName').value = load(LS.name, '');
+  $('userName').addEventListener('input', () => save(LS.name, $('userName').value.trim()));
   $('secs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; secs = +b.dataset.s; save(LS.secs, secs); renderHome(); });
   $('packs').addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
@@ -886,8 +915,24 @@ window.VOCA_PACKS = [
     ss.push({ date: new Date().toISOString().slice(0, 10), title: pack.title, elapsedMs: sm.elapsedMs,
       totalNg: sm.rounds.reduce((a, r) => a + r.ng, 0), weak: sm.weak.slice(0, 10) });
     save(LS.sessions, ss.slice(-50));
+    const d = new Date(), pad = (n) => String(n).padStart(2, '0');
+    lastShare = E.formatResult(sm, { name: load(LS.name, ''), title: pack.title, total: pack.words.length,
+      date: `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}` });
+    $('shareText').value = lastShare; $('shareMsg').textContent = '';
     show('result');
   }
+  let lastShare = '';
+  function copyText(t) {
+    const ta = $('shareText'); ta.focus(); ta.select(); ta.setSelectionRange(0, t.length);
+    let ok = false; try { ok = document.execCommand('copy'); } catch {}
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => ($('shareMsg').textContent = '복사됨 — 카톡에 붙여넣기'), () => {});
+    $('shareMsg').textContent = ok ? '복사됨 — 카톡에 붙여넣기' : '길게 눌러 전체 선택 후 복사하세요';
+  }
+  $('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) { try { await navigator.share({ text: lastShare }); $('shareMsg').textContent = '보냈어요'; return; } catch (e) { if (e.name === 'AbortError') return; } }
+    copyText(lastShare);
+  });
+  $('copyBtn').addEventListener('click', () => copyText(lastShare));
   $('again').addEventListener('click', () => start(pack));
   $('toHome').addEventListener('click', () => { renderHome(); show('home'); });
 
