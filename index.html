@@ -117,7 +117,7 @@
 
 <!-- 홈 -->
 <section id="home" class="screen on">
-  <h1>📚 단어 게임</h1>
+  <h1>📚 단어 게임 <span class="sub" id="ver" style="font-weight:400"></span></h1>
   <div class="row" style="margin-bottom:1rem">
     <span class="sub">보여주는 시간</span>
     <div class="seg" id="secs">
@@ -468,8 +468,20 @@
   $('toHome').addEventListener('click', () => { renderHome(); show('home'); });
 
   renderHome();
+  $('ver').textContent = 'v' + (window.VOCA_BUILD || '');
+  // 새 버전 자동 반영: 앱을 열거나 다시 화면에 올 때 sw.js 갱신 확인 → 새 워커가 잡히면 한 번 새로고침
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      const check = () => reg.update().catch(() => {});
+      check();
+      document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') check(); });
+      setInterval(check, 10 * 60 * 1000);
+    }).catch(() => {});
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (reloaded) return; reloaded = true;
+      if (!document.getElementById('card').classList.contains('on')) location.reload();
+    });
   }
 })();
 </script>

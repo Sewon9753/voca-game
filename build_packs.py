@@ -6,7 +6,7 @@ from pathlib import Path
 root = Path(__file__).parent
 packs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((root / "packs").glob("*.json"))]
 (root / "packs.js").write_text(
-    "// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성\nwindow.VOCA_PACKS = "
+    "// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성\nwindow.VOCA_BUILD = '" + __import__("datetime").datetime.now().strftime("%m%d.%H%M") + "';\nwindow.VOCA_PACKS = "
     + json.dumps(packs, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
 
 html = (root / "index.html").read_text(encoding="utf-8")

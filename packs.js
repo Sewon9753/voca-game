@@ -1,4 +1,5 @@
 // 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성
+window.VOCA_BUILD = '0907.1041';
 window.VOCA_PACKS = [
   {
     "pack_id": "neungyul-voca-middle-2025-day03",
