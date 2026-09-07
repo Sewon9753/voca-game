@@ -14,96 +14,103 @@
 <title>단어 게임</title>
 <style>
   :root {
-    --bg: #111318; --card: #1c1f27; --fg: #f3f4f6; --muted: #8b90a0;
-    --accent: #5b8cff; --ok: #2ecc71; --ng: #ff5c5c; --ring: #2a2e3a;
+    --bg: #111318; --card: #1c1f27; --fg: #f3f4f6; --muted: #9096a6;
+    --accent: #5b8cff; --ok: #2ecc71; --ng: #ff5c5c; --ring: #2a2e3a; --violet: #7c5cff; --amber: #ffb84d;
   }
+  html { font-size: 17px; }               /* 터치 기기에서는 JS가 화면 폭에 맞춰 키움 */
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
-    font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; }
+    font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; font-size: 1rem; }
   body { display: flex; flex-direction: column; min-height: 100dvh; user-select: none; -webkit-user-select: none; }
-  .screen { display: none; flex: 1; flex-direction: column; padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom)); }
+  button { font-family: inherit; }
+  .screen { display: none; flex: 1; flex-direction: column; width: 100%; max-width: 34rem; margin: 0 auto;
+    padding: max(1rem, env(safe-area-inset-top)) 1rem max(1rem, env(safe-area-inset-bottom)); }
   .screen.on { display: flex; }
-  h1 { font-size: 22px; margin: 8px 0 16px; }
-  .sub { color: var(--muted); font-size: 14px; }
-  .list { display: flex; flex-direction: column; gap: 10px; }
-  .item { background: var(--card); border-radius: 14px; padding: 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
-  .item b { font-size: 17px; }
-  .btn { background: var(--accent); color: #fff; border: 0; border-radius: 14px; padding: 14px 18px; font-size: 17px; font-weight: 700; cursor: pointer; }
+  h1 { font-size: 1.6rem; margin: .4rem 0 1rem; }
+  .sub { color: var(--muted); font-size: .9rem; }
+  .list { display: flex; flex-direction: column; gap: .8rem; }
+  .item { background: var(--card); border-radius: 1rem; padding: 1rem; display: flex; flex-direction: column; gap: .8rem; }
+  .item b { font-size: 1.15rem; line-height: 1.3; }
+  .btn { background: var(--accent); color: #fff; border: 0; border-radius: .9rem; padding: .9rem 1.1rem; font-size: 1.05rem; font-weight: 700; cursor: pointer; min-height: 3rem; }
   .btn.ghost { background: var(--card); color: var(--fg); }
-  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-  .seg { display: inline-flex; background: var(--card); border-radius: 12px; padding: 4px; }
-  .seg button { background: transparent; color: var(--muted); border: 0; padding: 8px 14px; border-radius: 9px; font-size: 15px; font-weight: 700; }
+  .row { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; }
+  .seg { display: inline-flex; background: var(--card); border-radius: .8rem; padding: .25rem; }
+  .seg button { background: transparent; color: var(--muted); border: 0; padding: .6rem 1rem; border-radius: .6rem; font-size: 1rem; font-weight: 700; min-height: 2.6rem; }
   .seg button.sel { background: var(--accent); color: #fff; }
-  textarea { width: 100%; min-height: 140px; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: 12px; padding: 12px; font-size: 15px; }
-  input[type=text] { width: 100%; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: 12px; padding: 12px; font-size: 15px; }
-  details { margin-top: 20px; }
-  summary { cursor: pointer; color: var(--muted); }
+  textarea { width: 100%; min-height: 9rem; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: .8rem; padding: .8rem; font-size: 1rem; }
+  input[type=text] { width: 100%; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: .8rem; padding: .8rem; font-size: 1rem; margin-bottom: .6rem; }
+  details { margin-top: 1.4rem; }
+  summary { cursor: pointer; color: var(--muted); font-size: 1rem; padding: .5rem 0; }
 
-  /* 카드 */
+  /* 홈 팩 행 */
+  .item .acts { display: flex; gap: .6rem; }
+  .item .acts button { flex: 1; border: 0; border-radius: .8rem; padding: .9rem; font-size: 1.05rem; font-weight: 800; color: #fff; cursor: pointer; min-height: 3.2rem; }
+  .item .acts .study { background: var(--violet); } .item .acts .test { background: var(--accent); }
+
+  /* 테스트 카드 */
   #card { justify-content: space-between; }
-  .top { display: flex; justify-content: space-between; align-items: center; font-size: 15px; color: var(--muted); }
+  .top { display: flex; justify-content: space-between; align-items: center; font-size: 1rem; color: var(--muted); }
   .top .phase { color: var(--fg); font-weight: 700; }
-  .prog { height: 4px; background: var(--ring); border-radius: 2px; margin-top: 10px; overflow: hidden; }
+  .prog { height: .3rem; background: var(--ring); border-radius: .15rem; margin-top: .6rem; overflow: hidden; }
   .prog i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .15s; }
-  .stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 22px; padding: 12px 0; }
-  .prompt { font-size: clamp(30px, 9vw, 56px); font-weight: 800; line-height: 1.2; word-break: keep-all; }
-  .prompt.ko { font-size: clamp(22px, 6.2vw, 38px); font-weight: 700; }
-  .answer { font-size: clamp(22px, 6.2vw, 38px); font-weight: 700; color: var(--accent); line-height: 1.35; word-break: keep-all; min-height: 1.4em; }
-  .answer.en { font-size: clamp(30px, 9vw, 56px); font-weight: 800; }
-  .ring { position: relative; width: 120px; height: 120px; }
-  .ring svg { transform: rotate(-90deg); }
+  .stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1.4rem; padding: .8rem 0; }
+  .prompt { font-size: 3rem; font-weight: 800; line-height: 1.2; word-break: keep-all; }
+  .prompt.ko { font-size: 1.9rem; font-weight: 700; }
+  .answer { font-size: 1.9rem; font-weight: 700; color: var(--accent); line-height: 1.35; word-break: keep-all; min-height: 1.4em; }
+  .answer.en { font-size: 3rem; font-weight: 800; }
+  .ring { position: relative; width: 8rem; height: 8rem; }
+  .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
   .ring circle { fill: none; stroke-width: 8; }
   .ring .bg { stroke: var(--ring); }
   .ring .fg { stroke: var(--accent); stroke-linecap: round; }
-  .ring .num { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 44px; font-weight: 800; font-variant-numeric: tabular-nums; }
-  .hint { color: var(--muted); font-size: 14px; }
-  .judge { display: none; gap: 12px; height: 120px; }
+  .ring .num { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .hint { color: var(--muted); font-size: .95rem; }
+  .judge { display: none; gap: .8rem; height: 8rem; }
   .judge.on { display: flex; }
-  .judge button { flex: 1; border: 0; border-radius: 18px; font-size: 56px; font-weight: 900; color: #fff; cursor: pointer; }
+  .judge button { flex: 1; border: 0; border-radius: 1.2rem; font-size: 3.6rem; font-weight: 900; color: #fff; cursor: pointer; }
   .judge .x { background: var(--ng); }
   .judge .o { background: var(--ok); }
   .judge button:active { filter: brightness(1.15); transform: scale(.98); }
-  .toast { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(17,19,24,.92); font-size: 30px; font-weight: 800; text-align: center; padding: 24px; line-height: 1.4; z-index: 9; }
+  .toast { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(17,19,24,.92); font-size: 2rem; font-weight: 800; text-align: center; padding: 1.5rem; line-height: 1.4; z-index: 9; }
   .toast.on { display: flex; }
-  .toast small { display: block; font-size: 16px; color: var(--muted); margin-top: 10px; font-weight: 500; }
+  .toast small { display: block; font-size: 1.05rem; color: var(--muted); margin-top: .6rem; font-weight: 500; }
 
   /* 카드 학습 */
-  .item .acts { display: flex; gap: 8px; }
-  .item .acts button { border: 0; border-radius: 10px; padding: 10px 12px; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; }
-  .item .acts .study { background: #7c5cff; } .item .acts .test { background: var(--accent); }
   #study { padding-bottom: 0; }
-  .sbody { flex: 1; overflow-y: auto; padding-bottom: 12px; }
-  .scard { background: var(--card); border-radius: 20px; padding: 22px 18px; margin-top: 12px; display: flex; flex-direction: column; gap: 14px; }
-  .sword { font-size: clamp(34px, 10vw, 60px); font-weight: 800; line-height: 1.1; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-  .spk { background: var(--ring); color: var(--fg); border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 20px; cursor: pointer; flex: none; }
-  .spk.sm { width: 34px; height: 34px; font-size: 15px; }
-  .ipa { color: var(--muted); font-size: 16px; font-family: "Charis SIL", "Doulos SIL", "Times New Roman", serif; }
-  .stress { font-size: 18px; letter-spacing: .5px; color: var(--muted); }
-  .stress b { color: #ffb84d; font-size: 22px; }
-  .semoji { font-size: 56px; line-height: 1; text-align: center; padding: 6px 0; }
-  .smean { font-size: 20px; font-weight: 700; color: #a9c1ff; line-height: 1.4; }
-  .sec { border-top: 1px solid var(--ring); padding-top: 12px; }
-  .sec .lab { font-size: 12px; color: var(--muted); letter-spacing: .06em; margin-bottom: 6px; }
-  .sex { font-size: 18px; line-height: 1.45; display: flex; gap: 8px; align-items: flex-start; }
-  .sex .en { flex: 1; } .sex .en mark { background: transparent; color: #ffb84d; font-weight: 800; }
-  .sexko { color: var(--muted); font-size: 15px; margin-top: 4px; }
-  .smn { font-size: 16px; line-height: 1.5; background: #26223a; border-radius: 12px; padding: 12px; }
-  .pron { display: flex; flex-direction: column; gap: 10px; }
-  .rec { background: var(--ng); color: #fff; border: 0; border-radius: 14px; padding: 14px; font-size: 17px; font-weight: 800; cursor: pointer; }
+  .sbody { flex: 1; overflow-y: auto; padding-bottom: .8rem; }
+  .scard { background: var(--card); border-radius: 1.3rem; padding: 1.3rem 1.1rem; margin-top: .8rem; display: flex; flex-direction: column; gap: .9rem; }
+  .sword { font-size: 2.6rem; font-weight: 800; line-height: 1.15; display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; word-break: keep-all; }
+  .spk { background: var(--ring); color: var(--fg); border: 0; border-radius: 50%; width: 3rem; height: 3rem; font-size: 1.4rem; cursor: pointer; flex: none; }
+  .spk.sm { width: 2.6rem; height: 2.6rem; font-size: 1.1rem; }
+  .ipa { color: var(--muted); font-size: 1.05rem; font-family: "Charis SIL", "Doulos SIL", "Times New Roman", serif; }
+  .stress { font-size: 1.15rem; letter-spacing: .02em; color: var(--muted); }
+  .stress b { color: var(--amber); font-size: 1.4rem; }
+  .semoji { font-size: 3.6rem; line-height: 1; text-align: center; padding: .3rem 0; }
+  .smean { font-size: 1.3rem; font-weight: 700; color: #a9c1ff; line-height: 1.4; word-break: keep-all; }
+  .sec { border-top: 1px solid var(--ring); padding-top: .8rem; }
+  .sec .lab { font-size: .8rem; color: var(--muted); letter-spacing: .06em; margin-bottom: .4rem; }
+  .sex { font-size: 1.2rem; line-height: 1.45; display: flex; gap: .5rem; align-items: flex-start; }
+  .sex .en { flex: 1; } .sex .en mark { background: transparent; color: var(--amber); font-weight: 800; }
+  .sexko { color: var(--muted); font-size: 1rem; margin-top: .3rem; line-height: 1.4; }
+  .smn { font-size: 1.1rem; line-height: 1.55; background: #26223a; border-radius: .8rem; padding: .8rem; word-break: keep-all; }
+  .pron { display: flex; flex-direction: column; gap: .7rem; }
+  .rec { background: var(--ng); color: #fff; border: 0; border-radius: .9rem; padding: 1rem; font-size: 1.15rem; font-weight: 800; cursor: pointer; min-height: 3.4rem; }
   .rec.on { background: #b23b3b; animation: pulse 1s infinite; }
   @keyframes pulse { 50% { opacity: .6; } }
-  .heard { font-size: 16px; } .heard b { font-size: 20px; }
-  canvas.env { width: 100%; height: 70px; background: #15171e; border-radius: 10px; }
-  .snav { display: flex; gap: 10px; padding: 10px 0 max(12px, env(safe-area-inset-bottom)); }
-  .snav button { flex: 1; background: var(--card); color: var(--fg); border: 0; border-radius: 14px; padding: 16px; font-size: 20px; font-weight: 800; cursor: pointer; }
-  .snav button.prim { background: #7c5cff; color: #fff; }
+  .heard { font-size: 1.05rem; line-height: 1.45; } .heard b { font-size: 1.3rem; }
+  canvas.env { width: 100%; height: 4.5rem; background: #15171e; border-radius: .7rem; }
+  .snav { display: flex; gap: .6rem; padding: .6rem 0 max(.8rem, env(safe-area-inset-bottom)); }
+  .snav button { flex: 1; background: var(--card); color: var(--fg); border: 0; border-radius: .9rem; padding: 1rem .5rem; font-size: 1.25rem; font-weight: 800; cursor: pointer; min-height: 3.6rem; }
+  .snav button.prim { background: var(--violet); color: #fff; }
+  .snav button:disabled { opacity: .35; }
 
   /* 결과 */
-  table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; }
-  td, th { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--ring); font-size: 15px; }
+  table { width: 100%; border-collapse: collapse; margin: .6rem 0 1.1rem; }
+  td, th { padding: .5rem .4rem; text-align: left; border-bottom: 1px solid var(--ring); font-size: 1rem; }
   th { color: var(--muted); font-weight: 600; }
   .ok { color: var(--ok); } .ng { color: var(--ng); }
-  .big { font-size: 40px; font-weight: 800; }
+  .big { font-size: 2.6rem; font-weight: 800; }
+  @media (prefers-reduced-motion: reduce) { .rec.on { animation: none; } }
 </style>
 </head>
 <body>
@@ -111,7 +118,7 @@
 <!-- 홈 -->
 <section id="home" class="screen on">
   <h1>📚 단어 게임</h1>
-  <div class="row" style="margin-bottom:16px">
+  <div class="row" style="margin-bottom:1rem">
     <span class="sub">보여주는 시간</span>
     <div class="seg" id="secs">
       <button data-s="3">3초</button><button data-s="5">5초</button><button data-s="7">7초</button>
@@ -123,7 +130,7 @@
     <p class="sub">한 줄에 한 단어. <code>영어[탭]뜻</code> 또는 <code>영어 - 뜻</code> 형식.</p>
     <input type="text" id="newTitle" placeholder="팩 이름 (예: DAY 04)">
     <textarea id="newText" placeholder="pack&#9;(짐을) 싸다&#10;male - 남성의"></textarea>
-    <div class="row" style="margin-top:10px"><button class="btn" id="addPack">추가</button><span class="sub" id="addMsg"></span></div>
+    <div class="row" style="margin-top:.6rem"><button class="btn" id="addPack">추가</button><span class="sub" id="addMsg"></span></div>
   </details>
   <details id="recentWrap" style="display:none">
     <summary>최근 기록</summary>
@@ -154,7 +161,7 @@
 
 <!-- 카드 학습 -->
 <section id="study" class="screen">
-  <div class="top"><button class="btn ghost" id="studyHome" style="padding:8px 12px;font-size:15px">‹ 홈</button><span id="studyPos"></span></div>
+  <div class="top"><button class="btn ghost" id="studyHome" style="padding:.5rem .9rem;font-size:1rem;min-height:2.6rem">‹ 홈</button><span id="studyPos"></span></div>
   <div class="sbody" id="sbody">
     <div class="scard" id="scard"></div>
   </div>
@@ -185,6 +192,17 @@
 <script>
 (function () {
   const E = window.VocaEngine;
+
+  // ---- 화면 폭에 맞춘 글자 크기 (터치 기기: 폭/23, 17~40px · 마우스 기기: 17px)
+  function applyScale(coarse, width) {
+    const px = coarse ? Math.max(17, Math.min(40, width / 23)) : 17;
+    document.documentElement.style.fontSize = px + 'px';
+    return px;
+  }
+  window.__applyScale = applyScale;
+  const coarse = () => matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+  applyScale(coarse(), window.innerWidth);
+  window.addEventListener('resize', () => applyScale(coarse(), window.innerWidth));
   const $ = (id) => document.getElementById(id);
   const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs' };
   const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
@@ -338,7 +356,7 @@
         <div class="lab">🎤 발음 연습 — 강세: <span class="stress">${stressHtml(w.stress)}</span></div>
         <button class="rec" id="recBtn">🎤 녹음하고 따라 말하기</button>
         <div class="heard" id="heard"></div>
-        <canvas class="env" id="env" width="600" height="140" style="display:none"></canvas>
+        <canvas class="env" id="env" width="600" height="120" style="display:none"></canvas>
         <div class="row" id="recActs" style="display:none"><button class="btn ghost" id="playMine">▶ 내 녹음</button><button class="btn ghost" data-say="${esc(w.en)}">🔊 원어</button></div>
       </div>`;
     $('sPrev').disabled = sIdx === 0;
