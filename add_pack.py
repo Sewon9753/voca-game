@@ -42,7 +42,14 @@ def validate(p: Path):
     return pack
 
 
-def archive_images(images, day_tag):
+def pack_slug(title):
+    """볼트 첨부 파일명에 쓸 교재·범위 표기 — 팩 title 에서 뽑는다(교재가 바뀌면 자동으로 따라간다)."""
+    s = re.sub(r"\[[^\]]*\]", " ", title)          # "[2025]" 같은 연도 표기는 뺀다
+    s = re.sub(r"[^0-9A-Za-z가-힣-]+", "-", s)
+    return re.sub(r"-{2,}", "-", s).strip("-")
+
+
+def archive_images(images, tag):
     VAULT_ATT.mkdir(parents=True, exist_ok=True)
     # 맥 파일명은 NFD·글롭 패턴은 NFC → 정규화해 비교(DAY03 미검출로 번호 중복 났던 버그)
     existing = [q for q in VAULT_ATT.iterdir() if unicodedata.normalize("NFC", q.name).startswith("아들-영어단어-") and q.suffix.lower() in (".jpeg", ".jpg", ".png")]
@@ -51,7 +58,7 @@ def archive_images(images, day_tag):
     for src in images:
         src = Path(src)
         seq += 1
-        dst = VAULT_ATT / f"아들-영어단어-{seq:02d}-능률VOCA-중등필수-{day_tag}{src.suffix.lower()}"
+        dst = VAULT_ATT / f"아들-영어단어-{seq:02d}-{tag}{src.suffix.lower()}"
         shutil.copy2(src, dst)
         out.append(dst.name)
         print(f"archived → {dst}")
@@ -81,9 +88,8 @@ def main():
     start = STEPS.index(a.start)
 
     pack = validate(p)
-    day_tag = re.sub(r"[^A-Za-z0-9]+", "", p.stem.upper()) or p.stem
     if a.image:
-        archive_images(a.image, day_tag)
+        archive_images(a.image, pack_slug(pack["title"]))
 
     if start <= STEPS.index("enrich"):
         print(sh(["python3", "enrich.py", str(p), "--model", a.model]), end="")
