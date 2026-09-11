@@ -46,7 +46,23 @@
   /* 홈 팩 행 */
   .item .acts { display: flex; gap: .6rem; }
   .item .acts button { flex: 1; border: 0; border-radius: .8rem; padding: .9rem; font-size: 1.05rem; font-weight: 800; color: #fff; cursor: pointer; min-height: 3.2rem; }
-  .item .acts .study { background: var(--violet); } .item .acts .test { background: var(--accent); }
+  .item .acts .study { background: var(--violet); } .item .acts .test { background: var(--accent); } .item .acts .write { background: var(--amber); color: #1a1a1a; }
+  /* 쓰기 시험 */
+  .wstage { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 1rem 0; }
+  .wstage .prompt.ko { font-size: 1.6rem; }
+  .wmask { font-size: 2.4rem; font-weight: 800; letter-spacing: .12em; font-family: ui-monospace, Menlo, monospace; color: var(--muted); }
+  .wmask b { color: var(--fg); }
+  .wlisten { background: var(--violet); color: #fff; border: 0; border-radius: 1.2rem; padding: 1.2rem 1.6rem; font-size: 1.4rem; font-weight: 800; cursor: pointer; }
+  .winput { width: 100%; font-size: 1.7rem; font-weight: 700; text-align: center; padding: .9rem; margin: 0; }
+  .winput.ok { border-color: var(--ok); } .winput.ng { border-color: var(--ng); }
+  .wfb { min-height: 2.4rem; font-size: 1.3rem; line-height: 1.4; word-break: keep-all; }
+  .wfb .diff { font-size: 2.2rem; font-weight: 800; letter-spacing: .06em; }
+  .wfb .diff i { font-style: normal; color: var(--ng); text-decoration: underline; }
+  .wfb .ans { color: var(--accent); font-weight: 700; }
+  .wfb .why { color: var(--amber); font-weight: 700; display: block; margin-top: .3rem; }
+  .wfb .ask { color: var(--muted); font-size: 1rem; display: block; margin-top: .3rem; }
+  #wJudge { height: 5.5rem; width: 100%; }
+  #wJudge button { font-size: 2.4rem; }
 
   /* 테스트 카드 */
   #card { justify-content: space-between; }
@@ -179,6 +195,25 @@
 </section>
 
 <!-- 결과 -->
+<section id="write" class="screen">
+  <div>
+    <div class="top"><span class="phase" id="wPhase"></span><span id="wPos"></span></div>
+    <div class="prog"><i id="wProg"></i></div>
+  </div>
+  <div class="wstage">
+    <div class="prompt" id="wPrompt"></div>
+    <div class="wmask" id="wMask" hidden></div>
+    <button class="wlisten" id="wListen" hidden>🔊 다시 듣기</button>
+    <input type="text" class="winput" id="wInput" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done">
+    <div class="wfb" id="wFb"></div>
+    <div class="judge" id="wJudge"><button class="x" id="wX">X</button><button class="o" id="wO">O</button></div>
+    <div class="row" style="width:100%">
+      <button class="btn" id="wSubmit" style="flex:1">확인</button>
+      <button class="btn ghost" id="wHome">홈</button>
+    </div>
+  </div>
+</section>
+
 <section id="result" class="screen">
   <h1>🎉 다 외웠다!</h1>
   <div class="big" id="elapsed"></div>
@@ -197,8 +232,8 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="engine.js?v=0910.2328"></script>
-<script src="packs.js?v=0910.2328"></script>
+<script src="engine.js?v=0911.1754"></script>
+<script src="packs.js?v=0911.1754"></script>
 <script>
 (function () {
   const E = window.VocaEngine;
@@ -234,7 +269,7 @@
   function renderHome() {
     document.querySelectorAll('#secs button').forEach(b => b.classList.toggle('sel', +b.dataset.s === secs));
     $('packs').innerHTML = packs.map((p, i) =>
-      `<div class="item"><div><b>${p.title}</b><div class="sub">${p.words.length}단어${E.doneLabel(done[packKey(p)]) ? ` · <span class="done">${E.doneLabel(done[packKey(p)])}</span>` : ''}</div></div><div class="acts"><button class="study" data-i="${i}">🃏 카드</button><button class="test" data-i="${i}">⚡ 테스트</button></div></div>`).join('');
+      `<div class="item"><div><b>${p.title}</b><div class="sub">${p.words.length}단어${E.doneLabel(done[packKey(p)]) ? ` · <span class="done">${E.doneLabel(done[packKey(p)])}</span>` : ''}</div></div><div class="acts"><button class="study" data-i="${i}">🃏 카드</button><button class="test" data-i="${i}">⚡ 테스트</button><button class="write" data-i="${i}">✍️ 쓰기</button></div></div>`).join('');
     const ss = load(LS.sessions, []);
     $('recentWrap').style.display = ss.length ? '' : 'none';
     $('recent').innerHTML = ss.slice(-10).reverse().map(s =>
@@ -245,7 +280,9 @@
   $('secs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; secs = +b.dataset.s; save(LS.secs, secs); renderHome(); });
   $('packs').addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
-    if (b.classList.contains('test')) start(packs[+b.dataset.i]); else startStudy(packs[+b.dataset.i]);
+    if (b.classList.contains('test')) start(packs[+b.dataset.i]);
+    else if (b.classList.contains('write')) startWrite(packs[+b.dataset.i]);
+    else startStudy(packs[+b.dataset.i]);
   });
   $('addPack').addEventListener('click', () => {
     const words = E.parsePack($('newText').value);
@@ -259,10 +296,12 @@
 
   // ---- 게임
   function start(p) {
-    pack = p; session = E.createSession(p.words);
+    pack = p; mode = 'test'; session = E.createSession(p.words);
     show('card'); showCard();
   }
-  function phaseName(ph) { return ph === 'en2ko' ? '1차 영어 → 뜻' : '2차 뜻 → 영어'; }
+  const PHASE_NAMES = { en2ko: '1차 영어 → 뜻', ko2en: '2차 뜻 → 영어', hint: '1차 힌트 쓰기', blank: '2차 백지 쓰기', ko: '3차 뜻 쓰기', dict: '4차 듣고 쓰기' };
+  function phaseName(ph) { return PHASE_NAMES[ph] || ph; }
+  let mode = 'test';
 
   function showCard() {
     const c = E.current(session);
@@ -330,6 +369,83 @@
     else if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'o') judge(true);
     else if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'x') judge(false);
   });
+
+  // ---- 쓰기 시험 (힌트 한→영 · 백지 한→영 · 영→한 · 듣고 쓰기)
+  // 상태: input(입력 대기) · retype(틀린 영어를 정답 그대로 따라 쓰기) · ask(뜻 자기판정 O/X) · next(정답 보고 다음)
+  let wState = 'input', wTarget = '';
+  function startWrite(p) {
+    pack = p; mode = 'write'; session = E.createSession(p.words, { phases: E.WRITE_PHASES });
+    show('write'); showWrite();
+    setTimeout(() => $('wInput').focus(), 50);
+  }
+  function showWrite() {
+    const c = E.current(session);
+    if (!c) return finish();
+    const ph = session.phase, w = c.word;
+    wState = 'input'; wTarget = c.answer;
+    $('wPhase').textContent = `${phaseName(ph)} · ${session.pass}회차`;
+    $('wPos').textContent = `${c.index + 1} / ${c.total}`;
+    $('wProg').style.width = (c.index / c.total * 100) + '%';
+    $('wPrompt').textContent = ph === 'dict' ? '🔊' : c.prompt;
+    $('wPrompt').className = 'prompt' + (ph === 'hint' || ph === 'blank' ? ' ko' : '');
+    $('wMask').hidden = ph !== 'hint';
+    if (ph === 'hint') $('wMask').innerHTML = E.maskWord(w.en).split('').map(ch => ch === '_' ? '_' : `<b>${esc(ch)}</b>`).join('');
+    $('wListen').hidden = ph !== 'dict';
+    $('wInput').value = ''; $('wInput').className = 'winput';
+    $('wInput').placeholder = ph === 'ko' ? '뜻을 써요 (품사 주의)' : '영어로 써요';
+    $('wInput').lang = ph === 'ko' ? 'ko' : 'en';
+    $('wFb').innerHTML = '';
+    $('wJudge').classList.remove('on');
+    $('wSubmit').textContent = '확인';
+    if (ph === 'dict') speak(w.en);
+  }
+  function wAdvance(ok) {
+    const ev = E.answer(session, ok);
+    if (ev.type === 'retry') toast(`틀린 ${ev.count}개 다시!`, `${session.pass}회차`, showWrite);
+    else if (ev.type === 'phase') toast(`${phaseName(ev.phase)} 시작 🎯`, { blank: '이번엔 힌트 없이 써 봐요', ko: '영어를 보고 뜻을 써요', dict: '소리만 듣고 스펠링을 써요' }[ev.phase] || '', showWrite);
+    else if (ev.type === 'done') finish();
+    else showWrite();
+  }
+  function wSubmit() {
+    const typed = $('wInput').value;
+    if (wState === 'next') return wAdvance(false);
+    if (wState === 'ask') return;
+    if (wState === 'retype') {
+      if (!E.gradeEn(wTarget, typed).ok) { $('wInput').className = 'winput ng'; return; }
+      return wAdvance(false);
+    }
+    if (session.phase === 'ko') {
+      const g = E.gradeKo(wTarget, typed);
+      if (g.verdict === 'ok') { $('wInput').className = 'winput ok'; return wAdvance(true); }
+      $('wInput').className = 'winput ng';
+      if (g.verdict === 'ask') {
+        wState = 'ask';
+        $('wFb').innerHTML = `<span class="ans">${esc(g.answer)}</span><span class="ask">같은 뜻이면 O, 아니면 X — 품사도 확인!</span>`;
+        $('wJudge').classList.add('on');
+        return;
+      }
+      wState = 'next';
+      $('wFb').innerHTML = `<span class="ans">${esc(g.answer)}</span>` +
+        (g.verdict === 'pos' ? `<span class="why">품사가 틀렸어요 — [${esc(g.pos)}] 꼴로 써야 해요</span>` : '');
+      $('wSubmit').textContent = '다음 ›';
+      return;
+    }
+    const g = E.gradeEn(wTarget, typed);
+    if (g.ok) { $('wInput').className = 'winput ok'; return wAdvance(true); }
+    wState = 'retype';
+    $('wInput').className = 'winput ng'; $('wInput').value = '';
+    $('wInput').placeholder = '정답을 그대로 따라 써요';
+    $('wFb').innerHTML = `<div class="diff">${g.diff.map(d => d.ok ? esc(d.ch) : `<i>${esc(d.ch)}</i>`).join('')}</div>` +
+      (typed.trim() ? `<span class="ask">내가 쓴 것: ${esc(typed.trim())}</span>` : '');
+    $('wSubmit').textContent = '따라 쓰고 확인';
+    if (session.phase === 'dict') speak(wTarget);
+  }
+  $('wSubmit').addEventListener('click', () => { wSubmit(); $('wInput').focus(); });
+  $('wInput').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); wSubmit(); } });
+  $('wListen').addEventListener('click', () => { speak(wTarget); $('wInput').focus(); });
+  $('wX').addEventListener('click', () => { if (wState === 'ask') { wState = 'next'; wAdvance(false); } });
+  $('wO').addEventListener('click', () => { if (wState === 'ask') { wState = 'next'; wAdvance(true); } });
+  $('wHome').addEventListener('click', () => { speechSynthesis.cancel && speechSynthesis.cancel(); renderHome(); show('home'); });
 
   // ---- 발음(TTS)
   function pickVoice() {
@@ -481,9 +597,9 @@
     ss.push({ date: new Date().toISOString().slice(0, 10), title: pack.title, elapsedMs: sm.elapsedMs,
       totalNg: sm.rounds.reduce((a, r) => a + r.ng, 0), weak: sm.weak.slice(0, 10) });
     save(LS.sessions, ss.slice(-50));
-    markDone(pack, 'test');
+    markDone(pack, mode);
     const d = new Date(), pad = (n) => String(n).padStart(2, '0');
-    lastShare = E.formatResult(sm, { name: load(LS.name, ''), title: pack.title, total: pack.words.length,
+    lastShare = E.formatResult(sm, { name: load(LS.name, ''), title: pack.title, total: pack.words.length, kind: mode,
       date: `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}` });
     $('shareText').value = lastShare; $('shareMsg').textContent = '';
     show('result');
@@ -500,7 +616,7 @@
     copyText(lastShare);
   });
   $('copyBtn').addEventListener('click', () => copyText(lastShare));
-  $('again').addEventListener('click', () => start(pack));
+  $('again').addEventListener('click', () => (mode === 'write' ? startWrite(pack) : start(pack)));
   $('toHome').addEventListener('click', () => { renderHome(); show('home'); });
 
   renderHome();
