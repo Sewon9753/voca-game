@@ -38,6 +38,8 @@
   .seg { display: inline-flex; background: var(--card); border-radius: .8rem; padding: .25rem; }
   .seg button { background: transparent; color: var(--muted); border: 0; padding: .6rem 1rem; border-radius: .6rem; font-size: 1rem; font-weight: 700; min-height: 2.6rem; }
   .seg button.sel { background: var(--accent); color: #fff; }
+  .seg.tabs { display: flex; width: 100%; }
+  .seg.tabs button { flex: 1; padding: .6rem .4rem; }
   textarea { width: 100%; min-height: 9rem; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: .8rem; padding: .8rem; font-size: 1rem; }
   input[type=text] { width: 100%; background: var(--card); color: var(--fg); border: 1px solid var(--ring); border-radius: .8rem; padding: .8rem; font-size: 1rem; margin-bottom: .6rem; }
   details { margin-top: 1.4rem; }
@@ -145,6 +147,7 @@
       <button data-s="3">3초</button><button data-s="5">5초</button><button data-s="7">7초</button>
     </div>
   </div>
+  <div class="seg tabs" id="bookTabs" style="margin-bottom:.8rem"></div>
   <div class="list" id="packs"></div>
   <details>
     <summary>+ 단어팩 붙여넣기로 추가</summary>
@@ -232,8 +235,8 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="engine.js?v=0911.1754"></script>
-<script src="packs.js?v=0911.1754"></script>
+<script src="engine.js?v=0913.1819"></script>
+<script src="packs.js?v=0913.1819"></script>
 <script>
 (function () {
   const E = window.VocaEngine;
@@ -249,7 +252,7 @@
   applyScale(coarse(), window.innerWidth);
   window.addEventListener('resize', () => applyScale(coarse(), window.innerWidth));
   const $ = (id) => document.getElementById(id);
-  const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs', name: 'voca:name', done: 'voca:done' };
+  const LS = { packs: 'voca:packs', sessions: 'voca:sessions', secs: 'voca:secs', name: 'voca:name', done: 'voca:done', tab: 'voca:tab' };
   const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
   const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
@@ -268,7 +271,10 @@
   // ---- 홈
   function renderHome() {
     document.querySelectorAll('#secs button').forEach(b => b.classList.toggle('sel', +b.dataset.s === secs));
-    $('packs').innerHTML = packs.map((p, i) =>
+    const groups = E.groupPacks(packs), tab = E.pickTab(groups, load(LS.tab, null));
+    $('bookTabs').innerHTML = groups.map(g => `<button data-book="${g.book}" class="${g.book === tab ? 'sel' : ''}">${g.book} <span style="font-weight:400;opacity:.75">${g.items.length}</span></button>`).join('');
+    const shown = (groups.find(g => g.book === tab) || { items: [] }).items;
+    $('packs').innerHTML = shown.map(({ pack: p, i }) =>
       `<div class="item"><div><b>${p.title}</b><div class="sub">${p.words.length}단어${E.doneLabel(done[packKey(p)]) ? ` · <span class="done">${E.doneLabel(done[packKey(p)])}</span>` : ''}</div></div><div class="acts"><button class="study" data-i="${i}">🃏 카드</button><button class="test" data-i="${i}">⚡ 테스트</button><button class="write" data-i="${i}">✍️ 쓰기</button></div></div>`).join('');
     const ss = load(LS.sessions, []);
     $('recentWrap').style.display = ss.length ? '' : 'none';
@@ -278,6 +284,7 @@
   $('userName').value = load(LS.name, '');
   $('userName').addEventListener('input', () => save(LS.name, $('userName').value.trim()));
   $('secs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; secs = +b.dataset.s; save(LS.secs, secs); renderHome(); });
+  $('bookTabs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; save(LS.tab, b.dataset.book); renderHome(); });
   $('packs').addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
     if (b.classList.contains('test')) start(packs[+b.dataset.i]);
@@ -290,6 +297,7 @@
     const p = { pack_id: 'custom-' + Date.now(), title: $('newTitle').value.trim() || `내 단어팩 (${words.length})`, words };
     const custom = load(LS.packs, []); custom.push(p); save(LS.packs, custom);
     packs = [...window.VOCA_PACKS, ...custom];
+    save(LS.tab, E.bookOf(p));
     $('newText').value = ''; $('newTitle').value = ''; $('addMsg').textContent = `추가됨: ${p.title}`;
     renderHome();
   });

@@ -271,5 +271,23 @@
     return { verdict: 'ask', answer };
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult, bumpDone, doneFromSessions, doneLabel, WRITE_PHASES, maskWord, gradeEn, parseMeanings, gradeKo };
+  // ---- 홈 탭: 교재별 그룹 (pack_id 접두어로 판정, 순서 고정)
+  const BOOKS = [['neungyul-voca-', '능률VOCA'], ['reading-tutor-', '리딩튜터']];
+  function bookOf(p) {
+    const id = String((p && p.pack_id) || '');
+    const hit = BOOKS.find(([pre]) => id.startsWith(pre));
+    return hit ? hit[1] : '내 단어팩';
+  }
+  function groupPacks(packs) {
+    const order = [...BOOKS.map(b => b[1]), '내 단어팩'];
+    const by = {};
+    packs.forEach((pack, i) => { (by[bookOf(pack)] = by[bookOf(pack)] || []).push({ i, pack }); });
+    return order.filter(b => by[b]).map(b => ({ book: b, items: by[b] }));
+  }
+  function pickTab(groups, saved) {
+    if (!groups.length) return null;
+    return groups.some(g => g.book === saved) ? saved : groups[0].book;
+  }
+
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult, bumpDone, doneFromSessions, doneLabel, WRITE_PHASES, maskWord, gradeEn, parseMeanings, gradeKo, bookOf, groupPacks, pickTab };
 });

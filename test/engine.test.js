@@ -267,3 +267,31 @@ test('parseMeanings: leading bracket label ([부정문], [소화기관]) is stri
   assert.deepEqual(E.parseMeanings('[부] 1. [부정문] 아직 2. [의문문] 벌써'), [{ pos: '부', senses: ['아직', '벌써'] }]);
   assert.deepEqual(E.parseMeanings('[명] [소화기관] 위, 배'), [{ pos: '명', senses: ['위', '배'] }]);
 });
+
+test('bookOf maps pack_id prefix to a book tab; custom/unknown → 내 단어팩', () => {
+  assert.equal(E.bookOf({ pack_id: 'neungyul-voca-middle-2025-day04' }), '능률VOCA');
+  assert.equal(E.bookOf({ pack_id: 'reading-tutor-junior1-section10-1' }), '리딩튜터');
+  assert.equal(E.bookOf({ pack_id: 'custom-1726000000' }), '내 단어팩');
+  assert.equal(E.bookOf({ title: '옛날 팩' }), '내 단어팩');
+});
+
+test('groupPacks keeps original index and book order (능률VOCA → 리딩튜터 → 내 단어팩), drops empty books', () => {
+  const packs = [
+    { pack_id: 'reading-tutor-junior1-section09-1', words: [] },
+    { pack_id: 'neungyul-voca-middle-2025-day03', words: [] },
+    { pack_id: 'neungyul-voca-middle-2025-day04', words: [] },
+  ];
+  const g = E.groupPacks(packs);
+  assert.deepEqual(g.map(x => x.book), ['능률VOCA', '리딩튜터']);
+  assert.deepEqual(g[0].items.map(x => x.i), [1, 2]);
+  assert.deepEqual(g[1].items.map(x => x.i), [0]);
+  assert.equal(g[1].items[0].pack, packs[0]);
+});
+
+test('pickTab falls back to the first book when the saved tab no longer exists', () => {
+  const g = [{ book: '능률VOCA', items: [] }, { book: '리딩튜터', items: [] }];
+  assert.equal(E.pickTab(g, '리딩튜터'), '리딩튜터');
+  assert.equal(E.pickTab(g, '내 단어팩'), '능률VOCA');
+  assert.equal(E.pickTab(g, null), '능률VOCA');
+  assert.equal(E.pickTab([], '능률VOCA'), null);
+});
