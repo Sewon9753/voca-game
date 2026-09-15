@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day48",
+  "title": "능률VOCA 중등 필수 [2025] DAY 48",
+  "source": "프렙업 영어학원 프린트 (PAGE 48/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "grocery",
+      "ko": "[명] 1. 식료품 2. 식료품(잡화)점",
+      "ipa": "/ˈɡroʊsəri/",
+      "stress": "GRO-cer-y",
+      "emoji": "🛒🥦🍞",
+      "ex": "Mom went to the grocery store to buy milk.",
+      "ex_ko": "엄마는 우유를 사러 식료품점에 가셨어.",
+      "mnemonic": "grocer(식료품 상인)+y → 상인이 파는 식료품·그 가게."
+    },
+    {
+      "n": 2,
+      "en": "studio",
+      "ko": "[명] (방송국의) 방송실, 스튜디오",
+      "ipa": "/ˈstuːdioʊ/",
+      "stress": "STU-di-o",
+      "emoji": "🎙️📺🎬",
+      "ex": "The singer recorded her new song in the studio.",
+      "ex_ko": "그 가수는 스튜디오에서 새 노래를 녹음했어.",
+      "mnemonic": "'스튜디오'는 study(공부)와 같은 뿌리! 예술가가 열심히 작업하는 방."
+    },
+    {
+      "n": 3,
+      "en": "unbelievable",
+      "ko": "[형] 믿을 수 없는, 믿기 어려운",
+      "ipa": "/ˌʌnbɪˈliːvəbəl/",
+      "stress": "un-be-LIEV-a-ble",
+      "emoji": "😲🤯❗",
+      "ex": "Wow, your test score is unbelievable!",
+      "ex_ko": "와, 네 시험 점수 믿을 수가 없어!",
+      "mnemonic": "un(아닌)+believe(믿다)+able(할 수 있는) → 믿을 수 없는!"
+    },
+    {
+      "n": 4,
+      "en": "leap",
+      "ko": "[동] 뛰다, 뛰어넘다",
+      "ipa": "/liːp/",
+      "stress": "LEAP",
+      "emoji": "🐸🦘💨",
+      "ex": "The frog can leap over the small pond.",
+      "ex_ko": "그 개구리는 작은 연못을 뛰어넘을 수 있어.",
+      "mnemonic": "'리~프!' 하고 개구리가 잎(leaf) 위로 폴짝 뛰어넘는 장면!"
+    },
+    {
+      "n": 5,
+      "en": "support",
+      "ko": "[명] 1. 지지 2. 부양 / [동] 1. 지지하다 2. 부양하다",
+      "ipa": "/səˈpɔːrt/",
+      "stress": "sup-PORT",
+      "emoji": "🤝💪🙌",
+      "ex": "My friends always support me when I feel down.",
+      "ex_ko": "내 친구들은 내가 우울할 때 항상 나를 지지해 줘.",
+      "mnemonic": "sup(아래에서)+port(나르다) → 아래에서 받쳐 주다, 지지하다!"
+    },
+    {
+      "n": 6,
+      "en": "proverb",
+      "ko": "[명] 속담, 격언",
+      "ipa": "/ˈprɑːvɜːrb/",
+      "stress": "PROV-erb",
+      "emoji": "📜💬🧓",
+      "ex": "My grandma loves to say old proverbs.",
+      "ex_ko": "우리 할머니는 옛 속담 말하기를 좋아하셔.",
+      "mnemonic": "pro(앞서)+verb(말) → 옛날 사람들이 앞서 남긴 말, 속담!"
+    },
+    {
+      "n": 7,
+      "en": "migrate",
+      "ko": "[동] 1. (철새 등이) 이동하다 2. (다른 지역으로) 이주하다",
+      "ipa": "/ˈmaɪɡreɪt/",
+      "stress": "MI-grate",
+      "emoji": "🦆🧭🌍",
+      "ex": "Many birds migrate south before winter comes.",
+      "ex_ko": "많은 새들이 겨울이 오기 전에 남쪽으로 이동해.",
+      "mnemonic": "migr=옮기다. 철새 이동도, 이민(immigrate)도 같은 뿌리."
+    },
+    {
+      "n": 8,
+      "en": "raw",
+      "ko": "[형] 1. 익히지 않은, 날것의 2. 가공되지 않은",
+      "ipa": "/rɔː/",
+      "stress": "RAW",
+      "emoji": "🍣🥩🥚",
+      "ex": "I don't like eating raw fish very much.",
+      "ex_ko": "나는 날생선 먹는 걸 별로 안 좋아해.",
+      "mnemonic": "raw=날것. 익히지 않은 회(raw fish), 가공 안 한 원료(raw material)."
+    },
+    {
+      "n": 9,
+      "en": "organization",
+      "ko": "[명] 조직, 단체, 기구",
+      "ipa": "/ˌɔːrɡənəˈzeɪʃən/",
+      "stress": "or-gan-i-ZA-tion",
+      "emoji": "🏢👥",
+      "ex": "My mom works for a big charity organization.",
+      "ex_ko": "우리 엄마는 큰 자선 단체에서 일하셔.",
+      "mnemonic": "organ(기관)이 모여 몸을 이루듯, 사람이 모여 짜인 조직. organize+ation."
+    },
+    {
+      "n": 10,
+      "en": "poverty",
+      "ko": "[명] 가난, 빈곤",
+      "ipa": "/ˈpɑːvərti/",
+      "stress": "POV-er-ty",
+      "emoji": "🪙🚫🏚️",
+      "ex": "Many kids around the world live in poverty.",
+      "ex_ko": "전 세계 많은 아이들이 가난 속에서 살아.",
+      "mnemonic": "poor(가난한)의 명사형. poverty line=빈곤선."
+    },
+    {
+      "n": 11,
+      "en": "except",
+      "ko": "[전] …을 제외하고, … 외에는",
+      "ipa": "/ɪkˈsept/",
+      "stress": "ex-CEPT",
+      "emoji": "✅✅❌",
+      "ex": "Everyone came to the party except Tom.",
+      "ex_ko": "톰만 빼고 다 파티에 왔어.",
+      "mnemonic": "ex(밖으로)+cept(잡다) → 밖으로 잡아 빼다=제외하고."
+    },
+    {
+      "n": 12,
+      "en": "tag",
+      "ko": "[명] 꼬리표",
+      "ipa": "/tæɡ/",
+      "stress": "TAG",
+      "emoji": "🏷️",
+      "ex": "Check the price tag before you buy it.",
+      "ex_ko": "사기 전에 가격표 확인해.",
+      "mnemonic": "'태그' → 옷에 달린 꼬리표, 사진에 친구 태그하기. 우리가 쓰는 그 '태그'가 바로 꼬리표."
+    },
+    {
+      "n": 13,
+      "en": "responsible",
+      "ko": "[형] 1. (문제 등에 대해) 책임이 있는 2. (관리 등을) 책임지고 있는",
+      "ipa": "/rɪˈspɑːnsəbəl/",
+      "stress": "re-SPON-si-ble",
+      "emoji": "🙋‍♂️✅",
+      "ex": "You are responsible for feeding the dog today.",
+      "ex_ko": "오늘 강아지 밥 주는 건 네 책임이야.",
+      "mnemonic": "respond(응답하다)+able → 물으면 답해야 하는 사람=책임 있는."
+    },
+    {
+      "n": 14,
+      "en": "station",
+      "ko": "[명] 1. 역, 정류장 2. (특정 일을 하는) -소, -서",
+      "ipa": "/ˈsteɪʃən/",
+      "stress": "STA-tion",
+      "emoji": "🚉🚔",
+      "ex": "Let's meet at the subway station at five.",
+      "ex_ko": "5시에 지하철역에서 만나자.",
+      "mnemonic": "'스테이션' → 기차가 stay(머무는) 곳=역. 경찰이 머물면 police station(경찰서)."
+    },
+    {
+      "n": 15,
+      "en": "content",
+      "ko": "[명] 1. 내용(물) 2. (책의) 목차",
+      "ipa": "/ˈkɑːntent/",
+      "stress": "CON-tent",
+      "emoji": "📦📋",
+      "ex": "The video content on this channel is really fun.",
+      "ex_ko": "이 채널 영상 내용 진짜 재밌어.",
+      "mnemonic": "'컨텐츠' → 유튜브 콘텐츠=내용물! con(함께)+tent(담다)=안에 담긴 것."
+    },
+    {
+      "n": 16,
+      "en": "miserable",
+      "ko": "[형] 비참한, 불행한",
+      "ipa": "/ˈmɪzərəbəl/",
+      "stress": "MIS-er-a-ble",
+      "emoji": "😭🌧️",
+      "ex": "I felt miserable after losing the final game.",
+      "ex_ko": "결승전에서 지고 나서 완전 비참했어.",
+      "mnemonic": "뮤지컬 '레 미제라블'=비참한 사람들. misery(불행)+able."
+    },
+    {
+      "n": 17,
+      "en": "relief",
+      "ko": "[명] 안도, 안심",
+      "ipa": "/rɪˈliːf/",
+      "stress": "re-LIEF",
+      "emoji": "😮‍💨😌",
+      "ex": "What a relief, the test is finally over!",
+      "ex_ko": "정말 안심이다, 시험이 드디어 끝났어!",
+      "mnemonic": "re(다시)+lieve(가볍게 하다) → 짐을 덜어 가벼워진 안도. relieve의 명사."
+    },
+    {
+      "n": 18,
+      "en": "concrete",
+      "ko": "[형] 1. 구체적인 2. 콘크리트로 된",
+      "ipa": "/ˈkɑːnkriːt/",
+      "stress": "CON-crete",
+      "emoji": "🧱📋",
+      "ex": "Give me a concrete example, not just an idea.",
+      "ex_ko": "그냥 아이디어 말고 구체적인 예를 들어 줘.",
+      "mnemonic": "콘크리트는 손에 잡히는 딱딱한 것 → 뜬구름 아닌 '구체적인'. 콘크리트처럼 확실하게!"
+    },
+    {
+      "n": 19,
+      "en": "servant",
+      "ko": "[명] 하인, 종 / [명] (조직 등의) 고용인, 종업원",
+      "ipa": "/ˈsɜːrvənt/",
+      "stress": "SER-vant",
+      "emoji": "🧹🙇",
+      "ex": "The rich family had a servant who cooked dinner.",
+      "ex_ko": "그 부잣집에는 저녁을 요리해 주는 하인이 있었어.",
+      "mnemonic": "serve(섬기다)+ant(사람) → 섬기는 사람 = 하인. 개미(ant)처럼 부지런히 시중드는 사람."
+    },
+    {
+      "n": 20,
+      "en": "struggle",
+      "ko": "[동] 고군분투하다, 몸부림치다 / [명] 투쟁, 분투",
+      "ipa": "/ˈstrʌɡəl/",
+      "stress": "STRUG-gle",
+      "emoji": "😤💪🧗",
+      "ex": "I really struggle with math homework every night.",
+      "ex_ko": "나 매일 밤 수학 숙제 때문에 진짜 고군분투해.",
+      "mnemonic": "struggle with=~와 씨름하다. 숙제와 씨름하며 고군분투."
+    },
+    {
+      "n": 21,
+      "en": "military",
+      "ko": "[명] 군대 / [형] 군사의, 무력의",
+      "ipa": "/ˈmɪləteri/",
+      "stress": "MIL-i-tar-y",
+      "emoji": "🪖🎖️",
+      "ex": "My uncle joined the military after high school.",
+      "ex_ko": "우리 삼촌은 고등학교 졸업 후 군대에 입대했어.",
+      "mnemonic": "'밀리터리' → 밀리터리 룩(군복 스타일 옷)! 군인 무늬 옷 떠올리면 '군대·군사의'."
+    },
+    {
+      "n": 22,
+      "en": "stay behind",
+      "ko": "(뒤에) 남다",
+      "ipa": "/steɪ bɪˈhaɪnd/",
+      "stress": "STAY be-HIND",
+      "emoji": "🏫🚶⬅️",
+      "ex": "Can you stay behind and help me clean up?",
+      "ex_ko": "남아서 나 청소하는 거 도와줄 수 있어?",
+      "mnemonic": "stay(머물다)+behind(뒤에) → 다들 가고 뒤에 남다. 수업 끝나고 교실에 혼자 남는 장면."
+    },
+    {
+      "n": 23,
+      "en": "put aside",
+      "ko": "치워 두다, 제쳐 두다",
+      "ipa": "/pʊt əˈsaɪd/",
+      "stress": "put a-SIDE",
+      "emoji": "📚➡️🗄️",
+      "ex": "Put aside your phone and finish your homework first.",
+      "ex_ko": "폰은 치워 두고 숙제부터 끝내.",
+      "mnemonic": "put(놓다)+aside(옆으로) → 옆에 치워 두다. 폰을 옆으로 밀어 두고 공부하는 모습."
+    },
+    {
+      "n": 24,
+      "en": "both ... and",
+      "ko": "…와 ~ 둘 다",
+      "ipa": "/boʊθ ... ænd/",
+      "stress": "BOTH ... AND",
+      "emoji": "🍕➕🍔",
+      "ex": "I like both pizza and hamburgers for lunch.",
+      "ex_ko": "난 점심으로 피자와 햄버거 둘 다 좋아해.",
+      "mnemonic": "both(둘 다)가 앞에서 두 개를 꽉 잡고 and로 묶는다 → '~와 ~ 둘 다'. 하나도 안 놓침!"
+    }
+  ]
+}

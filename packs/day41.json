@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day41",
+  "title": "능률VOCA 중등 필수 [2025] DAY 41",
+  "source": "프렙업 영어학원 프린트 (PAGE 41/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "champion",
+      "ko": "[명] 챔피언, 우승자",
+      "ipa": "/ˈtʃæmpiən/",
+      "stress": "CHAM-pi-on",
+      "emoji": "🏆🥇",
+      "ex": "She became the champion of the school race.",
+      "ex_ko": "그녀는 학교 달리기 대회의 우승자가 되었어.",
+      "mnemonic": "'챔피언' 벨트를 허리에 찬 사람 — 그가 바로 우승자!"
+    },
+    {
+      "n": 2,
+      "en": "local",
+      "ko": "[형] (특정) 지역의, 현지의",
+      "ipa": "/ˈloʊkəl/",
+      "stress": "LO-cal",
+      "emoji": "📍🏘️",
+      "ex": "We ate at a local restaurant near my house.",
+      "ex_ko": "우리는 우리 집 근처 지역 식당에서 밥을 먹었어.",
+      "mnemonic": "'로컬 푸드' = 우리 지역에서 난 음식. location(장소)과 같은 뿌리, '이 지역의'."
+    },
+    {
+      "n": 3,
+      "en": "difficulty",
+      "ko": "[명] 곤란, 어려움",
+      "ipa": "/ˈdɪfɪkəlti/",
+      "stress": "DIF-fi-cul-ty",
+      "emoji": "😣🧗",
+      "ex": "I had difficulty finishing my math homework last night.",
+      "ex_ko": "나 어젯밤에 수학 숙제 끝내는 데 어려움을 겪었어.",
+      "mnemonic": "difficult(어려운)에 -y를 붙이면 명사 '어려움'. 어려워서 '디피~' 하고 한숨 쉬는 모습."
+    },
+    {
+      "n": 4,
+      "en": "suffer",
+      "ko": "[동] 1. 고통 받다, (병을) 앓다 2. (어려운 일을) 겪다",
+      "ipa": "/ˈsʌfər/",
+      "stress": "SUF-fer",
+      "emoji": "🤒😖",
+      "ex": "My grandma suffers from back pain every winter.",
+      "ex_ko": "우리 할머니는 겨울마다 허리 통증을 앓으셔.",
+      "mnemonic": "'서퍼'가 파도에 넘어져 아파서 고통받는 장면. suffer from = ~을 앓다."
+    },
+    {
+      "n": 5,
+      "en": "environment",
+      "ko": "[명] 1. 자연환경 2. (주변의) 환경",
+      "ipa": "/ɪnˈvaɪrənmənt/",
+      "stress": "en-VI-ron-ment",
+      "emoji": "🌍🌳",
+      "ex": "We should recycle to protect the environment.",
+      "ex_ko": "환경을 보호하려면 재활용을 해야 해.",
+      "mnemonic": "environ = '둘러싸다'. 나를 둘러싼 모든 것이 환경. '인바이런' 안에 있는 세상."
+    },
+    {
+      "n": 6,
+      "en": "narrator",
+      "ko": "[명] (소설의) 서술자, (영화 등의) 내레이터",
+      "ipa": "/ˈnæreɪtər/",
+      "stress": "NAR-ra-tor",
+      "emoji": "🎙️📖",
+      "ex": "The narrator of the movie has a deep voice.",
+      "ex_ko": "그 영화의 내레이터는 목소리가 굵어.",
+      "mnemonic": "narrate(이야기하다) + -or(사람) = 이야기를 들려주는 사람. '내레이터'는 이미 우리말!"
+    },
+    {
+      "n": 7,
+      "en": "uneasy",
+      "ko": "[형] 1. 불안한, 걱정되는 2. 불편한",
+      "ipa": "/ʌnˈiːzi/",
+      "stress": "un-EA-sy",
+      "emoji": "😟💭",
+      "ex": "I felt uneasy before the test results came out.",
+      "ex_ko": "시험 결과 나오기 전에 나 불안했어.",
+      "mnemonic": "un(아니다) + easy(편한) = 편하지 않은, 불안한. '언~ 이지'하지 않아 마음이 조마조마."
+    },
+    {
+      "n": 8,
+      "en": "upon",
+      "ko": "[전] 1. [격식] … 위에 2. 가까이에, 임박한",
+      "ipa": "/əˈpɑːn/",
+      "stress": "up-ON",
+      "emoji": "⬆️📚",
+      "ex": "The cat jumped upon the table.",
+      "ex_ko": "고양이가 탁자 위로 뛰어올랐어.",
+      "mnemonic": "up(위) + on(위에) = 격식 있는 '위에'. 'Once upon a time'에서 이미 본 단어!"
+    },
+    {
+      "n": 9,
+      "en": "idiom",
+      "ko": "[명] 관용구, 숙어",
+      "ipa": "/ˈɪdiəm/",
+      "stress": "ID-i-om",
+      "emoji": "💬📖",
+      "ex": "\"Break a leg\" is an idiom for good luck.",
+      "ex_ko": "\"Break a leg\"은 행운을 빈다는 뜻의 관용구야.",
+      "mnemonic": "그리스어 idios(자기만의)에서 → 그 언어만의 독특한 표현=관용구."
+    },
+    {
+      "n": 10,
+      "en": "career",
+      "ko": "[명] 1. 직업 2. 경력, 이력",
+      "ipa": "/kəˈrɪr/",
+      "stress": "ca-REER",
+      "emoji": "💼📈",
+      "ex": "My dad has a long career as a teacher.",
+      "ex_ko": "우리 아빠는 교사로서 오랜 경력이 있어.",
+      "mnemonic": "커리어→\"커리어(경력)를 쌓는다\"는 말 그대로 한국어로도 쓰이는 단어. 직업의 길."
+    },
+    {
+      "n": 11,
+      "en": "mount",
+      "ko": "[동] 1. 증가하다 2. (계단 등을) 오르다 3. (말 등에) 올라타다",
+      "ipa": "/maʊnt/",
+      "stress": "MOUNT",
+      "emoji": "⛰️🐎📈",
+      "ex": "The pressure started to mount before the test.",
+      "ex_ko": "시험 전에 압박감이 점점 커지기 시작했어.",
+      "mnemonic": "마운트→마운틴(mountain, 산)의 형제. 산처럼 오르고, 쌓여서 증가하고, 말 위에 올라타다."
+    },
+    {
+      "n": 12,
+      "en": "string",
+      "ko": "[명] 끈, 줄",
+      "ipa": "/strɪŋ/",
+      "stress": "STRING",
+      "emoji": "🧵🎸",
+      "ex": "Can you tie this box with some string?",
+      "ex_ko": "이 상자를 끈으로 좀 묶어 줄 수 있어?",
+      "mnemonic": "스트링→기타 스트링(줄), 스트링 치즈(길게 찢어지는 줄 치즈). 길고 가느다란 끈."
+    },
+    {
+      "n": 13,
+      "en": "stroke",
+      "ko": "[명] 1. (공을 치는) 타격[타법], 스트로크 2. 뇌졸중",
+      "ipa": "/stroʊk/",
+      "stress": "STROKE",
+      "emoji": "🏊🎾🧠",
+      "ex": "She won the match with one powerful stroke.",
+      "ex_ko": "그녀는 강력한 한 번의 타격으로 경기를 이겼어.",
+      "mnemonic": "스트로크→수영 스트로크, 골프 스트로크처럼 한 번 휘두르는 타법. 뇌를 갑자기 '탁' 치는 병=뇌졸중."
+    },
+    {
+      "n": 14,
+      "en": "supper",
+      "ko": "[명] (간단한) 저녁 식사",
+      "ipa": "/ˈsʌpər/",
+      "stress": "SUP-per",
+      "emoji": "🍲🌙",
+      "ex": "We had a light supper of soup and bread.",
+      "ex_ko": "우리는 수프와 빵으로 간단한 저녁을 먹었어.",
+      "mnemonic": "서퍼→\"수프(soup)를 후루룩 서퍼\"—밤에 수프 한 그릇 먹는 간단한 저녁 식사."
+    },
+    {
+      "n": 15,
+      "en": "riddle",
+      "ko": "[명] 수수께끼",
+      "ipa": "/ˈrɪdl/",
+      "stress": "RID-dle",
+      "emoji": "❓🧩",
+      "ex": "Can you solve this riddle in one minute?",
+      "ex_ko": "이 수수께끼를 1분 안에 풀 수 있어?",
+      "mnemonic": "read(읽다)와 같은 뿌리 — 읽어내야(풀어야) 하는 문제=수수께끼."
+    },
+    {
+      "n": 16,
+      "en": "bet",
+      "ko": "[동] (내기 등에) 돈을 걸다 / [명] 내기, 내기 돈[물건]",
+      "ipa": "/bet/",
+      "stress": "BET",
+      "emoji": "🎲💰",
+      "ex": "I bet you can't finish this pizza alone.",
+      "ex_ko": "넌 이 피자를 혼자 다 못 먹을 거라고 내기할게.",
+      "mnemonic": "벳→\"베팅(betting)한다\"의 그 bet. 돈 걸고 내기하는 것."
+    },
+    {
+      "n": 17,
+      "en": "script",
+      "ko": "[명] 대본, 각본",
+      "ipa": "/skrɪpt/",
+      "stress": "SCRIPT",
+      "emoji": "📜🎬",
+      "ex": "The actors read the script before filming the scene.",
+      "ex_ko": "배우들은 장면을 찍기 전에 대본을 읽었어.",
+      "mnemonic": "스크립트 → '스크린'에 나올 말을 미리 적어둔 종이가 대본!"
+    },
+    {
+      "n": 18,
+      "en": "launch",
+      "ko": "[동] 1. 시작하다 2. 출시하다 3. 발사하다 / [명] 개시, 출시, 발사",
+      "ipa": "/lɔːntʃ/",
+      "stress": "LAUNCH",
+      "emoji": "🚀📱",
+      "ex": "Apple will launch a new phone next month.",
+      "ex_ko": "애플이 다음 달에 새 폰을 출시할 거래.",
+      "mnemonic": "런치 → 로켓이 '런!' 하고 달려 나가듯 발사·출시하다!"
+    },
+    {
+      "n": 19,
+      "en": "distance",
+      "ko": "[명] 1. 거리 2. 먼 곳",
+      "ipa": "/ˈdɪstəns/",
+      "stress": "DIS-tance",
+      "emoji": "📏🛣️",
+      "ex": "The distance from my house to school is two kilometers.",
+      "ex_ko": "우리 집에서 학교까지 거리는 2킬로미터야.",
+      "mnemonic": "dis(떨어져)+stance(서 있음) → 떨어져 서 있는 만큼의 거리."
+    },
+    {
+      "n": 20,
+      "en": "indicate",
+      "ko": "[동] 1. 나타내다, 보여주다 2. (손가락 등으로) 가리키다",
+      "ipa": "/ˈɪndɪkeɪt/",
+      "stress": "IN-di-cate",
+      "emoji": "👉📊",
+      "ex": "The red light indicates that the battery is low.",
+      "ex_ko": "빨간불은 배터리가 부족하다는 걸 나타내.",
+      "mnemonic": "index(집게손가락·색인)와 같은 뿌리 — 손가락으로 가리켜 보여주다."
+    },
+    {
+      "n": 21,
+      "en": "demonstrate",
+      "ko": "[동] (증거를 들어가며) 보여주다, 입증하다",
+      "ipa": "/ˈdemənstreɪt/",
+      "stress": "DEM-on-strate",
+      "emoji": "🧪👩‍🏫✅",
+      "ex": "The teacher demonstrated how to do the science experiment.",
+      "ex_ko": "선생님이 과학 실험하는 법을 직접 보여주셨어.",
+      "mnemonic": "데몬스트레이트 → '데모'는 보여주는 것! 증거로 입증해 보이다."
+    },
+    {
+      "n": 22,
+      "en": "use up",
+      "ko": "…을 다 쓰다",
+      "ipa": "/juːz ʌp/",
+      "stress": "USE UP",
+      "emoji": "🧴💨🚫",
+      "ex": "We used up all the milk, so I'll buy more.",
+      "ex_ko": "우유를 다 써버려서 내가 더 사 올게.",
+      "mnemonic": "use(쓰다)+up(끝까지) → 바닥까지 싹 다 써버리다!"
+    },
+    {
+      "n": 23,
+      "en": "make a decision",
+      "ko": "결정하다",
+      "ipa": "/meɪk ə dɪˈsɪʒən/",
+      "stress": "make a de-CI-sion",
+      "emoji": "🤔⚖️✔️",
+      "ex": "You need to make a decision about the trip today.",
+      "ex_ko": "오늘 여행에 대해 결정을 내려야 해.",
+      "mnemonic": "make(만들다)+decision(결정) → 결정을 '만들어' 내다 = 결정하다!"
+    },
+    {
+      "n": 24,
+      "en": "account for",
+      "ko": "1. 설명하다 2. (일정 부분을) 차지하다",
+      "ipa": "/əˈkaʊnt fɔːr/",
+      "stress": "a-COUNT for",
+      "emoji": "📊🧾💬",
+      "ex": "Teens account for half of the app's users.",
+      "ex_ko": "십 대가 그 앱 사용자의 절반을 차지해.",
+      "mnemonic": "어카운트 → '어! 카운트(세어)' 보니 설명도 되고 몇 %인지 차지도 알겠네!"
+    }
+  ]
+}

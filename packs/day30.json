@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day30",
+  "title": "능률VOCA 중등 필수 [2025] DAY 30",
+  "source": "프렙업 영어학원 프린트 (PAGE 30/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "steal",
+      "ko": "[동] 훔치다, 도둑질하다",
+      "ipa": "/stiːl/",
+      "stress": "STEAL",
+      "emoji": "🦹💰",
+      "ex": "Someone tried to steal my bike at school.",
+      "ex_ko": "누가 학교에서 내 자전거를 훔치려고 했어.",
+      "mnemonic": "야구의 '도루'가 steal a base(베이스를 훔치다). 몰래 가져가다 → 훔치다."
+    },
+    {
+      "n": 2,
+      "en": "feed",
+      "ko": "[동] 먹이[모이]를 주다",
+      "ipa": "/fiːd/",
+      "stress": "FEED",
+      "emoji": "🐶🍖",
+      "ex": "Can you feed the dog before you leave?",
+      "ex_ko": "나가기 전에 개한테 밥 좀 줄래?",
+      "mnemonic": "food(음식)와 형제 단어. SNS '피드'도 원래 소식을 먹여 준다는 뜻."
+    },
+    {
+      "n": 3,
+      "en": "pile",
+      "ko": "[명] (차곡차곡) 쌓아 놓은 것, 더미 / [동] (차곡차곡) 쌓다",
+      "ipa": "/paɪl/",
+      "stress": "PILE",
+      "emoji": "📚📚📚",
+      "ex": "There is a huge pile of homework on my desk.",
+      "ex_ko": "내 책상 위에 숙제가 산더미처럼 쌓여 있어.",
+      "mnemonic": "'a pile of books'=책 더미. 차곡차곡 쌓아 올린 것, 또는 쌓다."
+    },
+    {
+      "n": 4,
+      "en": "similar",
+      "ko": "[형] 비슷한, 유사한",
+      "ipa": "/ˈsɪmələr/",
+      "stress": "SIM-i-lar",
+      "emoji": "👯‍♀️🟰",
+      "ex": "Your phone case looks similar to mine.",
+      "ex_ko": "네 폰 케이스 내 거랑 비슷해 보여.",
+      "mnemonic": "라틴어 similis(닮은)에서. simulation(시뮬레이션)=비슷하게 흉내 내기."
+    },
+    {
+      "n": 5,
+      "en": "escape",
+      "ko": "[동] 1. 탈출하다 2. 피하다, 모면하다 / [명] 탈출, 도망",
+      "ipa": "/ɪˈskeɪp/",
+      "stress": "es-CAPE",
+      "emoji": "🏃‍♂️🚪💨",
+      "ex": "The cat tried to escape from the box.",
+      "ex_ko": "고양이가 상자에서 탈출하려고 했어.",
+      "mnemonic": "'이스케이프' 키보드 ESC 키처럼 빠져나가다 → 탈출하다, 피하다."
+    },
+    {
+      "n": 6,
+      "en": "disappoint",
+      "ko": "[동] 실망시키다",
+      "ipa": "/ˌdɪsəˈpɔɪnt/",
+      "stress": "dis-ap-POINT",
+      "emoji": "😞📉",
+      "ex": "I don't want to disappoint my parents again.",
+      "ex_ko": "부모님을 또 실망시키고 싶지 않아.",
+      "mnemonic": "dis(반대)+appoint(정하다): 정해둔 기대가 무너지다 → 실망시키다. '디스' 당하면 실망!"
+    },
+    {
+      "n": 7,
+      "en": "navy",
+      "ko": "[명] 해군",
+      "ipa": "/ˈneɪvi/",
+      "stress": "NA-vy",
+      "emoji": "⚓🚢🇰🇷",
+      "ex": "My uncle served in the navy for ten years.",
+      "ex_ko": "우리 삼촌은 해군에서 10년 복무했어.",
+      "mnemonic": "'네이비' 색 군복 입고 배(navigation 항해) 타는 군대 → 해군."
+    },
+    {
+      "n": 8,
+      "en": "spirit",
+      "ko": "[명] 1. 마음, 정신 2. 기분 3. 영혼",
+      "ipa": "/ˈspɪrɪt/",
+      "stress": "SPIR-it",
+      "emoji": "🧠✨👻",
+      "ex": "Our team has a strong fighting spirit today.",
+      "ex_ko": "오늘 우리 팀은 투지가 강해.",
+      "mnemonic": "'스피릿' 숨(spir=숨 쉬다)이 있는 곳에 마음·정신·영혼이 있다. 응원할 때 '파이팅 스피릿!'"
+    },
+    {
+      "n": 9,
+      "en": "overcome",
+      "ko": "[동] 극복하다, 이겨내다",
+      "ipa": "/ˌoʊvərˈkʌm/",
+      "stress": "o-ver-COME",
+      "emoji": "💪🏔️",
+      "ex": "She worked hard to overcome her fear of water.",
+      "ex_ko": "그녀는 물에 대한 두려움을 극복하려고 열심히 노력했어.",
+      "mnemonic": "over(넘어) + come(오다) → 어려움을 넘어오다, 극복하다!"
+    },
+    {
+      "n": 10,
+      "en": "anyway",
+      "ko": "[부] 1. 어쨌든 2. 그건 그렇고, 그런데",
+      "ipa": "/ˈeniweɪ/",
+      "stress": "AN-y-way",
+      "emoji": "🤷‍♂️➡️",
+      "ex": "It was raining, but we went out anyway.",
+      "ex_ko": "비가 왔지만 우리는 어쨌든 밖에 나갔어.",
+      "mnemonic": "any(어떤) + way(길)이든 → 어떤 길이든 상관없이, 어쨌든!"
+    },
+    {
+      "n": 11,
+      "en": "found",
+      "ko": "[동] (회사, 학교 등을) 설립하다",
+      "ipa": "/faʊnd/",
+      "stress": "FOUND",
+      "emoji": "🏢🎓",
+      "ex": "My uncle wants to found a new game company.",
+      "ex_ko": "우리 삼촌은 새 게임 회사를 설립하고 싶어 해.",
+      "mnemonic": "파운드(기초) 위에 회사를 세우다. foundation(기초)과 같은 뿌리!"
+    },
+    {
+      "n": 12,
+      "en": "international",
+      "ko": "[형] 국제적인, 국제의",
+      "ipa": "/ˌɪntərˈnæʃənəl/",
+      "stress": "in-ter-NA-tion-al",
+      "emoji": "🌍✈️",
+      "ex": "My school hosts an international food festival every year.",
+      "ex_ko": "우리 학교는 매년 국제 음식 축제를 열어.",
+      "mnemonic": "inter(사이) + national(국가의) → 나라와 나라 사이, 국제적인!"
+    },
+    {
+      "n": 13,
+      "en": "army",
+      "ko": "[명] 군대, 육군",
+      "ipa": "/ˈɑːrmi/",
+      "stress": "AR-my",
+      "emoji": "🪖🎖️",
+      "ex": "My brother joined the army last year.",
+      "ex_ko": "우리 형은 작년에 군대에 갔어.",
+      "mnemonic": "BTS 팬클럽 이름 아미! 팬 군단처럼 군대도 army."
+    },
+    {
+      "n": 14,
+      "en": "shock",
+      "ko": "[명] (심리적) 충격, 충격적인 일 / [동] 충격을 주다",
+      "ipa": "/ʃɑːk/",
+      "stress": "SHOCK",
+      "emoji": "😱⚡",
+      "ex": "The news of the accident was a big shock.",
+      "ex_ko": "그 사고 소식은 큰 충격이었어.",
+      "mnemonic": "쇼크! 우리말로도 쓰는 그 쇼크 → 충격."
+    },
+    {
+      "n": 15,
+      "en": "cell",
+      "ko": "[명] 세포",
+      "ipa": "/sel/",
+      "stress": "CELL",
+      "emoji": "🔬🧫",
+      "ex": "We looked at plant cells under a microscope today.",
+      "ex_ko": "오늘 현미경으로 식물 세포를 봤어.",
+      "mnemonic": "셀(cell)은 작은 칸! 엑셀의 칸처럼 몸도 작은 칸, 세포로 돼 있어."
+    },
+    {
+      "n": 16,
+      "en": "scream",
+      "ko": "[동] 비명을 지르다, 소리치다 / [명] 비명",
+      "ipa": "/skriːm/",
+      "stress": "SCREAM",
+      "emoji": "😱🔊",
+      "ex": "Everyone screamed on the roller coaster.",
+      "ex_ko": "롤러코스터에서 모두가 비명을 질렀어.",
+      "mnemonic": "스크림! 공포영화 '스크림' 가면 보면 비명 지르지."
+    },
+    {
+      "n": 17,
+      "en": "brain",
+      "ko": "[명] 1. 뇌 2. 머리, 지능",
+      "ipa": "/breɪn/",
+      "stress": "BRAIN",
+      "emoji": "🧠",
+      "ex": "Use your brain before you answer the question.",
+      "ex_ko": "대답하기 전에 머리를 좀 써 봐.",
+      "mnemonic": "'브레인'은 원래 우리말처럼 쓰이죠. 머리에 브레인(뇌)이 들어 있다고 기억하세요."
+    },
+    {
+      "n": 18,
+      "en": "disease",
+      "ko": "[명] 병, 질병",
+      "ipa": "/dɪˈziːz/",
+      "stress": "dis-EASE",
+      "emoji": "🤒🦠",
+      "ex": "Washing your hands can stop the spread of disease.",
+      "ex_ko": "손을 씻으면 질병이 퍼지는 걸 막을 수 있어.",
+      "mnemonic": "dis(아닌)+ease(편안함) = 편하지 않은 상태, 곧 병."
+    },
+    {
+      "n": 19,
+      "en": "gesture",
+      "ko": "[명] 1. 몸짓, 제스처 2. (감정, 의사의) 표현, 표시",
+      "ipa": "/ˈdʒestʃər/",
+      "stress": "GES-ture",
+      "emoji": "👋🙌",
+      "ex": "She made a gesture for me to sit down.",
+      "ex_ko": "그녀는 나에게 앉으라고 몸짓을 했어.",
+      "mnemonic": "'제스처'는 손짓·몸짓. 발표할 때 '제스처 크게 해!'라고 하잖아요. 몸으로 하는 표현이에요."
+    },
+    {
+      "n": 20,
+      "en": "original",
+      "ko": "[형] 1. 원래[본래]의 2. 독창적인 3. 원본[원작]의",
+      "ipa": "/əˈrɪdʒənəl/",
+      "stress": "o-RIG-i-nal",
+      "emoji": "🎨1️⃣",
+      "ex": "The original movie was better than the remake.",
+      "ex_ko": "원작 영화가 리메이크보다 더 좋았어.",
+      "mnemonic": "origin(기원, 처음)에서 온 말. '오리지널 버전'은 처음 나온 원래 것, 남 안 베낀 독창적인 것."
+    },
+    {
+      "n": 21,
+      "en": "violent",
+      "ko": "[형] 난폭한, 폭력적인",
+      "ipa": "/ˈvaɪələnt/",
+      "stress": "VI-o-lent",
+      "emoji": "👊💢",
+      "ex": "That game is too violent for little kids.",
+      "ex_ko": "그 게임은 어린애들한테 너무 폭력적이야.",
+      "mnemonic": "violence(폭력)의 형용사. 라틴어 vis(힘)에서 온 말, 힘을 마구 쓰는 → 난폭한."
+    },
+    {
+      "n": 22,
+      "en": "end up with",
+      "ko": "결국 …하게 되다",
+      "ipa": "/ˌend ˈʌp wɪð/",
+      "stress": "end UP with",
+      "emoji": "🏁😅",
+      "ex": "I ended up with three cats after helping one.",
+      "ex_ko": "한 마리 도와주다가 결국 고양이 세 마리를 키우게 됐어.",
+      "mnemonic": "end(끝)+up+with = 끝에 가서 ~와 함께 있게 되다. 돌고 돌아 결국 그걸 손에 쥐게 된 거예요."
+    },
+    {
+      "n": 23,
+      "en": "would like to-v",
+      "ko": "…하고 싶다",
+      "ipa": "/wʊd ˈlaɪk tuː/",
+      "stress": "would LIKE to",
+      "emoji": "🙏💭",
+      "ex": "I would like to order a cheese pizza, please.",
+      "ex_ko": "치즈 피자 하나 주문하고 싶어요.",
+      "mnemonic": "want to의 공손한 버전. '우드 라이크 투' → 우아하게 '~하고 싶어요'라고 말할 때 쓰세요."
+    },
+    {
+      "n": 24,
+      "en": "drop by",
+      "ko": "잠시[잠깐] 들르다",
+      "ipa": "/ˌdrɑːp ˈbaɪ/",
+      "stress": "drop BY",
+      "emoji": "🚪👋",
+      "ex": "Can I drop by your house after school today?",
+      "ex_ko": "오늘 방과 후에 너희 집에 잠깐 들러도 돼?",
+      "mnemonic": "drop(툭 떨어지다)+by(옆에) = 지나가다 툭 하고 옆에 잠깐 들르는 것. '드롭 바이~' 하고 잠깐!"
+    }
+  ]
+}

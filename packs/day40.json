@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day40",
+  "title": "능률VOCA 중등 필수 [2025] DAY 40",
+  "source": "프렙업 영어학원 프린트 (PAGE 40/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "forgive",
+      "ko": "[동] 용서하다",
+      "ipa": "/fərˈɡɪv/",
+      "stress": "for-GIVE",
+      "emoji": "🤝💛",
+      "ex": "I forgive you, but don't do it again.",
+      "ex_ko": "용서할게, 근데 다시는 그러지 마.",
+      "mnemonic": "for-(멀리)+give(주다) → 잘못을 멀리 보내 주다 = 용서하다."
+    },
+    {
+      "n": 2,
+      "en": "concern",
+      "ko": "[명] 1. 우려, 걱정 2. 관심사",
+      "ipa": "/kənˈsɜːrn/",
+      "stress": "con-CERN",
+      "emoji": "😟💭",
+      "ex": "My biggest concern is the math test tomorrow.",
+      "ex_ko": "내 가장 큰 걱정은 내일 수학 시험이야.",
+      "mnemonic": "con(함께)+cern(관계되다) → 나와 관계된 일이 관심사이자 걱정거리."
+    },
+    {
+      "n": 3,
+      "en": "humble",
+      "ko": "[형] 1. 겸손한 2. (신분 등이) 비천한, 낮은",
+      "ipa": "/ˈhʌmbəl/",
+      "stress": "HUM-ble",
+      "emoji": "🙇🌱",
+      "ex": "She is humble even after winning first place.",
+      "ex_ko": "그녀는 1등을 하고도 겸손해.",
+      "mnemonic": "라틴어 humus(흙, 땅)에서 온 말 → 땅처럼 낮은 자세 = 겸손한, 비천한."
+    },
+    {
+      "n": 4,
+      "en": "extra",
+      "ko": "[형] 추가의, 여분의 / [부] 추가로",
+      "ipa": "/ˈekstrə/",
+      "stress": "EX-tra",
+      "emoji": "➕🍟",
+      "ex": "Can I get extra cheese on my pizza?",
+      "ex_ko": "피자에 치즈 추가로 넣어 줄 수 있어요?",
+      "mnemonic": "'엑스트라' 영화 엑스트라는 주연 외에 추가로 붙는 사람 → 추가의, 여분의."
+    },
+    {
+      "n": 5,
+      "en": "delivery",
+      "ko": "[명] (우편물 등의) 배달, 배송",
+      "ipa": "/dɪˈlɪvəri/",
+      "stress": "de-LIV-er-y",
+      "emoji": "📦🛵",
+      "ex": "The pizza delivery took almost an hour.",
+      "ex_ko": "피자 배달이 거의 한 시간 걸렸어.",
+      "mnemonic": "'딜리버리' 배달 앱 이름처럼 익숙하지? 문 앞까지 배송해 주는 게 delivery."
+    },
+    {
+      "n": 6,
+      "en": "infection",
+      "ko": "[명] 1. (병의) 전염, 감염 2. 전염병",
+      "ipa": "/ɪnˈfekʃən/",
+      "stress": "in-FEC-tion",
+      "emoji": "🦠🤒",
+      "ex": "Wash your hands to avoid an infection.",
+      "ex_ko": "감염을 피하려면 손을 씻어.",
+      "mnemonic": "in(안으로)+fect(넣다) → 균이 몸 안에 들어와 물들이는 것 = 감염, 전염."
+    },
+    {
+      "n": 7,
+      "en": "photographer",
+      "ko": "[명] 사진가, 사진작가",
+      "ipa": "/fəˈtɑːɡrəfər/",
+      "stress": "pho-TOG-ra-pher",
+      "emoji": "📷🧑‍🎨",
+      "ex": "The photographer told us to smile.",
+      "ex_ko": "사진작가가 우리에게 웃으라고 했어.",
+      "mnemonic": "photo(사진)+grapher(그리는 사람) → 사진을 찍어 주는 사람, 강세는 '토'에!"
+    },
+    {
+      "n": 8,
+      "en": "waste",
+      "ko": "[명] 1. 낭비 2. 쓰레기, 폐기물 / [동] 낭비하다",
+      "ipa": "/weɪst/",
+      "stress": "WASTE",
+      "emoji": "🗑️⏳",
+      "ex": "Don't waste your time on that game.",
+      "ex_ko": "그 게임에 시간 낭비하지 마.",
+      "mnemonic": "vast(텅 빈)와 같은 뿌리 → 텅 비도록 써버리다 = 낭비, 낭비하다. 남은 건 쓰레기."
+    },
+    {
+      "n": 9,
+      "en": "polar",
+      "ko": "[형] 남[북]극의, 극지방의",
+      "ipa": "/ˈpoʊlər/",
+      "stress": "PO-lar",
+      "emoji": "🐻‍❄️🧊",
+      "ex": "Polar bears live where it is very cold.",
+      "ex_ko": "북극곰은 아주 추운 곳에 살아.",
+      "mnemonic": "pole(극, 북극·남극)+ar → 극지방의. polar bear = 북극곰."
+    },
+    {
+      "n": 10,
+      "en": "crowd",
+      "ko": "[명] 군중, 사람들 / [동] (사람이) 모여들다",
+      "ipa": "/kraʊd/",
+      "stress": "CROWD",
+      "emoji": "👥🎤",
+      "ex": "A big crowd waited outside the concert hall.",
+      "ex_ko": "많은 군중이 콘서트장 밖에서 기다렸어.",
+      "mnemonic": "'크라우드' → 사람이 너무 많아 '크게 라우드(loud)'하게 시끄러운 군중."
+    },
+    {
+      "n": 11,
+      "en": "evidence",
+      "ko": "[명] 증거, 근거",
+      "ipa": "/ˈevɪdəns/",
+      "stress": "EV-i-dence",
+      "emoji": "🔍📄",
+      "ex": "The police found evidence at the scene.",
+      "ex_ko": "경찰이 현장에서 증거를 찾았어.",
+      "mnemonic": "e(밖으로)+vid(보다, video) → 밖으로 드러나 보이는 것 = 증거."
+    },
+    {
+      "n": 12,
+      "en": "tragedy",
+      "ko": "[명] 비극(적인 사건)",
+      "ipa": "/ˈtrædʒədi/",
+      "stress": "TRAG-e-dy",
+      "emoji": "😢🎭",
+      "ex": "The fire was a real tragedy for the town.",
+      "ex_ko": "그 화재는 마을에 정말 비극이었어.",
+      "mnemonic": "그리스어 '염소의 노래'에서 온 말. 고대 그리스 슬픈 연극 = 비극."
+    },
+    {
+      "n": 13,
+      "en": "business",
+      "ko": "[명] 1. 사업, 거래 2. 업무",
+      "ipa": "/ˈbɪznəs/",
+      "stress": "BUSI-ness",
+      "emoji": "💼📈",
+      "ex": "My uncle runs a small business downtown.",
+      "ex_ko": "우리 삼촌은 시내에서 작은 사업을 해.",
+      "mnemonic": "busy(바쁜)+ness → 바쁘게 돌아가는 일이 곧 사업·업무."
+    },
+    {
+      "n": 14,
+      "en": "credit",
+      "ko": "[명] 1. 외상[신용] 거래 2. 칭찬, 인정",
+      "ipa": "/ˈkredɪt/",
+      "stress": "CRED-it",
+      "emoji": "💳👏",
+      "ex": "She got credit for finishing the project early.",
+      "ex_ko": "그녀는 프로젝트를 일찍 끝내서 인정을 받았어.",
+      "mnemonic": "'크레딧' 카드는 신용으로 외상 거래하는 것, 잘하면 '크레딧'이라는 칭찬도 받지."
+    },
+    {
+      "n": 15,
+      "en": "spoil",
+      "ko": "[동] 1. 망치다, 버려 놓다 2. (아이를) 버릇없게 키우다",
+      "ipa": "/spɔɪl/",
+      "stress": "SPOIL",
+      "emoji": "🍎🤢👶",
+      "ex": "Don't spoil the movie by telling me the ending!",
+      "ex_ko": "결말 말해서 영화 망치지 마!",
+      "mnemonic": "'스포일러'가 영화를 망치듯, spoil은 망치다. 너무 오냐오냐하면 아이도 버릇없어져."
+    },
+    {
+      "n": 16,
+      "en": "recommend",
+      "ko": "[동] 1. 추천하다 2. 권(장)하다",
+      "ipa": "/ˌrekəˈmend/",
+      "stress": "rec-om-MEND",
+      "emoji": "👍⭐",
+      "ex": "Can you recommend a good book for me?",
+      "ex_ko": "나한테 좋은 책 하나 추천해 줄래?",
+      "mnemonic": "re(강조)+commend(칭찬하다) → 좋다고 칭찬하며 권하다 = 추천하다."
+    },
+    {
+      "n": 17,
+      "en": "reply",
+      "ko": "[명] 대답, 답장 / [동] 대답하다, 답장하다",
+      "ipa": "/rɪˈplaɪ/",
+      "stress": "re-PLY",
+      "emoji": "💬↩️",
+      "ex": "Did she reply to your message yet?",
+      "ex_ko": "걔 네 메시지에 아직 답장 안 했어?",
+      "mnemonic": "'리플라이' → 댓글 '리플(reply)'! 리플 달듯 답장하는 거예요."
+    },
+    {
+      "n": 18,
+      "en": "advantage",
+      "ko": "[명] 유리한 점, 장점",
+      "ipa": "/ədˈvæntɪdʒ/",
+      "stress": "ad-VAN-tage",
+      "emoji": "👍🏆",
+      "ex": "Being tall is a big advantage in basketball.",
+      "ex_ko": "키가 큰 건 농구에서 큰 장점이야.",
+      "mnemonic": "ad(앞으로)+vantage(앞선 위치) → 남보다 앞선 유리한 점!"
+    },
+    {
+      "n": 19,
+      "en": "float",
+      "ko": "[동] 1. (물 위에) 뜨다, 띄우다 2. (공중에) 떠다니다",
+      "ipa": "/floʊt/",
+      "stress": "FLOAT",
+      "emoji": "🛟🌊🎈",
+      "ex": "Look, the leaf is floating on the water!",
+      "ex_ko": "봐, 나뭇잎이 물 위에 떠 있어!",
+      "mnemonic": "'플로트' → 물 위에 '풀~ 떠' 있는 튜브! 둥둥 뜨다."
+    },
+    {
+      "n": 20,
+      "en": "proper",
+      "ko": "[형] 적절한, 제대로 된",
+      "ipa": "/ˈprɑːpər/",
+      "stress": "PROP-er",
+      "emoji": "✅👔",
+      "ex": "Please wear proper shoes for the school trip.",
+      "ex_ko": "수학여행에는 제대로 된 신발을 신고 와.",
+      "mnemonic": "property(자기 것)와 같은 뿌리 → 그것에 딱 맞는, 제대로 된, 적절한."
+    },
+    {
+      "n": 21,
+      "en": "specific",
+      "ko": "[형] 1. 구체적인 2. 특정한",
+      "ipa": "/spəˈsɪfɪk/",
+      "stress": "spe-CIF-ic",
+      "emoji": "🎯🔍",
+      "ex": "Can you give me a specific example?",
+      "ex_ko": "구체적인 예를 하나 들어줄래?",
+      "mnemonic": "'스페시픽' → 스펙(spec)을 콕 집어 말하듯 구체적이고 특정한!"
+    },
+    {
+      "n": 22,
+      "en": "give off",
+      "ko": "(냄새, 빛 등을) 내뿜다, 발산하다",
+      "ipa": "/ɡɪv ɔːf/",
+      "stress": "GIVE off",
+      "emoji": "💡🌸💨",
+      "ex": "These flowers give off a really sweet smell.",
+      "ex_ko": "이 꽃들은 정말 달콤한 향기를 내뿜어.",
+      "mnemonic": "give(주다)+off(밖으로) → 밖으로 내주다 = 냄새·빛을 내뿜다!"
+    },
+    {
+      "n": 23,
+      "en": "work out",
+      "ko": "1. 운동하다 2. (일이) 잘 풀리다",
+      "ipa": "/wɜːrk aʊt/",
+      "stress": "WORK out",
+      "emoji": "🏋️💪👌",
+      "ex": "I work out at the gym after school.",
+      "ex_ko": "나 방과 후에 헬스장에서 운동해.",
+      "mnemonic": "work(일하다)+out(끝까지) → 몸을 끝까지 일시키면 운동, 일을 끝까지 풀면 잘 풀리다."
+    },
+    {
+      "n": 24,
+      "en": "be proud of",
+      "ko": "…을 자랑으로 여기다, …을 자랑스러워하다",
+      "ipa": "/bi praʊd ʌv/",
+      "stress": "be PROUD of",
+      "emoji": "😊🏅❤️",
+      "ex": "You should be proud of your test score.",
+      "ex_ko": "넌 네 시험 점수를 자랑스러워해도 돼.",
+      "mnemonic": "proud(자랑스러운)+of(…에 대해) → …을 자랑스럽게 여기다. 어깨 쫙 펴기."
+    }
+  ]
+}

@@ -33,7 +33,7 @@ def validate(p: Path):
             errs.append(f"en 형식 이상: {w.get('en')!r}")
         if not re.search(r"[가-힣]", w.get("ko", "")):
             errs.append(f"ko 에 한글 없음: {w.get('en')} → {w.get('ko')!r}")
-    ids = [json.loads(q.read_text(encoding="utf-8")).get("pack_id") for q in (ROOT / "packs").glob("*.json") if q != p]
+    ids = [json.loads(q.read_text(encoding="utf-8")).get("pack_id") for q in (ROOT / "packs").glob("*.json") if q.resolve() != p.resolve()]
     if pack.get("pack_id") in ids:
         errs.append(f"pack_id 중복: {pack.get('pack_id')}")
     if errs:

@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day15",
+  "title": "능률VOCA 중등 필수 [2025] DAY 15",
+  "source": "프렙업 영어학원 프린트 (PAGE 15/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "royal",
+      "ko": "[형] 왕실의, 왕족의",
+      "ipa": "/ˈrɔɪəl/",
+      "stress": "ROY-al",
+      "emoji": "👑🏰",
+      "ex": "The royal family lives in a huge palace.",
+      "ex_ko": "왕실 가족은 거대한 궁전에 살아.",
+      "mnemonic": "roy(왕, 프랑스어 roi)+al → 왕의, 왕실의. 로열 패밀리 = 왕족."
+    },
+    {
+      "n": 2,
+      "en": "worried",
+      "ko": "[형] 걱정스러운",
+      "ipa": "/ˈwɜːrid/",
+      "stress": "WOR-ried",
+      "emoji": "😟💭",
+      "ex": "I'm worried about the math test tomorrow.",
+      "ex_ko": "내일 수학 시험이 걱정돼.",
+      "mnemonic": "'워리~ 워리~' 하고 안절부절 걱정하는 소리. worry(걱정하다)에 -ed가 붙어 '걱정스러운'."
+    },
+    {
+      "n": 3,
+      "en": "director",
+      "ko": "[명] 1. (회사의) 이사, 임원 2. 책임자, 관리자 3. (영화 등의) 감독",
+      "ipa": "/dəˈrektər/",
+      "stress": "di-REC-tor",
+      "emoji": "🎬🎥",
+      "ex": "The director shouted 'Action!' and the filming started.",
+      "ex_ko": "감독이 '액션!'을 외치고 촬영이 시작됐어.",
+      "mnemonic": "direct(지시하다)+or(사람) = 지시하는 사람 → 감독·책임자·이사."
+    },
+    {
+      "n": 4,
+      "en": "ever",
+      "ko": "[부] 1. [의문문, 조건문] 언젠가, 지금까지 2. [부정문] 결코, 전혀",
+      "ipa": "/ˈevər/",
+      "stress": "EV-er",
+      "emoji": "❓⏳",
+      "ex": "Have you ever been to Japan?",
+      "ex_ko": "너 일본에 가 본 적 있어?",
+      "mnemonic": "ever = 언젠가·지금까지. never = not+ever(결코 ~않다). Have you ever…?"
+    },
+    {
+      "n": 5,
+      "en": "loose",
+      "ko": "[형] 1. 헐거운, 느슨한 2. 헐렁한",
+      "ipa": "/luːs/",
+      "stress": "LOOSE",
+      "emoji": "👖🪢",
+      "ex": "These pants are too loose for me.",
+      "ex_ko": "이 바지는 나한테 너무 헐렁해.",
+      "mnemonic": "'루~스' 하고 힘 빠진 소리. 끈이 루스하게 풀려 헐거워진 모습을 떠올려 봐."
+    },
+    {
+      "n": 6,
+      "en": "indoor",
+      "ko": "[형] 실내(용)의",
+      "ipa": "/ˈɪndɔːr/",
+      "stress": "IN-door",
+      "emoji": "🏠🏊",
+      "ex": "We played indoor soccer because it rained.",
+      "ex_ko": "비가 와서 우리는 실내 축구를 했어.",
+      "mnemonic": "in(안)+door(문) = 문 안쪽, 즉 실내의. 반대는 outdoor(실외의)."
+    },
+    {
+      "n": 7,
+      "en": "clay",
+      "ko": "[명] 점토, 찰흙",
+      "ipa": "/kleɪ/",
+      "stress": "CLAY",
+      "emoji": "🏺🖐️",
+      "ex": "We made cups out of clay in art class.",
+      "ex_ko": "미술 시간에 찰흙으로 컵을 만들었어.",
+      "mnemonic": "'클레이' 아트 = 찰흙 공예! 손에 찰흙 묻히며 클레이 인형 만드는 장면."
+    },
+    {
+      "n": 8,
+      "en": "bow",
+      "ko": "[동] (허리를 굽혀) 인사하다, 절하다 / [명] 1. 인사, 절 2. 활",
+      "ipa": "/baʊ/",
+      "stress": "BOW",
+      "emoji": "🙇🏹",
+      "ex": "The singer bowed to the crowd after the show.",
+      "ex_ko": "가수는 공연이 끝나고 관객에게 인사했어.",
+      "mnemonic": "'바우~' 하고 허리를 숙여 절하다. 활(bow)도 허리처럼 휘어져 있지!"
+    },
+    {
+      "n": 9,
+      "en": "national",
+      "ko": "[형] 1. 국가의, 국가적인 2. 국립의, 국영의",
+      "ipa": "/ˈnæʃənəl/",
+      "stress": "NA-tion-al",
+      "emoji": "🇰🇷🏛️",
+      "ex": "Tomorrow is a national holiday, so no school!",
+      "ex_ko": "내일은 국가 공휴일이라 학교 안 가!",
+      "mnemonic": "nation(국가)+al(~의) = 국가의. 국립공원은 national park!"
+    },
+    {
+      "n": 10,
+      "en": "interview",
+      "ko": "[명] 1. 면접 2. 인터뷰, 회견 / [동] 인터뷰하다",
+      "ipa": "/ˈɪntərvjuː/",
+      "stress": "IN-ter-view",
+      "emoji": "🎤🧑‍💼",
+      "ex": "I have an interview for the school newspaper club.",
+      "ex_ko": "나 학교 신문부 면접 있어.",
+      "mnemonic": "inter(서로)+view(보다) = 서로 마주 보며 묻고 답하는 면접·인터뷰."
+    },
+    {
+      "n": 11,
+      "en": "normal",
+      "ko": "[형] 1. 보통의, 평범한 2. (심신이) 정상적인",
+      "ipa": "/ˈnɔːrməl/",
+      "stress": "NOR-mal",
+      "emoji": "😐📏",
+      "ex": "It's normal to feel nervous before a test.",
+      "ex_ko": "시험 전에 긴장하는 건 정상이야.",
+      "mnemonic": "'노멀' 모드 = 보통·기본 모드. 게임 난이도 노멀 생각하면 돼!"
+    },
+    {
+      "n": 12,
+      "en": "lay",
+      "ko": "[동] 1. 놓다, 두다 2. (알을) 낳다",
+      "ipa": "/leɪ/",
+      "stress": "LAY",
+      "emoji": "📚🥚",
+      "ex": "Please lay your phone on the table now.",
+      "ex_ko": "지금 폰을 탁자 위에 놓아 줘.",
+      "mnemonic": "'레이~' 하고 살짝 내려놓다. 닭도 알을 레이(낳다)!"
+    },
+    {
+      "n": 13,
+      "en": "parade",
+      "ko": "[명] 퍼레이드, 행진",
+      "ipa": "/pəˈreɪd/",
+      "stress": "pa-RADE",
+      "emoji": "🎉🥁🚶",
+      "ex": "We watched the parade at the school festival.",
+      "ex_ko": "우리는 학교 축제에서 퍼레이드를 봤어.",
+      "mnemonic": "퍼레이드 = 사람들이 줄지어 행진하는 것. 디즈니 퍼레이드 떠올려!"
+    },
+    {
+      "n": 14,
+      "en": "peer",
+      "ko": "[명] 또래, 동료",
+      "ipa": "/pɪr/",
+      "stress": "PEER",
+      "emoji": "👫🧑‍🤝‍🧑",
+      "ex": "My peers and I study together after school.",
+      "ex_ko": "또래 친구들과 나는 방과 후에 같이 공부해.",
+      "mnemonic": "peer = 나이·지위가 같은 사람 = 또래. 또래 압력 = peer pressure."
+    },
+    {
+      "n": 15,
+      "en": "sketch",
+      "ko": "[명] 스케치, 밑그림 / [동] 스케치하다",
+      "ipa": "/skɛtʃ/",
+      "stress": "SKETCH",
+      "emoji": "✏️🖼️",
+      "ex": "I made a quick sketch of my dog.",
+      "ex_ko": "나는 내 강아지를 빠르게 스케치했어.",
+      "mnemonic": "스케치북에 연필로 슥슥 그리는 밑그림 = 스케치."
+    },
+    {
+      "n": 16,
+      "en": "grade",
+      "ko": "[명] 1. 등급 2. 학년 3. 성적",
+      "ipa": "/ɡreɪd/",
+      "stress": "GRADE",
+      "emoji": "📝💯🎓",
+      "ex": "I got a good grade on my math test.",
+      "ex_ko": "나 수학 시험에서 좋은 성적 받았어.",
+      "mnemonic": "'그레이드' = 등급. A등급·1학년·성적 모두 등급 매기는 것!"
+    },
+    {
+      "n": 17,
+      "en": "reuse",
+      "ko": "[동] 재사용하다",
+      "ipa": "/ˌriˈjuz/",
+      "stress": "re-USE",
+      "emoji": "♻️🥤",
+      "ex": "I reuse this water bottle every day at school.",
+      "ex_ko": "나는 이 물병을 학교에서 매일 재사용해.",
+      "mnemonic": "re(다시)+use(사용하다) → 다시 사용하다. '리유즈' 하면 리(re)로 다시 쓰는 거야."
+    },
+    {
+      "n": 18,
+      "en": "eastern",
+      "ko": "[형] 동쪽의, 동쪽에 있는",
+      "ipa": "/ˈistərn/",
+      "stress": "EAST-ern",
+      "emoji": "🌅🧭",
+      "ex": "My grandma lives in the eastern part of Korea.",
+      "ex_ko": "우리 할머니는 한국의 동쪽 지역에 사셔.",
+      "mnemonic": "east(동쪽)+ern(~의) → 동쪽의. '이스턴'은 해 뜨는 동쪽(east) 편이야."
+    },
+    {
+      "n": 19,
+      "en": "signal",
+      "ko": "[명] 신호",
+      "ipa": "/ˈsɪɡnəl/",
+      "stress": "SIG-nal",
+      "emoji": "🚦📶",
+      "ex": "My phone has no signal in the elevator.",
+      "ex_ko": "엘리베이터 안에서는 내 폰에 신호가 안 잡혀.",
+      "mnemonic": "'시그널' 폰 안테나 신호! sign(표시)을 보내는 게 signal이야."
+    },
+    {
+      "n": 20,
+      "en": "meaning",
+      "ko": "[명] 의미, 뜻",
+      "ipa": "/ˈminɪŋ/",
+      "stress": "MEAN-ing",
+      "emoji": "📖❓",
+      "ex": "What is the meaning of this word?",
+      "ex_ko": "이 단어의 의미가 뭐야?",
+      "mnemonic": "mean(의미하다)+ing → 의미, 뜻. '미닝'은 단어가 '뭐니?' 하고 뜻을 묻는 거야."
+    },
+    {
+      "n": 21,
+      "en": "cover",
+      "ko": "[동] 1. 덮다 2. (책 등이) 다루다, 포함하다",
+      "ipa": "/ˈkʌvər/",
+      "stress": "COV-er",
+      "emoji": "🛏️📚",
+      "ex": "Cover your mouth when you cough, please.",
+      "ex_ko": "기침할 땐 입을 좀 가려 줘.",
+      "mnemonic": "'커버'해 준다 = 덮어서 가려 준다. 책 커버가 책을 덮듯이, 책이 내용을 다루기도 해."
+    },
+    {
+      "n": 22,
+      "en": "take away",
+      "ko": "…을 치우다",
+      "ipa": "/ˌteɪk əˈweɪ/",
+      "stress": "take a-WAY",
+      "emoji": "🧹📦",
+      "ex": "Please take away these dishes from the table.",
+      "ex_ko": "식탁에서 이 접시들 좀 치워 줘.",
+      "mnemonic": "take(가져가다)+away(멀리) → 멀리 가져가서 치우다. '테이크 어웨이'는 치워서 저 멀리!"
+    },
+    {
+      "n": 23,
+      "en": "have ... in common",
+      "ko": "공통적으로 …을 가지다",
+      "ipa": "/hæv ɪn ˈkɑmən/",
+      "stress": "have in COM-mon",
+      "emoji": "👯🤝",
+      "ex": "My best friend and I have a lot in common.",
+      "ex_ko": "내 절친과 나는 공통점이 많아.",
+      "mnemonic": "have(가지다)+in common(공통으로) → 공통점을 가지다. common=공통의."
+    },
+    {
+      "n": 24,
+      "en": "add up",
+      "ko": "합산하다",
+      "ipa": "/ˌæd ˈʌp/",
+      "stress": "add UP",
+      "emoji": "➕🧮",
+      "ex": "Let's add up the scores to see who won.",
+      "ex_ko": "누가 이겼는지 점수를 합산해 보자.",
+      "mnemonic": "add(더하다)+up(위로) → 더해서 위로 쌓아 합산하다. '애드 업' 점수를 더해 올려!"
+    }
+  ]
+}

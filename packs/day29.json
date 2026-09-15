@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day29",
+  "title": "능률VOCA 중등 필수 [2025] DAY 29",
+  "source": "프렙업 영어학원 프린트 (PAGE 29/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "awful",
+      "ko": "[형] 끔찍한, 불쾌한",
+      "ipa": "/ˈɔːfəl/",
+      "stress": "AW-ful",
+      "emoji": "🤢😖",
+      "ex": "The cafeteria pizza today was really awful.",
+      "ex_ko": "오늘 급식 피자는 정말 끔찍했어.",
+      "mnemonic": "awe(두려움)+ful(가득한): 원래 '두려움 가득한'이 끔찍한·불쾌한으로 변한 말."
+    },
+    {
+      "n": 2,
+      "en": "spin",
+      "ko": "[동] 돌다[돌리다], 회전하다[회전시키다]",
+      "ipa": "/spɪn/",
+      "stress": "SPIN",
+      "emoji": "🌀🔄",
+      "ex": "Watch me spin this basketball on my finger!",
+      "ex_ko": "내가 손가락 위에서 농구공 돌리는 거 봐!",
+      "mnemonic": "피젯 스피너(spinner)는 빙글빙글 도는 장난감. spin=돌다·돌리다."
+    },
+    {
+      "n": 3,
+      "en": "guest",
+      "ko": "[명] 1. 손님, 하객 2. (호텔 등의) 투숙객",
+      "ipa": "/ɡɛst/",
+      "stress": "GUEST",
+      "emoji": "🚪🙋‍♂️🏨",
+      "ex": "We have a guest coming for dinner tonight.",
+      "ex_ko": "오늘 저녁에 손님이 오셔.",
+      "mnemonic": "게스트하우스(guest house)는 손님이 묵는 집. 방송의 '게스트'도 초대 손님."
+    },
+    {
+      "n": 4,
+      "en": "candle",
+      "ko": "[명] 양초",
+      "ipa": "/ˈkændəl/",
+      "stress": "CAN-dle",
+      "emoji": "🕯️🎂",
+      "ex": "Blow out the candles and make a wish!",
+      "ex_ko": "촛불 끄고 소원 빌어!",
+      "mnemonic": "라틴어 candere(빛나다)에서 온 말. 생일 케이크 위 캔들, 촛불."
+    },
+    {
+      "n": 5,
+      "en": "express",
+      "ko": "[동] (감정, 의견 등을) 표현하다, 나타내다",
+      "ipa": "/ɪkˈsprɛs/",
+      "stress": "ex-PRESS",
+      "emoji": "💬🎨😊",
+      "ex": "It's hard to express my feelings in words.",
+      "ex_ko": "내 감정을 말로 표현하기가 어려워.",
+      "mnemonic": "ex(밖으로)+press(누르다)=속마음을 밖으로 눌러 내보내다, 표현하다."
+    },
+    {
+      "n": 6,
+      "en": "beg",
+      "ko": "[동] 1. 간청하다, 부탁하다 2. 구걸하다",
+      "ipa": "/bɛɡ/",
+      "stress": "BEG",
+      "emoji": "🙏😢",
+      "ex": "Please, I beg you, don't tell my mom!",
+      "ex_ko": "제발, 부탁이야, 엄마한테 말하지 마!",
+      "mnemonic": "beggar(거지)는 beg(구걸하다)하는 사람. 'I beg you'=제발 부탁이야."
+    },
+    {
+      "n": 7,
+      "en": "fabric",
+      "ko": "[명] 천, 직물",
+      "ipa": "/ˈfæbrɪk/",
+      "stress": "FAB-ric",
+      "emoji": "🧵🧶👗",
+      "ex": "This fabric feels so soft on my skin.",
+      "ex_ko": "이 천은 피부에 닿는 느낌이 정말 부드러워.",
+      "mnemonic": "'패브릭'→ 패브릭 소파 광고 봤지? 천으로 만든 소파."
+    },
+    {
+      "n": 8,
+      "en": "customer",
+      "ko": "[명] 손님, 고객",
+      "ipa": "/ˈkʌstəmər/",
+      "stress": "CUS-tom-er",
+      "emoji": "🛒💳🏪",
+      "ex": "The customer asked for a bigger size.",
+      "ex_ko": "그 손님은 더 큰 사이즈를 달라고 했어.",
+      "mnemonic": "custom(습관)에서 온 말: 습관처럼 자주 오는 사람이 단골 손님, 고객."
+    },
+    {
+      "n": 9,
+      "en": "curiosity",
+      "ko": "[명] 호기심",
+      "ipa": "/ˌkjʊriˈɑːsəti/",
+      "stress": "cu-ri-OS-i-ty",
+      "emoji": "🤔🔍",
+      "ex": "My curiosity made me open the strange box.",
+      "ex_ko": "호기심 때문에 나는 그 이상한 상자를 열었어.",
+      "mnemonic": "curious(궁금한)+ity(명사): 궁금해하는 마음. 화성 탐사차 이름도 Curiosity!"
+    },
+    {
+      "n": 10,
+      "en": "pump",
+      "ko": "[동] (펌프로) 퍼 올리다, 퍼내다 / [명] 펌프",
+      "ipa": "/pʌmp/",
+      "stress": "PUMP",
+      "emoji": "⛽💧",
+      "ex": "Can you pump up my bike tire, please?",
+      "ex_ko": "내 자전거 타이어에 바람 좀 넣어 줄래?",
+      "mnemonic": "'펌프'로 '펌! 펌!' 소리 내며 물이나 바람을 퍼 올리는 모습."
+    },
+    {
+      "n": 11,
+      "en": "worth",
+      "ko": "[형] 1. (…할) 가치가 있는 / [명] 1. (얼마) 어치 2. 가치, 유용성",
+      "ipa": "/wɜːrθ/",
+      "stress": "WORTH",
+      "emoji": "💎✅",
+      "ex": "This movie is totally worth watching again.",
+      "ex_ko": "이 영화는 정말 다시 볼 가치가 있어.",
+      "mnemonic": "worthy(가치 있는)·worthless(가치 없는)의 worth. worth -ing=~할 가치가 있는."
+    },
+    {
+      "n": 12,
+      "en": "trick",
+      "ko": "[명] 1. 속임수 2. 장난 3. 마술, 묘기",
+      "ipa": "/trɪk/",
+      "stress": "TRICK",
+      "emoji": "🎩🐰",
+      "ex": "He played a trick on me at school today.",
+      "ex_ko": "걔가 오늘 학교에서 나한테 장난쳤어.",
+      "mnemonic": "'트릭'은 마술 '트릭'! 속임수·장난·마술 묘기가 다 '트릭'이야."
+    },
+    {
+      "n": 13,
+      "en": "detail",
+      "ko": "[명] 1. 세부 사항 2. 자세한 내용[정보]",
+      "ipa": "/ˈdiːteɪl/",
+      "stress": "DE-tail",
+      "emoji": "🔎📝",
+      "ex": "Tell me every detail about your trip.",
+      "ex_ko": "네 여행에 대해 세부 사항을 다 말해 줘.",
+      "mnemonic": "'디테일하다'는 우리말처럼 쓰지? 자잘한 세부 사항까지 꼼꼼히!"
+    },
+    {
+      "n": 14,
+      "en": "provide",
+      "ko": "[동] 제공하다, 공급하다",
+      "ipa": "/prəˈvaɪd/",
+      "stress": "pro-VIDE",
+      "emoji": "🎁🤲",
+      "ex": "The school will provide lunch for everyone tomorrow.",
+      "ex_ko": "학교가 내일 모두에게 점심을 제공할 거야.",
+      "mnemonic": "pro(미리)+vide(보다, video의 vid): 미리 내다보고 준비해 주다 → 제공하다."
+    },
+    {
+      "n": 15,
+      "en": "remind",
+      "ko": "[동] 상기시키다, 생각나게 하다",
+      "ipa": "/rɪˈmaɪnd/",
+      "stress": "re-MIND",
+      "emoji": "⏰💭",
+      "ex": "Please remind me to bring my homework tomorrow.",
+      "ex_ko": "내일 숙제 가져오라고 나한테 상기시켜 줘.",
+      "mnemonic": "re(다시)+mind(마음) → 마음에 다시 떠오르게 하니까 상기시키다."
+    },
+    {
+      "n": 16,
+      "en": "expect",
+      "ko": "[동] 1. 기대[예상]하다 2. 기다리다",
+      "ipa": "/ɪkˈspekt/",
+      "stress": "ex-PECT",
+      "emoji": "🔮👀",
+      "ex": "I expect it will rain this afternoon.",
+      "ex_ko": "오늘 오후에 비가 올 것 같아.",
+      "mnemonic": "ex(밖을)+spect(보다, inspect의 spect): 밖을 내다보며 기다리다 → 기대·예상하다."
+    },
+    {
+      "n": 17,
+      "en": "disappear",
+      "ko": "[동] 1. (시야에서) 사라지다 2. (존재가) 없어지다",
+      "ipa": "/ˌdɪsəˈpɪr/",
+      "stress": "dis-ap-PEAR",
+      "emoji": "👻💨",
+      "ex": "My phone just disappeared from my desk.",
+      "ex_ko": "내 폰이 방금 책상에서 사라졌어.",
+      "mnemonic": "dis(반대)+appear(나타나다) = 나타나는 것의 반대, 사라지다."
+    },
+    {
+      "n": 18,
+      "en": "plenty",
+      "ko": "[명] 많음, 충분, 다량",
+      "ipa": "/ˈplenti/",
+      "stress": "PLEN-ty",
+      "emoji": "🍕🍕🍕",
+      "ex": "Don't worry, we have plenty of time.",
+      "ex_ko": "걱정 마, 우리 시간 충분히 많아.",
+      "mnemonic": "라틴어 plenus(가득 찬)에서 온 말. plenty of time=시간이 충분히 많은."
+    },
+    {
+      "n": 19,
+      "en": "remember",
+      "ko": "[동] 기억나다, 기억하다",
+      "ipa": "/rɪˈmembər/",
+      "stress": "re-MEM-ber",
+      "emoji": "🧠💡",
+      "ex": "Do you remember her name from class?",
+      "ex_ko": "수업 때 그 애 이름 기억나?",
+      "mnemonic": "re(다시)+memor(기억하는, memory의 뿌리): 다시 마음에 떠올리다 → 기억하다."
+    },
+    {
+      "n": 20,
+      "en": "curious",
+      "ko": "[형] 궁금한, 호기심이 강한",
+      "ipa": "/ˈkjʊriəs/",
+      "stress": "CU-ri-ous",
+      "emoji": "🤔🔍",
+      "ex": "I'm curious about what's inside the box.",
+      "ex_ko": "상자 안에 뭐가 들었는지 궁금해.",
+      "mnemonic": "라틴어 cura(관심)에서 온 말. 관심이 많아 궁금한. curiosity의 형용사."
+    },
+    {
+      "n": 21,
+      "en": "schoolwork",
+      "ko": "[명] 학업, 학교 공부",
+      "ipa": "/ˈskuːlwɜːrk/",
+      "stress": "SCHOOL-work",
+      "emoji": "🏫📚✏️",
+      "ex": "I have too much schoolwork this week.",
+      "ex_ko": "이번 주에 학교 공부가 너무 많아.",
+      "mnemonic": "school(학교)+work(일) = 학교에서 하는 일, 학업. 숙제·시험 다 포함!"
+    },
+    {
+      "n": 22,
+      "en": "take place",
+      "ko": "(사건이) 일어나다, (행사가) 열리다",
+      "ipa": "/teɪk pleɪs/",
+      "stress": "TAKE PLACE",
+      "emoji": "📅🎪",
+      "ex": "The school festival will take place next Friday.",
+      "ex_ko": "학교 축제는 다음 주 금요일에 열려.",
+      "mnemonic": "행사가 자리(place)를 차지(take)한다 → 열리다, 일어나다. 축제가 운동장 자리를 잡는 장면!"
+    },
+    {
+      "n": 23,
+      "en": "instead of",
+      "ko": "… 대신에",
+      "ipa": "/ɪnˈsted əv/",
+      "stress": "in-STEAD of",
+      "emoji": "🔄🥤➡️💧",
+      "ex": "I'll drink water instead of soda today.",
+      "ex_ko": "오늘은 탄산음료 대신 물 마실래.",
+      "mnemonic": "in+stead(자리)+of: ~의 자리에(in place of) → ~ 대신에."
+    },
+    {
+      "n": 24,
+      "en": "for a while",
+      "ko": "잠시 동안",
+      "ipa": "/fər ə waɪl/",
+      "stress": "for a WHILE",
+      "emoji": "⏳😌",
+      "ex": "Let's rest here for a while before we go.",
+      "ex_ko": "가기 전에 여기서 잠시 쉬자.",
+      "mnemonic": "a while(잠깐의 시간)+for(동안). 'wait for a while'=잠시 기다리다."
+    }
+  ]
+}

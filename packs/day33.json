@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day33",
+  "title": "능률VOCA 중등 필수 [2025] DAY 33",
+  "source": "프렙업 영어학원 프린트 (PAGE 33/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "series",
+      "ko": "[명] 1. 연속, 일련 2. (TV, 책 등의) 연속물, 시리즈",
+      "ipa": "/ˈsɪriz/",
+      "stress": "SE-ries",
+      "emoji": "📺🔢",
+      "ex": "I watched the whole series in one weekend.",
+      "ex_ko": "나 주말 하루 만에 그 시리즈 다 봤어.",
+      "mnemonic": "'시리즈'는 이미 우리말처럼 쓰이죠. 드라마가 연속으로 쭉 이어지는 것, 그게 series!"
+    },
+    {
+      "n": 2,
+      "en": "terrible",
+      "ko": "[형] 1. 끔찍한 2. 형편없는",
+      "ipa": "/ˈterəbəl/",
+      "stress": "TER-ri-ble",
+      "emoji": "😱👎",
+      "ex": "The movie was terrible, don't waste your money.",
+      "ex_ko": "그 영화 끔찍했어, 돈 낭비하지 마.",
+      "mnemonic": "'테러(terror)+블' → 테러처럼 무섭고 끔찍한 것. 형편없는 것도 terrible!"
+    },
+    {
+      "n": 3,
+      "en": "tribe",
+      "ko": "[명] 종족, 부족",
+      "ipa": "/traɪb/",
+      "stress": "TRIBE",
+      "emoji": "🏕️👥",
+      "ex": "The tribe lived deep in the rainforest for centuries.",
+      "ex_ko": "그 부족은 수백 년 동안 열대우림 깊은 곳에 살았어.",
+      "mnemonic": "tribe의 tri는 '셋' — 옛 로마가 세 부족으로 나뉜 데서 온 말."
+    },
+    {
+      "n": 4,
+      "en": "solution",
+      "ko": "[명] 1. (문제 등의) 해법, 해결책 2. (퀴즈 등의) 해답, 정답",
+      "ipa": "/səˈluːʃən/",
+      "stress": "so-LU-tion",
+      "emoji": "💡🔑",
+      "ex": "We finally found a solution to the problem.",
+      "ex_ko": "우리는 마침내 그 문제의 해결책을 찾았어.",
+      "mnemonic": "solve(풀다)+tion → '솔루션', 문제를 풀어주는 해결책. 퀴즈의 정답도 solution!"
+    },
+    {
+      "n": 5,
+      "en": "cage",
+      "ko": "[명] 우리, 새장",
+      "ipa": "/keɪdʒ/",
+      "stress": "CAGE",
+      "emoji": "🐦🔒",
+      "ex": "The bird escaped from its cage this morning.",
+      "ex_ko": "새가 오늘 아침 새장에서 도망쳤어.",
+      "mnemonic": "'케이지' → 새가 '케~' 하고 울며 갇혀 있는 새장. 동물 우리도 cage!"
+    },
+    {
+      "n": 6,
+      "en": "familiar",
+      "ko": "[형] 익숙한, 낯익은",
+      "ipa": "/fəˈmɪljər/",
+      "stress": "fa-MIL-iar",
+      "emoji": "🤔👀",
+      "ex": "Your face looks familiar. Have we met before?",
+      "ex_ko": "네 얼굴 낯이 익은데. 우리 전에 만난 적 있어?",
+      "mnemonic": "family(가족)+ar → 가족처럼 익숙하고 낯익은 것이 familiar!"
+    },
+    {
+      "n": 7,
+      "en": "honor",
+      "ko": "[명] 1. 명예, 명성 2. 영광",
+      "ipa": "/ˈɑːnər/",
+      "stress": "HON-or",
+      "emoji": "🏅🎖️",
+      "ex": "It's an honor to meet you, coach.",
+      "ex_ko": "코치님, 만나 뵙게 되어 영광입니다.",
+      "mnemonic": "'아너' → '아, 너 정말 명예롭다!' 메달 받는 장면을 떠올려요. h는 소리 안 나요!"
+    },
+    {
+      "n": 8,
+      "en": "campaign",
+      "ko": "[명] (사회적, 정치적) 운동, 캠페인",
+      "ipa": "/kæmˈpeɪn/",
+      "stress": "cam-PAIGN",
+      "emoji": "📢✊",
+      "ex": "Our school started a campaign to stop bullying.",
+      "ex_ko": "우리 학교는 괴롭힘을 막기 위한 캠페인을 시작했어.",
+      "mnemonic": "'캠페인'은 우리말처럼 쓰이죠. 여럿이 목소리 높여 세상을 바꾸려는 운동이 campaign!"
+    },
+    {
+      "n": 9,
+      "en": "information",
+      "ko": "[명] 정보, 자료",
+      "ipa": "/ˌɪnfərˈmeɪʃən/",
+      "stress": "in-for-MA-tion",
+      "emoji": "📰🔍",
+      "ex": "I found a lot of information for my science project online.",
+      "ex_ko": "나는 과학 프로젝트에 쓸 정보를 인터넷에서 많이 찾았어.",
+      "mnemonic": "인포메이션 데스크에서 물어보면 정보를 알려주지. inform(알리다)+ation."
+    },
+    {
+      "n": 10,
+      "en": "pollute",
+      "ko": "[동] 오염시키다, 더럽히다",
+      "ipa": "/pəˈluːt/",
+      "stress": "pol-LUTE",
+      "emoji": "🏭💨🌊",
+      "ex": "Don't throw trash in the river; it will pollute the water.",
+      "ex_ko": "강에 쓰레기 버리지 마, 물을 오염시킬 거야.",
+      "mnemonic": "pollution(오염)의 동사가 pollute. 공장 폐수가 강을 오염시키다."
+    },
+    {
+      "n": 11,
+      "en": "delight",
+      "ko": "[명] 기쁨, 즐거움 / [동] 기쁘게 하다",
+      "ipa": "/dɪˈlaɪt/",
+      "stress": "de-LIGHT",
+      "emoji": "😄✨",
+      "ex": "The puppy jumped with delight when she came home.",
+      "ex_ko": "그녀가 집에 오자 강아지가 기뻐서 펄쩍 뛰었어.",
+      "mnemonic": "delicious(맛있는)와 친척인 delight. 맛있는 걸 먹을 때의 기쁨!"
+    },
+    {
+      "n": 12,
+      "en": "cable",
+      "ko": "[명] 전선, 케이블",
+      "ipa": "/ˈkeɪbəl/",
+      "stress": "CA-ble",
+      "emoji": "🔌🧵",
+      "ex": "Can I borrow your charging cable for my phone?",
+      "ex_ko": "내 폰 충전 케이블 좀 빌려줄 수 있어?",
+      "mnemonic": "케이블 TV, 충전 케이블처럼 굵은 전선이 케이블이야."
+    },
+    {
+      "n": 13,
+      "en": "value",
+      "ko": "[명] 1. (금전적) 가치, 가격 2. 가치, 유용성",
+      "ipa": "/ˈvæljuː/",
+      "stress": "VAL-ue",
+      "emoji": "💎💰",
+      "ex": "This old coin has a lot of value to collectors.",
+      "ex_ko": "이 오래된 동전은 수집가들에게 큰 가치가 있어.",
+      "mnemonic": "'밸류'가 높으면 값(value)어치가 크다! 밸-값 소리가 비슷해."
+    },
+    {
+      "n": 14,
+      "en": "supply",
+      "ko": "[명] 1. 공급(량) 2. 공급품, 물자 / [동] 공급하다",
+      "ipa": "/səˈplaɪ/",
+      "stress": "sup-PLY",
+      "emoji": "📦🚚",
+      "ex": "The store will supply free water bottles during the race.",
+      "ex_ko": "그 가게가 경주 중에 물병을 무료로 공급할 거야.",
+      "mnemonic": "sup(아래)+ply(채우다) → 밑에서부터 채워 주다 = 공급하다."
+    },
+    {
+      "n": 15,
+      "en": "memory",
+      "ko": "[명] 1. 기억(력) 2. 추억, 기억",
+      "ipa": "/ˈmeməri/",
+      "stress": "MEM-o-ry",
+      "emoji": "🧠📸",
+      "ex": "My grandma has a great memory for old songs.",
+      "ex_ko": "우리 할머니는 옛날 노래를 정말 잘 기억하셔.",
+      "mnemonic": "메모리 카드에 사진을 저장하듯 머릿속에 기억을 저장하는 것."
+    },
+    {
+      "n": 16,
+      "en": "university",
+      "ko": "[명] (종합) 대학교",
+      "ipa": "/ˌjuːnəˈvɜːrsəti/",
+      "stress": "u-ni-VER-si-ty",
+      "emoji": "🎓🏛️",
+      "ex": "My sister is studying art at a university in Seoul.",
+      "ex_ko": "우리 누나는 서울에 있는 대학교에서 미술을 공부해.",
+      "mnemonic": "uni(하나)+verse(우주), 모든 학문이 한곳에 모인 곳이 대학교."
+    },
+    {
+      "n": 17,
+      "en": "pipe",
+      "ko": "[명] 관, 파이프",
+      "ipa": "/paɪp/",
+      "stress": "PIPE",
+      "emoji": "🔧🚰",
+      "ex": "Water is leaking from the pipe under the sink.",
+      "ex_ko": "싱크대 밑 파이프에서 물이 새고 있어.",
+      "mnemonic": "파이프는 그냥 '파이프'! 물이 흐르는 긴 관을 떠올려."
+    },
+    {
+      "n": 18,
+      "en": "volunteer",
+      "ko": "[명] 1. 지원자 2. 자원봉사자 / [동] 자원(봉사)하다",
+      "ipa": "/ˌvɑːlənˈtɪr/",
+      "stress": "vol-un-TEER",
+      "emoji": "🙋🤝",
+      "ex": "I want to volunteer at the animal shelter this weekend.",
+      "ex_ko": "이번 주말에 동물 보호소에서 자원봉사하고 싶어.",
+      "mnemonic": "'발런티어' → '발로 뛰어' 남을 돕겠다고 스스로 나서는 사람."
+    },
+    {
+      "n": 19,
+      "en": "spill",
+      "ko": "[동] 쏟아지다, 쏟다, 흘리다",
+      "ipa": "/spɪl/",
+      "stress": "SPILL",
+      "emoji": "🥛💦",
+      "ex": "Be careful, don't spill your juice on the desk.",
+      "ex_ko": "조심해, 책상에 주스 쏟지 마.",
+      "mnemonic": "'엎질러진 우유(spilt milk)' 속담처럼 쏟다·흘리다가 spill."
+    },
+    {
+      "n": 20,
+      "en": "physical",
+      "ko": "[형] 1. 신체의, 육체의 2. 물리[물질]적인",
+      "ipa": "/ˈfɪzɪkəl/",
+      "stress": "PHYS-i-cal",
+      "emoji": "💪🏃",
+      "ex": "Physical exercise helps you stay healthy and strong.",
+      "ex_ko": "신체 운동은 건강하고 튼튼하게 해 줘.",
+      "mnemonic": "physics(물리)+al → 몸과 물질, 눈에 보이고 만져지는 것."
+    },
+    {
+      "n": 21,
+      "en": "zone",
+      "ko": "[명] 구역, 지대",
+      "ipa": "/zoʊn/",
+      "stress": "ZONE",
+      "emoji": "🚧📍",
+      "ex": "This is a school zone, so cars must slow down.",
+      "ex_ko": "여기는 스쿨존이라 차들이 속도를 줄여야 해.",
+      "mnemonic": "스쿨존, 안전존의 그 '존'! 선을 그어 나눈 구역."
+    },
+    {
+      "n": 22,
+      "en": "be filled with",
+      "ko": "…로 가득차다",
+      "ipa": "/bi fɪld wɪð/",
+      "stress": "be FILLED with",
+      "emoji": "🫙✨",
+      "ex": "The room will be filled with balloons for the party.",
+      "ex_ko": "파티를 위해 방이 풍선으로 가득 찰 거야.",
+      "mnemonic": "fill(채우다)+ed → '~로 채워진' 상태, 즉 가득 차 있다."
+    },
+    {
+      "n": 23,
+      "en": "on one's way",
+      "ko": "(…로 가는) 길[도중]에",
+      "ipa": "/ɑːn wʌnz weɪ/",
+      "stress": "on one's WAY",
+      "emoji": "🚶➡️",
+      "ex": "I'm on my way to school right now.",
+      "ex_ko": "나 지금 학교 가는 길이야.",
+      "mnemonic": "way는 길, '내 길 위에 있다' → 가는 도중이야."
+    },
+    {
+      "n": 24,
+      "en": "turn off",
+      "ko": "(전기, 가스, 수도 등을) 끄다",
+      "ipa": "/tɜːrn ɔːf/",
+      "stress": "turn OFF",
+      "emoji": "💡🔌",
+      "ex": "Please turn off the lights when you leave.",
+      "ex_ko": "나갈 때 불 좀 꺼 줘.",
+      "mnemonic": "스위치를 돌려(turn) 꺼진(off) 상태로! 반대는 turn on."
+    }
+  ]
+}

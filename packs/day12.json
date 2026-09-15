@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day12",
+  "title": "능률VOCA 중등 필수 [2025] DAY 12",
+  "source": "프렙업 영어학원 프린트 (PAGE 12/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "scary",
+      "ko": "[형] 무서운, 두려운",
+      "ipa": "/ˈskeri/",
+      "stress": "SCA-ry",
+      "emoji": "😱👻",
+      "ex": "That horror movie was really scary last night.",
+      "ex_ko": "어젯밤 그 공포 영화 정말 무서웠어.",
+      "mnemonic": "scare(겁주다)+y = 겁나게 하는 → 무서운. '스케리~' 하고 귀신이 나오면 무섭다!"
+    },
+    {
+      "n": 2,
+      "en": "foreigner",
+      "ko": "[명] 외국인",
+      "ipa": "/ˈfɔːrənər/",
+      "stress": "FOR-eign-er",
+      "emoji": "🌍🧳🛂",
+      "ex": "A foreigner asked me for directions to the subway.",
+      "ex_ko": "외국인이 나한테 지하철 가는 길을 물어봤어.",
+      "mnemonic": "foreign(외국의)+er(사람) = 외국인. 바깥(foris) 나라에서 온 사람."
+    },
+    {
+      "n": 3,
+      "en": "tradition",
+      "ko": "[명] 전통, 관습",
+      "ipa": "/trəˈdɪʃən/",
+      "stress": "tra-DI-tion",
+      "emoji": "🎎🏮🧧",
+      "ex": "Eating rice cake soup is a New Year's tradition.",
+      "ex_ko": "떡국 먹는 건 설날 전통이야.",
+      "mnemonic": "'트러디션' → 대대로 '전해디션(전해진)' 것 = 전통."
+    },
+    {
+      "n": 4,
+      "en": "product",
+      "ko": "[명] 생산품, 제품",
+      "ipa": "/ˈprɑːdʌkt/",
+      "stress": "PRO-duct",
+      "emoji": "📦🏷️🛒",
+      "ex": "This new product sold out in one day.",
+      "ex_ko": "이 신제품은 하루 만에 다 팔렸어.",
+      "mnemonic": "pro(앞으로)+duct(이끌다) → 앞으로 끌어낸 것 = 제품. produce의 명사."
+    },
+    {
+      "n": 5,
+      "en": "creature",
+      "ko": "[명] 생물, 생명체",
+      "ipa": "/ˈkriːtʃər/",
+      "stress": "CREA-ture",
+      "emoji": "🐉🦑🐾",
+      "ex": "We saw a strange creature in the pond.",
+      "ex_ko": "우리는 연못에서 이상한 생물을 봤어.",
+      "mnemonic": "create(창조하다)된 것 = 생물. '크리쳐'는 게임에 나오는 괴생명체!"
+    },
+    {
+      "n": 6,
+      "en": "meeting",
+      "ko": "[명] 회의",
+      "ipa": "/ˈmiːtɪŋ/",
+      "stress": "MEET-ing",
+      "emoji": "👥📋🕐",
+      "ex": "Our club has a meeting after school today.",
+      "ex_ko": "우리 동아리 오늘 방과 후에 회의 있어.",
+      "mnemonic": "meet(만나다)+ing = 만나서 하는 것 = 회의. '미팅' 잡자!"
+    },
+    {
+      "n": 7,
+      "en": "coast",
+      "ko": "[명] 해안, 연안",
+      "ipa": "/koʊst/",
+      "stress": "COAST",
+      "emoji": "🏖️🌊🗺️",
+      "ex": "We drove along the coast during summer vacation.",
+      "ex_ko": "여름 방학 때 해안을 따라 드라이브했어.",
+      "mnemonic": "'코스트' → 바다 옆 '코스'를 달리는 해안 도로."
+    },
+    {
+      "n": 8,
+      "en": "skip",
+      "ko": "[동] 1. (일 등을) 빼다, 거르다 2. 건너뛰다, 생략하다",
+      "ipa": "/skɪp/",
+      "stress": "SKIP",
+      "emoji": "⏭️🚫🍞",
+      "ex": "Don't skip breakfast before the test.",
+      "ex_ko": "시험 전에 아침 거르지 마.",
+      "mnemonic": "'스킵' 버튼 누르면 건너뛰기! 광고 스킵하듯 밥을 거르면 안 돼."
+    },
+    {
+      "n": 9,
+      "en": "refuse",
+      "ko": "[동] 거절하다, 거부하다",
+      "ipa": "/rɪˈfjuːz/",
+      "stress": "re-FUSE",
+      "emoji": "🙅‍♂️❌",
+      "ex": "She refused to share her notes with me.",
+      "ex_ko": "그녀는 나한테 필기 공유하기를 거절했어.",
+      "mnemonic": "re(도로)+fuse(붓다) → 받은 걸 도로 부어 돌려보내다 = 거절하다."
+    },
+    {
+      "n": 10,
+      "en": "sign",
+      "ko": "[명] 1. 표지판 2. 기미, 조짐 / [동] 서명하다",
+      "ipa": "/saɪn/",
+      "stress": "SIGN",
+      "emoji": "🪧✍️",
+      "ex": "Did you see the stop sign back there?",
+      "ex_ko": "저기 뒤에 정지 표지판 봤어?",
+      "mnemonic": "'사인'은 서명(사인해 주세요!)이면서, 길에 세운 '사인'=표지판. 조짐도 '신호(sign)'."
+    },
+    {
+      "n": 11,
+      "en": "mad",
+      "ko": "[형] 1. 화가 난 2. 미친",
+      "ipa": "/mæd/",
+      "stress": "MAD",
+      "emoji": "😡🤪",
+      "ex": "My mom got mad when I came home late.",
+      "ex_ko": "늦게 집에 오니까 엄마가 화나셨어.",
+      "mnemonic": "mad는 '화난'과 '미친' 둘 다. 'Are you mad?' = 화났어? / 미쳤어?"
+    },
+    {
+      "n": 12,
+      "en": "alive",
+      "ko": "[형] 살아 있는",
+      "ipa": "/əˈlaɪv/",
+      "stress": "a-LIVE",
+      "emoji": "💓🌱",
+      "ex": "The fish is still alive in the bucket.",
+      "ex_ko": "그 물고기 아직 양동이 안에서 살아 있어.",
+      "mnemonic": "a + live(살다) = 살아 있는. '얼라이브' → '얼라(아이)가 살아서 방긋'."
+    },
+    {
+      "n": 13,
+      "en": "branch",
+      "ko": "[명] 1. 나뭇가지 2. 지점, 지사",
+      "ipa": "/bræntʃ/",
+      "stress": "BRANCH",
+      "emoji": "🌳🏢",
+      "ex": "A bird is sitting on that thin branch.",
+      "ex_ko": "새 한 마리가 저 가는 나뭇가지에 앉아 있어.",
+      "mnemonic": "나무 줄기에서 뻗은 가지 = branch. 본사에서 뻗어 나온 가지 = 지점."
+    },
+    {
+      "n": 14,
+      "en": "reach",
+      "ko": "[동] 1. 도착[도달]하다 2. (손이) 닿다",
+      "ipa": "/riːtʃ/",
+      "stress": "REACH",
+      "emoji": "🖐️🏁",
+      "ex": "I can't reach the top shelf without a chair.",
+      "ex_ko": "의자 없이는 맨 위 선반에 손이 안 닿아.",
+      "mnemonic": "손을 쭉 뻗어 닿다 = reach. 목적지에 손이 닿듯 도착하다도 reach."
+    },
+    {
+      "n": 15,
+      "en": "common",
+      "ko": "[형] 1. 흔한 2. 공통의, 공동의",
+      "ipa": "/ˈkɑːmən/",
+      "stress": "COM-mon",
+      "emoji": "👥🔁",
+      "ex": "Kim is a very common last name in Korea.",
+      "ex_ko": "김은 한국에서 아주 흔한 성이야.",
+      "mnemonic": "com(함께)+mun(공동) → 모두가 함께 가진 = 공통의, 그래서 흔한."
+    },
+    {
+      "n": 16,
+      "en": "nation",
+      "ko": "[명] 국가, 나라",
+      "ipa": "/ˈneɪʃən/",
+      "stress": "NA-tion",
+      "emoji": "🌍🏳️",
+      "ex": "Korea is a small but strong nation.",
+      "ex_ko": "한국은 작지만 강한 나라야.",
+      "mnemonic": "nat(태어나다)에서 온 말: 같은 땅에서 태어난 사람들의 나라. national=국가의."
+    },
+    {
+      "n": 17,
+      "en": "path",
+      "ko": "[명] 1. (밟아서 생긴) 길, 오솔길 2. 경로, 방향",
+      "ipa": "/pæθ/",
+      "stress": "PATH",
+      "emoji": "🛤️🌲",
+      "ex": "We walked along the path through the park.",
+      "ex_ko": "우리는 공원을 가로지르는 오솔길을 따라 걸었어.",
+      "mnemonic": "'패스(pass)'하듯 지나가는 길이 path. 사람들이 밟고 지나가서 생긴 오솔길!"
+    },
+    {
+      "n": 18,
+      "en": "core",
+      "ko": "[명] 핵심, 중심부 / [형] 핵심적인, 가장 중요한",
+      "ipa": "/kɔːr/",
+      "stress": "CORE",
+      "emoji": "🍎🎯",
+      "ex": "Eat the apple, but don't eat the core.",
+      "ex_ko": "사과는 먹되, 심은 먹지 마.",
+      "mnemonic": "'코어 운동'은 몸의 중심부를 단련하는 거! core = 핵심, 중심."
+    },
+    {
+      "n": 19,
+      "en": "per",
+      "ko": "[전] …당, …마다",
+      "ipa": "/pɜːr/",
+      "stress": "PER",
+      "emoji": "💰⏱️",
+      "ex": "This job pays ten dollars per hour.",
+      "ex_ko": "이 일은 시간당 10달러를 줘.",
+      "mnemonic": "'퍼센트(percent)'는 100'당' 얼마! per = …당, …마다."
+    },
+    {
+      "n": 20,
+      "en": "vote",
+      "ko": "[동] 투표하다 / [명] 투표, 표결",
+      "ipa": "/voʊt/",
+      "stress": "VOTE",
+      "emoji": "🗳️✋",
+      "ex": "Let's vote for our new class president today.",
+      "ex_ko": "오늘 새 반장을 뽑는 투표를 하자.",
+      "mnemonic": "'보우트(boat)'가 아니라 vote! 표를 '보태'서 투표하다."
+    },
+    {
+      "n": 21,
+      "en": "match",
+      "ko": "[명] 1. 경기, 시합 2. 성냥 / [동] 어울리다",
+      "ipa": "/mætʃ/",
+      "stress": "MATCH",
+      "emoji": "⚽🔥👕",
+      "ex": "Your shoes match your jacket really well.",
+      "ex_ko": "네 신발이 재킷이랑 정말 잘 어울려.",
+      "mnemonic": "'매치'가 딱 맞다 = 어울리다. 축구 매치는 경기, 불붙이는 성냥도 match!"
+    },
+    {
+      "n": 22,
+      "en": "at that time",
+      "ko": "그때, 그 당시",
+      "ipa": "/æt ðæt taɪm/",
+      "stress": "at THAT time",
+      "emoji": "⏰👈",
+      "ex": "At that time, I was only five years old.",
+      "ex_ko": "그때 나는 겨우 다섯 살이었어.",
+      "mnemonic": "'그(that) 시간(time)에' = 그때, 그 당시. 옛날 이야기 시작할 때 쓰는 말!"
+    },
+    {
+      "n": 23,
+      "en": "sooner or later",
+      "ko": "조만간, 곧",
+      "ipa": "/ˈsuːnər ɔːr ˈleɪtər/",
+      "stress": "SOON-er or LAT-er",
+      "emoji": "⏳🔜",
+      "ex": "Sooner or later, you'll have to tell her.",
+      "ex_ko": "조만간 너 걔한테 말해야 할 거야.",
+      "mnemonic": "'더 빨리(sooner)든 더 늦게(later)든' 결국 온다 = 조만간, 곧."
+    },
+    {
+      "n": 24,
+      "en": "run out",
+      "ko": "(시간, 돈 등이) 다 되다, 다 떨어지다",
+      "ipa": "/rʌn aʊt/",
+      "stress": "run OUT",
+      "emoji": "⏳🪫💸",
+      "ex": "Hurry, we're going to run out of time!",
+      "ex_ko": "서둘러, 시간이 다 떨어지겠어!",
+      "mnemonic": "돈이 밖으로(out) 달려(run) 나가버리다 = 다 떨어지다. '런 아웃 = 남은 게 없다!'"
+    }
+  ]
+}

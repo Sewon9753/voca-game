@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day25",
+  "title": "능률VOCA 중등 필수 [2025] DAY 25",
+  "source": "프렙업 영어학원 프린트 (PAGE 25/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "goods",
+      "ko": "[명] 상품, 제품",
+      "ipa": "/ɡʊdz/",
+      "stress": "GOODS",
+      "emoji": "🛍️📦",
+      "ex": "The store sells all kinds of goods online.",
+      "ex_ko": "그 가게는 온라인으로 온갖 상품을 팔아.",
+      "mnemonic": "good(좋은) 것들에 s를 붙이면 '좋은 물건들' = 상품, 제품!"
+    },
+    {
+      "n": 2,
+      "en": "announce",
+      "ko": "[동] 발표하다, 알리다",
+      "ipa": "/əˈnaʊns/",
+      "stress": "an-NOUNCE",
+      "emoji": "📢🗣️",
+      "ex": "The teacher will announce the test results tomorrow.",
+      "ex_ko": "선생님이 내일 시험 결과를 발표하실 거야.",
+      "mnemonic": "'어나운서'가 하는 일이 바로 announce, 뉴스를 알리는 것!"
+    },
+    {
+      "n": 3,
+      "en": "impossible",
+      "ko": "[형] 불가능한",
+      "ipa": "/ɪmˈpɑːsəbəl/",
+      "stress": "im-POS-si-ble",
+      "emoji": "🚫🤯",
+      "ex": "It's impossible to finish this homework in ten minutes.",
+      "ex_ko": "이 숙제를 10분 안에 끝내는 건 불가능해.",
+      "mnemonic": "im(아님) + possible(가능한) = 가능하지 않은, 불가능한!"
+    },
+    {
+      "n": 4,
+      "en": "public",
+      "ko": "[형] 1. 대중의 2. 공공의 / [명] 대중",
+      "ipa": "/ˈpʌblɪk/",
+      "stress": "PUB-lic",
+      "emoji": "🏛️👥",
+      "ex": "Please don't talk loudly in public places.",
+      "ex_ko": "공공장소에서는 크게 말하지 마세요.",
+      "mnemonic": "people(사람들)과 뿌리가 같은 말. 모든 사람의=대중의, 공공의."
+    },
+    {
+      "n": 5,
+      "en": "ancient",
+      "ko": "[형] 1. 고대의 2. 아주 오래된",
+      "ipa": "/ˈeɪnʃənt/",
+      "stress": "AN-cient",
+      "emoji": "🏺🏛️",
+      "ex": "We learned about ancient Egypt in history class.",
+      "ex_ko": "우리는 역사 시간에 고대 이집트에 대해 배웠어.",
+      "mnemonic": "ante(앞선)에서 온 말. 지금보다 훨씬 앞선 시대, 고대의."
+    },
+    {
+      "n": 6,
+      "en": "storm",
+      "ko": "[명] 폭풍, 폭풍우",
+      "ipa": "/stɔːrm/",
+      "stress": "STORM",
+      "emoji": "⛈️🌪️",
+      "ex": "The storm knocked down trees on our street.",
+      "ex_ko": "폭풍이 우리 동네 나무들을 쓰러뜨렸어.",
+      "mnemonic": "'스톰!' 하고 바람이 세게 부딪히는 소리, 폭풍!"
+    },
+    {
+      "n": 7,
+      "en": "wire",
+      "ko": "[명] 1. 철사 2. (전화 등의) 선, 전선",
+      "ipa": "/ˈwaɪər/",
+      "stress": "WIRE",
+      "emoji": "🔌🧵",
+      "ex": "Don't touch that wire, it might be dangerous.",
+      "ex_ko": "그 전선 만지지 마, 위험할 수도 있어.",
+      "mnemonic": "'와이어'는 와~ 이어져 있는 철사·전선!"
+    },
+    {
+      "n": 8,
+      "en": "landmark",
+      "ko": "[명] 주요 지형지물, 랜드마크",
+      "ipa": "/ˈlændmɑːrk/",
+      "stress": "LAND-mark",
+      "emoji": "🗼🗺️",
+      "ex": "The Eiffel Tower is a famous landmark in Paris.",
+      "ex_ko": "에펠탑은 파리의 유명한 랜드마크야.",
+      "mnemonic": "land(땅) + mark(표시) = 땅 위의 표시가 되는 주요 지형지물!"
+    },
+    {
+      "n": 9,
+      "en": "introduce",
+      "ko": "[동] 소개하다",
+      "ipa": "/ˌɪntrəˈduːs/",
+      "stress": "in-tro-DUCE",
+      "emoji": "🤝👋",
+      "ex": "Let me introduce my new friend to you.",
+      "ex_ko": "내 새 친구를 너에게 소개할게.",
+      "mnemonic": "intro(안으로)+duce(이끌다)=사람을 안으로 이끌어 들이다, 소개하다."
+    },
+    {
+      "n": 10,
+      "en": "poetry",
+      "ko": "[명] 시, 시가",
+      "ipa": "/ˈpoʊətri/",
+      "stress": "PO-e-try",
+      "emoji": "📜✍️",
+      "ex": "We read some poetry in English class today.",
+      "ex_ko": "오늘 영어 시간에 시를 좀 읽었어.",
+      "mnemonic": "poem(시 한 편)을 모은 전체가 poetry(시, 시가). poet(시인)이 쓰는 것."
+    },
+    {
+      "n": 11,
+      "en": "dust",
+      "ko": "[명] 먼지, 티끌",
+      "ipa": "/dʌst/",
+      "stress": "DUST",
+      "emoji": "🌫️🧹",
+      "ex": "There is a lot of dust on my desk.",
+      "ex_ko": "내 책상 위에 먼지가 많아.",
+      "mnemonic": "먼지떨이가 duster! 먼지(dust)를 터는 도구. 책상 위 먼지."
+    },
+    {
+      "n": 12,
+      "en": "wave",
+      "ko": "[명] 파도, 물결 / [동] 1. (손을) 흔들다 2. 흔들다, 흔들리다",
+      "ipa": "/weɪv/",
+      "stress": "WAVE",
+      "emoji": "🌊👋",
+      "ex": "The waves were really big at the beach.",
+      "ex_ko": "해변에서 파도가 정말 컸어.",
+      "mnemonic": "웨이브(wave) 머리처럼 물결치는 파도. 손도 물결처럼 흔들다."
+    },
+    {
+      "n": 13,
+      "en": "nor",
+      "ko": "[접] …도 또한 아니다",
+      "ipa": "/nɔːr/",
+      "stress": "NOR",
+      "emoji": "🚫🚫",
+      "ex": "I don't like math, nor does my brother.",
+      "ex_ko": "난 수학을 안 좋아하고, 내 형도 그래.",
+      "mnemonic": "either…or(둘 중 하나)의 부정 짝이 neither…nor. n이 붙으면 '…도 아니다'."
+    },
+    {
+      "n": 14,
+      "en": "chemical",
+      "ko": "[형] 화학의, 화학적인 / [명] 화학 물질",
+      "ipa": "/ˈkemɪkəl/",
+      "stress": "CHEM-i-cal",
+      "emoji": "🧪⚗️",
+      "ex": "Don't touch the chemicals in the science lab.",
+      "ex_ko": "과학실에 있는 화학 물질 만지지 마.",
+      "mnemonic": "케미(chemi)가 터지는 화학 반응! 케미컬 = 화학의."
+    },
+    {
+      "n": 15,
+      "en": "fake",
+      "ko": "[형] 1. 가짜의 2. [위조]모조의 / [명] 가짜, 모조[위조]품",
+      "ipa": "/feɪk/",
+      "stress": "FAKE",
+      "emoji": "🎭🚫",
+      "ex": "That designer bag looks fake to me.",
+      "ex_ko": "그 명품 가방 내가 보기엔 가짜 같아.",
+      "mnemonic": "페이크(fake) 모션은 가짜 동작! 페이크 = 가짜의."
+    },
+    {
+      "n": 16,
+      "en": "rapidly",
+      "ko": "[부] 빨리, 급속히",
+      "ipa": "/ˈræpɪdli/",
+      "stress": "RAP-id-ly",
+      "emoji": "⚡🏃",
+      "ex": "The city is growing rapidly these days.",
+      "ex_ko": "요즘 그 도시가 빠르게 성장하고 있어.",
+      "mnemonic": "래퍼(rap)가 랩을 빨리(rapid) 뱉듯 급속히!"
+    },
+    {
+      "n": 17,
+      "en": "electricity",
+      "ko": "[명] 전기",
+      "ipa": "/ɪˌlɛkˈtrɪsəti/",
+      "stress": "e-lec-TRI-ci-ty",
+      "emoji": "⚡🔌",
+      "ex": "The electricity went out during the storm last night.",
+      "ex_ko": "어젯밤 폭풍 때 전기가 나갔어.",
+      "mnemonic": "일렉트릭(electric) 기타의 그 '일렉'! 전기로 소리 내니까 전기."
+    },
+    {
+      "n": 18,
+      "en": "garage",
+      "ko": "[명] 차고",
+      "ipa": "/ɡəˈrɑːʒ/",
+      "stress": "ga-RAGE",
+      "emoji": "🚗🏠",
+      "ex": "My dad parked the car in the garage.",
+      "ex_ko": "아빠가 차고에 차를 세우셨어.",
+      "mnemonic": "프랑스어 garer(차를 대다)에서 온 말. 차를 대 두는 곳, 차고."
+    },
+    {
+      "n": 19,
+      "en": "plain",
+      "ko": "[명] 평지, 평원 / [형] 1. 분명한, 명백한 2. 꾸미지 않은",
+      "ipa": "/pleɪn/",
+      "stress": "PLAIN",
+      "emoji": "🌾🧍",
+      "ex": "She wore a plain white T-shirt to school.",
+      "ex_ko": "걔는 학교에 아무 무늬 없는 흰 티를 입고 왔어.",
+      "mnemonic": "'플레인' 요거트 = 아무것도 안 넣은 꾸미지 않은 맛. 평평한 땅도 plain."
+    },
+    {
+      "n": 20,
+      "en": "bother",
+      "ko": "[동] 귀찮게 하다, 괴롭히다",
+      "ipa": "/ˈbɑːðər/",
+      "stress": "BO-ther",
+      "emoji": "😤🙄",
+      "ex": "Stop bothering me, I'm trying to study!",
+      "ex_ko": "그만 귀찮게 해, 나 공부하려고 하잖아!",
+      "mnemonic": "Don't bother me!(귀찮게 하지 마) 미드에서 자주 듣는 말. 귀찮게 하다."
+    },
+    {
+      "n": 21,
+      "en": "victory",
+      "ko": "[명] 승리",
+      "ipa": "/ˈvɪktəri/",
+      "stress": "VIC-to-ry",
+      "emoji": "🏆🎉",
+      "ex": "Our team celebrated the victory after the game.",
+      "ex_ko": "우리 팀은 경기 후에 승리를 축하했어.",
+      "mnemonic": "게임에서 이기면 뜨는 'VICTORY!' 화면. 브이(V) 손가락 = 승리."
+    },
+    {
+      "n": 22,
+      "en": "check out",
+      "ko": "1. …을 보다, 구경하다 2. (호텔에서) 나가다, 체크아웃하다",
+      "ipa": "/ˌtʃɛk ˈaʊt/",
+      "stress": "check OUT",
+      "emoji": "👀🏨",
+      "ex": "Check out this new song I found!",
+      "ex_ko": "내가 찾은 이 새 노래 좀 봐봐!",
+      "mnemonic": "체크(확인)해서 밖(out)을 본다 → 구경하다. 호텔도 확인하고 밖으로 = 체크아웃."
+    },
+    {
+      "n": 23,
+      "en": "more and more",
+      "ko": "점점 더 (많이)",
+      "ipa": "/ˌmɔːr ənd ˈmɔːr/",
+      "stress": "more and MORE",
+      "emoji": "📈➕",
+      "ex": "More and more students are using tablets in class.",
+      "ex_ko": "점점 더 많은 학생들이 수업에서 태블릿을 써.",
+      "mnemonic": "'더(more) 그리고 더(more)' → 더, 더, 계속 늘어나니까 점점 더."
+    },
+    {
+      "n": 24,
+      "en": "get together",
+      "ko": "모이다, 만나다",
+      "ipa": "/ˌɡɛt təˈɡɛðər/",
+      "stress": "get to-GE-ther",
+      "emoji": "👫🎈",
+      "ex": "Let's get together this weekend and play games.",
+      "ex_ko": "이번 주말에 모여서 게임하자.",
+      "mnemonic": "together(함께) 상태를 get(얻다) → 함께가 되다 = 모이다."
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day11",
+  "title": "능률VOCA 중등 필수 [2025] DAY 11",
+  "source": "프렙업 영어학원 프린트 (PAGE 11/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "flight",
+      "ko": "[명] 1. (비행기) 여행, 비행 2. 항공편, 항공기",
+      "ipa": "/flaɪt/",
+      "stress": "FLIGHT",
+      "emoji": "✈️🛫",
+      "ex": "Our flight to Jeju leaves at nine tomorrow morning.",
+      "ex_ko": "우리 제주도행 항공편은 내일 아침 9시에 떠나.",
+      "mnemonic": "fly(날다)에서 온 말. '플라이트' = 플라이(날아가는) 비행기 표!"
+    },
+    {
+      "n": 2,
+      "en": "hunter",
+      "ko": "[명] 사냥꾼",
+      "ipa": "/ˈhʌntər/",
+      "stress": "HUN-ter",
+      "emoji": "🏹🦌",
+      "ex": "The hunter waited quietly in the forest all day.",
+      "ex_ko": "그 사냥꾼은 하루 종일 숲에서 조용히 기다렸어.",
+      "mnemonic": "hunt(사냥하다)+er(사람) = 사냥하는 사람. '헌터'는 게임에서도 사냥꾼 직업!"
+    },
+    {
+      "n": 3,
+      "en": "scared",
+      "ko": "[형] 두려워하는, 겁먹은",
+      "ipa": "/skerd/",
+      "stress": "SCARED",
+      "emoji": "😱👻",
+      "ex": "I was so scared during the horror movie last night.",
+      "ex_ko": "어젯밤 공포 영화 보는 동안 나 너무 무서웠어.",
+      "mnemonic": "'스케어드' → 스케이트 타다 넘어질까 겁먹은 모습! scare(겁주다)의 형용사."
+    },
+    {
+      "n": 4,
+      "en": "medicine",
+      "ko": "[명] 1. 약, 약물 2. 의학, 의술",
+      "ipa": "/ˈmedɪsən/",
+      "stress": "MED-i-cine",
+      "emoji": "💊🩺",
+      "ex": "Take this medicine twice a day after meals.",
+      "ex_ko": "이 약을 하루 두 번 식후에 먹어.",
+      "mnemonic": "'메디신' → 메디(의료) + 신(神) = 의료의 신이 주는 약! medical(의료의)과 형제."
+    },
+    {
+      "n": 5,
+      "en": "text",
+      "ko": "[명] 1. (책 등의) 글, 본문 2. (컴퓨터의) 텍스트, 문서",
+      "ipa": "/tekst/",
+      "stress": "TEXT",
+      "emoji": "📄📱",
+      "ex": "Read the text on page ten before class starts.",
+      "ex_ko": "수업 시작 전에 10쪽에 있는 글을 읽어 봐.",
+      "mnemonic": "'텍스트 메시지'의 그 text! 화면이나 책에 적힌 글자 덩어리."
+    },
+    {
+      "n": 6,
+      "en": "boil",
+      "ko": "[동] 1. 끓다, 끓이다 2. (끓는 물에) 삶다",
+      "ipa": "/bɔɪl/",
+      "stress": "BOIL",
+      "emoji": "🍲♨️",
+      "ex": "Boil the water first, then add the noodles.",
+      "ex_ko": "먼저 물을 끓이고, 그다음 면을 넣어.",
+      "mnemonic": "'보일' → 물이 보글보글 끓는 게 보일 때! 보글+보일=끓다."
+    },
+    {
+      "n": 7,
+      "en": "foreign",
+      "ko": "[형] 외국의",
+      "ipa": "/ˈfɔːrən/",
+      "stress": "FOR-eign",
+      "emoji": "🌍🛂",
+      "ex": "My cousin is learning three foreign languages at school.",
+      "ex_ko": "내 사촌은 학교에서 외국어 세 개를 배우고 있어.",
+      "mnemonic": "라틴어 foris(바깥)에서 온 말 → 바깥 나라의 = 외국의. foreigner=외국인."
+    },
+    {
+      "n": 8,
+      "en": "lie",
+      "ko": "[동] 1. 눕다 2. 놓여 있다 3. 거짓말하다 / [명] 거짓말",
+      "ipa": "/laɪ/",
+      "stress": "LIE",
+      "emoji": "🛏️🤥",
+      "ex": "Don't lie to me. Just tell me the truth.",
+      "ex_ko": "나한테 거짓말하지 마. 그냥 사실대로 말해.",
+      "mnemonic": "'라이' → 누워서(눕다) 라이터 켜며 거짓말(라이)하는 장면! 눕다·거짓말 둘 다 lie."
+    },
+    {
+      "n": 9,
+      "en": "pleasure",
+      "ko": "[명] 즐거움, 기쁨",
+      "ipa": "/ˈplɛʒər/",
+      "stress": "PLEA-sure",
+      "emoji": "😊🎉",
+      "ex": "It was a pleasure to meet you today.",
+      "ex_ko": "오늘 너를 만나서 정말 즐거웠어.",
+      "mnemonic": "please(기쁘게 하다)의 명사형 = 기쁨. 'My pleasure!' = 기꺼이요!"
+    },
+    {
+      "n": 10,
+      "en": "dirt",
+      "ko": "[명] 1. 때, 먼지 2. 흙",
+      "ipa": "/dɜːrt/",
+      "stress": "DIRT",
+      "emoji": "🧹💩",
+      "ex": "Wash the dirt off your hands before dinner.",
+      "ex_ko": "저녁 먹기 전에 손에 묻은 때를 씻어.",
+      "mnemonic": "'더러운 트(dirt)' — 더러운 흙과 때. dirty(더러운)의 명사예요."
+    },
+    {
+      "n": 11,
+      "en": "everywhere",
+      "ko": "[부] 모든 곳에, 어디든지",
+      "ipa": "/ˈɛvriwɛr/",
+      "stress": "EV-ery-where",
+      "emoji": "🌍📍📍",
+      "ex": "I looked everywhere but couldn't find my phone.",
+      "ex_ko": "모든 곳을 찾아봤는데 내 폰을 못 찾았어.",
+      "mnemonic": "every(모든)+where(곳) = 모든 곳에. 어디든지!"
+    },
+    {
+      "n": 12,
+      "en": "traffic",
+      "ko": "[명] 교통(량)",
+      "ipa": "/ˈtræfɪk/",
+      "stress": "TRAF-fic",
+      "emoji": "🚗🚦🚕",
+      "ex": "We were late because of heavy traffic.",
+      "ex_ko": "교통 체증이 심해서 우리 늦었어.",
+      "mnemonic": "'트래픽' 하면 차들이 트럭처럼 빽빽하게 막힌 도로를 떠올려요."
+    },
+    {
+      "n": 13,
+      "en": "hike",
+      "ko": "[명] 하이킹, 도보 여행 / [동] 하이킹[도보 여행]하다",
+      "ipa": "/haɪk/",
+      "stress": "HIKE",
+      "emoji": "🥾⛰️",
+      "ex": "Let's hike up the mountain this weekend.",
+      "ex_ko": "이번 주말에 산으로 하이킹 가자.",
+      "mnemonic": "'하이(high)~크' 높은 산으로 걸어 올라가는 하이킹!"
+    },
+    {
+      "n": 14,
+      "en": "beyond",
+      "ko": "[전] 1. [장소] … 너머[저편]에 2. [시간] …을 지나서",
+      "ipa": "/bɪˈjɑːnd/",
+      "stress": "be-YOND",
+      "emoji": "🌄➡️",
+      "ex": "The park is just beyond that bridge.",
+      "ex_ko": "공원은 저 다리 바로 너머에 있어.",
+      "mnemonic": "be+yond(저쪽, yonder) → 저쪽 너머에. '비욘드' = 저 너머!"
+    },
+    {
+      "n": 15,
+      "en": "succeed",
+      "ko": "[동] 1. 성공하다 2. 뒤를 잇다",
+      "ipa": "/səkˈsiːd/",
+      "stress": "suc-CEED",
+      "emoji": "🏆✅",
+      "ex": "If you practice every day, you will succeed.",
+      "ex_ko": "매일 연습하면 넌 성공할 거야.",
+      "mnemonic": "'썩 씨드(seed)' — 씨앗을 심으면 결국 성공의 열매가 열려요."
+    },
+    {
+      "n": 16,
+      "en": "failure",
+      "ko": "[명] 1. 실패 2. 실패작",
+      "ipa": "/ˈfeɪljər/",
+      "stress": "FAIL-ure",
+      "emoji": "❌😞",
+      "ex": "Don't be afraid of failure. Just try again.",
+      "ex_ko": "실패를 두려워하지 마. 그냥 다시 해봐.",
+      "mnemonic": "fail(실패하다)+ure(명사) = 실패. '페일~' 하고 넘어지는 소리."
+    },
+    {
+      "n": 17,
+      "en": "stranger",
+      "ko": "[명] 1. 낯선[모르는] 사람 2. (어떤 장소에) 처음 온 사람",
+      "ipa": "/ˈstreɪndʒər/",
+      "stress": "STRAN-ger",
+      "emoji": "🚶‍♂️❓",
+      "ex": "Don't talk to a stranger on the street.",
+      "ex_ko": "길에서 낯선 사람에게 말 걸지 마.",
+      "mnemonic": "strange(이상한)+er(사람) → '이상하게 낯선 사람'. 스트레인저 = 처음 보는 사람."
+    },
+    {
+      "n": 18,
+      "en": "aid",
+      "ko": "[명] 1. 도움 2. 원조, 지원",
+      "ipa": "/eɪd/",
+      "stress": "AID",
+      "emoji": "🆘🤝",
+      "ex": "The first aid kit is in the kitchen.",
+      "ex_ko": "구급상자는 부엌에 있어.",
+      "mnemonic": "'에이드'는 밴드에이드! 다쳤을 때 붙여주는 도움. 구급상자 = first aid."
+    },
+    {
+      "n": 19,
+      "en": "toward",
+      "ko": "[전] …을 향하여, … 쪽으로",
+      "ipa": "/tɔːrd/",
+      "stress": "TOWARD",
+      "emoji": "➡️🎯",
+      "ex": "She walked toward the bus stop quickly.",
+      "ex_ko": "그녀는 버스 정류장 쪽으로 빠르게 걸어갔어.",
+      "mnemonic": "to(~로)+ward(방향) → '~쪽으로'. '투워드' = 그쪽으로 향해 가다."
+    },
+    {
+      "n": 20,
+      "en": "sheet",
+      "ko": "[명] 1. 시트, 얇은 천 2. (종이) (한) 장",
+      "ipa": "/ʃiːt/",
+      "stress": "SHEET",
+      "emoji": "📄🛏️",
+      "ex": "Can I have a sheet of paper?",
+      "ex_ko": "종이 한 장 줄 수 있어?",
+      "mnemonic": "'시트'는 침대 시트! 얇고 넓게 펼쳐진 천이나 종이 한 장."
+    },
+    {
+      "n": 21,
+      "en": "powerful",
+      "ko": "[형] 1. 영향력 있는 2. 강력한, 효과적인 3. (신체 등이) 강한",
+      "ipa": "/ˈpaʊərfəl/",
+      "stress": "POW-er-ful",
+      "emoji": "💪⚡",
+      "ex": "That new phone has a really powerful battery.",
+      "ex_ko": "그 새 폰은 배터리가 정말 강력해.",
+      "mnemonic": "power(힘)+ful(가득) → 힘이 가득한 = 강력한. '파워풀'하다!"
+    },
+    {
+      "n": 22,
+      "en": "cut ... into pieces",
+      "ko": "…을 여러 조각으로 자르다",
+      "ipa": "/kʌt ˈɪntuː ˈpiːsɪz/",
+      "stress": "CUT IN-to PIE-ces",
+      "emoji": "🔪🍕",
+      "ex": "Mom cut the pizza into eight pieces.",
+      "ex_ko": "엄마가 피자를 여덟 조각으로 잘랐어.",
+      "mnemonic": "cut(자르다)+into(~으로)+pieces(조각들) → 조각들로 자르다. 피자를 '피스'로!"
+    },
+    {
+      "n": 23,
+      "en": "stay up",
+      "ko": "(늦게까지) 깨어 있다, 안 자다",
+      "ipa": "/steɪ ʌp/",
+      "stress": "STAY UP",
+      "emoji": "🌙👀",
+      "ex": "I stayed up late playing games last night.",
+      "ex_ko": "어젯밤에 게임하느라 늦게까지 안 잤어.",
+      "mnemonic": "stay(머물다)+up(일어난 상태) → 계속 일어나 있다 = 안 자다. 눕지 않고 '업'!"
+    },
+    {
+      "n": 24,
+      "en": "get along with",
+      "ko": "…와 잘 지내다",
+      "ipa": "/ɡet əˈlɔːŋ wɪð/",
+      "stress": "get a-LONG with",
+      "emoji": "🤝😊",
+      "ex": "I get along with my new classmates well.",
+      "ex_ko": "난 새 반 친구들이랑 잘 지내.",
+      "mnemonic": "along(함께 나란히)+with(~와) → 나란히 같이 가다 = 잘 지내다."
+    }
+  ]
+}

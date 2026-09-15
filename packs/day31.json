@@ -1,0 +1,271 @@
+{
+  "pack_id": "neungyul-voca-middle-2025-day31",
+  "title": "능률VOCA 중등 필수 [2025] DAY 31",
+  "source": "프렙업 영어학원 프린트 (PAGE 31/50)",
+  "words": [
+    {
+      "n": 1,
+      "en": "locker",
+      "ko": "[명] 라커, 사물함",
+      "ipa": "/ˈlɑːkər/",
+      "stress": "LOCK-er",
+      "emoji": "🔒🗄️",
+      "ex": "I left my gym clothes in my locker.",
+      "ex_ko": "체육복을 사물함에 두고 왔어.",
+      "mnemonic": "lock(잠그다)+er → 잠그는 것, 즉 사물함. '락!' 하고 잠그는 라커."
+    },
+    {
+      "n": 2,
+      "en": "athlete",
+      "ko": "[명] (운동)선수",
+      "ipa": "/ˈæθliːt/",
+      "stress": "ATH-lete",
+      "emoji": "🏃‍♂️🏅",
+      "ex": "My brother wants to be a pro athlete.",
+      "ex_ko": "우리 형은 프로 선수가 되고 싶어 해.",
+      "mnemonic": "육상(athletics)·운동선수(athlete). 올림픽에 나가는 선수들이 athletes."
+    },
+    {
+      "n": 3,
+      "en": "such",
+      "ko": "[형] 1. 그러한, 그런 2. 매우 …한",
+      "ipa": "/sʌtʃ/",
+      "stress": "SUCH",
+      "emoji": "👉✨",
+      "ex": "I've never seen such a big dog before.",
+      "ex_ko": "그렇게 큰 개는 처음 봐.",
+      "mnemonic": "such a big dog처럼 '그런, 매우 …한'을 강조할 때 쓰는 such."
+    },
+    {
+      "n": 4,
+      "en": "article",
+      "ko": "[명] (신문, 잡지 등의) 글, 기사, 논문",
+      "ipa": "/ˈɑːrtɪkl/",
+      "stress": "AR-ti-cle",
+      "emoji": "📰✍️",
+      "ex": "I read an article about K-pop online.",
+      "ex_ko": "인터넷에서 케이팝 기사를 읽었어.",
+      "mnemonic": "신문·잡지에 실린 글 한 편이 article. 기사 하나, 논문 한 편."
+    },
+    {
+      "n": 5,
+      "en": "capital",
+      "ko": "[명] 1. 수도 2. 자본(금), 자금 3. (알파벳의) 대문자",
+      "ipa": "/ˈkæpɪtl/",
+      "stress": "CAP-i-tal",
+      "emoji": "🏛️💰🔠",
+      "ex": "Seoul is the capital of South Korea.",
+      "ex_ko": "서울은 대한민국의 수도야.",
+      "mnemonic": "cap(머리)에서 온 말 → 나라의 머리는 수도, 돈의 머리는 자본, 글자의 머리는 대문자."
+    },
+    {
+      "n": 6,
+      "en": "northern",
+      "ko": "[형] 북쪽의, 북쪽에 있는",
+      "ipa": "/ˈnɔːrðərn/",
+      "stress": "NOR-thern",
+      "emoji": "🧭⬆️❄️",
+      "ex": "It snows a lot in the northern part of Korea.",
+      "ex_ko": "한국 북쪽 지역에는 눈이 많이 와.",
+      "mnemonic": "north(북쪽)+ern(~의) → 북쪽의. '노던' 지방은 늘 눈이 오는 북쪽."
+    },
+    {
+      "n": 7,
+      "en": "explain",
+      "ko": "[동] 1. 설명하다 2. 해명[변명]하다",
+      "ipa": "/ɪkˈspleɪn/",
+      "stress": "ex-PLAIN",
+      "emoji": "🗣️💡",
+      "ex": "Can you explain this math problem to me?",
+      "ex_ko": "이 수학 문제 좀 설명해 줄래?",
+      "mnemonic": "ex(밖으로)+plain(평평하게) → 꼬인 걸 밖으로 펴서 보여주다 = 설명하다."
+    },
+    {
+      "n": 8,
+      "en": "forget",
+      "ko": "[동] 잊다, 잊어버리다",
+      "ipa": "/fərˈɡet/",
+      "stress": "for-GET",
+      "emoji": "🤦‍♂️💭",
+      "ex": "Don't forget to bring your homework tomorrow.",
+      "ex_ko": "내일 숙제 가져오는 거 잊지 마.",
+      "mnemonic": "for(멀리)+get(얻다) → 얻은 게 멀리 가버림 = 잊다. '퍼겟' 하고 퍼뜩 사라짐."
+    },
+    {
+      "n": 9,
+      "en": "manner",
+      "ko": "[명] 1. 방식, 방법 2. 태도 3. 예의, 예절",
+      "ipa": "/ˈmænər/",
+      "stress": "MAN-ner",
+      "emoji": "🙇🍽️",
+      "ex": "Say thank you, it's good manners.",
+      "ex_ko": "고맙다고 말해, 그게 좋은 예의야.",
+      "mnemonic": "'매너 좋다' 할 때 그 매너! 태도·예의·방식 모두 매너에서 나와요."
+    },
+    {
+      "n": 10,
+      "en": "tune",
+      "ko": "[명] 곡(조), 선율 / [동] (악기의) 음을 맞추다, 조율하다",
+      "ipa": "/tuːn/",
+      "stress": "TUNE",
+      "emoji": "🎵🎸",
+      "ex": "I can't get this tune out of my head.",
+      "ex_ko": "이 곡이 머릿속에서 떠나질 않아.",
+      "mnemonic": "'튠~' 하고 기타 줄을 튕기며 음을 맞추면 곡(선율)이 흘러나와요."
+    },
+    {
+      "n": 11,
+      "en": "sticky",
+      "ko": "[형] 끈적끈적한",
+      "ipa": "/ˈstɪki/",
+      "stress": "STICK-y",
+      "emoji": "🍯🖐️",
+      "ex": "My hands are sticky from the candy.",
+      "ex_ko": "사탕 때문에 손이 끈적끈적해.",
+      "mnemonic": "스티커(sticker)처럼 착 달라붙는 느낌 = 스티키, 끈적끈적한."
+    },
+    {
+      "n": 12,
+      "en": "perhaps",
+      "ko": "[부] 아마, 어쩌면",
+      "ipa": "/pərˈhæps/",
+      "stress": "per-HAPS",
+      "emoji": "🤔❓",
+      "ex": "Perhaps we can meet after school today.",
+      "ex_ko": "아마 오늘 방과 후에 만날 수 있을 거야.",
+      "mnemonic": "per(~에 의해)+hap(우연) → 우연에 달렸으니 '아마, 어쩌면'."
+    },
+    {
+      "n": 13,
+      "en": "sense",
+      "ko": "[명] (감각 기관의) 감각 / [명] 느낌, -감",
+      "ipa": "/sens/",
+      "stress": "SENSE",
+      "emoji": "👃👂👁️",
+      "ex": "Dogs have a strong sense of smell.",
+      "ex_ko": "개는 후각(냄새 감각)이 뛰어나.",
+      "mnemonic": "'센스 있다'의 센스! 눈·코·귀로 느끼는 감각, 그리고 느낌."
+    },
+    {
+      "n": 14,
+      "en": "booth",
+      "ko": "[명] (칸막이를 한) 작은 공간, 부스",
+      "ipa": "/buːθ/",
+      "stress": "BOOTH",
+      "emoji": "📸🚪",
+      "ex": "Let's take pictures in the photo booth.",
+      "ex_ko": "포토 부스에서 사진 찍자.",
+      "mnemonic": "포토 부스, 전화 부스처럼 칸막이로 막은 작은 공간이 booth."
+    },
+    {
+      "n": 15,
+      "en": "conduct",
+      "ko": "[동] 1. 수행하다 2. 지휘하다 / [명] 행위, 행동",
+      "ipa": "/kənˈdʌkt/",
+      "stress": "con-DUCT",
+      "emoji": "🎼🧪",
+      "ex": "She will conduct the school orchestra tonight.",
+      "ex_ko": "그녀가 오늘 밤 학교 오케스트라를 지휘할 거야.",
+      "mnemonic": "'컨덕터(지휘자)'가 conduct! 지휘하고, 실험을 수행하는 행동."
+    },
+    {
+      "n": 16,
+      "en": "fault",
+      "ko": "[명] 1. 잘못, 과실 2. 결점, 결함",
+      "ipa": "/fɔːlt/",
+      "stress": "FAULT",
+      "emoji": "😬🙅",
+      "ex": "It's not my fault that we're late.",
+      "ex_ko": "우리가 늦은 건 내 잘못이 아니야.",
+      "mnemonic": "'폴트!' 테니스에서 서브 실수를 폴트라 하죠 — 잘못, 결점."
+    },
+    {
+      "n": 17,
+      "en": "disappointed",
+      "ko": "[형] 실망한",
+      "ipa": "/ˌdɪsəˈpɔɪntɪd/",
+      "stress": "dis-ap-POINT-ed",
+      "emoji": "😞💔",
+      "ex": "I was disappointed when the concert got canceled.",
+      "ex_ko": "콘서트가 취소돼서 나는 실망했어.",
+      "mnemonic": "dis(반대)+appoint(약속하다): 약속이 깨져서 '디스'당한 기분, 실망한."
+    },
+    {
+      "n": 18,
+      "en": "ladder",
+      "ko": "[명] 사다리",
+      "ipa": "/ˈlædər/",
+      "stress": "LAD-der",
+      "emoji": "🪜",
+      "ex": "Dad climbed the ladder to fix the roof.",
+      "ex_ko": "아빠가 지붕을 고치려고 사다리에 올라갔어.",
+      "mnemonic": "'래더'를 타고 올라가면 '레벨 up'! 한 칸씩 오르는 사다리."
+    },
+    {
+      "n": 19,
+      "en": "comfort",
+      "ko": "[명] 1. 안락, 편안함 2. 위로, 위안",
+      "ipa": "/ˈkʌmfərt/",
+      "stress": "COM-fort",
+      "emoji": "🛋️🤗",
+      "ex": "My mom gave me comfort after the bad test.",
+      "ex_ko": "시험을 망친 후 엄마가 나를 위로해 주셨어.",
+      "mnemonic": "'컴포트' 소파에 푹 앉으면 편안함, 힘들 땐 그게 위로가 돼요."
+    },
+    {
+      "n": 20,
+      "en": "heal",
+      "ko": "[동] 낫다, 치유하다",
+      "ipa": "/hiːl/",
+      "stress": "HEAL",
+      "emoji": "🩹✨",
+      "ex": "The cut on my knee will heal soon.",
+      "ex_ko": "내 무릎의 상처는 곧 나을 거야.",
+      "mnemonic": "'힐'러가 게임에서 체력을 회복시키듯, heal은 상처를 낫게 하다."
+    },
+    {
+      "n": 21,
+      "en": "difference",
+      "ko": "[명] 차이(점)",
+      "ipa": "/ˈdɪfrəns/",
+      "stress": "DIF-fer-ence",
+      "emoji": "🍎🍊",
+      "ex": "Can you see the difference between these two pictures?",
+      "ex_ko": "이 두 그림의 차이점이 보여?",
+      "mnemonic": "different(다른)에 -ence를 붙이면 '다른 점', 즉 차이."
+    },
+    {
+      "n": 22,
+      "en": "in need",
+      "ko": "어려움에 처한",
+      "ipa": "/ɪn niːd/",
+      "stress": "in NEED",
+      "emoji": "🆘🤲",
+      "ex": "We collected coats for families in need this winter.",
+      "ex_ko": "우리는 이번 겨울 어려운 가정을 위해 코트를 모았어.",
+      "mnemonic": "need(필요) 속에(in) 빠져 있다 = 도움이 절실히 필요한, 어려움에 처한."
+    },
+    {
+      "n": 23,
+      "en": "come across",
+      "ko": "우연히 마주치다[발견하다]",
+      "ipa": "/kʌm əˈkrɔːs/",
+      "stress": "come a-CROSS",
+      "emoji": "🚶💡",
+      "ex": "I often come across old photos when I clean my room.",
+      "ex_ko": "방 청소할 때 옛날 사진을 우연히 자주 발견해.",
+      "mnemonic": "길을 건너(across) 오다(come) 보니 딱 마주친 것, 우연히 발견하다."
+    },
+    {
+      "n": 24,
+      "en": "all the time",
+      "ko": "항상, 늘",
+      "ipa": "/ɔːl ðə taɪm/",
+      "stress": "ALL the time",
+      "emoji": "🔁⏰",
+      "ex": "My little brother asks questions all the time.",
+      "ex_ko": "내 남동생은 항상 질문을 해.",
+      "mnemonic": "모든(all) 시간(time)에 걸쳐서 = 늘, 항상."
+    }
+  ]
+}
