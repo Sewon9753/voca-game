@@ -1,3 +1,4 @@
 .playwright-mcp/
 *.png
 !icon-*.png
+sheets/
