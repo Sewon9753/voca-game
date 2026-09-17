@@ -6,6 +6,8 @@
     python3 test_sheet.py section10-1 section10-2 --mode en2ko    # 두 팩을 합쳐 한 시험(80단어)
     python3 test_sheet.py day06 --mode en2ko --order print        # 프린트 번호 순(기본은 섞기)
     python3 test_sheet.py day06 --mode en2ko --print              # 생성 후 Canon G4010 출력
+    python3 test_sheet.py day08 --mode en2ko ko2en --rounds 2 --one-file
+        # 두 방식 × 1차·2차 시험지(문항 순서 동일) + 정답지 1장 → PDF 1개(재시험용)
 
 방식: en2ko = 영어 제시 → 한글 뜻 쓰기 / ko2en = 한글 제시 → 영어 쓰기.
 쪽당 최대 40문항(2열×20행). 섞기는 --seed 로 재현 가능(기본 = 오늘 날짜).
@@ -59,7 +61,7 @@ def order_words(words, order, seed):
     return ws
 
 
-def page_html(title, mode, items, start, total, page_no, pages, date):
+def page_html(title, mode, items, start, total, page_no, pages, date, round_label=""):
     rows = []
     for i, w in enumerate(items, start):
         q = html.escape(w["en"] if mode == "en2ko" else w["ko"])
@@ -75,12 +77,14 @@ def page_html(title, mode, items, start, total, page_no, pages, date):
         ordered.append(right[k] if k < len(right) else '<div class="row" style="border:0"></div>')
     return f"""<div class="page">
 <div class="head"><div><div class="title">{html.escape(title)} — {MODE_LABEL[mode]}</div>
-<div class="sub">{total}문항 · {page_no}/{pages}쪽 · {date}</div></div>
+<div class="sub">{round_label}{total}문항 · {page_no}/{pages}쪽 · {date}</div></div>
 <div class="blanks"><span>이름</span><span>점수&nbsp;&nbsp;&nbsp;&nbsp;/ {total}</span></div></div>
 <div class="grid" style="--rh:{rh:.1f}mm">{''.join(ordered)}</div></div>"""
 
 
 def key_html(title, mode, words, date):
+    mode_label = f" — {MODE_LABEL[mode]}" if mode else ""
+    scope = "문항 순서 시험지와 동일" if mode else "문항 순서 전 방식·전 차수 시험지와 동일"
     rows = []
     for i, w in enumerate(words, 1):
         rows.append(f'<div class="row"><span class="n">{i}.</span><span class="q">{html.escape(w["en"])}</span><span class="ans">{html.escape(w["ko"])}</span></div>')
@@ -93,22 +97,43 @@ def key_html(title, mode, words, date):
             ordered.append(chunk[k])
             ordered.append(chunk[half + k] if half + k < len(chunk) else "")
         pages.append(f"""<div class="page key">
-<div class="head"><div><div class="title">정답지 — {html.escape(title)} — {MODE_LABEL[mode]}</div>
-<div class="sub">채점용 · 문항 순서 시험지와 동일 · {date}</div></div></div>
+<div class="head"><div><div class="title">정답지 — {html.escape(title)}{mode_label}</div>
+<div class="sub">채점용 · {scope} · {date}</div></div></div>
 <div class="grid">{''.join(ordered)}</div></div>""")
     return "".join(pages)
 
 
-def build_html(title, mode, words, date, with_key):
+def test_pages(title, mode, words, date, rounds=1):
+    """시험지 쪽들. rounds>1 이면 같은 문항 순서로 1차·2차… 반복(재시험용)."""
     total = len(words)
     pages = (total + PER_PAGE - 1) // PER_PAGE
-    body = "".join(
-        page_html(title, mode, words[s:s + PER_PAGE], s + 1, total, s // PER_PAGE + 1, pages, date)
-        for s in range(0, total, PER_PAGE)
-    )
+    body = ""
+    for r in range(1, rounds + 1):
+        label = f"<b>{r}차 시험</b> · " if rounds > 1 else ""
+        body += "".join(
+            page_html(title, mode, words[s:s + PER_PAGE], s + 1, total, s // PER_PAGE + 1, pages, date, label)
+            for s in range(0, total, PER_PAGE)
+        )
+    return body
+
+
+def wrap_html(body):
+    return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>{CSS}</style></head><body>{body}</body></html>'
+
+
+def build_html(title, mode, words, date, with_key, rounds=1):
+    body = test_pages(title, mode, words, date, rounds)
     if with_key:
         body += key_html(title, mode, words, date)
-    return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><style>{CSS}</style></head><body>{body}</body></html>'
+    return wrap_html(body)
+
+
+def build_set_html(title, modes, words, date, with_key, rounds=1):
+    """여러 방식을 한 파일에: 방식마다 rounds 회 시험지, 정답지는 마지막 1부(문항 순서 공통)."""
+    body = "".join(test_pages(title, m, words, date, rounds) for m in modes)
+    if with_key:
+        body += key_html(title, None, words, date)
+    return wrap_html(body)
 
 
 def to_pdf(html_path, pdf_path):
@@ -133,6 +158,9 @@ def main():
     ap.add_argument("--seed", default=None, help="섞기 시드(기본 오늘 날짜+팩id)")
     ap.add_argument("--out", default=str(ROOT / "sheets"))
     ap.add_argument("--no-key", action="store_true", help="정답지 생략")
+    ap.add_argument("--rounds", type=int, default=1, help="시험지 반복 수(1차·2차…, 문항 순서 동일 — 재시험용)")
+    ap.add_argument("--one-file", action="store_true",
+                    help="모든 방식을 PDF 1개로 합치고 정답지는 마지막 1부만(방식 간 문항 순서 동일)")
     ap.add_argument("--print", dest="do_print", action="store_true", help="생성 후 프린터로 출력")
     a = ap.parse_args()
 
@@ -141,17 +169,28 @@ def main():
     out = Path(a.out); out.mkdir(exist_ok=True)
     stem = "+".join(a.packs)
     made = []
-    for mode in a.mode:
+    if a.one_file:
+        seed = a.seed or f"{date}:{stem}"
+        ws = order_words(words, a.order, seed)
+        h = build_set_html(title, a.mode, ws, date, not a.no_key, a.rounds)
+        html_path = out / f"{stem}_set_{date}.html"
+        pdf_path = out / f"{stem}_set_{date}.pdf"
+        html_path.write_text(h, encoding="utf-8")
+        pdf_path.unlink(missing_ok=True)
+        to_pdf(html_path.resolve(), pdf_path.resolve())
+        made.append(("set", pdf_path, len(ws)))
+        print(f"OK {pdf_path}  ({len(ws)}문항, {'+'.join(a.mode)} × {a.rounds}차, 정답지 {'없음' if a.no_key else '1부'}, seed={seed})")
+    for mode in ([] if a.one_file else a.mode):
         seed = a.seed or f"{date}:{stem}:{mode}"
         ws = order_words(words, a.order, seed)
-        h = build_html(title, mode, ws, date, not a.no_key)
+        h = build_html(title, mode, ws, date, not a.no_key, a.rounds)
         html_path = out / f"{stem}_{mode}_{date}.html"
         pdf_path = out / f"{stem}_{mode}_{date}.pdf"
         html_path.write_text(h, encoding="utf-8")
         pdf_path.unlink(missing_ok=True)
         to_pdf(html_path.resolve(), pdf_path.resolve())
         made.append((mode, pdf_path, len(ws)))
-        print(f"OK {pdf_path}  ({len(ws)}문항, {MODE_LABEL[mode]}, order={a.order}, seed={seed})")
+        print(f"OK {pdf_path}  ({len(ws)}문항, {MODE_LABEL[mode]} × {a.rounds}차, order={a.order}, seed={seed})")
     if a.do_print:
         for mode, pdf_path, _ in made:
             ok = print_pdf(pdf_path)
