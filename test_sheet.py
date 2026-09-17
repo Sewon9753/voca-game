@@ -8,6 +8,12 @@
     python3 test_sheet.py day06 --mode en2ko --print              # 생성 후 Canon G4010 출력
     python3 test_sheet.py day08 --mode en2ko ko2en --rounds 2 --one-file
         # 두 방식 × 1차·2차 시험지(문항 순서 동일) + 정답지 1장 → PDF 1개(재시험용)
+    python3 test_sheet.py day21 day22 day23 --each --rounds 2 --one-file --print
+        # --each = 팩마다 별도 세트(합치지 않음). 출력은 뒤 팩·뒤 쪽부터(역순) 보내서
+        # 배출 트레이에 앞면 위로 쌓이는 순서가 읽는 순서와 같게 한다(2026-09-17 대표 요청).
+
+방식 순서는 항상 영→뜻 → 뜻→영(난이도 순, 인자 순서 무관).
+출력 = 각 PDF를 쪽 역순으로 뒤집은 임시본을 보내고, 여러 세트는 마지막 세트부터 제출한다.
 
 방식: en2ko = 영어 제시 → 한글 뜻 쓰기 / ko2en = 한글 제시 → 영어 쓰기.
 쪽당 최대 40문항(2열×20행). 섞기는 --seed 로 재현 가능(기본 = 오늘 날짜).
@@ -144,10 +150,23 @@ def to_pdf(html_path, pdf_path):
         sys.exit(f"PDF 변환 실패: {r.stderr[-500:]}")
 
 
-def print_pdf(pdf_path):
+def print_pdf(pdf_path, reverse=True):
+    """Canon G4010은 앞면 위로 배출 → 쪽 역순으로 보내야 트레이의 묶음이 1쪽부터 읽힌다."""
     sys.path.insert(0, str(Path.home() / "Dev/hofn-ai-org/ops"))
     from localprint import submit
-    return submit(str(pdf_path), printer="Canon_G4010_series")
+    src = Path(pdf_path)
+    if reverse:
+        import fitz
+        d = fitz.open(src)
+        r = fitz.open()
+        for i in range(len(d) - 1, -1, -1):
+            r.insert_pdf(d, from_page=i, to_page=i)
+        src = src.with_name(src.stem + ".rev.pdf")
+        r.save(src)
+    ok = submit(str(src), printer="Canon_G4010_series")
+    if reverse:
+        src.unlink(missing_ok=True)
+    return ok
 
 
 def main():
@@ -162,12 +181,26 @@ def main():
     ap.add_argument("--one-file", action="store_true",
                     help="모든 방식을 PDF 1개로 합치고 정답지는 마지막 1부만(방식 간 문항 순서 동일)")
     ap.add_argument("--print", dest="do_print", action="store_true", help="생성 후 프린터로 출력")
+    ap.add_argument("--each", action="store_true", help="팩마다 별도 세트(합치지 않음)")
+    ap.add_argument("--no-reverse", action="store_true", help="출력 시 쪽·세트 역순 뒤집기 생략")
     a = ap.parse_args()
+    a.mode = [m for m in MODE_LABEL if m in a.mode]  # 항상 영→뜻 → 뜻→영 순
 
-    title, words = load(a.packs)
     date = datetime.date.today().isoformat()
     out = Path(a.out); out.mkdir(exist_ok=True)
-    stem = "+".join(a.packs)
+    made = []
+    for group in ([[p] for p in a.packs] if a.each else [a.packs]):
+        made += build_group(group, a, date, out)
+    if a.do_print:
+        order = made if a.no_reverse else list(reversed(made))
+        for mode, pdf_path, _ in order:
+            ok = print_pdf(pdf_path, reverse=not a.no_reverse)
+            print(f"{'PRINTED' if ok else 'PRINT FAIL'} {pdf_path.name}{'' if a.no_reverse else ' (역순)'}")
+
+
+def build_group(pack_ids, a, date, out):
+    title, words = load(pack_ids)
+    stem = "+".join(pack_ids)
     made = []
     if a.one_file:
         seed = a.seed or f"{date}:{stem}"
@@ -191,10 +224,7 @@ def main():
         to_pdf(html_path.resolve(), pdf_path.resolve())
         made.append((mode, pdf_path, len(ws)))
         print(f"OK {pdf_path}  ({len(ws)}문항, {MODE_LABEL[mode]} × {a.rounds}차, order={a.order}, seed={seed})")
-    if a.do_print:
-        for mode, pdf_path, _ in made:
-            ok = print_pdf(pdf_path)
-            print(f"{'PRINTED' if ok else 'PRINT FAIL'} {pdf_path.name}")
+    return made
 
 
 if __name__ == "__main__":
