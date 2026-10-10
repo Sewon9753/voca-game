@@ -150,7 +150,7 @@ def to_pdf(html_path, pdf_path):
         sys.exit(f"PDF 변환 실패: {r.stderr[-500:]}")
 
 
-def print_pdf(pdf_path, reverse=True):
+def print_pdf(pdf_path, reverse=True, printer="Canon_G4010_series"):
     """Canon G4010은 앞면 위로 배출 → 쪽 역순으로 보내야 트레이의 묶음이 1쪽부터 읽힌다."""
     sys.path.insert(0, str(Path.home() / "Dev/hofn-ai-org/ops"))
     from localprint import submit
@@ -163,7 +163,7 @@ def print_pdf(pdf_path, reverse=True):
             r.insert_pdf(d, from_page=i, to_page=i)
         src = src.with_name(src.stem + ".rev.pdf")
         r.save(src)
-    ok = submit(str(src), printer="Canon_G4010_series")
+    ok = submit(str(src), printer=printer)
     if reverse:
         src.unlink(missing_ok=True)
     return ok
@@ -182,6 +182,8 @@ def main():
                     help="모든 방식을 PDF 1개로 합치고 정답지는 마지막 1부만(방식 간 문항 순서 동일)")
     ap.add_argument("--print", dest="do_print", action="store_true", help="생성 후 프린터로 출력")
     ap.add_argument("--each", action="store_true", help="팩마다 별도 세트(합치지 않음)")
+    ap.add_argument("--title", default=None, help="시험지 제목 덮어쓰기(기본: 팩 title 들을 + 로 연결)")
+    ap.add_argument("--printer", default="Canon_G4010_series", help="CUPS 프린터명(집=Canon_G3060_series)")
     ap.add_argument("--no-reverse", action="store_true", help="출력 시 쪽·세트 역순 뒤집기 생략")
     a = ap.parse_args()
     a.mode = [m for m in MODE_LABEL if m in a.mode]  # 항상 영→뜻 → 뜻→영 순
@@ -194,12 +196,14 @@ def main():
     if a.do_print:
         order = made if a.no_reverse else list(reversed(made))
         for mode, pdf_path, _ in order:
-            ok = print_pdf(pdf_path, reverse=not a.no_reverse)
+            ok = print_pdf(pdf_path, reverse=not a.no_reverse, printer=a.printer)
             print(f"{'PRINTED' if ok else 'PRINT FAIL'} {pdf_path.name}{'' if a.no_reverse else ' (역순)'}")
 
 
 def build_group(pack_ids, a, date, out):
     title, words = load(pack_ids)
+    if a.title:
+        title = a.title
     stem = "+".join(pack_ids)
     made = []
     if a.one_file:

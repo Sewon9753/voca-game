@@ -2,3 +2,4 @@
 *.png
 !icon-*.png
 sheets/
+__pycache__/

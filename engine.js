@@ -272,7 +272,7 @@
   }
 
   // ---- 홈 탭: 교재별 그룹 (pack_id 접두어로 판정, 순서 고정)
-  const BOOKS = [['neungyul-voca-', '능률VOCA'], ['reading-tutor-', '리딩튜터']];
+  const BOOKS = [['neungyul-voca-', '능률VOCA'], ['reading-tutor-', '리딩튜터'], ['reading-inside-', '리딩인사이드'], ['irregular-past-', '불규칙동사']];
   function bookOf(p) {
     const id = String((p && p.pack_id) || '');
     const hit = BOOKS.find(([pre]) => id.startsWith(pre));

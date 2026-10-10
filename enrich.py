@@ -25,9 +25,9 @@ __WORDS__
 """
 
 
-def call_claude(words, model):
+def call_claude(words, model, note=""):
     listing = "\n".join(f"- {w['en']} / {w['ko']}" for w in words)
-    prompt = PROMPT.replace("__WORDS__", listing)
+    prompt = PROMPT.replace("__WORDS__", listing) + (f"\nAdditional instruction: {note}\n" if note else "")
     cmd = ["claude", "-p", prompt, "--model", model, "--output-format", "text", "--tools", ""]
     for attempt in range(3):
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
@@ -49,6 +49,7 @@ def main():
     ap.add_argument("--force", action="store_true", help="이미 채워진 단어도 다시 생성")
     ap.add_argument("--batch", type=int, default=8)
     ap.add_argument("--model", default="claude-opus-5")
+    ap.add_argument("--note", default="", help="프롬프트 끝에 붙일 추가 지시(예: 불규칙동사 팩)")
     a = ap.parse_args()
 
     p = Path(a.pack)
@@ -59,8 +60,8 @@ def main():
     for i in range(0, len(todo), a.batch):
         chunk = todo[i:i + a.batch]
         print(f"  batch {i // a.batch + 1}: {[w['en'] for w in chunk]}")
-        for item in call_claude(chunk, a.model):
-            w = by_en.get(item.get("en"))
+        for item in call_claude(chunk, a.model, a.note):
+            w = by_en.get(item.get("en")) or by_en.get(str(item.get("en", "")).split(" / ")[0].strip())  # 모델이 "hold / held" 식으로 돌려줄 때
             if not w:
                 sys.stderr.write(f"  unknown word in output: {item.get('en')!r}\n")
                 continue

@@ -81,6 +81,7 @@ def main():
     ap.add_argument("--from", dest="start", choices=STEPS, default="validate")
     ap.add_argument("--no-deploy", action="store_true")
     ap.add_argument("--model", default="claude-opus-5")
+    ap.add_argument("--note", default="", help="enrich 프롬프트 추가 지시(불규칙동사 팩 등)")
     a = ap.parse_args()
     p = Path(a.pack)
     if not p.is_absolute():
@@ -92,7 +93,7 @@ def main():
         archive_images(a.image, pack_slug(pack["title"]))
 
     if start <= STEPS.index("enrich"):
-        print(sh(["python3", "enrich.py", str(p), "--model", a.model]), end="")
+        print(sh(["python3", "enrich.py", str(p), "--model", a.model] + (["--note", a.note] if a.note else [])), end="")
         validate(p)
         pk = json.loads(p.read_text(encoding="utf-8"))
         missing = [w["en"] for w in pk["words"] if not all(w.get(f) for f in ("ipa", "stress", "emoji", "ex", "ex_ko", "mnemonic"))]

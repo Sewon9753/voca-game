@@ -271,6 +271,8 @@ test('parseMeanings: leading bracket label ([부정문], [소화기관]) is stri
 test('bookOf maps pack_id prefix to a book tab; custom/unknown → 내 단어팩', () => {
   assert.equal(E.bookOf({ pack_id: 'neungyul-voca-middle-2025-day04' }), '능률VOCA');
   assert.equal(E.bookOf({ pack_id: 'reading-tutor-junior1-section10-1' }), '리딩튜터');
+  assert.equal(E.bookOf({ pack_id: 'reading-inside-starter-unit05' }), '리딩인사이드');
+  assert.equal(E.bookOf({ pack_id: 'irregular-past-ch06-1' }), '불규칙동사');
   assert.equal(E.bookOf({ pack_id: 'custom-1726000000' }), '내 단어팩');
   assert.equal(E.bookOf({ title: '옛날 팩' }), '내 단어팩');
 });
