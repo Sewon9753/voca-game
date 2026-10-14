@@ -1,0 +1,233 @@
+{
+  "pack_id": "reading-inside-starter-unit02",
+  "title": "리딩인사이드 스타터 UNIT 02 Economics 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "감각동사+형용사 보어 / make·keep·call+목적어+목적격 보어(형용사·명사)",
+    "evidence": "R1 Check Up: soft / bad · R2 Check Up: angry / him a genius · WB GRAMMAR TEST A(strange·sad·beautiful·me a bookworm) B(heavy·sweet·happy·his room clean·her a famous actress) C(좋은 냄새가 난다·부드럽게 느껴진다·나를 슬프게 했다·차를 따뜻하게 유지했다)",
+    "summary": [
+      "감각동사(look·feel·sound)+형용사",
+      "부사(softly) 아닌 형용사(soft)",
+      "make+목적어+형용사: ~을 …하게",
+      "call+목적어+명사: ~을 …라고 부르다",
+      "keep+목적어+형용사: ~을 …하게 유지"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "The Framing Effect",
+      "src": "구문",
+      "line": "1행",
+      "en": "One says it has a 90% success rate.",
+      "ko": "한 약은 그것이 90%의 성공률이 있다고 한다.",
+      "target": "says it has a 90% success rate",
+      "point": "says 뒤 목적어 명사절(that 생략)",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "The Framing Effect",
+      "src": "구문",
+      "line": "6행",
+      "en": "The framing effect is not about “what you say”; it is about “how you say it.”",
+      "ko": "프레이밍 효과는 ‘무엇을 말하는가’에 대한 것이 아니라, ‘그것을 어떻게 말하는가’에 대한 것이다.",
+      "target": "how you say it",
+      "point": "간접의문문(의문사+주어+동사)이 about의 목적어",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "The Framing Effect",
+      "src": "구문",
+      "line": "9행",
+      "en": "Marketers use it to make facts about their products sound better.",
+      "ko": "마케팅 담당자들은 그들의 상품에 대한 사실이 더 좋게 들리게 하려고 그것을 사용한다.",
+      "target": "facts about their products sound",
+      "point": "목적의 to부정사+사역 make+목적어+동사원형",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The Framing Effect",
+      "src": "구문",
+      "line": "12행",
+      "en": "A membership that costs $350 a year might sound too expensive.",
+      "ko": "일 년에 350달러인 회원권은 너무 비싸게 들릴지도 모른다.",
+      "target": "might sound too expensive",
+      "point": "주격 관계대명사절이 a membership 수식",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The Framing Effect",
+      "src": "구문",
+      "line": "13행",
+      "en": "It sounds much cheaper!",
+      "ko": "그것은 훨씬 더 저렴하게 들린다!",
+      "target": "sounds much cheaper",
+      "point": "much가 비교급 강조: 훨씬",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The Framing Effect",
+      "src": "구문",
+      "line": "14행",
+      "en": "So, next time you buy something, don’t be fooled by the framing effect!",
+      "ko": "그러니, 다음에 무언가를 살 때, 프레이밍 효과에 속지 마라!",
+      "target": "don’t be fooled by",
+      "point": "부정 명령문+수동태: ~에 속지 마라",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "3행",
+      "en": "She worked for 25 years to save money for her own business.",
+      "ko": "그녀는 자기 자신의 사업을 위한 돈을 모으려고 25년 동안 일했다.",
+      "target": "to save money for",
+      "point": "to부정사 부사적 용법(목적)",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "8행",
+      "en": "This made Martha’s salon a huge success.",
+      "ko": "이것이 Martha의 미용실을 크게 성공하게 했다.",
+      "target": "This made Martha’s salon",
+      "point": "make+목적어+명사: ~을 …로 만들다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "9행",
+      "en": "Her customers encouraged Martha to open more salons in other cities.",
+      "ko": "그녀의 고객들은 Martha가 다른 도시에 더 많은 미용실을 열도록 권했다.",
+      "target": "encouraged Martha to open",
+      "point": "encourage+목적어+to-v: ~에게 …하도록 권하다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "9행",
+      "en": "But Martha didn’t want to hire employees to run her shops on her behalf.",
+      "ko": "하지만 Martha는 자신을 대신해서 그녀의 가게를 운영할 종업원을 고용하고 싶지 않았다.",
+      "target": "didn’t want to hire",
+      "point": "want+to부정사, to run은 명사 수식",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "12행",
+      "en": "In 1891, Martha sold the right to use the name of her salon to other women.",
+      "ko": "1891년에, Martha는 다른 여성들에게 자신의 미용실 이름을 사용할 권리를 팔았다.",
+      "target": "the right to use",
+      "point": "형용사적 to부정사가 the right 수식",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "13행",
+      "en": "Instead of being paid by Martha, the women ran their own Harper’s Salons!",
+      "ko": "Martha에게서 보수를 받는 대신, 그 여성들은 그들 자신의 Harper’s Salon을 운영했다!",
+      "target": "Instead of being paid",
+      "point": "instead of+동명사의 수동태(being paid)",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "14행",
+      "en": "This method later became known as “franchising.”",
+      "ko": "이 방법은 후에 ‘가맹업’으로 알려지게 되었다.",
+      "target": "became known as",
+      "point": "become known as: ~로 알려지게 되다",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "A Servant’s Dream",
+      "src": "구문",
+      "line": "16행",
+      "en": "This pioneering businesswoman made the spread of huge global businesses such as McDonald’s possible.",
+      "ko": "이 선구적인 여성 사업가는 맥도날드와 같은 대규모 글로벌 사업의 확산을 가능하게 했다.",
+      "target": "made the spread of huge global businesses",
+      "point": "make+목적어+형용사(possible): ~을 가능하게",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "The Framing Effect",
+      "src": "워크북",
+      "line": "",
+      "en": "You want to buy",
+      "ko": "당신은 (조금의 약을) 사고 싶다",
+      "target": "You want to buy",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "The blanket feels ____. (softly)",
+      "a": "soft",
+      "why": "feel+형용사"
+    },
+    {
+      "type": "blank",
+      "q": "This milk smells ____. (badly)",
+      "a": "bad",
+      "why": "smell+형용사"
+    },
+    {
+      "type": "blank",
+      "q": "The sad movie made me ____. (sadly)",
+      "a": "sad",
+      "why": "make+목적어+형용사"
+    },
+    {
+      "type": "blank",
+      "q": "A $350 membership sounds ____. (expensively)",
+      "a": "expensive",
+      "why": "sound+형용사"
+    },
+    {
+      "type": "choose",
+      "q": "Her new dress looks (beautiful / beautifully).",
+      "a": "beautiful",
+      "why": "look+형용사"
+    },
+    {
+      "type": "choose",
+      "q": "The mug kept the tea (warm / warmly).",
+      "a": "warm",
+      "why": "keep+목적어+형용사"
+    },
+    {
+      "type": "fix",
+      "q": "The flowers smell sweetly.",
+      "a": "The flowers smell sweet.",
+      "why": "smell+형용사"
+    },
+    {
+      "type": "fix",
+      "q": "His friends call a genius him.",
+      "a": "His friends call him a genius.",
+      "why": "call+목적어+명사"
+    }
+  ]
+}

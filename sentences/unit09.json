@@ -1,0 +1,188 @@
+{
+  "pack_id": "reading-inside-starter-unit09",
+  "title": "리딩인사이드 스타터 UNIT 09 Ice 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "to부정사의 부사적 용법(목적)·형용사적 용법(명사 수식)",
+    "evidence": "R1 Check Up: 그의 친구들을 만나기 위해 / 질문을 하기 위해 · R2 Check Up: many places / any money · WB GRAMMAR TEST A any secrets/something, B money to take·homework to do·to borrow some books, C 나는 너에게 말할 것이 있다 / 입학하기 위해 등",
+    "summary": [
+      "목적: to+동사원형 = ~하기 위해",
+      "명사+to부정사 = ~할 (명사)",
+      "-thing+to부정사: something to eat",
+      "형용사적 to부정사는 명사 뒤에 온다"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "The Coolest Music in the World",
+      "src": "구문",
+      "line": "5행",
+      "en": "Surprisingly, the instruments are made of ice.",
+      "ko": "놀랍게도, 악기들은 얼음으로 만들어진다.",
+      "target": "are made of ice",
+      "point": "be made of+명사: ~로 만들어지다",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The Coolest Music in the World",
+      "src": "구문",
+      "line": "9행",
+      "en": "Also, the instruments must be retuned between songs to maintain their sound.",
+      "ko": "또한, 악기들은 소리를 유지하기 위해서 곡들 사이에 다시 조율되어야 한다.",
+      "target": "must be retuned",
+      "point": "조동사+수동태: 다시 조율되어야 한다",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The Coolest Music in the World",
+      "src": "구문",
+      "line": "11행",
+      "en": "This is because they melt a little each time they are played.",
+      "ko": "그것들은 연주될 때마다 조금씩 녹기 때문이다.",
+      "target": "each time they are played",
+      "point": "each time+주어+동사: ~할 때마다 / 수동태",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The Coolest Music in the World",
+      "src": "구문",
+      "line": "13행",
+      "en": "But sadly, they must be kept short to prevent the audience from freezing and the instruments from melting!",
+      "ko": "하지만 아쉽게도, 그것은 관중이 너무 추워하거나 악기가 녹는 것을 막기 위해 짧게 유지되어야 한다!",
+      "target": "prevent the audience from freezing",
+      "point": "목적의 to부정사 / prevent+목적어+from v-ing",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Ice King",
+      "src": "구문",
+      "line": "1행",
+      "en": "These days, ice is cheap and can be bought easily.",
+      "ko": "요즘에, 얼음은 저렴하고 쉽게 구매될 수 있다.",
+      "target": "can be bought",
+      "point": "조동사 can+수동태: 구매될 수 있다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Ice King",
+      "src": "구문",
+      "line": "1행",
+      "en": "But before refrigerators were invented, ice was rare.",
+      "ko": "하지만 냉장고가 발명되기 전에 얼음은 희귀했다.",
+      "target": "before refrigerators were invented",
+      "point": "접속사 before: ~하기 전에 / 수동태",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "The Ice King",
+      "src": "구문",
+      "line": "4행",
+      "en": "He came up with the idea to take ice from frozen winter ponds and ship …",
+      "ko": "그는 꽁꽁 언 겨울 연못에서 얼음을 가져다 운송할 아이디어를 생각해냈다.",
+      "target": "to take ice from",
+      "point": "명사 수식 to부정사, and로 (to) ship 병렬",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Ice King",
+      "src": "구문",
+      "line": "9행",
+      "en": "At first, most of the ice Tudor tried to ship did melt.",
+      "ko": "처음에는, Tudor가 운송하려 했던 얼음의 대부분이 정말 녹아버렸다.",
+      "target": "Tudor tried to ship",
+      "point": "목적격 관계대명사 생략 / 강조의 did",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Ice King",
+      "src": "구문",
+      "line": "10행",
+      "en": "But later, he discovered a way to store the ice by packing it in sawdust.",
+      "ko": "하지만 나중에, 그는 톱밥으로 얼음을 싸서 저장하는 방법을 알아냈다.",
+      "target": "to store the ice",
+      "point": "a way to+동사원형 / by+v-ing: ~함으로써",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Ice King",
+      "src": "구문",
+      "line": "14행",
+      "en": "For example, he gave bartenders free ice to try.",
+      "ko": "예를 들어, 그는 바텐더들에게 사용해 볼 무료 얼음을 제공했다.",
+      "target": "free ice to try",
+      "point": "명사 수식 형용사적 to부정사: 사용해 볼",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The Coolest Music in the World",
+      "src": "워크북",
+      "line": "",
+      "en": "gather to hear",
+      "ko": "듣기 위해 모인다",
+      "target": "gather to hear",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "People gather ____ the ice music orchestra. (hear)",
+      "a": "to hear",
+      "why": "목적: ~하기 위해"
+    },
+    {
+      "type": "blank",
+      "q": "I have a lot of homework ____ tonight. (do)",
+      "a": "to do",
+      "why": "명사 수식 to부정사"
+    },
+    {
+      "type": "blank",
+      "q": "Do you have anything ____? (drink)",
+      "a": "to drink",
+      "why": "-thing 수식 to부정사"
+    },
+    {
+      "type": "blank",
+      "q": "She turned on the computer ____ her email. (check)",
+      "a": "to check",
+      "why": "목적: ~하기 위해"
+    },
+    {
+      "type": "choose",
+      "q": "He gave bartenders free ice (to try / trying).",
+      "a": "to try",
+      "why": "명사 수식은 to부정사"
+    },
+    {
+      "type": "choose",
+      "q": "Tudor found a way (to store / stores) the ice.",
+      "a": "to store",
+      "why": "a way to+동사원형"
+    },
+    {
+      "type": "fix",
+      "q": "I went to the store buy some groceries.",
+      "a": "I went to the store to buy some groceries.",
+      "why": "목적은 to+동사원형"
+    },
+    {
+      "type": "fix",
+      "q": "I have something tell you.",
+      "a": "I have something to tell you.",
+      "why": "-thing+to부정사"
+    }
+  ]
+}

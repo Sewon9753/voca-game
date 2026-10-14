@@ -1,0 +1,211 @@
+{
+  "pack_id": "reading-inside-starter-unit03",
+  "title": "리딩인사이드 스타터 UNIT 03 Jobs 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "4형식(수여동사+간접목적어+직접목적어)·5형식(동사+목적어+to-v)",
+    "evidence": "R1 Check Up: I sent him a Christmas card · R2 Check Up: Tom advised me to read · WB GRAMMAR TEST A(asked·to clean·showed·to come) B(sent him the files·told me to drink·advised her to accept·made me a new chair)",
+    "summary": [
+      "4형식: 동사+~에게+…을",
+      "give·send·tell·show·lend·make",
+      "5형식: 동사+목적어+to-v",
+      "tell·ask·advise·allow 등",
+      "목적어 자리엔 목적격(him·me)"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "Air Traffic Controllers",
+      "src": "구문",
+      "line": "2행",
+      "en": "Many people are needed to make a safe journey.",
+      "ko": "안전한 여행을 하기 위해서는 많은 사람들이 필요하다.",
+      "target": "are needed to make",
+      "point": "수동태+목적의 to부정사",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Air Traffic Controllers",
+      "src": "구문",
+      "line": "8행",
+      "en": "So air traffic controllers make sure that the planes keep a safe distance …",
+      "ko": "그래서 항공 운항 관제사들은 반드시 비행기들이 안전거리를 유지하도록 한다.",
+      "target": "make sure that the planes",
+      "point": "make sure (that)+주어+동사: 반드시 ~하게 하다",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Air Traffic Controllers",
+      "src": "구문",
+      "line": "10행",
+      "en": "While a pilot is responsible for one flight at a time, an air traffic controller …",
+      "ko": "조종사는 한 번에 한 대의 항공기를 책임지지만, 항공 운항 관제사는 …",
+      "target": "is responsible for",
+      "point": "while(대조): ~하지만 / be responsible for",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Air Traffic Controllers",
+      "src": "구문",
+      "line": "11행",
+      "en": "For instance, an air traffic controller might help one aircraft land while he tells another aircraft the weather report …",
+      "ko": "예를 들어, 항공 운항 관제사는 다른 항공기에 기상 정보를 말하는 동안 한 항공기가 착륙하는 것을 도울 수 있다.",
+      "target": "might help one aircraft land",
+      "point": "help+목적어+동사원형 / tell+간목+직목",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "구문",
+      "line": "2행",
+      "en": "Today, ice technician Ralph Lewis is here to tell us.",
+      "ko": "오늘, 빙상 기술자 Ralph Lewis가 우리에게 말해주기 위해 오셨습니다.",
+      "target": "is here to tell us",
+      "point": "to부정사 부사적 용법(목적)",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "구문",
+      "line": "7행",
+      "en": "Finally, I check the rink’s temperature, humidity, and lighting, as they affect the ice.",
+      "ko": "마지막으로, 아이스링크의 온도, 습도, 조명을 확인하는데, 그것들이 얼음에 영향을 미치기 때문입니다.",
+      "target": "as they affect the ice",
+      "point": "접속사 as(이유): ~이기 때문에",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "구문",
+      "line": "10행",
+      "en": "It’s important to adjust the ice’s temperature and thickness for each sport.",
+      "ko": "스포츠마다 얼음의 온도와 두께를 조절하는 것이 중요합니다.",
+      "target": "It’s important to adjust",
+      "point": "가주어 it, 진주어 to부정사",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "구문",
+      "line": "11행",
+      "en": "Thinner and colder ice allows them to do this.",
+      "ko": "더 얇고 더 차가운 얼음은 그들이 이것을 할 수 있게 해줍니다.",
+      "target": "allows them to do this",
+      "point": "allow+목적어+to-v: ~가 …할 수 있게 하다",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "구문",
+      "line": "12행",
+      "en": "However, figure skaters would hurt themselves from jumping on that ice.",
+      "ko": "하지만, 피겨 스케이팅 선수들은 그런 얼음 위에서 점프하면 다칠 것입니다.",
+      "target": "hurt themselves from jumping",
+      "point": "would(추측)·재귀대명사·from(원인)",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Air Traffic Controllers",
+      "src": "워크북",
+      "line": "",
+      "en": "give the pilot information",
+      "ko": "조종사에게 (기상 상태와 같은) 정보를 제공한다",
+      "target": "give the pilot information",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "워크북",
+      "line": "",
+      "en": "be thicker and less cold",
+      "ko": "얼음이 더 두껍고 덜 차가워야 합니다",
+      "target": "be thicker and less cold",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "워크북",
+      "line": "",
+      "en": "enables athletes to perform",
+      "ko": "선수들이 (안전하고 능숙하게) 경기할 수 있게 합니다",
+      "target": "enables athletes to perform",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Ice Technicians",
+      "src": "워크북",
+      "line": "",
+      "en": "allow skaters to perform",
+      "ko": "(스케이트) 선수들이 이것을 할 수 있게 해줍니다",
+      "target": "allow skaters to perform",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "My mom told me ____ my room. (clean)",
+      "a": "to clean",
+      "why": "tell+목적어+to-v"
+    },
+    {
+      "type": "blank",
+      "q": "Her customers encouraged Martha ____ more salons. (open)",
+      "a": "to open",
+      "why": "encourage+목적어+to-v"
+    },
+    {
+      "type": "blank",
+      "q": "Tom advised me ____ this book. (read)",
+      "a": "to read",
+      "why": "advise+목적어+to-v"
+    },
+    {
+      "type": "blank",
+      "q": "Thin ice allows skaters ____ fast. (turn)",
+      "a": "to turn",
+      "why": "allow+목적어+to-v"
+    },
+    {
+      "type": "choose",
+      "q": "I sent (him a card / a card him) last week.",
+      "a": "him a card",
+      "why": "간목+직목 순서"
+    },
+    {
+      "type": "choose",
+      "q": "The controller tells (the pilot the weather / the weather the pilot).",
+      "a": "the pilot the weather",
+      "why": "~에게+…을 순서"
+    },
+    {
+      "type": "choose",
+      "q": "She lent (I / me) some books.",
+      "a": "me",
+      "why": "간접목적어=목적격"
+    },
+    {
+      "type": "fix",
+      "q": "She asked me join the club.",
+      "a": "She asked me to join the club.",
+      "why": "ask+목적어+to-v"
+    }
+  ]
+}

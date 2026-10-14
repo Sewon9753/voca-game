@@ -6,7 +6,9 @@
   const PHASES = ['en2ko', 'ko2en'];
   // 쓰기 시험: 힌트 한→영 · 백지 한→영 · 영→한 · 듣고 쓰기
   const WRITE_PHASES = ['hint', 'blank', 'ko', 'dict'];
-  const ANSWER_EN = { ko2en: 1, hint: 1, blank: 1, dict: 1 };
+  // 문장 연습(리딩인사이드 구문 문장): 1차 단어 배열 · 2차 핵심 덩어리 빈칸 쓰기
+  const SENT_PHASES = ['arrange', 'fill'];
+  const ANSWER_EN = { ko2en: 1, hint: 1, blank: 1, dict: 1, arrange: 1, fill: 1 };
 
   function fisherYates(arr) {
     const a = arr.slice();
@@ -156,17 +158,19 @@
       return `${label}: ` + rs.map((r) => `${r.pass}회차 ${r.ok}/${r.ok + r.ng}`).join(', ');
     };
     const weak = sm.weak.length ? sm.weak.map((w) => `${w.en}(${w.misses})`).join(', ') : '없음 (전부 한 번에 통과)';
-    const kindLabel = meta.kind === 'write' ? '쓰기 시험' : '단어 게임';
+    const kindLabel = { write: '쓰기 시험', sent: '문장 연습' }[meta.kind] || '단어 게임';
     return [
       `[${meta.name ? meta.name + ' ' : ''}${kindLabel} 결과] ${meta.date}`,
-      `${meta.title} (${meta.total}단어) · ${time}`,
+      `${meta.title} (${meta.total}${meta.kind === 'sent' ? '문장' : '단어'}) · ${time}`,
       phaseLine('en2ko', '1차 영어→뜻'),
       phaseLine('ko2en', '2차 뜻→영어'),
       phaseLine('hint', '1차 힌트 쓰기'),
       phaseLine('blank', '2차 백지 쓰기'),
       phaseLine('ko', '3차 뜻 쓰기'),
       phaseLine('dict', '4차 듣고 쓰기'),
-      `틀린 단어: ${weak}`,
+      phaseLine('arrange', '1차 문장 배열'),
+      phaseLine('fill', '2차 빈칸 쓰기'),
+      `틀린 ${meta.kind === 'sent' ? '문장' : '단어'}: ${weak}`,
     ].filter(Boolean).join('\n');
   }
 
@@ -186,11 +190,12 @@
     return d;
   }
   function doneLabel(rec) {
-    if (!rec || (!rec.test && !rec.study && !rec.write)) return '';
+    if (!rec || (!rec.test && !rec.study && !rec.write && !rec.sent)) return '';
     const parts = [];
     if (rec.test) parts.push(`✅ 테스트 ${rec.test}회`);
     if (rec.write) parts.push(`✍️ 쓰기 ${rec.write}회`);
     if (rec.study) parts.push(`🃏 카드 ${rec.study}회`);
+    if (rec.sent) parts.push(`🧩 문장 ${rec.sent}회`);
     if (rec.last) { const [, m, dd] = rec.last.split('-'); parts.push(`최근 ${+m}/${+dd}`); }
     return parts.join(' · ');
   }
@@ -271,6 +276,26 @@
     return { verdict: 'ask', answer };
   }
 
+  // ---- 문장 연습 보조
+  // 배열 칩: 앞 생략부호(…)는 고정 머리말로 떼고 나머지를 공백 단위 칩으로(구두점은 낱말에 붙은 채)
+  function chipsOf(en) {
+    const t = String(en || '').trim();
+    const lead = /^…/.test(t) ? '…' : '';
+    return { lead, tokens: t.replace(/^…\s*/, '').split(/\s+/).filter(Boolean) };
+  }
+  function checkArrange(tokens, picked) {
+    return picked.length === tokens.length && picked.every((x, i) => x === tokens[i]);
+  }
+  // 빈칸 문장: target(문장 속 연속 부분)을 빼낸 앞·뒤. 못 찾으면 null
+  function blankOut(en, target) {
+    const i = target ? String(en).indexOf(target) : -1;
+    if (i < 0) return null;
+    return { before: en.slice(0, i), after: en.slice(i + target.length), size: target.trim().split(/\s+/).length };
+  }
+  // 덩어리 채점: 둥근 따옴표·끝 구두점 차이는 무시하고 gradeEn
+  const normQ = (t) => String(t || '').replace(/[’‘]/g, "'").replace(/[“”]/g, '"').trim().replace(/[.!?,]+$/, '');
+  function gradeChunk(target, typed) { return gradeEn(normQ(target), normQ(typed)); }
+
   // ---- 홈 탭: 교재별 그룹 (pack_id 접두어로 판정, 순서 고정)
   const BOOKS = [['neungyul-voca-', '능률VOCA'], ['reading-tutor-', '리딩튜터'], ['reading-inside-', '리딩인사이드'], ['irregular-past-', '불규칙동사']];
   function bookOf(p) {
@@ -289,5 +314,5 @@
     return groups.some(g => g.book === saved) ? saved : groups[0].book;
   }
 
-  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult, bumpDone, doneFromSessions, doneLabel, WRITE_PHASES, maskWord, gradeEn, parseMeanings, gradeKo, bookOf, groupPacks, pickTab };
+  return { createSession, current, answer, summary, parsePack, fisherYates, pronunciationScore, stressSyllables, formatResult, bumpDone, doneFromSessions, doneLabel, WRITE_PHASES, maskWord, gradeEn, parseMeanings, gradeKo, bookOf, groupPacks, pickTab, SENT_PHASES, chipsOf, checkArrange, blankOut, gradeChunk };
 });

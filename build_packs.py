@@ -8,7 +8,10 @@ build = __import__("datetime").datetime.now().strftime("%m%d.%H%M")
 packs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((root / "packs").glob("*.json"))]
 (root / "packs.js").write_text(
     "// 내장 단어팩 (file:// 에서도 동작하도록 JS로 내장) — build_packs.py 가 생성\nwindow.VOCA_BUILD = '" + __import__("datetime").datetime.now().strftime("%m%d.%H%M") + "';\nwindow.VOCA_PACKS = "
-    + json.dumps(packs, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+    + json.dumps(packs, ensure_ascii=False, indent=2) + ";\n"
+    # 문장 연습 세트(sentences/*.json) — 키=같은 단원 단어팩의 pack_id(홈 카드에 🧩 문장 버튼)
+    + "window.VOCA_SENTENCES = " + json.dumps({s["pack_id"]: s for s in (json.loads(f.read_text(encoding="utf-8")) for f in sorted((root / "sentences").glob("*.json")))}, ensure_ascii=False) + ";\n",
+    encoding="utf-8")
 
 build = __import__("datetime").datetime.now().strftime("%m%d.%H%M")
 idx = root / "index.html"

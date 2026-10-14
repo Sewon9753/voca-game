@@ -8,6 +8,8 @@
     python3 test_sheet.py day06 --mode en2ko --print              # 생성 후 Canon G4010 출력
     python3 test_sheet.py day08 --mode en2ko ko2en --rounds 2 --one-file
         # 두 방식 × 1차·2차 시험지(문항 순서 동일) + 정답지 1장 → PDF 1개(재시험용)
+    python3 test_sheet.py unit01 --mode mix --rounds 2 --one-file
+        # mix = 학원(워크북 VOCABULARY TEST 1) 형식: 단어 2/3 영→뜻 → 1/3 뜻→영 → 숙어 영→뜻
     python3 test_sheet.py day21 day22 day23 --each --rounds 2 --one-file --print
         # --each = 팩마다 별도 세트(합치지 않음). 출력은 뒤 팩·뒤 쪽부터(역순) 보내서
         # 배출 트레이에 앞면 위로 쌓이는 순서가 읽는 순서와 같게 한다(2026-09-17 대표 요청).
@@ -26,7 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PER_PAGE, COLS = 40, 2
-MODE_LABEL = {"en2ko": "영어 → 뜻 쓰기", "ko2en": "뜻 → 영어 쓰기"}
+MODE_LABEL = {"en2ko": "영어 → 뜻 쓰기", "ko2en": "뜻 → 영어 쓰기", "mix": "학원형 시험"}
 
 CSS = """
 @page { size: A4; margin: 12mm 12mm 10mm 12mm; }
@@ -67,11 +69,27 @@ def order_words(words, order, seed):
     return ws
 
 
+def mix_words(words, seed):
+    """학원 워크북 VOCABULARY TEST 1 형식: 단어(섞기) 앞 2/3 영→뜻, 뒤 1/3 뜻→영, 숙어(띄어쓰기 포함)는 끝에 영→뜻."""
+    rnd = random.Random(seed)
+    single = [w for w in words if " " not in w["en"]]
+    phrase = [w for w in words if " " in w["en"]]
+    rnd.shuffle(single); rnd.shuffle(phrase)
+    cut = round(len(single) * 2 / 3)
+    return ([dict(w, _dir="en2ko") for w in single[:cut]] + [dict(w, _dir="ko2en") for w in single[cut:]]
+            + [dict(w, _dir="en2ko") for w in phrase])
+
+
+def arrange(words, mode, order, seed):
+    return mix_words(words, seed) if mode == "mix" else order_words(words, order, seed)
+
+
 def page_html(title, mode, items, start, total, page_no, pages, date, round_label=""):
     rows = []
     for i, w in enumerate(items, start):
-        q = html.escape(w["en"] if mode == "en2ko" else w["ko"])
-        qcls = "q" if mode == "en2ko" else "q ko"
+        d = w.get("_dir", mode)
+        q = html.escape(w["en"] if d == "en2ko" else w["ko"])
+        qcls = "q" if d == "en2ko" else "q ko"
         rows.append(f'<div class="row"><span class="n">{i}.</span><span class="{qcls}">{q}</span><span class="a"></span></div>')
     # 2열: 왼쪽 열을 먼저 채우고 오른쪽 열 (프린트 읽는 순서와 동일)
     half = (len(rows) + 1) // 2
@@ -208,7 +226,9 @@ def build_group(pack_ids, a, date, out):
     made = []
     if a.one_file:
         seed = a.seed or f"{date}:{stem}"
-        ws = order_words(words, a.order, seed)
+        if "mix" in a.mode and len(a.mode) > 1:
+            sys.exit("--one-file 에서 mix 는 단독으로만 쓸 수 있습니다")
+        ws = arrange(words, a.mode[0], a.order, seed)
         h = build_set_html(title, a.mode, ws, date, not a.no_key, a.rounds)
         html_path = out / f"{stem}_set_{date}.html"
         pdf_path = out / f"{stem}_set_{date}.pdf"
@@ -219,7 +239,7 @@ def build_group(pack_ids, a, date, out):
         print(f"OK {pdf_path}  ({len(ws)}문항, {'+'.join(a.mode)} × {a.rounds}차, 정답지 {'없음' if a.no_key else '1부'}, seed={seed})")
     for mode in ([] if a.one_file else a.mode):
         seed = a.seed or f"{date}:{stem}:{mode}"
-        ws = order_words(words, a.order, seed)
+        ws = arrange(words, mode, a.order, seed)
         h = build_html(title, mode, ws, date, not a.no_key, a.rounds)
         html_path = out / f"{stem}_{mode}_{date}.html"
         pdf_path = out / f"{stem}_{mode}_{date}.pdf"

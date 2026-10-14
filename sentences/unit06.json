@@ -1,0 +1,222 @@
+{
+  "pack_id": "reading-inside-starter-unit06",
+  "title": "리딩인사이드 스타터 UNIT 06 Cooperation 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "부정대명사 one·ones와 대명사 it / 원급 비교 as+원급+as",
+    "evidence": "R1 Check Up: one · R2 Check Up: This sweater is as big · WB GRAMMAR TEST A(big·as·ones·it) B(one·They·ones·it) C(as old as Amy·as hot as that tea·as fast as that car)",
+    "summary": [
+      "one: 같은 종류의 아무 하나",
+      "ones: one의 복수형",
+      "it: 앞에 나온 바로 그것",
+      "as+원급+as: ~만큼 …한",
+      "as와 as 사이엔 원급만"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "Cooperating for Honey",
+      "src": "구문",
+      "line": "1행",
+      "en": "Some animals benefit from having a special relationship with other animals.",
+      "ko": "어떤 동물들은 다른 동물들과 특별한 관계를 맺는 것으로부터 이익을 얻는다.",
+      "target": "having a special relationship",
+      "point": "전치사 from의 목적어인 동명사구",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Cooperating for Honey",
+      "src": "구문",
+      "line": "2행",
+      "en": "But have you ever heard of one between humans and birds?",
+      "ko": "하지만 당신은 인간과 새와의 관계에 대해 들어본 적이 있는가?",
+      "target": "have you ever heard of",
+      "point": "현재완료(경험): ~한 적 있다",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Cooperating for Honey",
+      "src": "구문",
+      "line": "3행",
+      "en": "Birds called honeyguides work with humans.",
+      "ko": "꿀잡이새라고 불리는 새들은 인간과 함께 일한다.",
+      "target": "Birds called honeyguides",
+      "point": "과거분사구가 birds 수식",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Cooperating for Honey",
+      "src": "구문",
+      "line": "5행",
+      "en": "But there are ones that are hard to break open.",
+      "ko": "하지만 부수어서 열기에 어려운 것들도 있다.",
+      "target": "ones that are hard",
+      "point": "ones=bee nests, 주격 관계대명사절 수식",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Cooperating for Honey",
+      "src": "구문",
+      "line": "8행",
+      "en": "The humans return the call and then follow it.",
+      "ko": "인간들은 그 소리에 답한 다음 그것을 따라간다.",
+      "target": "return the call and then follow it",
+      "point": "and로 동사구 연결, it=the call",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Cooperating for Honey",
+      "src": "구문",
+      "line": "9행",
+      "en": "When a honeyguide finds a bee nest, it calls out to nearby humans.",
+      "ko": "꿀잡이새가 벌집을 발견하면, 그것은 근처의 인간들을 향해 울음소리를 낸다.",
+      "target": "When a honeyguide finds a bee nest",
+      "point": "접속사 when(시간): ~하면",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Cooperating for Honey",
+      "src": "구문",
+      "line": "12행",
+      "en": "… are a great example of people who cooperate with honeyguides.",
+      "ko": "꿀잡이새와 협력하는 사람들의 좋은 예이다.",
+      "target": "who cooperate with honeyguides",
+      "point": "주격 관계대명사절이 people 수식",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Meal for Two",
+      "src": "구문",
+      "line": "1행",
+      "en": "Helping someone in need doesn’t always have to cost you extra time or money.",
+      "ko": "어려움에 처한 누군가를 돕는 것에 항상 추가의 시간이나 돈이 드는 것은 아니다.",
+      "target": "Helping someone in need",
+      "point": "동명사구 주어·부분 부정(not always)",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Meal for Two",
+      "src": "구문",
+      "line": "4행",
+      "en": "A charity organization named Mealshare lets you do exactly this!",
+      "ko": "Mealshare라는 이름의 한 자선 단체가 당신으로 하여금 바로 이것을 하게 한다!",
+      "target": "named Mealshare lets you",
+      "point": "과거분사구 수식+let+목적어+동사원형",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Meal for Two",
+      "src": "구문",
+      "line": "8행",
+      "en": "The money is used to give a meal to someone in need, at no extra cost to you!",
+      "ko": "당신이 아무런 추가 비용을 지불하지 않고도, 그 돈은 어려움에 처한 누군가에게 식사를 제공하는 데 쓰인다!",
+      "target": "used to give a meal",
+      "point": "be used to-v: ~하는 데 사용되다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Meal for Two",
+      "src": "구문",
+      "line": "11행",
+      "en": "Mealshare was founded in Canada by business school graduates in 2013.",
+      "ko": "Mealshare는 2013년 캐나다에서 경영 대학원 졸업생들에 의해 설립되었다.",
+      "target": "Mealshare was founded",
+      "point": "수동태 be+v-ed+by",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Meal for Two",
+      "src": "구문",
+      "line": "12행",
+      "en": "They were unhappy that so many people …, so they wanted to create a convenient way for restaurant-goers to help others.",
+      "ko": "그들은 매우 많은 사람들이 … 마음이 좋지 않았고, 그래서 식당에 가는 사람들이 타인을 도울 수 있는 편리한 방법을 만들고 싶었다.",
+      "target": "for restaurant-goers to help others",
+      "point": "감정 원인 that절·의미상 주어 for+목적격",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "A Meal for Two",
+      "src": "구문",
+      "line": "16행",
+      "en": "And the number keeps growing!",
+      "ko": "그리고 그 수는 계속 늘어나고 있다!",
+      "target": "the number keeps growing",
+      "point": "keep+v-ing: 계속해서 ~하다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "A Meal for Two",
+      "src": "워크북",
+      "line": "",
+      "en": "as simple as eating",
+      "ko": "(식당에서) 식사를 하는 것만큼 간단할",
+      "target": "as simple as eating",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "I lost my pen. I need to buy a new ____.",
+      "a": "one",
+      "why": "같은 종류 아무 하나"
+    },
+    {
+      "type": "blank",
+      "q": "I bought a cap yesterday. I like ____ a lot.",
+      "a": "it",
+      "why": "앞의 바로 그 모자"
+    },
+    {
+      "type": "blank",
+      "q": "These shoes are too small. Do you have bigger ____?",
+      "a": "ones",
+      "why": "복수 → ones"
+    },
+    {
+      "type": "blank",
+      "q": "This sweater is as ____ as that one. (big)",
+      "a": "big",
+      "why": "as+원급+as"
+    },
+    {
+      "type": "choose",
+      "q": "Amy is as (tall / taller) as Tom.",
+      "a": "tall",
+      "why": "as 사이엔 원급"
+    },
+    {
+      "type": "choose",
+      "q": "Some bee nests are easy to open, but there are hard (one / ones), too.",
+      "a": "ones",
+      "why": "복수 명사 대신"
+    },
+    {
+      "type": "fix",
+      "q": "This tea is as hotter as that tea.",
+      "a": "This tea is as hot as that tea.",
+      "why": "as+원급+as"
+    },
+    {
+      "type": "fix",
+      "q": "This car is as fast so that car.",
+      "a": "This car is as fast as that car.",
+      "why": "as … as 짝"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "pack_id": "reading-inside-starter-unit11",
+  "title": "리딩인사이드 스타터 UNIT 11 Sea 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "접속사 — and·but·or / when·before·after",
+    "evidence": "R1 Check Up: before · R2 Check Up: but · WB GRAMMAR TEST A or/and/when/After, B when/but/before/and, C flour and milk·cheap but tasty·When I was young·Before you have dinner",
+    "summary": [
+      "and: 그리고 / but: 그러나",
+      "or: 또는 (둘 중 하나)",
+      "when: ~할 때",
+      "before: ~하기 전에, after: ~한 후에",
+      "시간절은 미래라도 현재시제"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "구문",
+      "line": "1행",
+      "en": "…, it looks just like a colorful ribbon waving in the water.",
+      "ko": "이것은 꼭 물속에서 흔들리는 화려한 리본처럼 보인다.",
+      "target": "waving in the water",
+      "point": "look like+명사 / 명사 수식 현재분사구",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "구문",
+      "line": "3행",
+      "en": "This beautiful eel can grow to be about one meter long …",
+      "ko": "이 아름다운 장어는 약 1미터까지 자랄 수 있다.",
+      "target": "grow to be about one meter long",
+      "point": "결과의 to부정사: 자라서 ~가 되다",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "구문",
+      "line": "5행",
+      "en": "As a ribbon eel grows, its color changes.",
+      "ko": "리본 장어는 자라면서, 색이 변한다.",
+      "target": "As a ribbon eel grows",
+      "point": "접속사 as: ~하면서, ~함에 따라",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "구문",
+      "line": "6행",
+      "en": "As it gets bigger, its body turns bright blue and, …",
+      "ko": "점점 더 커지면서, 그것의 몸통은 밝은 파란색으로 바뀐다.",
+      "target": "As it gets bigger",
+      "point": "get+비교급: 점점 더 ~해지다 / turn+형용사",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "구문",
+      "line": "9행",
+      "en": "When a ribbon eel turns blue, it has become a fully adult male.",
+      "ko": "리본 장어가 파란색으로 바뀌면, 그것은 완전히 다 자란 수컷이 된 것이다.",
+      "target": "it has become a fully adult male",
+      "point": "현재완료(완료) have/has+v-ed",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "구문",
+      "line": "12행",
+      "en": "So, it is not easy to find yellow ribbon eels in the wild.",
+      "ko": "그래서, 야생에서 노란색 리본 장어를 발견하는 것은 쉽지 않다.",
+      "target": "it is not easy to find",
+      "point": "가주어 it, 진주어 to find 이하",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Magellan’s Great Discovery",
+      "src": "구문",
+      "line": "1행",
+      "en": "The Pacific Ocean is the deepest and largest of the five major oceans on Earth.",
+      "ko": "태평양은 지구의 오대양 중 가장 깊고 크다.",
+      "target": "the deepest and largest",
+      "point": "최상급 앞에는 보통 the",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Magellan’s Great Discovery",
+      "src": "구문",
+      "line": "3행",
+      "en": "The name itself was given by Portuguese navigator Ferdinand Magellan …",
+      "ko": "그 이름 자체는 포르투갈 항해사 Ferdinand Magellan이 지었다.",
+      "target": "was given by",
+      "point": "강조 재귀대명사 itself / 수동태",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Magellan’s Great Discovery",
+      "src": "구문",
+      "line": "5행",
+      "en": "He and his crew sailed from Spain in 1519 to find a route …",
+      "ko": "그와 그의 선원들은 항로를 찾기 위해 1519년 스페인에서 출항했다.",
+      "target": "to find a route",
+      "point": "목적의 to부정사: ~을 찾기 위해",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "Magellan’s Great Discovery",
+      "src": "구문",
+      "line": "13행",
+      "en": "He believed the Spice Islands were very near, but that would prove untrue.",
+      "ko": "그는 향료 제도가 매우 가까이에 있다고 믿었지만, 그것은 사실이 아닌 것으로 판명 났다.",
+      "target": "that would prove untrue",
+      "point": "that 생략 목적어절 / prove+형용사",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Magellan’s Great Discovery",
+      "src": "구문",
+      "line": "17행",
+      "en": "To this day, we still haven’t explored much of this enormous ocean.",
+      "ko": "오늘날까지, 우리는 여전히 이 거대한 바다를 많이 탐험하지 못했다.",
+      "target": "haven’t explored",
+      "point": "현재완료(완료) 부정: 아직 ~하지 못했다",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "워크북",
+      "line": "",
+      "en": "after it lays eggs",
+      "ko": "알을 낳은 뒤",
+      "target": "after it lays eggs",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Ribbon Eels",
+      "src": "워크북",
+      "line": "",
+      "en": "When it turns yellow",
+      "ko": "노란색으로 바뀌면",
+      "target": "When it turns yellow",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Magellan’s Great Discovery",
+      "src": "워크북",
+      "line": "",
+      "en": "came upon an unfamiliar ocean",
+      "ko": "낯선 바다를 우연히 발견했다",
+      "target": "came upon an unfamiliar ocean",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "The eel dies about a month ____ it lays eggs. (~한 후에)",
+      "a": "after",
+      "why": "~한 후에 = after"
+    },
+    {
+      "type": "blank",
+      "q": "____ it turns blue, it becomes a fully adult male. (~할 때)",
+      "a": "When",
+      "why": "~할 때 = when"
+    },
+    {
+      "type": "blank",
+      "q": "He believed the islands were near, ____ that proved untrue. (그러나)",
+      "a": "but",
+      "why": "반대 내용 연결"
+    },
+    {
+      "type": "blank",
+      "q": "Wash your hands ____ you have dinner. (~하기 전에)",
+      "a": "before",
+      "why": "~하기 전에 = before"
+    },
+    {
+      "type": "choose",
+      "q": "Which do you like better, summer (and / or) winter?",
+      "a": "or",
+      "why": "둘 중 선택은 or"
+    },
+    {
+      "type": "choose",
+      "q": "The food was cheap (but / or) tasty.",
+      "a": "but",
+      "why": "대조되는 내용 연결"
+    },
+    {
+      "type": "choose",
+      "q": "Ribbon eels have long (and / or) flat bodies.",
+      "a": "and",
+      "why": "두 특징을 함께 나열"
+    },
+    {
+      "type": "fix",
+      "q": "After it will lay eggs, the eel dies.",
+      "a": "After it lays eggs, the eel dies.",
+      "why": "시간절은 현재시제"
+    }
+  ]
+}

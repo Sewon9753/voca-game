@@ -1,0 +1,210 @@
+{
+  "pack_id": "reading-inside-starter-unit10",
+  "title": "리딩인사이드 스타터 UNIT 10 Competition 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "동사의 목적어 — to부정사 vs 동명사",
+    "evidence": "R1 Check Up: to be / to stay · R2 Check Up: running / uploading · WB GRAMMAR TEST A to be/to study/to buy/opening, B to see/looking/doing/to lose, C avoid eating·gave up smoking·enjoy watching·promised to return",
+    "summary": [
+      "to부정사만: want, decide, promise",
+      "동명사만: enjoy, avoid, give up",
+      "둘 다 가능: start, begin, love",
+      "keep·risk 뒤에는 동명사"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "구문",
+      "line": "1행",
+      "en": "She was very talented at weaving and loved to brag.",
+      "ko": "그녀는 베를 짜는 데 매우 재능이 있었고 자랑하기 좋아했다.",
+      "target": "very talented at weaving",
+      "point": "be talented at+동명사 / love+to부정사",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "구문",
+      "line": "3행",
+      "en": "She decided to disguise herself as an old woman and talk to Arachne.",
+      "ko": "그녀는 자기 자신을 늙은 여자로 변장해서 아라크네와 이야기하기로 결심했다.",
+      "target": "decided to disguise herself",
+      "point": "decide+to부정사 / disguise A as B",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "구문",
+      "line": "5행",
+      "en": "“Was this talent given to you by Athena?”",
+      "ko": "“이 재능은 아테나가 당신에게 준 것인가요?”",
+      "target": "Was this talent given",
+      "point": "수동태 의문문: be+주어+v-ed?",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "구문",
+      "line": "7행",
+      "en": "This made Athena angry, so she revealed herself as the goddess of weaving.",
+      "ko": "이것이 아테나를 화나게 해서, 그녀 자신을 직물의 여신의 모습으로 드러냈다.",
+      "target": "made Athena angry",
+      "point": "make+목적어+형용사 / reveal A as B",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "구문",
+      "line": "8행",
+      "en": "“You wish to challenge me?” she yelled.",
+      "ko": "“나한테 도전하겠느냐?”라고 그녀가 소리쳤다.",
+      "target": "wish to challenge me",
+      "point": "wish는 to부정사를 목적어로 취함",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "구문",
+      "line": "9행",
+      "en": "Arachne and Athena quickly started to weave.",
+      "ko": "아라크네와 아테나는 재빨리 베를 짜기 시작했다.",
+      "target": "started to weave",
+      "point": "start+to부정사/동명사 모두 가능",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "구문",
+      "line": "14행",
+      "en": "“You must be punished.”",
+      "ko": "“너는 벌을 받아야겠다.”",
+      "target": "must be punished",
+      "point": "조동사 must+수동태: 벌을 받아야 한다",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "The Rower and the Ducks",
+      "src": "구문",
+      "line": "1행",
+      "en": "… understand that there are more important things in life than winning.",
+      "ko": "삶에 있어서 승리보다 더 중요한 것이 있다는 것을 안다.",
+      "target": "that there are more important",
+      "point": "목적어 that절 / 비교급+than",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Rower and the Ducks",
+      "src": "구문",
+      "line": "4행",
+      "en": "…, he was competing in the single sculls event.",
+      "ko": "그는 1인 조정 경기 종목에 출전 중이었다.",
+      "target": "he was competing",
+      "point": "과거진행형 was+v-ing: ~하고 있었다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Rower and the Ducks",
+      "src": "구문",
+      "line": "9행",
+      "en": "After the ducks had passed, Pearce began rowing again.",
+      "ko": "오리들이 지나간 뒤에, Pearce는 다시 노를 젓기 시작했다.",
+      "target": "After the ducks had passed",
+      "point": "과거완료 had+v-ed / begin+동명사",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Rower and the Ducks",
+      "src": "구문",
+      "line": "13행",
+      "en": "But he risked losing the race to protect the lives of a family of ducks!",
+      "ko": "하지만 그는 오리 가족의 생명을 보호하기 위해 경주에서 패배할 위험을 무릅썼다!",
+      "target": "risked losing the race",
+      "point": "risk+동명사 / 목적의 to부정사",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "The World’s First Spider",
+      "src": "워크북",
+      "line": "",
+      "en": "made Athena furious",
+      "ko": "아테나를 격노하게 했다",
+      "target": "made Athena furious",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Rower and the Ducks",
+      "src": "워크북",
+      "line": "",
+      "en": "kept rowing and took",
+      "ko": "계속 노를 저었고 선두에 섰다",
+      "target": "kept rowing and took",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "Arachne decided ____ with Athena. (compete)",
+      "a": "to compete",
+      "why": "decide+to부정사"
+    },
+    {
+      "type": "blank",
+      "q": "Pearce’s opponent kept ____. (row)",
+      "a": "rowing",
+      "why": "keep+동명사"
+    },
+    {
+      "type": "blank",
+      "q": "I enjoy ____ movies on weekends. (watch)",
+      "a": "watching",
+      "why": "enjoy+동명사"
+    },
+    {
+      "type": "blank",
+      "q": "He promised ____ my book tomorrow. (return)",
+      "a": "to return",
+      "why": "promise+to부정사"
+    },
+    {
+      "type": "blank",
+      "q": "You should avoid ____ junk food. (eat)",
+      "a": "eating",
+      "why": "avoid+동명사"
+    },
+    {
+      "type": "choose",
+      "q": "Would you mind (to open / opening) the window?",
+      "a": "opening",
+      "why": "mind+동명사"
+    },
+    {
+      "type": "choose",
+      "q": "She wants (to be / being) a famous weaver.",
+      "a": "to be",
+      "why": "want+to부정사"
+    },
+    {
+      "type": "fix",
+      "q": "My father gave up to smoke last year.",
+      "a": "My father gave up smoking last year.",
+      "why": "give up+동명사"
+    }
+  ]
+}

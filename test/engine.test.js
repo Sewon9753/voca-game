@@ -297,3 +297,45 @@ test('pickTab falls back to the first book when the saved tab no longer exists',
   assert.equal(E.pickTab(g, null), '능률VOCA');
   assert.equal(E.pickTab([], '능률VOCA'), null);
 });
+
+// ---- 문장 연습
+test('sentence session: arrange then fill, prompt is Korean', () => {
+  const S = [{ en: '… he made a long, wooden tube.', ko: '그는 나무로 된 기다란 관을 만들었다.', target: 'made a long, wooden tube' }];
+  const s = E.createSession(S, { phases: E.SENT_PHASES, shuffle: noShuffle });
+  assert.equal(s.phase, 'arrange');
+  assert.equal(E.current(s).prompt, S[0].ko);
+  assert.deepEqual(E.answer(s, true), { type: 'phase', phase: 'fill' });
+  assert.deepEqual(E.answer(s, true), { type: 'done' });
+});
+
+test('chipsOf strips leading ellipsis and keeps punctuation on words', () => {
+  assert.deepEqual(E.chipsOf('… a French doctor went for a walk.'), { lead: '…', tokens: ['a', 'French', 'doctor', 'went', 'for', 'a', 'walk.'] });
+  assert.deepEqual(E.chipsOf('Did this stop them?'), { lead: '', tokens: ['Did', 'this', 'stop', 'them?'] });
+});
+
+test('checkArrange accepts duplicate words in either slot, rejects wrong order or partial', () => {
+  const t = ['a', 'boy', 'and', 'a', 'girl'];
+  assert.equal(E.checkArrange(t, ['a', 'boy', 'and', 'a', 'girl']), true);
+  assert.equal(E.checkArrange(t, ['a', 'girl', 'and', 'a', 'boy']), false);
+  assert.equal(E.checkArrange(t, ['a', 'boy']), false);
+});
+
+test('blankOut splits around target, null when target missing', () => {
+  assert.deepEqual(E.blankOut('He saw two boys playing.', 'saw two boys playing'), { before: 'He ', after: '.', size: 4 });
+  assert.equal(E.blankOut('He saw two boys.', 'girls'), null);
+});
+
+test('gradeChunk ignores curly quotes, case and trailing punctuation', () => {
+  assert.equal(E.gradeChunk('They didn’t have drums', "they didn't have drums.").ok, true);
+  assert.equal(E.gradeChunk('were captured and brought', 'were capture and brought').ok, false);
+});
+
+test('formatResult labels sentence practice', () => {
+  const t = E.formatResult({ elapsedMs: 61000, weak: [], rounds: [{ phase: 'arrange', pass: 1, ok: 3, ng: 0 }, { phase: 'fill', pass: 1, ok: 3, ng: 0 }] },
+    { name: '연우', title: 'UNIT 01 문장', total: 3, kind: 'sent', date: '2026-10-14 20:00' });
+  assert.match(t, /문장 연습 결과/);
+  assert.match(t, /\(3문장\)/);
+  assert.match(t, /1차 문장 배열: 1회차 3\/3/);
+  assert.match(t, /2차 빈칸 쓰기/);
+  assert.equal(E.doneLabel({ sent: 2, last: '2026-10-14' }), '🧩 문장 2회 · 최근 10/14');
+});

@@ -1,0 +1,222 @@
+{
+  "pack_id": "reading-inside-starter-unit04",
+  "title": "리딩인사이드 스타터 UNIT 04 Technology 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "조동사 can·must·have to (능력·허가·의무·불필요)",
+    "evidence": "R1 Check Up: fix / can · R2 Check Up: don’t have to · WB GRAMMAR TEST A(can’t·Can·must·have to) B(지불할 필요가 없다·주차해서는 안 된다·쓸 수 없다) C(don’t have to wait·must[have to] follow·can speak)",
+    "summary": [
+      "조동사 뒤엔 동사원형",
+      "can: ~할 수 있다(능력·허가)",
+      "must = have to: ~해야 한다",
+      "must not: ~해서는 안 된다",
+      "don’t have to: ~할 필요 없다"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "Smart Bins",
+      "src": "구문",
+      "line": "1행",
+      "en": "Something new is coming to city streets.",
+      "ko": "새로운 무언가가 도시의 거리로 오고 있다.",
+      "target": "Something new is coming",
+      "point": "-thing 대명사는 형용사가 뒤에서 수식",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Smart Bins",
+      "src": "구문",
+      "line": "4행",
+      "en": "A smart bin makes a neighborhood better in several ways.",
+      "ko": "스마트 쓰레기통은 여러 방면으로 동네를 더 좋게 만든다.",
+      "target": "makes a neighborhood better",
+      "point": "make+목적어+형용사(비교급)",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Smart Bins",
+      "src": "구문",
+      "line": "8행",
+      "en": "The most amazing thing is that each smart bin is a Wi-Fi hotspot.",
+      "ko": "가장 놀라운 것은 각각의 스마트 쓰레기통이 와이파이 핫스팟이라는 점이다.",
+      "target": "that each smart bin is",
+      "point": "that절이 be동사의 보어(명사절)",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Smart Bins",
+      "src": "구문",
+      "line": "9행",
+      "en": "… on every street corner to give out a strong signal to thousands of people.",
+      "ko": "도시 거리의 모퉁이마다 수많은 사람들에게 강한 신호를 보내기 위해",
+      "target": "to give out a strong signal",
+      "point": "to부정사 부사적 용법(목적)",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Smart Bins",
+      "src": "구문",
+      "line": "11행",
+      "en": "Many people enjoy using the internet every day, but they often forget that some people cannot …",
+      "ko": "많은 사람들은 매일 인터넷을 사용하는 것을 즐기지만, 일부 사람들은 … 형편이 안 된다는 것을 종종 잊는다.",
+      "target": "enjoy using the internet",
+      "point": "enjoy+동명사 / forget의 목적어 that절",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Smart Bins",
+      "src": "구문",
+      "line": "14행",
+      "en": "Aren’t they smart?",
+      "ko": "그것들은 똑똑하지 않은가?",
+      "target": "Aren’t they smart?",
+      "point": "부정 의문문: ~이지 않은가?",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "Weather Forecasts",
+      "src": "구문",
+      "line": "1행",
+      "en": "Just as you open the door to leave, your mom says, …",
+      "ko": "나가려고 문을 연 바로 그 때, 당신의 엄마는 … 말한다.",
+      "target": "Just as you open the door",
+      "point": "접속사 as(시간)+목적의 to부정사",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "Weather Forecasts",
+      "src": "구문",
+      "line": "2행",
+      "en": "It’s going to rain today.",
+      "ko": "오늘 비가 올 거야.",
+      "target": "going to rain",
+      "point": "be going to: ~할 것이다(미래)",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Weather Forecasts",
+      "src": "구문",
+      "line": "5행",
+      "en": "They can help us make decisions about the clothes we wear.",
+      "ko": "그것들은 우리가 입을 옷에 대한 결정을 내리는 데 도움을 줄 수 있다.",
+      "target": "help us make decisions",
+      "point": "help+목적어+동사원형, 목적격 관계대명사 생략",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "Weather Forecasts",
+      "src": "구문",
+      "line": "8행",
+      "en": "Weather forecasts are created by people called meteorologists.",
+      "ko": "일기 예보는 기상학자라고 불리는 사람들에 의해 만들어진다.",
+      "target": "are created by people",
+      "point": "수동태+과거분사구(called …)의 명사 수식",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Weather Forecasts",
+      "src": "구문",
+      "line": "14행",
+      "en": "Then they can compare the results with previous weather patterns to make …",
+      "ko": "그런 다음, 그들은 결과를 이전의 날씨 패턴에 비교하여 … 할 수 있다.",
+      "target": "can compare the results with",
+      "point": "compare A with B: A를 B에 비교하다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Weather Forecasts",
+      "src": "워크북",
+      "line": "",
+      "en": "give us predictions",
+      "ko": "우리에게 (날씨에 대한) 예측을 제공한다",
+      "target": "give us predictions",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "Weather Forecasts",
+      "src": "워크북",
+      "line": "",
+      "en": "have to use tons of",
+      "ko": "수많은 양의 (정보를) 이용해야 한다",
+      "target": "have to use tons of",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Smart Bins",
+      "src": "워크북",
+      "line": "",
+      "en": "cannot afford to pay",
+      "ko": "(비용을) 지불할 형편이 안 된다",
+      "target": "cannot afford to pay",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "He ____ fix the computer. He is good at it. (~할 수 있다, 1단어)",
+      "a": "can",
+      "why": "능력 → can"
+    },
+    {
+      "type": "blank",
+      "q": "You ____ wait for her. She is already here. (~할 필요가 없다, 3단어)",
+      "a": "don’t have to",
+      "why": "불필요 → don’t have to"
+    },
+    {
+      "type": "blank",
+      "q": "You ____ park here. It’s not allowed. (must 이용, 2단어)",
+      "a": "must not",
+      "why": "금지 → must not"
+    },
+    {
+      "type": "blank",
+      "q": "She ____ carry her passport. (have to를 알맞은 형태로)",
+      "a": "has to",
+      "why": "3인칭 단수 → has to"
+    },
+    {
+      "type": "choose",
+      "q": "He can (speak / speaks) four languages.",
+      "a": "speak",
+      "why": "조동사+동사원형"
+    },
+    {
+      "type": "choose",
+      "q": "The Wi-Fi is free. You (don’t have to / must not) pay for it.",
+      "a": "don’t have to",
+      "why": "무료 → 낼 필요 없음"
+    },
+    {
+      "type": "fix",
+      "q": "She musts follow the school rules.",
+      "a": "She must follow the school rules.",
+      "why": "조동사엔 -s 안 붙음"
+    },
+    {
+      "type": "fix",
+      "q": "Meteorologists have to using supercomputers.",
+      "a": "Meteorologists have to use supercomputers.",
+      "why": "have to+동사원형"
+    }
+  ]
+}

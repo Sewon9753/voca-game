@@ -1,0 +1,211 @@
+{
+  "pack_id": "reading-inside-starter-unit08",
+  "title": "리딩인사이드 스타터 UNIT 08 Geography 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "가주어 it + 진주어 to부정사 / 수량형용사 a few·few·a little·little",
+    "evidence": "R1 Check Up: It isn’t easy to learn a foreign language. · R2 Check Up: little / a few · WB GRAMMAR TEST A a few/little/a little/few, B a few coins·It, to wake up·a little space, C It is important to know yourself. 등",
+    "summary": [
+      "It(가주어) ~ to부정사(진주어)",
+      "가주어 It은 해석하지 않는다",
+      "a few/few + 셀 수 있는 명사",
+      "a little/little + 셀 수 없는 명사",
+      "a 있으면 ‘조금 있는’, 없으면 ‘거의 없는’"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "South-up Maps",
+      "src": "구문",
+      "line": "4행",
+      "en": "His goal was to make people think differently about his country.",
+      "ko": "그의 목표는 사람들이 그의 나라에 대해 다르게 생각하도록 만드는 것이었다.",
+      "target": "to make people think",
+      "point": "사역동사 make+목적어+동사원형",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "South-up Maps",
+      "src": "구문",
+      "line": "6행",
+      "en": "McArthur was tired of being at “the bottom of the world.”",
+      "ko": "McArthur는 ‘세상의 맨 아래’에 있는 것에 싫증이 났다.",
+      "target": "tired of being at",
+      "point": "전치사 of의 목적어로 쓰인 동명사구",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "South-up Maps",
+      "src": "구문",
+      "line": "7행",
+      "en": "So he gave the world a new perspective.",
+      "ko": "그래서 그는 세상에 새로운 관점을 제시했다.",
+      "target": "gave the world a new perspective",
+      "point": "give+간접목적어+직접목적어",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "South-up Maps",
+      "src": "구문",
+      "line": "8행",
+      "en": "Another goal of south-up maps is to help people think differently about developing nations.",
+      "ko": "남쪽이 위에 있는 지도의 또 다른 목표는 사람들이 개발 도상국들에 대해 다르게 생각하도록 돕는 것이다.",
+      "target": "to help people think differently",
+      "point": "보어 to부정사구 / help+목적어+동사원형",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "South-up Maps",
+      "src": "구문",
+      "line": "10행",
+      "en": "This can add to stereotypes that they are “more valuable.”",
+      "ko": "이는 그 나라들이 ‘더 가치 있다’는 고정관념을 가중할 수 있다.",
+      "target": "stereotypes that they are",
+      "point": "동격 that절: ~라는 고정관념",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "South-up Maps",
+      "src": "구문",
+      "line": "13행",
+      "en": "It feels strange to see familiar things in new ways, …",
+      "ko": "익숙한 것을 새로운 방식으로 보는 것은 낯설게 느껴진다.",
+      "target": "It feels strange to see",
+      "point": "가주어 it, 진주어 to see 이하",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Coldest Desert",
+      "src": "구문",
+      "line": "2행",
+      "en": "And since they don’t have much water, people tend to believe they are very dry.",
+      "ko": "그리고 그곳에는 물이 많이 없기 때문에, 사람들은 그곳이 매우 건조하다고 믿는 경향이 있다.",
+      "target": "since they don’t have much water",
+      "point": "since: ~하기 때문에(이유)",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Coldest Desert",
+      "src": "구문",
+      "line": "4행",
+      "en": "For example, the Sahara Desert in Africa is one of the hottest places on Earth.",
+      "ko": "예를 들어, 아프리카의 사하라 사막은 지구상에서 가장 더운 곳 중 하나이다.",
+      "target": "one of the hottest places",
+      "point": "one of the+최상급+복수명사",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Coldest Desert",
+      "src": "구문",
+      "line": "6행",
+      "en": "But not all deserts are hot and full of sand.",
+      "ko": "그러나 모든 사막이 덥고 모래로 가득 찬 것은 아니다.",
+      "target": "not all deserts are",
+      "point": "not all: 모두 ~인 것은 아니다(부분부정)",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Coldest Desert",
+      "src": "구문",
+      "line": "8행",
+      "en": "And it can get as cold as –89°C.",
+      "ko": "그리고 그곳은 영하 89도까지 추워질 수 있다.",
+      "target": "as cold as –89°C",
+      "point": "as+형용사+as: ~만큼 …한",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Coldest Desert",
+      "src": "구문",
+      "line": "12행",
+      "en": "So living there is hard for plants and animals.",
+      "ko": "그래서 식물과 동물에게는 그곳에서 사는 것이 어렵다.",
+      "target": "living there is",
+      "point": "주어로 쓰인 동명사구",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Coldest Desert",
+      "src": "구문",
+      "line": "13행",
+      "en": "As you can see, being hot doesn’t define a desert.",
+      "ko": "보다시피, 덥다는 것이 사막을 정의하지 않는다.",
+      "target": "being hot doesn’t define",
+      "point": "as: ~하듯이 / 주어로 쓰인 동명사구",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Coldest Desert",
+      "src": "구문",
+      "line": "14행",
+      "en": "The main characteristics are being dry and having extreme temperatures.",
+      "ko": "가장 큰 특징은 건조하고 극단적인 온도를 가지는 것이다.",
+      "target": "being dry and having extreme temperatures",
+      "point": "보어 동명사구 두 개가 and로 병렬",
+      "wb": false
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "It is hard ____ English fluently. (speak)",
+      "a": "to speak",
+      "why": "진주어 to부정사"
+    },
+    {
+      "type": "blank",
+      "q": "It feels strange ____ familiar things in new ways. (see)",
+      "a": "to see",
+      "why": "진주어 to부정사"
+    },
+    {
+      "type": "blank",
+      "q": "It is not easy ____ a south-up map. (make)",
+      "a": "to make",
+      "why": "진주어 to부정사"
+    },
+    {
+      "type": "blank",
+      "q": "It was fun ____ the world map. (look at)",
+      "a": "to look at",
+      "why": "진주어 to부정사"
+    },
+    {
+      "type": "choose",
+      "q": "Very (few / little) plants live in Antarctica.",
+      "a": "few",
+      "why": "plants는 셀 수 있는 명사"
+    },
+    {
+      "type": "choose",
+      "q": "Deserts get very (few / little) rain.",
+      "a": "little",
+      "why": "rain은 셀 수 없는 명사"
+    },
+    {
+      "type": "choose",
+      "q": "I have (a few / a little) coins in my pocket.",
+      "a": "a few",
+      "why": "coins는 셀 수 있는 명사"
+    },
+    {
+      "type": "fix",
+      "q": "That is dangerous to swim in the river at night.",
+      "a": "It is dangerous to swim in the river at night.",
+      "why": "가주어는 It"
+    }
+  ]
+}

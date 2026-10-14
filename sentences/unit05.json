@@ -1,0 +1,211 @@
+{
+  "pack_id": "reading-inside-starter-unit05",
+  "title": "리딩인사이드 스타터 UNIT 05 Solutions 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "현재진행형(be+v-ing) / 동명사(v-ing)의 주어·목적어 쓰임",
+    "evidence": "R1 Check Up: is smiling / are standing · R2 Check Up: designing · WB GRAMMAR TEST A(Watching·playing·meeting·passing) B(am eating·is getting·are running) C(teaching Spanish·He is walking·She is dancing·Drinking too much soda)",
+    "summary": [
+      "현재진행: am/is/are+v-ing",
+      "뜻: ~하고 있다(지금 진행 중)",
+      "동명사 v-ing: ~하는 것",
+      "동명사 주어는 단수 취급",
+      "enjoy·전치사 뒤엔 동명사"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "Green Billboards",
+      "src": "구문",
+      "line": "2행",
+      "en": "The city is located in a desert, so it has little water.",
+      "ko": "그 도시는 사막에 있어서, 물이 거의 없다.",
+      "target": "is located in a desert",
+      "point": "be located in: ~에 있다 / little+셀 수 없는 명사",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Green Billboards",
+      "src": "구문",
+      "line": "5행",
+      "en": "But a local university has created an unusual weapon to fight these problems: …",
+      "ko": "하지만 한 지역 대학이 이러한 문제에 맞서 싸우기 위해 독특한 무기를 만들었는데, …",
+      "target": "to fight these problems",
+      "point": "현재완료(완료)+목적의 to부정사",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Green Billboards",
+      "src": "구문",
+      "line": "17행",
+      "en": "Of course, the billboards are still used as advertisements.",
+      "ko": "물론, 그 광고판은 여전히 광고로 사용된다.",
+      "target": "are still used as",
+      "point": "수동태 / as(~로서)",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Green Billboards",
+      "src": "구문",
+      "line": "17행",
+      "en": "…, the university is presenting a good image of their school, and providing …!",
+      "ko": "그 대학은 학교의 좋은 이미지를 보여 주면서, … 제공하고 있다!",
+      "target": "is presenting a good image",
+      "point": "현재진행형 두 개를 and로 연결",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "The Seabin Project",
+      "src": "구문",
+      "line": "1행",
+      "en": "The Seabin is a floating garbage bin.",
+      "ko": "Seabin은 물에 떠 있는 쓰레기통이다.",
+      "target": "floating garbage bin",
+      "point": "현재분사 floating이 명사 수식",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Seabin Project",
+      "src": "구문",
+      "line": "2행",
+      "en": "It was invented by Australian surfers to remove trash from the ocean.",
+      "ko": "그것은 바다에서 쓰레기를 제거하기 위해 호주의 서퍼들에 의해 발명되었다.",
+      "target": "It was invented by",
+      "point": "수동태+목적의 to부정사",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Seabin Project",
+      "src": "구문",
+      "line": "7행",
+      "en": "And it has a mesh bag inside made of natural materials.",
+      "ko": "그리고 그것은 천연 재료로 만들어진 그물 주머니를 내부에 가지고 있다.",
+      "target": "made of natural materials",
+      "point": "과거분사구가 a mesh bag 수식",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Seabin Project",
+      "src": "구문",
+      "line": "10행",
+      "en": "Attaching a special filter to the Seabin will also allow it to remove oil from the water!",
+      "ko": "또한 Seabin에 특별한 여과기를 부착하는 것은 그것이 물에서 기름을 제거하는 것을 가능하게 할 것이다!",
+      "target": "to remove oil from",
+      "point": "동명사구 주어 / allow+목적어+to-v",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Seabin Project",
+      "src": "구문",
+      "line": "15행",
+      "en": "So, you’ll only see them used near land.",
+      "ko": "그래서, 당신은 그것이 육지 가까이에서 사용되는 것만 볼 것이다.",
+      "target": "see them used near land",
+      "point": "see+목적어+v-ed: ~가 …되는 것을 보다",
+      "wb": false
+    },
+    {
+      "reading": 2,
+      "title": "The Seabin Project",
+      "src": "구문",
+      "line": "15행",
+      "en": "But they are very effective at cleaning the water around docks and harbors.",
+      "ko": "하지만 그것은 부두와 항구 주변의 물을 깨끗하게 하는 데 매우 효과적이다.",
+      "target": "effective at cleaning the water",
+      "point": "전치사 at의 목적어인 동명사구",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "Green Billboards",
+      "src": "워크북",
+      "line": "",
+      "en": "more than 90 liters of water",
+      "ko": "90리터가 넘는 물",
+      "target": "more than 90 liters of water",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "Green Billboards",
+      "src": "워크북",
+      "line": "",
+      "en": "is increasing",
+      "ko": "(대기 오염 물질이) 증가하고 있다",
+      "target": "is increasing",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Seabin Project",
+      "src": "워크북",
+      "line": "",
+      "en": "Using the Seabin",
+      "ko": "Seabin을 사용하는 것은",
+      "target": "Using the Seabin",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "Look! The girl ____ at us. (smile)",
+      "a": "is smiling",
+      "why": "Look! → 현재진행"
+    },
+    {
+      "type": "blank",
+      "q": "They ____ in front of the billboard now. (stand)",
+      "a": "are standing",
+      "why": "now → 현재진행"
+    },
+    {
+      "type": "blank",
+      "q": "I ____ lunch right now. (eat)",
+      "a": "am eating",
+      "why": "I+am+v-ing"
+    },
+    {
+      "type": "blank",
+      "q": "They are very effective at ____ the water. (clean)",
+      "a": "cleaning",
+      "why": "전치사 뒤 동명사"
+    },
+    {
+      "type": "choose",
+      "q": "He enjoys (to design / designing) clothes.",
+      "a": "designing",
+      "why": "enjoy+동명사"
+    },
+    {
+      "type": "choose",
+      "q": "Watching movies (is / are) my hobby.",
+      "a": "is",
+      "why": "동명사 주어=단수"
+    },
+    {
+      "type": "fix",
+      "q": "She is dance on the stage now.",
+      "a": "She is dancing on the stage now.",
+      "why": "be+v-ing"
+    },
+    {
+      "type": "fix",
+      "q": "The pollution are increasing in Lima.",
+      "a": "The pollution is increasing in Lima.",
+      "why": "단수 주어 → is"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "pack_id": "reading-inside-starter-unit07",
+  "title": "리딩인사이드 스타터 UNIT 07 Sports 문장",
+  "source": "Reading Inside Starter Answer Key — 구문 해설 인용문 + 워크북 WRITING TEST 정답 청크(해석은 교재 해석 발췌)",
+  "grammar": {
+    "topic": "비교급 — 형용사·부사 비교급 + than",
+    "evidence": "R1 Check Up: nicer than · R2 Check Up: harder than · WB GRAMMAR TEST A bigger/better/heavier/more interesting, B than/more difficult/harder, C higher than/faster than/worse than/wiser than",
+    "summary": [
+      "비교급+than: ~보다 더 …한",
+      "대부분 +er, -e로 끝나면 +r",
+      "자음+y → y를 i로 바꾸고 +er",
+      "big→bigger: 끝 자음 겹치고 +er",
+      "긴 단어 more+원급, good→better"
+    ]
+  },
+  "sentences": [
+    {
+      "reading": 1,
+      "title": "On Ice? No, Underwater!",
+      "src": "구문",
+      "line": "1행",
+      "en": "But next time you want to play hockey, go to a swimming pool instead.",
+      "ko": "하지만 다음에 하키를 하고 싶을 때는, 대신 수영장에 가 봐라.",
+      "target": "next time you want to",
+      "point": "next time+주어+동사: 다음에 ~가 …할 때",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "On Ice? No, Underwater!",
+      "src": "구문",
+      "line": "5행",
+      "en": "They also use hockey sticks to push the puck, …",
+      "ko": "그들은 또한 퍽을 밀어내기 위해 하키용 스틱을 쓴다.",
+      "target": "to push the puck",
+      "point": "목적의 to부정사: 퍽을 밀어내기 위해",
+      "wb": false
+    },
+    {
+      "reading": 1,
+      "title": "On Ice? No, Underwater!",
+      "src": "구문",
+      "line": "6행",
+      "en": "Before the game, the puck is placed in the middle of the pool.",
+      "ko": "경기 전에, 퍽은 수영장 중앙에 놓인다.",
+      "target": "is placed in the middle",
+      "point": "수동태 be+v-ed: 놓이다",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "On Ice? No, Underwater!",
+      "src": "구문",
+      "line": "12행",
+      "en": "This is because it is safer than ice hockey or field hockey.",
+      "ko": "이는 그것이 아이스하키나 필드하키보다 더 안전하기 때문이다.",
+      "target": "it is safer than",
+      "point": "this is because ~ / 비교급+than",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "On Ice? No, Underwater!",
+      "src": "구문",
+      "line": "13행",
+      "en": "You might be surprised to hear that there are even players in their 70s!",
+      "ko": "심지어 70대인 선수들이 있다는 것을 들으면 당신은 놀랄지도 모른다!",
+      "target": "surprised to hear that",
+      "point": "감정 원인의 to부정사 + that 명사절 목적어",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Trampoline Effect",
+      "src": "구문",
+      "line": "1행",
+      "en": "If he uses a wooden bat, the ball will fly about 150 meters.",
+      "ko": "만약 그가 나무 방망이를 사용하면, 공은 약 150미터를 날아갈 것이다.",
+      "target": "If he uses",
+      "point": "조건 if절은 현재시제가 미래를 대신",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Trampoline Effect",
+      "src": "구문",
+      "line": "5행",
+      "en": "This causes the ball to lose some of its kinetic energy.",
+      "ko": "이는 공이 운동 에너지의 일부를 잃게 한다.",
+      "target": "causes the ball to lose",
+      "point": "cause+목적어+to-v: ~가 …하도록 야기하다",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Trampoline Effect",
+      "src": "구문",
+      "line": "6행",
+      "en": "It’s like bouncing a ball on soft grass.",
+      "ko": "그것은 부드러운 잔디 위에서 공이 튀어 오르게 하는 것과 같다.",
+      "target": "like bouncing a ball",
+      "point": "전치사 like의 목적어로 쓰인 동명사구",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Trampoline Effect",
+      "src": "구문",
+      "line": "10행",
+      "en": "This makes the ball go farther.",
+      "ko": "이것은 공이 더 멀리 나아가게 한다.",
+      "target": "makes the ball go farther",
+      "point": "사역동사 make+목적어+동사원형",
+      "wb": true
+    },
+    {
+      "reading": 2,
+      "title": "The Trampoline Effect",
+      "src": "워크북",
+      "line": "",
+      "en": "will travel more than",
+      "ko": "200미터보다 더 이동할 것이다",
+      "target": "will travel more than",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    },
+    {
+      "reading": 1,
+      "title": "On Ice? No, Underwater!",
+      "src": "워크북",
+      "line": "",
+      "en": "are shorter than",
+      "ko": "아이스하키 스틱보다 더 짧다",
+      "target": "are shorter than",
+      "point": "워크북 WRITING TEST 정답 청크",
+      "wb": true
+    }
+  ],
+  "quiz": [
+    {
+      "type": "blank",
+      "q": "Underwater hockey sticks are ____ than ice hockey sticks. (short)",
+      "a": "shorter",
+      "why": "short의 비교급"
+    },
+    {
+      "type": "blank",
+      "q": "Concrete is ____ than soft grass. (hard)",
+      "a": "harder",
+      "why": "hard의 비교급"
+    },
+    {
+      "type": "blank",
+      "q": "This swimming pool is ____ than that one. (big)",
+      "a": "bigger",
+      "why": "끝 자음 겹치고 +er"
+    },
+    {
+      "type": "blank",
+      "q": "This book is ____ than that one. (interesting)",
+      "a": "more interesting",
+      "why": "긴 단어는 more+원급"
+    },
+    {
+      "type": "blank",
+      "q": "A metal bat sends the ball farther. It is ____ than a wooden bat for hitting home runs. (good)",
+      "a": "better",
+      "why": "good의 불규칙 비교급"
+    },
+    {
+      "type": "choose",
+      "q": "Underwater hockey is (safer / more safe) than ice hockey.",
+      "a": "safer",
+      "why": "1음절 형용사는 +er"
+    },
+    {
+      "type": "choose",
+      "q": "My bat is heavier (than / then) yours.",
+      "a": "than",
+      "why": "비교 대상 앞은 than"
+    },
+    {
+      "type": "fix",
+      "q": "Today is more hot than yesterday.",
+      "a": "Today is hotter than yesterday.",
+      "why": "hot→hotter"
+    }
+  ]
+}
